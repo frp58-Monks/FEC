@@ -7,3 +7,5 @@
 
 ## API KEYS ##
 client/src/config/config.js
+client/node_modules/
+client/package-lock.json
