@@ -1,36 +1,11 @@
-# Prerequisites
-*.d
+## NPM ##
+# # Dependency directorys
+# Deployed apps should consider commenting these lines out:
+# see https://npmjs.org/doc/faq.html#Should-I-check-my-node_modules-folder-into-git
+# node_modules/
+# bower_components/
 
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
-
-# Precompiled Headers
-*.gch
-*.pch
-
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
-
-# Fortran module files
-*.mod
-*.smod
-
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
-
-# Executables
-*.exe
-*.out
-*.app
-
-# Dev
-package-lock.json
-node_modules/
+## API KEYS ##
+client/src/config/config.js
+client/node_modules/
+client/package-lock.json
