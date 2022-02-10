@@ -1,7 +1,9 @@
 import React from 'react';
 import axios from 'axios';
-var API = './theAPI';
-import Token from '../config/config.js';
+import configData from '../config/config.js';
+const TOKEN = configData.token;
+const CAMPUS = configData.campus;
+const API = `https://app-hrsei-api.herokuapp.com/api/fec2/${CAMPUS}/`;
 
 class App extends React.Component {
   constructor(props) {
@@ -13,17 +15,22 @@ class App extends React.Component {
     this.getProducts = this.getProducts.bind(this);
   }
   //------------Class_Methods------------//
-  getProducts(table) {
-    axios.get(API, {
-      authorization: Token,
-      params: table
+  getProducts(endpoint) {
+    const route = API + endpoint;
+    axios.get(route, {headers:
+      {authorization: TOKEN}
     })
     .then((res) => {
-      this.seteState({input: res.data});
+      this.setState({input: res.data});
+      console.log({'GET Responded with': this.state.input});
     })
     .catch((err) => {
       console.log({'GET Req': err})
     })
+  }
+
+  componentDidMount() {
+    this.getProducts('products');
   }
 
   //------------Render_Here------------//

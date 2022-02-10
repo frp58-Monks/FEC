@@ -1,9 +1,10 @@
-// Put your API key goes here!
-// module.exports = {
-//   Token: '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'
-// }
+//Create your own cofig.js file that is gitIgnored and insert your own API token
 
-// in App.jsx import Token from './config/config.js';
+const configData = {
+  token: 'Github_API_Token_Here',
+  campus: 'hr-rfp'
+}
 
-const Token = 'Github_API_Token_Here';
-export default Token;
+export default configData;
+
+// in App.jsx import configData from '../config/config.js';
