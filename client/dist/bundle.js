@@ -344,7 +344,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n// Put your API key goes here!\n// module.exports = {\n//   Token: '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'\n// }\n// in App.jsx import Token from './config/config.js';\nvar configData = {\n  token: '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',\n  campus: 'hr-rfp'\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (configData);\n\n//# sourceURL=webpack://project-runway/./src/config/config.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n//Create your own cofig.js file that is gitIgnored and insert your own API token\nvar configData = {\n  token: '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',\n  campus: 'hr-rfp'\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (configData); // in App.jsx import configData from '../config/config.js';\n\n//# sourceURL=webpack://project-runway/./src/config/config.js?");
 
 /***/ }),
 
