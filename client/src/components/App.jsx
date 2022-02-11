@@ -1,6 +1,8 @@
 import React from 'react';
 import axios from 'axios';
 import configData from '../config/config.js';
+import Overview from './Overview.jsx';
+import Feedback from './Feedback.jsx';
 const TOKEN = configData.token;
 const CAMPUS = configData.campus;
 const API = `https://app-hrsei-api.herokuapp.com/api/fec2/${CAMPUS}/`;
@@ -38,6 +40,8 @@ class App extends React.Component {
     return (
       <div className="content">
         <div>Jello World</div>
+        <Overview />
+        <Feedback />
       </div>
     );
   }
