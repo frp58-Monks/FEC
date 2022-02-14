@@ -4,7 +4,7 @@ export const StarStyled = styled.div`
   display: inline-flex;
   color: grey;
   width: 20px;
-  padding: 1px;
+  padding: 2px;
 
   &:hover {
     color: gold;
@@ -17,5 +17,10 @@ export const StarStyled = styled.div`
 
 export const StarBorder = styled.div`
   border-style: solid;
-  width: 10%;
+  width: 11%;
+  margin: 1px;
+`
+
+export const StarText = styled.p`
+  float: left;
 `

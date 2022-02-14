@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import axios from 'axios';
 import configData from '../config/config.js';
 import Overview from './Overview.jsx';
 import Feedback from './Feedback.jsx';
-import { FaStar } from "react-icons/fa";
-import { StarStyled, StarBorder } from './styled/StarStyled.js';
+// import { FaStar } from "react-icons/fa";
+// import { StarStyled, StarBorder } from './styled/StarStyled.js';
+import StarReview from './RatingReview/StarReview.jsx';
 const TOKEN = configData.token;
 const CAMPUS = configData.campus;
 const API = `https://app-hrsei-api.herokuapp.com/api/fec2/${CAMPUS}/`;
@@ -13,11 +14,14 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      input: ''
+      input: '',
+      // stars: [1, 2, 3, 4, 5]
     };
     //------------Bind_Class_Methods_Here------------//
     this.getProducts = this.getProducts.bind(this);
     // this.starRatings = this.starRatings.bind(this);
+    // this.onClick = this.onClick.bind(this);
+    // this.getStars = this.getStars.bind(this);
   }
   //------------Class_Methods------------//
   getProducts(endpoint) {
@@ -37,6 +41,22 @@ class App extends React.Component {
   //------------Star Ratings------------//
   // starRatings () {
   //   const [rating, SetRating] = useState(null);
+
+  //   [...Array(5)].map((star) => (
+  //     <FaStar />
+  //   ))
+  // }
+
+  // getStars () {
+  //   let array = [...this.state.stars];
+
+  //   for (var i = 0; i < array.length; i++) {
+  //     this.setState([i + 1]);
+  //   }
+  // }
+
+  // onClick (star) {
+  //   this.getStars();
   // }
 
   componentDidMount() {
@@ -48,18 +68,7 @@ class App extends React.Component {
     return (
       <div className="content">
         <div>Jello World</div>
-        <StarBorder>
-          {
-            [...Array(5)].map((star) => (
-              <label>
-                  <StarStyled>
-                    <input type='radio' name='rating'></input>
-                    <FaStar />
-                  </StarStyled>
-              </label>
-            ))
-          }
-        </StarBorder>
+          <StarReview />
           <Overview />
           <Feedback />
       </div>
@@ -70,13 +79,19 @@ class App extends React.Component {
 export default App;
 
 /*
-  {
-            [...Array(5)].map((star) => (
-              <label>
-                <input type='radio' name='rating'></input>
-                <FaStar />
-              </label>
-            ))
-          }
+  <StarBorder>
+            {
+              [...Array(5)].map((star, i) => (
+               <label>
+                 <StarStyled>
+                  <input type='radio' name='rating' value={i + 1}></input>
+                  <FaStar />
+                </StarStyled>
+               </label>
+              ))
+            }
+        </StarBorder>
 
-        */
+        <StarReview value={this.state.stars} />
+
+*/
