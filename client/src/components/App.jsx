@@ -13,7 +13,14 @@ const hardcodedQuantities = ['1', '2', '10', '16', '17'];
 
 const App = (props) => {
 
+
   const [data, setData] = useState([]);
+  //current url cange state to new location
+  const [url, setURL] = useState(window.location.href);
+
+  window.addEventListener('popstate', function (event) {
+    return setURL(window.loaction.href);
+  })
 
   const getRequest = () => {
     axios.get(API)
@@ -28,7 +35,7 @@ const App = (props) => {
   return (
     <div className="content">
       <div>Jello World</div>
-      <Overview sizesArr={hardcodedSizes} qtyArr={hardcodedQuantities} productData={data}/>
+      <Overview sizesArr={hardcodedSizes} qtyArr={hardcodedQuantities} productData={data} url={url}/>
       <Feedback />
     </div>
   );

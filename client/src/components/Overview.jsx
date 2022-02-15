@@ -8,6 +8,7 @@ import Price from './Overview/Price.jsx';
 import AddToCart from './Overview/AddtoCart.jsx';
 
 const Overview = (props) => {
+  console.log('inside overview.jsx: ', props.url);
   return (
     <div>
       <div className="image-carousel"><ImageCarousel/></div>
