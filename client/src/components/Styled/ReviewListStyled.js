@@ -25,3 +25,8 @@ export const ReviewPurchaser = styled.div`
   text-align: right;
   color: green;
 `
+
+export const Response = styled.div`
+  text-align: center;
+  background-color: #F0F8FF;
+`

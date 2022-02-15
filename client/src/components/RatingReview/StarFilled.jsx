@@ -12,13 +12,13 @@ let decimal = average.toString().split('.').slice(1);
 decimal = Number(decimal);
 
 return (
-  <div>
+  <QuarterStar>
       <FaStar className="star"/>
       <FaStar className="star"/>
       <FaStar className="star"/>
       <FaStar className="star"/>
       <FaStar className="star"/>
-  </div>
+  </QuarterStar>
 )
 
 }
