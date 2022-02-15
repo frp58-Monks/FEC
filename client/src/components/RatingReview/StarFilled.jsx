@@ -1,7 +1,7 @@
 import React from 'react';
 import StarAverage from './StarAverage.jsx';
 import { FaStar } from "react-icons/fa";
-import { StarStyled, StarBorder, StarText, QuarterStar } from '../styled/StarStyled.js';
+import { StarStyled, StarBorder, StarText, QuarterStar } from '../Styled/StarStyled.js';
 
 const StarFilled = () => {
   let average = StarAverage();

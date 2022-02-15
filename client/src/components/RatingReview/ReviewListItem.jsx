@@ -1,5 +1,5 @@
 import React from 'react';
-import { ReviewSummary, ReviewWrapper, ReviewBody, ReviewDate, ReviewPurchaser, Response, Recommend } from '../styled/ReviewListStyled.js';
+import { ReviewSummary, ReviewWrapper, ReviewBody, ReviewDate, ReviewPurchaser, Response, Recommend } from '../Styled/ReviewListStyled.js';
 import StarFilled from '../RatingReview/StarFilled.jsx';
 import { FaCheck } from "react-icons/fa";
 
