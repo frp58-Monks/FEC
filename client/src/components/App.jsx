@@ -1,55 +1,39 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import configData from '../config/config.js';
 import Overview from './Overview.jsx';
 import Feedback from './Feedback.jsx';
 import StarReview from './RatingReview/StarReview.jsx';
 import StarFilled from './RatingReview/StarFilled.jsx';
 import ReviewList from './RatingReview/ReviewList.jsx';
-const TOKEN = configData.token;
-const CAMPUS = configData.campus;
-const API = `https://app-hrsei-api.herokuapp.com/api/fec2/${CAMPUS}/`;
+import Data from './Overview/hardcodedData.jsx';
 
-class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      input: ''
-    };
-    //------------Bind_Class_Methods_Here------------//
-    this.getProducts = this.getProducts.bind(this);
-  }
-  //------------Class_Methods------------//
-  getProducts(endpoint) {
-    const route = API + endpoint;
-    axios.get(route, {headers:
-      {authorization: TOKEN}
-    })
-    .then((res) => {
-      this.setState({input: res.data});
-      console.log({'GET Responded with': this.state.input});
-    })
-    .catch((err) => {
-      console.log({'GET Req': err})
-    })
-  }
+//Hardcoded prop data to pass to dropdown menus
+const hardcodedSizes = ['XS', 'S', 'M', 'L', 'XL', 'XXL'];
+const hardcodedQuantities = ['1', '2', '10', '16', '17'];
 
-  // componentDidMount() {
-  //   this.getProducts('products');
-  // }
+// componentDidMount() {
+//   this.getProducts('products');
+// }
+
+//Updated Component to use React Hooks (instead of class component)
+const App = (props) => {
+
+  //Create a func to set the state of 'url' to the current URL of the window everytime it changes
+  const [url, setURL] = useState(window.location.href);
+  window.addEventListener('popstate', function (event) {
+    return setURL(window.loaction.href);
+  })
 
   //------------Render_Here------------//
-  render () {
-    return (
-      <div className="content">
-        <div>Jello World</div>
-          <StarReview />
-          <ReviewList />
-          <Overview />
-          <Feedback />
-      </div>
-    );
-  }
+  return (
+    <div className="content">
+      <div>Jello World</div>
+      <Overview sizesArr={hardcodedSizes} qtyArr={hardcodedQuantities} productData={Data} url={url} />
+      <Feedback />
+      <StarReview />
+      <ReviewList />
+    </div>
+  );
 }
 
 export default App;
