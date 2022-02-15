@@ -6,7 +6,8 @@
 # bower_components/
 
 ## API KEYS ##
-client/src/config/config.js
+# config/config.js
+config/myConfig.js
 
 ## DEV ##
 node_modules
