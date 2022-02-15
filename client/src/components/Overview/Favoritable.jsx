@@ -2,7 +2,7 @@ import React from 'react';
 
 const Favoritable = (props) => {
   return (
-    <div>create favoritable component here</div>
+    <div>create favoritable sub-component here</div>
   );
 }
 

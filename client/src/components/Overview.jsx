@@ -18,19 +18,19 @@ const Overview = (props) => {
 
       <div className="product-details">
         <div>
-          <h2 className="name">Product Name</h2>
+          <h2 className="name">Product Name-PROP</h2>
           <div className="favoritable"><Favoritable/></div>
         </div>
 
-        <div className="category">Product Category</div>
+        <div className="category">Product Category-PROP</div>
 
         <div>
-          <div className="stars">import Stars from App</div>
-          <div>ratings route</div>
-          <div>reviews route</div>
+          <div className="stars">import Stars component PROP from App</div>
+          <div>ratings link</div>
+          <div>reviews link</div>
         </div>
 
-        <textarea className="description">Product Desription</textarea>
+        <p className="description">Product Desription-PROP</p>
 
         <div className="styles"><Styles/></div>
 

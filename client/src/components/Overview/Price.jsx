@@ -2,7 +2,7 @@ import React from 'react';
 
 const Price = (props) => {
   return (
-    <div>price or sale here</div>
+    <div>create price/sale sub-component here</div>
   );
 }
 

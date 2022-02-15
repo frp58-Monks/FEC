@@ -3,6 +3,7 @@ import axios from 'axios';
 import Overview from './Overview.jsx';
 import Feedback from './Feedback.jsx';
 import Data from './Overview/hardcodedData.jsx';
+import configData from '../config/config.js';
 const TOKEN = configData.token;
 const CAMPUS = configData.campus;
 const API = `https://app-hrsei-api.herokuapp.com/api/fec2/${CAMPUS}/`;
