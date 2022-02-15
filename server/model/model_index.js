@@ -1,5 +1,5 @@
 const axios = require ('axios');
-const ConfigData = require ('../../config/config.js');
+const ConfigData = require ('../../config/myConfig.js');
 const TOKEN = ConfigData.token;
 const CAMPUS = ConfigData.campus;
 const API = `https://app-hrsei-api.herokuapp.com/api/fec2/${CAMPUS}/`;

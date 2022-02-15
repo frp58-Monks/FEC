@@ -11,10 +11,6 @@ import Data from './Overview/hardcodedData.jsx';
 const hardcodedSizes = ['XS', 'S', 'M', 'L', 'XL', 'XXL'];
 const hardcodedQuantities = ['1', '2', '10', '16', '17'];
 
-// componentDidMount() {
-//   this.getProducts('products');
-// }
-
 //Updated Component to use React Hooks (instead of class component)
 const App = (props) => {
 
