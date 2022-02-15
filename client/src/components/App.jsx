@@ -7,74 +7,38 @@ const TOKEN = configData.token;
 const CAMPUS = configData.campus;
 const API = `https://app-hrsei-api.herokuapp.com/api/fec2/${CAMPUS}/`;
 
+//Hardcoded prop data to pass to dropdown menus
 const hardcodedSizes = ['XS', 'S', 'M', 'L', 'XL', 'XXL'];
 const hardcodedQuantities = ['1', '2', '10', '16', '17'];
 
+//Updated Component to use React Hooks (instead of class component)
 const App = (props) => {
   const [data, setData] = useState([]);
-  //current url cange state to new location
+
+  //Create a func to set the state of 'url' to the current URL of the window everytime it changes
   const [url, setURL] = useState(window.location.href);
   window.addEventListener('popstate', function (event) {
     return setURL(window.loaction.href);
   })
 
-  const getRequest = () => {
-    axios.get(API)
+  //Create a func given an ID to GET all product information for overview
+  const getFullProductInfo = (id) => {
+    const route  = API + 'products/' + id;
+    axios
+      .get(route, {headers: {authorization: TOKEN}})
       .then((res) => {
-        setData(res.data)
-        console.log({'GET Responded with': data});
+        setData(res.data);
       })
-      .catch((err) => {console.log({'GET Req': err})
-      })
-  }
+      .catch((err) => {console.log(err)})
+  };
 
   return (
     <div className="content">
       <div>Jello World</div>
-      <Overview sizesArr={hardcodedSizes} qtyArr={hardcodedQuantities} productData={data} url={url}/>
+      <Overview sizesArr={hardcodedSizes} qtyArr={hardcodedQuantities} productData={data} url={url} getFullProductInfo={getFullProductInfo}/>
       <Feedback />
     </div>
   );
 }
-
-// class App extends React.Component {
-//   constructor(props) {
-//     super(props);
-//     this.state = {
-//       input: ''
-//     };
-//     //------------Bind_Class_Methods_Here------------//
-//     this.getProducts = this.getProducts.bind(this);
-//   }
-//   //------------Class_Methods------------//
-//   getProducts(endpoint) {
-//     const route = API + endpoint;
-//     axios.get(route, {headers:
-//       {authorization: TOKEN}
-//     })
-//     .then((res) => {
-//       this.setState({input: res.data});
-//       console.log({'GET Responded with': this.state.input});
-//     })
-//     .catch((err) => {
-//       console.log({'GET Req': err})
-//     })
-//   }
-
-  // componentDidMount() {
-  //   this.getProducts('products');
-  // }
-
-  //------------Render_Here------------//
-//   render () {
-//     return (
-//       <div className="content">
-//         <div>Jello World</div>
-//         <Overview sizesArr={hardcodedSizes} qtyArr={hardcodedQuantities} productData={data}/>
-//         <Feedback />
-//       </div>
-//     );
-//   }
-// }
 
 export default App;
