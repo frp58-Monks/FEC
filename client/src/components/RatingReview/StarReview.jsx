@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { FaStar } from "react-icons/fa";
-import { StarStyled, StarBorder, StarText } from '../styled/StarStyled.js';
+import { StarStyled, StarBorder, StarText } from '../Styled/StarStyled.js';
 
 const StarReview = ( ) => {
   const [rating, setRating] = useState(null);
@@ -20,8 +20,6 @@ const StarReview = ( ) => {
                   name='rating'
                   value={ratingValue}
                   onClick={() =>
-                    //{
-                    // count++;
                     setRating(ratingValue)
                   }
                   onMouseOver={() => setHover(ratingValue)}

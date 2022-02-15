@@ -3,7 +3,6 @@ import axios from 'axios';
 import Overview from './Overview.jsx';
 import Feedback from './Feedback.jsx';
 import StarReview from './RatingReview/StarReview.jsx';
-import StarFilled from './RatingReview/StarFilled.jsx';
 import ReviewList from './RatingReview/ReviewList.jsx';
 import Data from './Overview/hardcodedData.jsx';
 
