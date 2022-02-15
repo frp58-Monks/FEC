@@ -10,7 +10,6 @@ import AddToCart from './Overview/AddtoCart.jsx';
 const Overview = (props) => {
   //Log passed down props to the console
   console.log({'Overview URL Prop': props.url});
-  console.log({'Overview GET REQ Prop': props.getFullProductInfo});
   //----Render React Virtual DOM Here----
   return (
     <div>
