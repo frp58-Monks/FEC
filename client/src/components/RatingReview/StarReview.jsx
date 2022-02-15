@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FaStar } from "react-icons/fa";;
+import { FaStar } from "react-icons/fa";
 import { StarStyled, StarBorder, StarText } from '../styled/StarStyled.js';
 
 const StarReview = ( ) => {
@@ -11,7 +11,6 @@ const StarReview = ( ) => {
       {
         [...Array(5)].map((star, i) => {
           const ratingValue = i + 1;
-          // let count = 0;
 
           return (
               <label>

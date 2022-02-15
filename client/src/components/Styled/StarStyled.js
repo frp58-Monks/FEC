@@ -24,3 +24,20 @@ export const StarBorder = styled.div`
 export const StarText = styled.p`
   float: left;
 `
+
+export const QuarterStar = styled.span`
+display: inline-flex;
+color: grey;
+fill: Red;
+
+
+&:fill {
+  content: "\f005";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 60%;
+  overflow: hidden;
+  color: #f80;
+}
+`
