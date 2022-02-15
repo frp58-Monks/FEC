@@ -27,7 +27,7 @@ var ReviewListData = {
       "review_id": 3,
       "rating": 4,
       "summary": "I am liking these glasses",
-      "recommend": false,
+      "recommend": true,
       "response": "Glad you're enjoying the product!",
       "body": "They are very dark. But that's good because I'm in very sunny spots",
       "date": "2019-06-23T00:00:00.000Z",

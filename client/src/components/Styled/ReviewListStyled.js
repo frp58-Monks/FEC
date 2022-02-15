@@ -30,3 +30,6 @@ export const Response = styled.div`
   text-align: center;
   background-color: #F0F8FF;
 `
+export const Recommend = styled.div`
+  text-align: center;
+`
