@@ -432,7 +432,7 @@ eval("\n\nif (false) {} else {\n  module.exports = __webpack_require__(/*! ./cjs
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/slicedToArray */ \"./client/node_modules/@babel/runtime/helpers/esm/slicedToArray.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ \"./client/node_modules/react/index.js\");\n/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! axios */ \"./client/node_modules/axios/index.js\");\n/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var _config_config_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../config/config.js */ \"./client/src/config/config.js\");\n/* harmony import */ var _Overview_jsx__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Overview.jsx */ \"./client/src/components/Overview.jsx\");\n/* harmony import */ var _Feedback_jsx__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Feedback.jsx */ \"./client/src/components/Feedback.jsx\");\n/* harmony import */ var _Overview_hardcodedData_jsx__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./Overview/hardcodedData.jsx */ \"./client/src/components/Overview/hardcodedData.jsx\");\n\n\n\n\n\n\n\nvar TOKEN = _config_config_js__WEBPACK_IMPORTED_MODULE_3__[\"default\"].token;\nvar CAMPUS = _config_config_js__WEBPACK_IMPORTED_MODULE_3__[\"default\"].campus;\nvar API = \"https://app-hrsei-api.herokuapp.com/api/fec2/\".concat(CAMPUS, \"/\");\nvar hardcodedSizes = ['XS', 'S', 'M', 'L', 'XL', 'XXL'];\nvar hardcodedQuantities = ['1', '2', '10', '16', '17'];\n\nvar App = function App(props) {\n  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)([]),\n      _useState2 = (0,_babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(_useState, 2),\n      data = _useState2[0],\n      setData = _useState2[1]; //current url cange state to new location\n\n\n  var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(window.location.href),\n      _useState4 = (0,_babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(_useState3, 2),\n      url = _useState4[0],\n      setURL = _useState4[1];\n\n  window.addEventListener('popstate', function (event) {\n    return setURL(window.loaction.href);\n  });\n\n  var getRequest = function getRequest() {\n    axios__WEBPACK_IMPORTED_MODULE_2___default().get(API).then(function (res) {\n      setData(res.data);\n      console.log({\n        'GET Responded with': data\n      });\n    })[\"catch\"](function (err) {\n      console.log({\n        'GET Req': err\n      });\n    });\n  };\n\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(\"div\", {\n    className: \"content\"\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(\"div\", null, \"Jello World\"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_Overview_jsx__WEBPACK_IMPORTED_MODULE_4__[\"default\"], {\n    sizesArr: hardcodedSizes,\n    qtyArr: hardcodedQuantities,\n    productData: data,\n    url: url\n  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_Feedback_jsx__WEBPACK_IMPORTED_MODULE_5__[\"default\"], null));\n}; // class App extends React.Component {\n//   constructor(props) {\n//     super(props);\n//     this.state = {\n//       input: ''\n//     };\n//     //------------Bind_Class_Methods_Here------------//\n//     this.getProducts = this.getProducts.bind(this);\n//   }\n//   //------------Class_Methods------------//\n//   getProducts(endpoint) {\n//     const route = API + endpoint;\n//     axios.get(route, {headers:\n//       {authorization: TOKEN}\n//     })\n//     .then((res) => {\n//       this.setState({input: res.data});\n//       console.log({'GET Responded with': this.state.input});\n//     })\n//     .catch((err) => {\n//       console.log({'GET Req': err})\n//     })\n//   }\n// componentDidMount() {\n//   this.getProducts('products');\n// }\n//------------Render_Here------------//\n//   render () {\n//     return (\n//       <div className=\"content\">\n//         <div>Jello World</div>\n//         <Overview sizesArr={hardcodedSizes} qtyArr={hardcodedQuantities} productData={data}/>\n//         <Feedback />\n//       </div>\n//     );\n//   }\n// }\n\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (App);\n\n//# sourceURL=webpack://project-runway/./client/src/components/App.jsx?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/classCallCheck */ \"./node_modules/@babel/runtime/helpers/esm/classCallCheck.js\");\n/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/createClass */ \"./node_modules/@babel/runtime/helpers/esm/createClass.js\");\n/* harmony import */ var _babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/assertThisInitialized */ \"./node_modules/@babel/runtime/helpers/esm/assertThisInitialized.js\");\n/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime/helpers/inherits */ \"./node_modules/@babel/runtime/helpers/esm/inherits.js\");\n/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime/helpers/possibleConstructorReturn */ \"./node_modules/@babel/runtime/helpers/esm/possibleConstructorReturn.js\");\n/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @babel/runtime/helpers/getPrototypeOf */ \"./node_modules/@babel/runtime/helpers/esm/getPrototypeOf.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! axios */ \"./node_modules/axios/index.js\");\n/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_7__);\n/* harmony import */ var _Overview_jsx__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./Overview.jsx */ \"./client/src/components/Overview.jsx\");\n/* harmony import */ var _Feedback_jsx__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./Feedback.jsx */ \"./client/src/components/Feedback.jsx\");\n\n\n\n\n\n\n\nfunction _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = (0,_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5__[\"default\"])(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = (0,_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5__[\"default\"])(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0,_babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4__[\"default\"])(this, result); }; }\n\nfunction _isNativeReflectConstruct() { if (typeof Reflect === \"undefined\" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === \"function\") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }\n\n\n\n\n\n\nvar App = /*#__PURE__*/function (_React$Component) {\n  (0,_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_3__[\"default\"])(App, _React$Component);\n\n  var _super = _createSuper(App);\n\n  function App(props) {\n    var _this;\n\n    (0,_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(this, App);\n\n    _this = _super.call(this, props);\n    _this.state = {\n      input: ''\n    }; //------------Bind_Class_Methods_Here------------//\n\n    _this.getProducts = _this.getProducts.bind((0,_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_2__[\"default\"])(_this));\n    return _this;\n  } //------------Class_Methods------------//\n\n\n  (0,_babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__[\"default\"])(App, [{\n    key: \"getProducts\",\n    value: function getProducts(endpoint) {\n      var _this2 = this;\n\n      axios__WEBPACK_IMPORTED_MODULE_7___default().get('/products').then(function (res) {\n        _this2.setState({\n          input: res.data\n        });\n\n        console.log({\n          'GET Responded with': _this2.state.input\n        });\n      })[\"catch\"](function (err) {\n        console.log({\n          'GET Req': err\n        });\n      });\n    }\n  }, {\n    key: \"componentDidMount\",\n    value: function componentDidMount() {\n      this.getProducts('products');\n    } //------------Render_Here------------//\n\n  }, {\n    key: \"render\",\n    value: function render() {\n      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6__.createElement(\"div\", {\n        className: \"content\"\n      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6__.createElement(\"div\", null, \"Jello World\"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6__.createElement(_Overview_jsx__WEBPACK_IMPORTED_MODULE_8__[\"default\"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6__.createElement(_Feedback_jsx__WEBPACK_IMPORTED_MODULE_9__[\"default\"], null));\n    }\n  }]);\n\n  return App;\n}(react__WEBPACK_IMPORTED_MODULE_6__.Component);\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (App);\n\n//# sourceURL=webpack://project-runway/./client/src/components/App.jsx?");
 
 /***/ }),
 
@@ -480,21 +480,10 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
-/***/ "./client/src/components/Overview/ImageCarousel.jsx":
-/*!**********************************************************!*\
-  !*** ./client/src/components/Overview/ImageCarousel.jsx ***!
-  \**********************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./client/node_modules/react/index.js\");\n\n\nvar ImageCarousel = function ImageCarousel(props) {\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"div\", null, \"images carousel here baby\");\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ImageCarousel);\n\n//# sourceURL=webpack://project-runway/./client/src/components/Overview/ImageCarousel.jsx?");
-
-/***/ }),
-
-/***/ "./client/src/components/Overview/Price.jsx":
-/*!**************************************************!*\
-  !*** ./client/src/components/Overview/Price.jsx ***!
-  \**************************************************/
+/***/ "./client/src/index.js":
+/*!*****************************!*\
+  !*** ./client/src/index.js ***!
+  \*****************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -748,7 +737,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /************************************************************************/
 /******/ 	// The module cache
 /******/ 	var __webpack_module_cache__ = {};
-/******/ 	
+/******/
 /******/ 	// The require function
 /******/ 	function __webpack_require__(moduleId) {
 /******/ 		// Check if module is in cache
@@ -762,14 +751,14 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /******/ 			// no module.loaded needed
 /******/ 			exports: {}
 /******/ 		};
-/******/ 	
+/******/
 /******/ 		// Execute the module function
 /******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
-/******/ 	
+/******/
 /******/ 		// Return the exports of the module
 /******/ 		return module.exports;
 /******/ 	}
-/******/ 	
+/******/
 /************************************************************************/
 /******/ 	/* webpack/runtime/compat get default export */
 /******/ 	(() => {
@@ -782,7 +771,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /******/ 			return getter;
 /******/ 		};
 /******/ 	})();
-/******/ 	
+/******/
 /******/ 	/* webpack/runtime/define property getters */
 /******/ 	(() => {
 /******/ 		// define getter functions for harmony exports
@@ -794,12 +783,12 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /******/ 			}
 /******/ 		};
 /******/ 	})();
-/******/ 	
+/******/
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
 /******/ 	(() => {
 /******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
 /******/ 	})();
-/******/ 	
+/******/
 /******/ 	/* webpack/runtime/make namespace object */
 /******/ 	(() => {
 /******/ 		// define __esModule on exports
@@ -810,13 +799,13 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /******/ 			Object.defineProperty(exports, '__esModule', { value: true });
 /******/ 		};
 /******/ 	})();
-/******/ 	
+/******/
 /************************************************************************/
-/******/ 	
+/******/
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module can't be inlined because the eval devtool is used.
 /******/ 	var __webpack_exports__ = __webpack_require__("./client/src/index.js");
-/******/ 	
+/******/
 /******/ })()
 ;

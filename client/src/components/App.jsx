@@ -1,6 +1,5 @@
 import React,  {useState} from 'react';
 import axios from 'axios';
-import configData from '../config/config.js';
 import Overview from './Overview.jsx';
 import Feedback from './Feedback.jsx';
 import Data from './Overview/hardcodedData.jsx';
@@ -12,12 +11,9 @@ const hardcodedSizes = ['XS', 'S', 'M', 'L', 'XL', 'XXL'];
 const hardcodedQuantities = ['1', '2', '10', '16', '17'];
 
 const App = (props) => {
-
-
   const [data, setData] = useState([]);
   //current url cange state to new location
   const [url, setURL] = useState(window.location.href);
-
   window.addEventListener('popstate', function (event) {
     return setURL(window.loaction.href);
   })
