@@ -7,23 +7,18 @@ import QtyDropdown from './Overview/QtyDropdown.jsx';
 import Price from './Overview/Price.jsx';
 import AddToCart from './Overview/AddtoCart.jsx';
 
-/*
-Props: (passed down from App)
-  sizesArr={hardcodedSizes}
-  qtyArr={hardcodedQuantities}
-  productData={allData}
-  getProductInfo={getPoductDetailsNStyles}
-  prodID={product_id}
-  prodDetails={productDetails}
-  prodStyles={productStyles}/>
-*/
-
 const Overview = (props) => {
+  const [loading, setLoading] = useState(false);
 
-  //Conditional Rendering
-  // console.log('productID: ', props.prodID);
-  //If the product id is not null the invoke the function getProductInfo to the product_id
+  console.log({'Overview allProducts': props.allProducts});
+  console.log({'Overview productId': props.productId});
+  console.log({'Overview productDetails': props.productDetails});
+  console.log({'Overview productStyles': props.productStyles});
 
+  // Conditional Rendering - If Product Details and Product Styles states are not null then render
+
+  // If state_name is truthy then do null otherwise do y
+  // return product_id ? null : y
 
   return (
     <div>
@@ -31,7 +26,7 @@ const Overview = (props) => {
 
       <div className="product-details">
         <div>
-          <h2 className="name">Product Name-PROP</h2>
+          <h3 className="name">name</h3>
           <div className="favoritable"><Favoritable /></div>
         </div>
 
