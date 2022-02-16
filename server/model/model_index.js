@@ -29,4 +29,59 @@ const getOneProduct = (product_id, callback) => {
   })
 };
 
-module.exports = { getAllProducts, getOneProduct };
+const getProductStyles = (product_id, callback) => {
+  const route = API + `products/${product_id}/styles`;
+  axios.get(route, {headers:
+    {authorization: TOKEN}})
+  .then((res) => {
+    callback(null, res.data)
+  })
+  .catch((err) => {
+    callback(err);
+  })
+};
+
+const getReviews = (product_id, callback) => {
+  const route = API + `reviews/`;
+  axios.get(route, {headers:
+    {authorization: TOKEN}, params: { product_id }})
+  .then((res) => {
+    callback(null, res.data)
+  })
+  .catch((err) => {
+    callback(err);
+  })
+};
+
+const getReviewsMeta = (product_id, callback) => {
+  const route = API + `reviews/meta`;
+  axios.get(route, {headers:
+    {authorization: TOKEN}, params: { product_id }})
+  .then((res) => {
+    callback(null, res.data)
+  })
+  .catch((err) => {
+    callback(err);
+  })
+};
+
+const getQuestions = (product_id, callback) => {
+  const route = API + `qa/questions`;
+  axios.get(route, {headers:
+    {authorization: TOKEN}, params: { product_id }})
+  .then((res) => {
+    callback(null, res.data)
+  })
+  .catch((err) => {
+    callback(err);
+  })
+};
+
+module.exports = {
+  getAllProducts,
+  getOneProduct,
+  getProductStyles,
+  getReviews,
+  getReviewsMeta,
+  getQuestions
+};
