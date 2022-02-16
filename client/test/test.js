@@ -7,9 +7,16 @@ import {setupServer} from 'msw/node';
 import {render, getByText, waitFor, screen} from '@testing-library/react';
 import '@testing-library/jest-dom';
 import App from '../src/components/App.jsx';
+import Overview from '../src/components/Overview.jsx';
+import RatingReview from '../src/components/RatingReview.jsx';
+import QuestionAnswer from '../src/components/QuestionAnswer.jsx';
+import StarReview from '../src/components/RatingReview/StarReview.jsx';
+import ReviewListItem from '../src/components/RatingReview/ReviewListItem.jsx';
+import ReviewListData from '../src/components/RatingReview/HardcodeData.jsx';
+
 // import Data from '../src/components/Overview/hardcodedData.jsx';
 
-const route = '/products/40344/styles';
+// const route = '/products/40344/styles';
 
 // //Create a Mock Server
 // const server = setupServer(
@@ -39,7 +46,32 @@ const route = '/products/40344/styles';
 
 // })
 
-test('expect DOM to render', () => {
+test('expect App to render Jello World', () => {
   render(<App/>);
   expect(screen.getByText('Jello World')).toBeInTheDocument();
+})
+
+// test('expect DOM to render', () => {
+//   render(<Overview/>);
+//   expect(screen.getByText('Product Name-PROP')).toBeInTheDocument();
+// })
+
+test('expect QuestionAnswer Component to render string', () => {
+  render(<QuestionAnswer/>);
+  expect(screen.getByText('Question and Answer Components Here')).toBeInTheDocument();
+})
+
+test('expect RatingReview Component to render string: RatingReview', () => {
+  render(<RatingReview/>);
+  expect(screen.getByText('RatingReview')).toBeInTheDocument();
+})
+
+test('expect StarReview Component to render string: The Rating is', () => {
+  render(<StarReview/>);
+  expect(screen.getByText('The rating is')).toBeInTheDocument();
+})
+
+test('expect ReviewListItem Component to render purchaser name: shortandsweeet', () => {
+  render(<ReviewListItem item={ReviewListData.results[0]}/>);
+  expect(screen.getByText('shortandsweeet')).toBeInTheDocument();
 })

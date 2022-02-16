@@ -21,7 +21,7 @@ Props: (passed down from App)
 const Overview = (props) => {
 
   //Conditional Rendering
-  console.log('productID: ', props.prodID);
+  // console.log('productID: ', props.prodID);
   //If the product id is not null the invoke the function getProductInfo to the product_id
 
 
