@@ -8,34 +8,6 @@ import Price from './Overview/Price.jsx';
 import AddToCart from './Overview/AddtoCart.jsx';
 
 const Overview = (props) => {
-  //----Render React Virtual DOM Here----
-
-  const [url, setURL] = useState(window.location.href);
-  const [expertProdData, setExpertProdData] = useState('No Data');
-  const [productStyles, setStyles] = useState('No Data');
-
-
-  window.addEventListener('popstate', function (event) {
-    return setURL(window.loaction.href);
-  })
-
-  const getExpertProdDetails = (product_id) => {
-    axios
-      .get('/products/:product_id', { params: { product_id } })
-      .then((res) => { setExpertProdData(res.data) })
-      .catch((err) => { console.log('Client GET ERR', err)
-    })
-  }
-
-
-  // getProductStyles(product_id) => {
-  //   axios
-  //     .get('/products/:product_id/styles', { params: { product_id })
-  //     .then((res) => {setcurrentProdData(res.data) console.log(currentProdData);})
-  //     .catch((err) => {console.log('Client GET ERR', err)})
-  //   }
-  // }
-
   return (
     <div>
       <div className="image-carousel"><ImageCarousel /></div>
