@@ -15,6 +15,22 @@ app.get('/products/:product_id', (req, res) => {
   Controller.getOneProduct(req, res);
 });
 
+app.get('/products/:product_id/styles', (req, res) => {
+  Controller.getProductStyles(req, res);
+});
+
+app.get('/reviews/', (req, res) => {
+  Controller.getReviews(req, res);
+});
+
+app.get('/reviews/meta', (req, res) => {
+  Controller.getReviewsMeta(req, res);
+});
+
+app.get('/qa/questions', (req, res) => {
+  Controller.getQuestions(req, res);
+});
+
 app.listen(PORT, () => {
   console.log(`Server listening on port: ${PORT}`);
 });
