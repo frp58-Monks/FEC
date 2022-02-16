@@ -2,9 +2,8 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import Overview from './Overview.jsx';
 import Feedback from './Feedback.jsx';
-import StarReview from './RatingReview/StarReview.jsx';
-import ReviewList from './RatingReview/ReviewList.jsx';
 import Data from './Overview/hardcodedData.jsx';
+import ReviewListData from './RatingReview/HardcodeData.jsx';
 
 //Hardcoded prop data to pass to dropdown menus
 const hardcodedSizes = ['XS', 'S', 'M', 'L', 'XL', 'XXL'];
@@ -24,9 +23,7 @@ const App = (props) => {
     <div className="content">
       <div>Jello World</div>
       <Overview sizesArr={hardcodedSizes} qtyArr={hardcodedQuantities} productData={Data} url={url} />
-      <Feedback />
-      <StarReview />
-      <ReviewList />
+      <Feedback ratingData={ReviewListData}/>
     </div>
   );
 }
