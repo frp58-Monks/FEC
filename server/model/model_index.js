@@ -5,7 +5,7 @@ const CAMPUS = ConfigData.campus;
 const API = `https://app-hrsei-api.herokuapp.com/api/fec2/${CAMPUS}/`;
 
 
-const getProducts = (callback) => {
+const getAllProducts = (callback) => {
   axios.get(API + 'products', {headers:
     {authorization: TOKEN}
   })
@@ -17,4 +17,16 @@ const getProducts = (callback) => {
   })
 };
 
-module.exports = { getProducts };
+const getOneProduct = (product_id, callback) => {
+  const route = API + `products/${product_id}`;
+  axios.get(route, {headers:
+    {authorization: TOKEN}})
+  .then((res) => {
+    callback(null, res.data)
+  })
+  .catch((err) => {
+    callback(err);
+  })
+};
+
+module.exports = { getAllProducts, getOneProduct };
