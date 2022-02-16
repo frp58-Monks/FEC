@@ -8,7 +8,11 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 app.get('/products', (req, res) => {
-  Controller.getProducts(req, res);
+  Controller.getAllProducts(req, res);
+});
+
+app.get('/products/:product_id', (req, res) => {
+  Controller.getOneProduct(req, res);
 });
 
 app.listen(PORT, () => {
