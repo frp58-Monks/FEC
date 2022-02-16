@@ -15,10 +15,10 @@ const hardcodedQuantities = ['1', '2', '10', '16', '17'];
 //Updated Component to use React Hooks (instead of class component)
 const App = (props) => {
   const [url, setURL] = useState(window.location.href);
+  const [allData, setAllData] = useState('No Data');
   const [product_id, setProduct_id] = useState(null);
   const [productDetails, setProductDetails] = useState('No Data');
   const [productStyles, setProductStyles] = useState('No Data');
-  const [allData, setAllData] = useState('No Data');
 
   window.addEventListener('popstate', (event) => {
     return setURL(window.loaction.href);
@@ -56,14 +56,19 @@ const App = (props) => {
     getProductDetails(product_id);
     getProductStyles(product_id);
   }
-  console.log({'product id': product_id});
+
+  //----Console Log States Before Passing Down to Sub-Components----//
+  console.log({'current url': url});
   console.log({'all products data': allData});
+  console.log({'product id': product_id});
+  console.log({'product details': productDetails});
+  console.log({'product styles': productStyles});
   //------------Render_Here------------//
   return (
     <div className="content">
       <div>Jello World</div>
       <SearchProductBar/>
-      <Overview sizesArr={hardcodedSizes} qtyArr={hardcodedQuantities} productData={Data}/>
+      <Overview sizesArr={hardcodedSizes} qtyArr={hardcodedQuantities} productData={allData} getProductInfo={getPoductDetailsNStyles} prodID={product_id} prodDetails={productDetails} prodStyles={productStyles}/>
       <Feedback />
       <StarReview />
       <ReviewList />

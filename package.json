@@ -25,10 +25,13 @@
     "@babel/plugin-transform-runtime": "^7.17.0",
     "@babel/preset-env": "^7.16.11",
     "@babel/preset-react": "^7.16.7",
+    "@testing-library/jest-dom": "^5.16.2",
     "@testing-library/react": "^12.1.2",
     "babel-loader": "^8.2.3",
     "eslint": "^8.8.0",
     "eslint-config-airbnb": "^19.0.4",
+    "jest": "^27.5.1",
+    "msw": "^0.36.8",
     "nodemon": "^2.0.15",
     "webpack": "^5.68.0",
     "webpack-cli": "^4.9.2"

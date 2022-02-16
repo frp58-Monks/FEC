@@ -7,7 +7,24 @@ import QtyDropdown from './Overview/QtyDropdown.jsx';
 import Price from './Overview/Price.jsx';
 import AddToCart from './Overview/AddtoCart.jsx';
 
+/*
+Props: (passed down from App)
+  sizesArr={hardcodedSizes}
+  qtyArr={hardcodedQuantities}
+  productData={allData}
+  getProductInfo={getPoductDetailsNStyles}
+  prodID={product_id}
+  prodDetails={productDetails}
+  prodStyles={productStyles}/>
+*/
+
 const Overview = (props) => {
+
+  //Conditional Rendering
+  console.log('productID: ', props.prodID);
+  //If the product id is not null the invoke the function getProductInfo to the product_id
+
+
   return (
     <div>
       <div className="image-carousel"><ImageCarousel /></div>
