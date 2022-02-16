@@ -1,22 +1,14 @@
 //Import react and react DOM
-import React from 'react';
+import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 //Import API mocking utilities from Mock Service Worker
 import {rest} from 'msw';
 import {setupServer} from 'msw/node';
-//Import react-testing methods
 import {render, getByText, waitFor, screen} from '@testing-library/react';
-
-// add custom jest matchers from jest-dom
 import '@testing-library/jest-dom';
-//Import the App.jsx file
 import App from '../src/components/App.jsx';
-//Import Hardcoded Data
-import Data from '../src/components/Overview/hardcodedData.jsx';
-//
+// import Data from '../src/components/Overview/hardcodedData.jsx';
 
-//Setup
-//Need to make a server
 const route = '/products/40344/styles';
 
 // //Create a Mock Server
@@ -47,15 +39,7 @@ const route = '/products/40344/styles';
 
 // })
 
-// test('should render components to the DOM', () => {
-//   const root = document.createElement('div');
-
-// });
-
-test('loads and displays greeting', async () => {
-  render(<Fetch url="/greeting" />)
-
-  await waitFor(() => screen.getByRole('heading'))
-
-  expect(screen.getByRole('heading')).toHaveTextContent('Jello World');
-});
+test('expect DOM to render', () => {
+  render(<App/>);
+  expect(screen.getByText('Jello World')).toBeInTheDocument();
+})

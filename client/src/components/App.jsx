@@ -66,7 +66,7 @@ const App = (props) => {
   //------------Render_Here------------//
   return (
     <div className="content">
-      <div>Jello World</div>
+      <h1>Jello World</h1>
       <SearchProductBar/>
       <Overview sizesArr={hardcodedSizes} qtyArr={hardcodedQuantities} productData={allData} getProductInfo={getPoductDetailsNStyles} prodID={product_id} prodDetails={productDetails} prodStyles={productStyles}/>
       <Feedback />
