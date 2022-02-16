@@ -65,11 +65,23 @@ const getQuestions = (req, res) => {
   })
 };
 
+const getAnswers = (req, res) => {
+  const question_id = req.query.question_id;
+  Model.getAnswers(question_id, (err, reviews) => {
+    if (err) {
+      res.status(500).send(err);
+    } else {
+      res.status(200).send(reviews);
+    }
+  })
+}
+
 module.exports = {
   getAllProducts,
   getOneProduct,
   getProductStyles,
   getReviews,
   getReviewsMeta,
-  getQuestions
+  getQuestions,
+  getAnswers
 };
