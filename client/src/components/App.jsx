@@ -16,7 +16,7 @@ const App = (props) => {
   return (
     <div className="content">
       <div>Jello World</div>
-      <Overview sizesArr={hardcodedSizes} qtyArr={hardcodedQuantities} productData={Data} url={url} />
+      <Overview sizesArr={hardcodedSizes} qtyArr={hardcodedQuantities} productData={Data} />
       <Feedback ratingData={ReviewListData}/>
     </div>
   );
