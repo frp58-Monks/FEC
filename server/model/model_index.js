@@ -5,10 +5,9 @@ const CAMPUS = ConfigData.campus;
 const API = `https://app-hrsei-api.herokuapp.com/api/fec2/${CAMPUS}/`;
 
 
-const getAllProducts = (callback) => {
+const getAllProducts = (params, callback) => {
   axios.get(API + 'products', {headers:
-    {authorization: TOKEN}
-  })
+    {authorization: TOKEN}, params: params})
   .then((res) => {
     callback(null, res.data)
   })
@@ -17,10 +16,10 @@ const getAllProducts = (callback) => {
   })
 };
 
-const getOneProduct = (product_id, callback) => {
-  const route = API + `products/${product_id}`;
+const getOneProduct = (params, callback) => {
+  const route = API + `products/${params.product_id}`;
   axios.get(route, {headers:
-    {authorization: TOKEN}})
+    {authorization: TOKEN}, params: params})
   .then((res) => {
     callback(null, res.data)
   })
@@ -29,10 +28,10 @@ const getOneProduct = (product_id, callback) => {
   })
 };
 
-const getProductStyles = (product_id, callback) => {
-  const route = API + `products/${product_id}/styles`;
+const getProductStyles = (params, callback) => {
+  const route = API + `products/${params.product_id}/styles`;
   axios.get(route, {headers:
-    {authorization: TOKEN}})
+    {authorization: TOKEN}, params: params})
   .then((res) => {
     callback(null, res.data)
   })
@@ -41,12 +40,12 @@ const getProductStyles = (product_id, callback) => {
   })
 };
 
-const getReviews = (product_id, callback) => {
+const getReviews = (params, callback) => {
   const route = API + `reviews/`;
   console.log('model reviews :', product_id);
 
   axios.get(route, {headers:
-    {authorization: TOKEN}, params: { product_id }})
+    {authorization: TOKEN}, params: params})
   .then((res) => {
     callback(null, res.data)
   })
@@ -55,10 +54,10 @@ const getReviews = (product_id, callback) => {
   })
 };
 
-const getReviewsMeta = (product_id, callback) => {
+const getReviewsMeta = (params, callback) => {
   const route = API + `reviews/meta`;
   axios.get(route, {headers:
-    {authorization: TOKEN}, params: { product_id }})
+    {authorization: TOKEN}, params: params})
   .then((res) => {
     callback(null, res.data)
   })
@@ -67,10 +66,22 @@ const getReviewsMeta = (product_id, callback) => {
   })
 };
 
-const getQuestions = (product_id, callback) => {
+const getQuestions = (params, callback) => {
   const route = API + `qa/questions`;
   axios.get(route, {headers:
-    {authorization: TOKEN}, params: { product_id }})
+    {authorization: TOKEN}, params: params})
+  .then((res) => {
+    callback(null, res.data)
+  })
+  .catch((err) => {
+    callback(err);
+  })
+};
+
+const getAnswers = (params, callback) => {
+  const route = API + `qa/questions/${params.question_id}/answers`;
+  axios.get(route, {headers:
+    {authorization: TOKEN}, params: params})
   .then((res) => {
     callback(null, res.data)
   })
@@ -85,5 +96,6 @@ module.exports = {
   getProductStyles,
   getReviews,
   getReviewsMeta,
-  getQuestions
+  getQuestions,
+  getAnswers
 };

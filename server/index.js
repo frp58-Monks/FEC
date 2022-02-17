@@ -31,6 +31,10 @@ app.get('/qa/questions', (req, res) => {
   Controller.getQuestions(req, res);
 });
 
+app.get('/qa/questions/:question_id/answers', (req, res) => {
+  Controller.getAnswers(req, res);
+});
+
 app.listen(PORT, () => {
   console.log(`Server listening on port: ${PORT}`);
 });

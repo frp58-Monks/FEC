@@ -1,7 +1,8 @@
 const Model = require('../model/model_index.js');
 
 const getAllProducts = (req, res) => {
-  Model.getAllProducts((err, products) => {
+  const params = req.query;
+  Model.getAllProducts(params, (err, products) => {
     if (err) {
       res.status(500).send(err);
     } else {
@@ -11,8 +12,8 @@ const getAllProducts = (req, res) => {
 };
 
 const getOneProduct = (req, res) => {
-  const product_id = req.query.product_id;
-  Model.getOneProduct(product_id, (err, product) => {
+  const params = req.query;
+  Model.getOneProduct(params, (err, product) => {
     if (err) {
       res.status(500).send(err);
     } else {
@@ -22,8 +23,8 @@ const getOneProduct = (req, res) => {
 };
 
 const getProductStyles = (req, res) => {
-  const product_id = req.query.product_id;
-  Model.getProductStyles(product_id, (err, styles) => {
+  const params = req.query;
+  Model.getProductStyles(params, (err, styles) => {
     if (err) {
       res.status(500).send(err);
     } else {
@@ -33,10 +34,8 @@ const getProductStyles = (req, res) => {
 };
 
 const getReviews = (req, res) => {
-  const product_id = req.query.product_id;
-  console.log('controller reviews :', product_id);
-
-  Model.getReviews(product_id, (err, reviews) => {
+  const params = req.query;
+  Model.getReviews(params, (err, reviews) => {
     if (err) {
       res.status(500).send(err);
     } else {
@@ -46,8 +45,8 @@ const getReviews = (req, res) => {
 };
 
 const getReviewsMeta = (req, res) => {
-  const product_id = req.query.product_id;
-  Model.getReviewsMeta(product_id, (err, reviews) => {
+  const params = req.query;
+  Model.getReviewsMeta(params, (err, reviews) => {
     if (err) {
       res.status(500).send(err);
     } else {
@@ -57,8 +56,8 @@ const getReviewsMeta = (req, res) => {
 };
 
 const getQuestions = (req, res) => {
-  const product_id = req.query.product_id;
-  Model.getQuestions(product_id, (err, reviews) => {
+  const params = req.query;
+  Model.getQuestions(params, (err, reviews) => {
     if (err) {
       res.status(500).send(err);
     } else {
@@ -67,11 +66,23 @@ const getQuestions = (req, res) => {
   })
 };
 
+const getAnswers = (req, res) => {
+  const params = req.query;
+  Model.getAnswers(params, (err, reviews) => {
+    if (err) {
+      res.status(500).send(err);
+    } else {
+      res.status(200).send(reviews);
+    }
+  })
+}
+
 module.exports = {
   getAllProducts,
   getOneProduct,
   getProductStyles,
   getReviews,
   getReviewsMeta,
-  getQuestions
+  getQuestions,
+  getAnswers
 };
