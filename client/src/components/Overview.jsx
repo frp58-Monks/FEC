@@ -39,12 +39,12 @@ const Overview = (props) => {
           <div className="category"><b>Category: </b>{props.productDetails.category}</div>
 
           <div>
-            <div className="stars">import Stars component PROP from App</div>
+            <div className="stars">import Stars PROP from App</div>
             <div>Ratings-link</div>
             <div>Reviews-link</div>
           </div>
 
-          <div className="description">About this Item: <p>{props.productDetails.description}</p></div>
+          <div className="description">About this Item: <p className="productDesription">{props.productDetails.description}</p></div>
 
           <div className="styles"><Styles productStyles={props.productStyles}/></div>
 
