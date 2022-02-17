@@ -4,6 +4,7 @@ import QuestionAnswer from './QuestionAnswer.jsx';
 import StarReview from './RatingReview/StarReview.jsx';
 import axios from 'axios';
 
+//takes in product id from app (overview)
 class Feedback extends React.Component {
   constructor(props) {
     super(props);
@@ -14,6 +15,7 @@ class Feedback extends React.Component {
     this.getReviews = this.getReviews.bind(this);
   }
 
+  //R&R API CALLS
   getReviews() {
     let product_id = 40344;
     axios
@@ -30,6 +32,9 @@ class Feedback extends React.Component {
       });
   }
 
+  //Q&A API CALLS
+
+  //component did mount
   componentDidMount() {
     this.getReviews();
   }

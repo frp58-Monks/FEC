@@ -13,9 +13,15 @@ const ReviewListItem = ({ item }) => {
   cappedSummary = cappedSummary.split('.');
   cappedSummary = cappedSummary[0];
 
+  //getting individual review stars per review
+  let rating = item.rating;
+  let reviewRating = [];
+  for (let i = 0; i < rating; i++) {
+    reviewRating.push('⭐')
+  }
   return (
     <ReviewWrapper>
-      <StarFilled />
+      <div>{reviewRating}</div>
       <ReviewDate>{date}</ReviewDate>
       <ReviewPurchaser>Verified Purchaser: {item.reviewer_name}</ReviewPurchaser>
       <Recommend>
