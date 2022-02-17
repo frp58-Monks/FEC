@@ -87,16 +87,15 @@ const App = (props) => {
         productDetails={productDetails}
         productStyles={productStyles}
       />
-      <Feedback />
+      <div>
+        {product_id &&
+          <Feedback
+          product_id={product_id}
+        />
+        }
+      </div>
     </div>
   );
 }
 
 export default App;
-
-//      <Feedback ratingData={ReviewListData}/>
-/*
-      <Feedback />
-      <StarReview />
-      <ReviewList />
-*/
