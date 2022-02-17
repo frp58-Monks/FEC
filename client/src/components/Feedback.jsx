@@ -42,7 +42,7 @@ class Feedback extends React.Component {
   render() {
     return (
       <div>
-        <QuestionAnswer />
+        {/* <QuestionAnswer /> */}
         <StarReview />
         <RatingReview reviews={this.state.reviews}/>
       </div>
