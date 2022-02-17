@@ -47,7 +47,6 @@ const App = (props) => {
       .then((res) => {
         const prodDetailsRes = res.data;
         setProductDetails(prodDetailsRes);
-        console.log({'Product Styles': productDetails})
       })
       .catch((err) => {
         console.log('Client GET Details err: ', err)
@@ -73,11 +72,11 @@ const App = (props) => {
   ), [product_id]);
 
   //----Console Log States Before Passing Down to Sub-Components----//
-  console.log({'current url': url});
-  console.log({'all products data': allProducts});
-  console.log({'product id': product_id});
-  console.log({'product details': productDetails});
-  console.log({'product styles': productStyles});
+  // console.log({'current url': url});
+  // console.log({'all products data': allProducts});
+  // console.log({'product id': product_id});
+  // console.log({'product details': productDetails});
+  // console.log({'product styles': productStyles});
   //------------Render_Here------------//
   return (
     <div className="content">

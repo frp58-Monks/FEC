@@ -10,48 +10,55 @@ import AddToCart from './Overview/AddtoCart.jsx';
 const Overview = (props) => {
   const [loading, setLoading] = useState(false);
 
-  console.log({'Overview allProducts': props.allProducts});
-  console.log({'Overview productId': props.productId});
-  console.log({'Overview productDetails': props.productDetails});
-  console.log({'Overview productStyles': props.productStyles});
+  // console.log({'Overview productId': props.productId});
+  // console.log({'Overview allProducts': props.allProducts});
+  // console.log({'Overview productDetails': props.productDetails});
+  // console.log({'Overview productStyles': props.productStyles});
 
   // Conditional Rendering - If Product Details and Product Styles states are not null then render
-
   // If state_name is truthy then do null otherwise do y
   // return product_id ? null : y
+  let rdyToRender = null;
+  if (props.productId && props.allProducts && props.productDetails && props.productStyles) {
+    rdyToRender = true;
+    console.log({'The DOM is ready to render: ': rdyToRender});
+  }
 
   return (
     <div>
-      <div className="image-carousel"><ImageCarousel /></div>
+      {rdyToRender &&
+      <div>
+        <div className="image-carousel"><ImageCarousel productStyles={props.productStyles}/></div>
 
-      <div className="product-details">
-        <div>
-          <h3 className="name">name</h3>
-          <div className="favoritable"><Favoritable /></div>
+        <div className="product-details">
+          <div>
+            <h3 className="name">{props.productDetails.name}</h3>
+            <div className="favoritable"><Favoritable /></div>
+          </div>
+
+          <div className="category"><b>Category: </b>{props.productDetails.category}</div>
+
+          <div>
+            <div className="stars">import Stars component PROP from App</div>
+            <div>Ratings-link</div>
+            <div>Reviews-link</div>
+          </div>
+
+          <div className="description">About this Item: <p>{props.productDetails.description}</p></div>
+
+          <div className="styles"><Styles productStyles={props.productStyles}/></div>
+
+          <div className="dropdown-menus">
+            <SizeDropdown sizesArr={props.sizesArr} productStyles={props.productStyles}/>
+            <QtyDropdown qtyArr={props.qtyArr} productStyles={props.productStyles}/>
+          </div>
+
+          <div className="price"><Price originalPrice={props.productStyles.results[0].original_price} salePrice={props.productStyles.results[0].sale_price}/></div>
+
+          <div className="add-to-cart"><AddToCart /></div>
         </div>
-
-        <div className="category">Product Category-PROP</div>
-
-        <div>
-          <div className="stars">import Stars component PROP from App</div>
-          <div>ratings link</div>
-          <div>reviews link</div>
-        </div>
-
-        <p className="description">Product Desription-PROP</p>
-
-        <div className="styles"><Styles /></div>
-
-        <div className="dropdown-menus">
-          <SizeDropdown sizesArr={props.sizesArr} />
-          <QtyDropdown qtyArr={props.qtyArr} />
-        </div>
-
-        <div className="price"><Price /></div>
-
-        <div className="add-to-cart"><AddToCart /></div>
       </div>
-
+      }
     </div>
   );
 }

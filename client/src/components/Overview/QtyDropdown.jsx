@@ -1,6 +1,7 @@
 import React, {useState, useEffect, useContext} from 'react';
 
 const QtyDropdown = (props) => {
+  console.log({'Qty Dropdown Styles Prop': props.productStyles});
   const [open, setOpen] = useState(false);
   const [qty, setQty] = useState(props.qtyArr[0]);
 
