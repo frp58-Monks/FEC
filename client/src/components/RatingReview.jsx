@@ -3,6 +3,7 @@ import React from 'react';
 import ReviewListItem from './RatingReview/ReviewListItem.jsx';
 import axios from 'axios';
 import RatingBreakdown from './RatingReview/RatingBreakdown.jsx';
+import ProgressBar from './RatingReview/ProgressBar.jsx';
 
 //takes in product_id prop from feedback
 const RatingReview = ({ reviews, reviewStars }) => {
@@ -11,6 +12,7 @@ const RatingReview = ({ reviews, reviewStars }) => {
   return (
     <div>
       <RatingBreakdown reviewStars={reviewStars}/>
+      <ProgressBar reviewStars={reviewStars}/>
       {
         resultsArr &&
         resultsArr.map((item, i) => (
@@ -24,16 +26,3 @@ const RatingReview = ({ reviews, reviewStars }) => {
 export default RatingReview;
 
 // !resultsArr ? null :
-
-/* can also use this
-return  (
-    <div>
-      {
-        resultsArr &&
-        resultsArr.map((item, i) => (
-          <ReviewListItem item={item} key={i} />
-        ))
-      }
-    </div>
-  )
-  */
