@@ -20,8 +20,6 @@ const StarReview = ( ) => {
                   name='rating'
                   value={ratingValue}
                   onClick={() =>
-                    //{
-                    // count++;
                     setRating(ratingValue)
                   }
                   onMouseOver={() => setHover(ratingValue)}
