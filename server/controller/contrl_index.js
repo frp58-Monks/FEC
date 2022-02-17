@@ -34,6 +34,8 @@ const getProductStyles = (req, res) => {
 
 const getReviews = (req, res) => {
   const product_id = req.query.product_id;
+  console.log('controller reviews :', product_id);
+
   Model.getReviews(product_id, (err, reviews) => {
     if (err) {
       res.status(500).send(err);

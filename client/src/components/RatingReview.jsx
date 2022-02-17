@@ -1,51 +1,38 @@
 import React from 'react';
-// import ReviewListData from './RatingReview/HardcodeData.jsx';
+// import ReviewList from './RatingReview/ReviewList.jsx';
 import ReviewListItem from './RatingReview/ReviewListItem.jsx';
+import axios from 'axios';
 
-const ReviewList = ( {ratingData} ) => {
-
-  let resultsArr = ratingData.results;
+//takes in product_id prop from feedback
+const RatingReview = ({ reviews }) => {
+  let resultsArr = reviews.results;
+  console.log('results arr', resultsArr);
 
   return (
     <div>
-      <div>Rating and Review component here</div>
       {
+        resultsArr &&
         resultsArr.map((item, i) => (
-          <ReviewListItem item={item} key={i}/>
+          <ReviewListItem item={item} key={i} />
         ))
       }
     </div>
   )
 }
-export default ReviewList;
 
-/*OLD CODE
-  // let body;
-  // let summary;
-  // let date;
-  // let reviewerName;
-  // let text = [];
-  let resultsArr = ReviewListData.results;
+export default RatingReview;
 
-  // for (let i = 0; i < resultsArr.length; i++) {
-  //   let obj = resultsArr[i];
+// !resultsArr ? null :
 
-  //   summary = obj.summary;
-  //   date = obj.date.split('T');
-  //   date = date[0];
-  //   reviewerName = obj.reviewer_name;
-  //   body = obj.body;
-
-  //   text.push(`${reviewerName}, ${date}, ${summary}, ${body}`);
-  // }
-
-  // return (
-  //   <ReviewWrapper>
-  //     <StarFilled />
-  //     <ReviewPurchaser>Verified Purchaser: {reviewerName}</ReviewPurchaser>
-  //     <ReviewDate>{date}</ReviewDate>
-  //     <ReviewSummary>Summary: {summary}</ReviewSummary>
-  //     <ReviewBody>{body}</ReviewBody>
-  //   </ReviewWrapper>
-  // )
+/* can also use this
+return  (
+    <div>
+      {
+        resultsArr &&
+        resultsArr.map((item, i) => (
+          <ReviewListItem item={item} key={i} />
+        ))
+      }
+    </div>
+  )
   */

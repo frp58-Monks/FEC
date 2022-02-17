@@ -3,11 +3,8 @@ import axios from 'axios';
 import Overview from './Overview.jsx';
 import Feedback from './Feedback.jsx';
 import Data from './Overview/hardcodedData.jsx';
-<<<<<<< HEAD
-import ReviewListData from './RatingReview/HardcodeData.jsx';
-=======
+// import ReviewListData from './RatingReview/HardcodeData.jsx';
 import SearchProductBar from './SearchProd.jsx';
->>>>>>> main
 
 //Hardcoded prop data to pass to dropdown menus
 const hardcodedSizes = ['XS', 'S', 'M', 'L', 'XL', 'XXL'];
@@ -34,7 +31,6 @@ const App = (props) => {
       .catch((err) => {
         console.log('GET /products Error: ', err);
       })
-
   ), []);//anytime states listed in [] are changed this function would run again, otherwise everytime you render it runs
 
   const getProductDetails = (product_id) => {
@@ -67,20 +63,19 @@ const App = (props) => {
   //------------Render_Here------------//
   return (
     <div className="content">
-<<<<<<< HEAD
-      <div>Jello World</div>
-      <Overview sizesArr={hardcodedSizes} qtyArr={hardcodedQuantities} productData={Data} />
-      <Feedback ratingData={ReviewListData}/>
-=======
       <h1>Jello World</h1>
       <SearchProductBar/>
       <Overview sizesArr={hardcodedSizes} qtyArr={hardcodedQuantities} productData={allData} getProductInfo={getPoductDetailsNStyles} prodID={product_id} prodDetails={productDetails} prodStyles={productStyles}/>
       <Feedback />
-      <StarReview />
-      <ReviewList />
->>>>>>> main
     </div>
   );
 }
 
 export default App;
+
+//      <Feedback ratingData={ReviewListData}/>
+/*
+      <Feedback />
+      <StarReview />
+      <ReviewList />
+*/

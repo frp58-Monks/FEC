@@ -43,6 +43,8 @@ const getProductStyles = (product_id, callback) => {
 
 const getReviews = (product_id, callback) => {
   const route = API + `reviews/`;
+  console.log('model reviews :', product_id);
+
   axios.get(route, {headers:
     {authorization: TOKEN}, params: { product_id }})
   .then((res) => {
