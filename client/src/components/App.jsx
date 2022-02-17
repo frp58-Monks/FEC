@@ -22,17 +22,31 @@ const App = (props) => {
     return setURL(window.loaction.href);
   })
 
+//     axios.get('/products', { params: {count: 1000}})
+  const searchForProducts = (count) => {
+    console.log('count: ', count);
+    axios.get('/products', { params: { count }})
+    .then((res) => {
+      console.log('Search Res: ', res);
+      // const allTheProducts = res;
+      setAllProducts(res.data);
+    })
+    .catch((err) => {
+      console.log('GET ALL products Error: ', err);
+    })
+  }
+
   useEffect(() => (
     axios.get('/products')
-      .then((res) => {
-        const product_id = res.data[0].id;
-        setProduct_id(product_id);
-        const allProducts = res.data;
-        setAllProducts(allProducts);
-      })
-      .catch((err) => {
-        console.log('GET /products Error: ', err);
-      })
+    .then((res) => {
+      const product_id = res.data[4].id;
+      setProduct_id(product_id);
+      // const allProducts = res.data;
+      // setAllProducts(allProducts);
+    })
+    .catch((err) => {
+      console.log('GET /products Error: ', err);
+    })
   ), []);//anytime states listed in [] are changed this function would run again, otherwise everytime you render it runs
   //Install react method: isonfocus to only useEffect once upon page load
 
@@ -78,15 +92,17 @@ const App = (props) => {
   return (
     <div className="content">
       <h1>Jello World</h1>
-      <SearchProductBar/>
-      <Overview
-        sizesArr={hardcodedSizes}
-        qtyArr={hardcodedQuantities}
-        allProducts={allProducts}
-        productId={product_id}
-        productDetails={productDetails}
-        productStyles={productStyles}
-      />
+      <SearchProductBar allProducts={allProducts} searchForProducts={searchForProducts}/>
+      <div>
+        {productStyles &&
+        <Overview
+          sizesArr={hardcodedSizes}
+          qtyArr={hardcodedQuantities}
+          productDetails={productDetails}
+          productStyles={productStyles}
+        />
+        }
+      </div>
       <div>
         {product_id &&
           <Feedback

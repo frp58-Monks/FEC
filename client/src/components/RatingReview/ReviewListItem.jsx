@@ -5,7 +5,7 @@ import { FaCheck } from "react-icons/fa";
 
 
 const ReviewListItem = ({ item }) => {
-  console.log('item', item);
+  // console.log('item', item);
   let date = item.date.split('T');
   date = date[0];
 

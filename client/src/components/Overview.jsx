@@ -2,13 +2,12 @@ import React, { useState, useEffect, useContext } from 'react';
 import ImageCarousel from './Overview/ImageCarousel.jsx';
 import Favoritable from './Overview/Favoritable.jsx';
 import Styles from './Overview/Styles.jsx';
-import SizeDropdown from './Overview/SizeDD.jsx';
-import QtyDropdown from './Overview/QtyDropdown.jsx';
+import SizeQtyDD from './Overview/SizeQtyDD.jsx';
 import Price from './Overview/Price.jsx';
 import AddToCart from './Overview/AddtoCart.jsx';
 
 const Overview = (props) => {
-  const [loading, setLoading] = useState(false);
+  // const [loading, setLoading] = useState(false);
 
   // console.log({'Overview productId': props.productId});
   // console.log({'Overview allProducts': props.allProducts});
@@ -19,9 +18,9 @@ const Overview = (props) => {
   // If state_name is truthy then do null otherwise do y
   // return product_id ? null : y
   let rdyToRender = null;
-  if (props.productId && props.allProducts && props.productDetails && props.productStyles) {
+  if (props.productDetails && props.productStyles) {
     rdyToRender = true;
-    console.log({'The DOM is ready to render: ': rdyToRender});
+    // console.log({'The DOM is ready to render: ': rdyToRender});
   }
 
   return (
@@ -48,10 +47,7 @@ const Overview = (props) => {
 
           <div className="styles"><Styles productStyles={props.productStyles}/></div>
 
-          <div className="dropdown-menus">
-            <SizeDropdown sizesArr={props.sizesArr} productStyles={props.productStyles}/>
-            <QtyDropdown qtyArr={props.qtyArr} productStyles={props.productStyles}/>
-          </div>
+          <SizeQtyDD className="dropdown-menus" productStyles={props.productStyles}/>
 
           <div className="price"><Price originalPrice={props.productStyles.results[0].original_price} salePrice={props.productStyles.results[0].sale_price}/></div>
 
