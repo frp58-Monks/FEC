@@ -2,10 +2,8 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Overview from './Overview.jsx';
 import Feedback from './Feedback.jsx';
-import StarReview from './RatingReview/StarReview.jsx';
-import StarFilled from './RatingReview/StarFilled.jsx';
-import ReviewList from './RatingReview/ReviewList.jsx';
 import Data from './Overview/hardcodedData.jsx';
+// import ReviewListData from './RatingReview/HardcodeData.jsx';
 import SearchProductBar from './SearchProd.jsx';
 
 //Hardcoded prop data to pass to dropdown menus
@@ -35,7 +33,6 @@ const App = (props) => {
       .catch((err) => {
         console.log('GET /products Error: ', err);
       })
-
   ), []);//anytime states listed in [] are changed this function would run again, otherwise everytime you render it runs
   //Install react method: isonfocus to only useEffect once upon page load
 
@@ -91,10 +88,15 @@ const App = (props) => {
         productStyles={productStyles}
       />
       <Feedback />
-      <StarReview />
-      <ReviewList />
     </div>
   );
 }
 
 export default App;
+
+//      <Feedback ratingData={ReviewListData}/>
+/*
+      <Feedback />
+      <StarReview />
+      <ReviewList />
+*/
