@@ -10,9 +10,11 @@ class Feedback extends React.Component {
     super(props);
 
     this.state = {
-      reviews:{}
+      reviews:{},
+      reviewMeta: {}
     };
     this.getReviews = this.getReviews.bind(this);
+    this.getMeta = this.getMeta.bind(this);
   }
   //R&R API CALLS
   //get data for individual review tiles
@@ -32,11 +34,29 @@ class Feedback extends React.Component {
       });
   }
 
+  //get review meta
+  getMeta() {
+    let product_id = this.props.product_id;
+    axios
+      .get('/reviews/meta', { params: { product_id: product_id } })
+      .then(res => {
+        const data = res.data;
+
+        this.setState({
+          reviewMeta: data
+        });
+      })
+      .catch((err) => {
+        console.log('error with reviews', err);
+      });
+  }
+
   //Q&A API CALLS
 
   //component did mount
   componentDidMount() {
     this.getReviews();
+    this.getMeta();
   }
 
   render() {
@@ -45,16 +65,37 @@ class Feedback extends React.Component {
       <div>
         <QuestionAnswer />
         <StarReview />
+        <div>
         <RatingReview
           reviews={this.state.reviews}
           reviewStars={this.props.reviewStars}
+          meta={this.state.reviewMeta}
         />
+        </div>
       </div>
     )
   }
 }
 
 export default Feedback;
+
+/* META
+ //get for progress bars
+  getMeta() {
+    let product_id = this.props.product_id;
+    axios
+      .get('/reviews/meta', { params: { product_id: product_id } })
+      .then(res => {
+        const data = res.data;
+
+        this.setState({
+          reviewMeta: data
+        });
+      })
+      .catch((err) => {
+        console.log('error with reviews', err);
+      });
+  }
 
 /*POTENTIAL HOOK REFACTOR
 

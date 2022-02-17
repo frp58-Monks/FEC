@@ -20,11 +20,6 @@ const App = (props) => {
   const [productDetails, setProductDetails] = useState(null);
   const [productStyles, setProductStyles] = useState(null);
   const [reviewStars, setReviewStars] = useState(null);
-  // const [ratingAverage, setRatingAverage] = useState(0);
-
-  // const averageSetting = {
-  //   ratingAverage, setRatingAverage
-  // }
 
   window.addEventListener('popstate', (event) => {
     return setURL(window.loaction.href);
@@ -99,7 +94,7 @@ const App = (props) => {
       <h1>Jello World</h1>
       <div>
         {reviewStars &&
-          <RatingBreakdown reviewStars={reviewStars}/>
+        <RatingBreakdown reviewStars={reviewStars}/>
         }
       </div>
       <SearchProductBar/>
@@ -128,6 +123,12 @@ export default App;
 
 /*
 
+  // const [ratingAverage, setRatingAverage] = useState(0);
+
+  // const averageSetting = {
+  //   ratingAverage, setRatingAverage
+  // }
+  
  <AppContext.Provider value={averageSetting}>
      </AppContext.Provider>
       <div>
