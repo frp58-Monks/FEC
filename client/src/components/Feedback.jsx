@@ -15,8 +15,9 @@ class Feedback extends React.Component {
     this.getReviews = this.getReviews.bind(this);
   }
   //R&R API CALLS
+  //get data for individual review tiles
   getReviews() {
-    let product_id = 40344;
+    let product_id = this.props.product_id;
     axios
       .get('/reviews/', { params: { product_id: product_id } })
       .then(res => {
@@ -39,12 +40,15 @@ class Feedback extends React.Component {
   }
 
   render() {
-    console.log({'product id in feedback': this.props.product_id});
+    //console.log('review star in feedback', this.props.reviewStars);
     return (
       <div>
         <QuestionAnswer />
         <StarReview />
-        <RatingReview reviews={this.state.reviews}/>
+        <RatingReview
+          reviews={this.state.reviews}
+          reviewStars={this.props.reviewStars}
+        />
       </div>
     )
   }

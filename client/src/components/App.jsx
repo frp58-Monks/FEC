@@ -17,6 +17,7 @@ const App = (props) => {
   const [product_id, setProduct_id] = useState(null);
   const [productDetails, setProductDetails] = useState(null);
   const [productStyles, setProductStyles] = useState(null);
+  const [reviewStars, setReviewStars] = useState(null);
 
   window.addEventListener('popstate', (event) => {
     return setURL(window.loaction.href);
@@ -63,9 +64,20 @@ const App = (props) => {
       })
   }
 
+  const getReviewStars = () => {
+    axios.get('/reviews/meta', { params: { product_id } })
+      .then(res => {
+        setReviewStars(res.data);
+      })
+      .catch((err) => {
+        console.log('error with stars: ', err);
+      })
+  }
+
   useEffect(() => (
     getProductDetails(product_id),
-    getProductStyles(product_id)
+    getProductStyles(product_id),
+    getReviewStars(product_id)
   ), [product_id]);
 
   //----Console Log States Before Passing Down to Sub-Components----//
@@ -88,9 +100,10 @@ const App = (props) => {
         productStyles={productStyles}
       />
       <div>
-        {product_id &&
+        {product_id && reviewStars &&
           <Feedback
           product_id={product_id}
+          reviewStars={reviewStars}
         />
         }
       </div>
@@ -99,3 +112,14 @@ const App = (props) => {
 }
 
 export default App;
+
+/*
+      <div>
+        {product_id && reviewStars &&
+          <Feedback
+          product_id={product_id}
+          reviewStars={reviewsStars}
+        />
+        }
+      </div>
+      */

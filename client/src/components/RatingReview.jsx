@@ -2,14 +2,15 @@ import React from 'react';
 // import ReviewList from './RatingReview/ReviewList.jsx';
 import ReviewListItem from './RatingReview/ReviewListItem.jsx';
 import axios from 'axios';
+import RatingBreakdown from './RatingReview/RatingBreakdown.jsx';
 
 //takes in product_id prop from feedback
-const RatingReview = ({ reviews }) => {
+const RatingReview = ({ reviews, reviewStars }) => {
   let resultsArr = reviews.results;
-  console.log('results arr', resultsArr);
 
   return (
     <div>
+      <RatingBreakdown reviewStars={reviewStars}/>
       {
         resultsArr &&
         resultsArr.map((item, i) => (
