@@ -19,7 +19,7 @@ class Feedback extends React.Component {
   getReviews() {
     let product_id = 40344;
     axios
-      .get('/reviews/', { params: { product_id } })
+      .get('/reviews/', { params: { product_id: product_id } })
       .then(res => {
         const data = res.data;
 
