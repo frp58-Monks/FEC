@@ -1,6 +1,7 @@
 import React, {useState, useEffect, useContext} from 'react';
 
 const SizeDropdown = (props) => {
+  console.log({'Size Dropdown Styles Prop': props.productStyles});
   const [open, setOpen] = useState(false);
   const [size, setSize] = useState(props.sizesArr[0]);
 
