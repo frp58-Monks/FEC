@@ -23,17 +23,24 @@ const App = (props) => {
   })
 
 //     axios.get('/products', { params: {count: 1000}})
-  const searchForProducts = (count) => {
-    console.log('count: ', count);
+  const searchForProducts = (count, search) => {
+    console.log('count: ', count, 'search: ', search);
     axios.get('/products', { params: { count }})
     .then((res) => {
-      console.log('Search Res: ', res);
-      // const allTheProducts = res;
-      setAllProducts(res.data);
+      // console.log('Search Res: ', res);
+      const allTheProducts = res.data;
+      // setAllProducts(res.data);
+      allTheProducts.map((eachProd) => {
+        if (eachProd.name === search) {
+          setProduct_id(eachProd.id);
+        }
+      })
+
     })
     .catch((err) => {
       console.log('GET ALL products Error: ', err);
     })
+
   }
 
   useEffect(() => (

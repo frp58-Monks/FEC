@@ -1,17 +1,17 @@
 import React, { useState } from 'react';
 
 const SearchProductBar = (props) => {
-  const [searchInput, setSearchInput] = useState(null);
+  const [searchInput, setSearchInput] = useState('');
 
-  if (props.allProducts) {
-    console.log({'Searchbar all products prop': props.allProducts});
-  }
+  // if (props.allProducts) {
+  //   console.log({'Searchbar all products prop': props.allProducts});
+  // }
 
   return (
     <form onSubmit={(e) => {
       e.preventDefault();
       console.log('You Clicked on Search!');
-      props.searchForProducts(1000);
+      props.searchForProducts(1000, searchInput);
     }}>
       <input
         type="text"
