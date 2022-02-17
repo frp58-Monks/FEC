@@ -14,7 +14,6 @@ class Feedback extends React.Component {
     };
     this.getReviews = this.getReviews.bind(this);
   }
-
   //R&R API CALLS
   getReviews() {
     let product_id = 40344;
@@ -40,6 +39,7 @@ class Feedback extends React.Component {
   }
 
   render() {
+    console.log({'product id in feedback': this.props.product_id});
     return (
       <div>
         {/* <QuestionAnswer /> */}
