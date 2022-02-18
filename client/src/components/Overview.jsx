@@ -5,6 +5,7 @@ import Styles from './Overview/Styles.jsx';
 import SizeQtyDD from './Overview/SizeQtyDD.jsx';
 import Price from './Overview/Price.jsx';
 import AddToCart from './Overview/AddtoCart.jsx';
+import RatingBreakdown from './RatingReview/RatingBreakdown.jsx';
 
 const Overview = (props) => {
   console.log({'stars': props.stars});
