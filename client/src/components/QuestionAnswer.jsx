@@ -1,8 +1,18 @@
 import React from 'react';
+import QuestionListItem from './QuestionAnswer/QuestionListItem.jsx';
 
-const QuestionAnswer = (props) => {
+const QuestionAnswer = ({ questions }) => {
+  let questionsArr = questions.results;
+
   return (
-    <div>Question and Answer Components Here</div>
+    <div>
+      {
+        questionsArr &&
+        questionsArr.map((question, i) => (
+          <QuestionListItem question={question} key={i} />
+        ))
+      }
+    </div>
   );
 }
 
