@@ -5,6 +5,7 @@ import Styles from './Overview/Styles.jsx';
 import SizeQtyDD from './Overview/SizeQtyDD.jsx';
 import Price from './Overview/Price.jsx';
 import AddToCart from './Overview/AddtoCart.jsx';
+import RatingBreakdown from './RatingReview/RatingBreakdown.jsx';
 
 const Overview = (props) => {
   let rdyToRender = null;
@@ -26,7 +27,7 @@ const Overview = (props) => {
           <div className="category"><b>Category: </b>{props.productDetails.category}</div>
 
           <div>
-            <div className="stars">import Stars PROP from App</div>
+            <RatingBreakdown reviewStars={props.reviewStars}/>
             <div>Ratings-link</div>
             <div>Reviews-link</div>
           </div>

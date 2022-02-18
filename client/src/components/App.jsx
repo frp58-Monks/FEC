@@ -79,9 +79,11 @@ const App = (props) => {
   }
 
   const getReviewStars = (product_id) => {
+    console.log('inside stars func')
     axios.get('/reviews/meta', { params: { product_id } })
       .then(res => {
-        setReviewStars(res.data);
+        const starData = res.data;
+        setReviewStars(starData);
       })
       .catch((err) => {
         console.log('error with stars: ', err);
@@ -97,17 +99,13 @@ const App = (props) => {
   return (
     <div className="content">
       <h1>Jello World</h1>
-      <div>
-        {reviewStars &&
-        <RatingBreakdown reviewStars={reviewStars}/>
-        }
-      </div>
       <SearchProductBar searchForProducts={searchForProducts}/>
       <div>
-        {productStyles &&
+        {productStyles && reviewStars &&
         <Overview
           productDetails={productDetails}
           productStyles={productStyles}
+          reviewStars={reviewStars}
         />
         }
       </div>
