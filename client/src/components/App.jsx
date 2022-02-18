@@ -10,6 +10,7 @@ const App = (props) => {
   const [product_id, setProduct_id] = useState(null);
   const [productDetails, setProductDetails] = useState(null);
   const [productStyles, setProductStyles] = useState(null);
+  const [index, setIndex] = useState(0);
 
   window.addEventListener('popstate', (event) => {
     return setURL(window.loaction.href);
@@ -36,10 +37,15 @@ const App = (props) => {
 
   }
 
+  const featureNextProduct = () => {
+    let newIndex = index + 1;
+    setIndex(newIndex);
+  }
+
   useEffect(() => (
     axios.get('/products')
     .then((res) => {
-      const product_id = res.data[4].id;
+      const product_id = res.data[index].id;
       setProduct_id(product_id);
       // const allProducts = res.data;
       // setAllProducts(allProducts);
@@ -96,8 +102,6 @@ const App = (props) => {
       <div>
         {productStyles &&
         <Overview
-          sizesArr={hardcodedSizes}
-          qtyArr={hardcodedQuantities}
           productDetails={productDetails}
           productStyles={productStyles}
         />
