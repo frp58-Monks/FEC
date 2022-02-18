@@ -3,13 +3,15 @@ import axios from 'axios';
 import Overview from './Overview.jsx';
 import Feedback from './Feedback.jsx';
 import Data from './Overview/hardcodedData.jsx';
-// import ReviewListData from './RatingReview/HardcodeData.jsx';
 import SearchProductBar from './SearchProd.jsx';
+import RatingBreakdown from './RatingReview/RatingBreakdown.jsx';
 
 //Hardcoded prop data to pass to dropdown menus
 const hardcodedSizes = ['XS', 'S', 'M', 'L', 'XL', 'XXL'];
 const hardcodedQuantities = ['1', '2', '10', '16', '17'];
 
+//create global context
+export const AppContext = React.createContext();
 //Updated Component to use React Hooks (instead of class component)
 const App = (props) => {
   const [url, setURL] = useState(window.location.href);
@@ -17,6 +19,7 @@ const App = (props) => {
   const [product_id, setProduct_id] = useState(null);
   const [productDetails, setProductDetails] = useState(null);
   const [productStyles, setProductStyles] = useState(null);
+  const [reviewStars, setReviewStars] = useState(null);
 
   window.addEventListener('popstate', (event) => {
     return setURL(window.loaction.href);
@@ -63,9 +66,20 @@ const App = (props) => {
       })
   }
 
+  const getReviewStars = (product_id) => {
+    axios.get('/reviews/meta', { params: { product_id } })
+      .then(res => {
+        setReviewStars(res.data);
+      })
+      .catch((err) => {
+        console.log('error with stars: ', err);
+      })
+  }
+
   useEffect(() => (
     getProductDetails(product_id),
-    getProductStyles(product_id)
+    getProductStyles(product_id),
+    getReviewStars(product_id)
   ), [product_id]);
 
   //----Console Log States Before Passing Down to Sub-Components----//
@@ -78,6 +92,11 @@ const App = (props) => {
   return (
     <div className="content">
       <h1>Jello World</h1>
+      <div>
+        {reviewStars &&
+        <RatingBreakdown reviewStars={reviewStars}/>
+        }
+      </div>
       <SearchProductBar/>
       <Overview
         sizesArr={hardcodedSizes}
@@ -88,9 +107,10 @@ const App = (props) => {
         productStyles={productStyles}
       />
       <div>
-        {product_id &&
+        {product_id && reviewStars &&
           <Feedback
           product_id={product_id}
+          reviewStars={reviewStars}
         />
         }
       </div>
@@ -99,3 +119,24 @@ const App = (props) => {
 }
 
 export default App;
+
+
+/*
+
+  // const [ratingAverage, setRatingAverage] = useState(0);
+
+  // const averageSetting = {
+  //   ratingAverage, setRatingAverage
+  // }
+
+ <AppContext.Provider value={averageSetting}>
+     </AppContext.Provider>
+      <div>
+        {product_id && reviewStars &&
+          <Feedback
+          product_id={product_id}
+          reviewStars={reviewsStars}
+        />
+        }
+      </div>
+      */

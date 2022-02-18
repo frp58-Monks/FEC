@@ -88,6 +88,19 @@ const getAnswers = (params, callback) => {
   })
 };
 
+//put - looking for additional arg as body.data (null)
+const putReviewHelpful = (params, callback) => {
+  const route = API + `reviews/${params.review_id}/helpful`;
+  axios.put(route, null, {headers:
+    {authorization: TOKEN}, params: params})
+  .then((res) => {
+    callback(null, res.data)
+  })
+  .catch((err) => {
+    callback(err);
+  })
+};
+
 module.exports = {
   getAllProducts,
   getOneProduct,
@@ -95,5 +108,6 @@ module.exports = {
   getReviews,
   getReviewsMeta,
   getQuestions,
-  getAnswers
+  getAnswers,
+  putReviewHelpful
 };

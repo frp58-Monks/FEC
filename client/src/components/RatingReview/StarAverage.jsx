@@ -1,46 +1,44 @@
-
-//on click need the product id in app state
-//pass down product id to staraverage
-
-//get request to API taking in product id from props from app
-//https://app-hrsei-api.herokuapp.com/api/fec2/hr-rfp/reviews/meta?product_id=40344
-//then
-//get ratings from the res.data.ratings
-//create a total count
-//create average count
-
-//loop over the ratings obj
-//total count += values of rating obj
-//average += number(key) * values of rating obj
-
-//return average/total count
-
-//export star average to star review
-
-
-//starReview
-//import star average
-//take is prod id as props as well
-//get decimal if prod id
-//get integer of product id
-//if integer value
-//fill whole star of integer value
-
-//if decimal value
-//if the average has a decimal <0.26
-//fill quarter star
-//if the average has a decimal of <0.75
-//fill half star
-//otherwise
-//fill 3/4 star
-
 import React from 'react';
 // { productId }
-const StarAverage = () => {
+const StarAverage = (ratingsObj) => {
   var totalCount = 0;
   var averageCount = 0;
 
-  var data =
+  //let ratingsObj = data.ratings;
+
+  for (let key in ratingsObj) {
+    let value = Number(ratingsObj[key]);
+    let num = Number(key);
+    totalCount += value;
+    averageCount += (num * ratingsObj[key]);
+  }
+
+  let average = averageCount / totalCount;
+  average = Math.round(average * 10) / 10
+  return average;
+}
+
+export default StarAverage;
+
+// axios.get(`https://app-hrsei-api.herokuapp.com/api/fec2/hr-rfp/reviews/meta?product_id=${productId}`)
+//   .then(res => {
+//     var ratingsObj = res.data.ratings;
+
+//loop over ratings obj
+// for (let key in ratingsObj) {
+//   totalCount += ratingsObj[key];
+//   averageCount += (key * ratingsObj[key]);
+//   let average = averageCount / totalCount;
+
+//   return average;
+  //   }
+  // })
+  // .catch((err) => {
+  //   console.log(err);
+  // });
+
+  /*
+    var data =
   {
     "product_id": "40344",
     "ratings": {
@@ -72,37 +70,4 @@ const StarAverage = () => {
         "value": "3.2967741935483871"
       }
     }
-  }
-
-  let ratingsObj = data.ratings;
-
-  for (let key in ratingsObj) {
-    let value = Number(ratingsObj[key]);
-    let num = Number(key);
-    totalCount += value;
-    averageCount += (num * ratingsObj[key]);
-  }
-
-  let average = averageCount / totalCount;
-  average = Math.round(average * 100) / 100
-  return average;
-}
-
-export default StarAverage;
-
-// axios.get(`https://app-hrsei-api.herokuapp.com/api/fec2/hr-rfp/reviews/meta?product_id=${productId}`)
-//   .then(res => {
-//     var ratingsObj = res.data.ratings;
-
-//loop over ratings obj
-// for (let key in ratingsObj) {
-//   totalCount += ratingsObj[key];
-//   averageCount += (key * ratingsObj[key]);
-//   let average = averageCount / totalCount;
-
-//   return average;
-  //   }
-  // })
-  // .catch((err) => {
-  //   console.log(err);
-  // });
+  }*/

@@ -10,15 +10,18 @@ class Feedback extends React.Component {
     super(props);
 
     this.state = {
-      reviews:{}
+      reviews:{},
+      reviewMeta: {}
     };
     this.getReviews = this.getReviews.bind(this);
+    this.getMeta = this.getMeta.bind(this);
   }
   //R&R API CALLS
+  //get data for individual review tiles
   getReviews() {
-    let product_id = 40344;
+    let product_id = this.props.product_id;
     axios
-      .get('/reviews/', { params: { product_id } })
+      .get('/reviews/', { params: { product_id: product_id } })
       .then(res => {
         const data = res.data;
 
@@ -31,26 +34,71 @@ class Feedback extends React.Component {
       });
   }
 
+  //get review meta
+  getMeta() {
+    let product_id = this.props.product_id;
+    axios
+      .get('/reviews/meta', { params: { product_id: product_id } })
+      .then(res => {
+        const data = res.data;
+
+        this.setState({
+          reviewMeta: data
+        });
+      })
+      .catch((err) => {
+        console.log('error with reviews', err);
+      });
+  }
+
+  //Put review req
+
   //Q&A API CALLS
 
   //component did mount
   componentDidMount() {
     this.getReviews();
+    this.getMeta();
   }
 
   render() {
-    console.log({'product id in feedback': this.props.product_id});
+    //console.log('review star in feedback', this.props.reviewStars);
     return (
       <div>
         <QuestionAnswer />
         <StarReview />
-        <RatingReview reviews={this.state.reviews}/>
+        <div>
+        <RatingReview
+          reviews={this.state.reviews}
+          reviewStars={this.props.reviewStars}
+          meta={this.state.reviewMeta}
+          product_id={this.props.product_id}
+        />
+        </div>
       </div>
     )
   }
 }
 
 export default Feedback;
+
+/* META
+ //get for progress bars
+  getMeta() {
+    let product_id = this.props.product_id;
+    axios
+      .get('/reviews/meta', { params: { product_id: product_id } })
+      .then(res => {
+        const data = res.data;
+
+        this.setState({
+          reviewMeta: data
+        });
+      })
+      .catch((err) => {
+        console.log('error with reviews', err);
+      });
+  }
 
 /*POTENTIAL HOOK REFACTOR
 

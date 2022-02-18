@@ -1,4 +1,5 @@
 const path = require('path');
+const stylesHandler = 'style-loader';
 
 module.exports = {
   mode: 'development',
@@ -28,7 +29,11 @@ module.exports = {
             ]
           }
         }
-      }
+      },
+      {
+        test: /\.css$/i,
+        use: [stylesHandler, 'css-loader', 'postcss-loader'],
+      },
     ],
   }
 };
