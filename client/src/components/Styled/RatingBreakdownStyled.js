@@ -5,13 +5,17 @@ export const AverageStar = styled.div`
   font-weight: bold;
   font-family: Georgia;
   font-weight: 20px;
-  padding: 15px;
+  padding: 20px;
   margin: 20px 75px;
   background-color: #E9967A;
-  width: 40%;
+  width: 60%;
 `
 
-
+export const Container = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`
   // const Starbox = styled.div.attrs({
   //   className: "Starbox"
   // })`

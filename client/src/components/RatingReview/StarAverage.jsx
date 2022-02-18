@@ -14,7 +14,7 @@ const StarAverage = (ratingsObj) => {
   }
 
   let average = averageCount / totalCount;
-  average = Math.round(average * 100) / 100
+  average = Math.round(average * 10) / 10
   return average;
 }
 

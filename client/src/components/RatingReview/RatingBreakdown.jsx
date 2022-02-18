@@ -1,9 +1,9 @@
 import React, { useContext } from 'react';
 import StarAverage from './StarAverage.jsx';
-import { AverageStar, ProgressBar } from '../Styled/RatingBreakdownStyled.js';
+import { AverageStar, ProgressBar, Container } from '../Styled/RatingBreakdownStyled.js';
 import AppContext from '../App.jsx'
 import styled from 'styled-components';
-import '../style.css';
+import css from "../style.css";;
 
 const RatingBreakdown = ({ reviewStars }) => {
   let starObj = reviewStars.ratings;
@@ -29,9 +29,11 @@ const RatingBreakdown = ({ reviewStars }) => {
 
   return (
     <div>
-      <AverageStar>
-        AVERAGE RATING FOR THIS PRODUCT: {avg}
-      </AverageStar>
+      <Container>
+        <AverageStar>
+         AVERAGE RATING FOR THIS PRODUCT: {avg}
+        </AverageStar>
+      </Container>
     </div>
   )
 }

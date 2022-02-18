@@ -4,20 +4,20 @@ import { Container, BarTitle, AverageText } from '../Styled/ProgressBarStyled.js
 import axios from 'axios';
 
 const ProgressBar = ( { reviewStars, meta } ) => {
-  
+
   //to get avg star rating
   let starObj = reviewStars.ratings;
   let avg = StarAverage(starObj);
   let string = avg.toString();
 
-  console.log('meta rec :', reviewStars.recommended);
+  // console.log('meta rec :', reviewStars.recommended);
   //meta deta of recommended
   let rec = reviewStars.recommended;
   //recommended the item
   let notRecommend = Number(rec.false);
   let doRecommend = Number(rec.true);
   let recommendNum = ((doRecommend / (doRecommend + notRecommend)) * 100);
-  let recommendPercentageRound = Math.round(recommendNum * 100) / 100;
+  let recommendPercentageRound = Math.round(recommendNum * 10) / 10;
   let recommendPercentageStr = recommendPercentageRound.toString();
 
   // let comfort = meta.characteristics.Comfort.value;

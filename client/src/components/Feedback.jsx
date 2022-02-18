@@ -51,6 +51,8 @@ class Feedback extends React.Component {
       });
   }
 
+  //Put review req
+
   //Q&A API CALLS
 
   //component did mount
@@ -70,6 +72,7 @@ class Feedback extends React.Component {
           reviews={this.state.reviews}
           reviewStars={this.props.reviewStars}
           meta={this.state.reviewMeta}
+          product_id={this.props.product_id}
         />
         </div>
       </div>
