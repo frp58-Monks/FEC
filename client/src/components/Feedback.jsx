@@ -11,10 +11,12 @@ class Feedback extends React.Component {
 
     this.state = {
       reviews:{},
+      questions: {},
       reviewMeta: {}
     };
     this.getReviews = this.getReviews.bind(this);
     this.getMeta = this.getMeta.bind(this);
+    this.getQuestions = this.getQuestions.bind(this);
   }
   //R&R API CALLS
   //get data for individual review tiles
@@ -55,17 +57,36 @@ class Feedback extends React.Component {
 
   //Q&A API CALLS
 
+  getQuestions() {
+    // const product_id = this.props.product_id;
+    const product_id = 40345
+    axios
+      .get('/qa/questions', { params: {
+        product_id: product_id
+      }})
+      .then(res => {
+        const data = res.data;
+        this.setState({
+          questions: data
+        });
+      })
+      .catch((err) => {
+        console.log('error with questions', err);
+      });
+  }
+
   //component did mount
   componentDidMount() {
     this.getReviews();
     this.getMeta();
+    this.getQuestions();
   }
 
   render() {
     //console.log('review star in feedback', this.props.reviewStars);
     return (
       <div>
-        <QuestionAnswer />
+        <QuestionAnswer questions={this.state.questions}/>
         <StarReview />
         <div>
         <RatingReview
