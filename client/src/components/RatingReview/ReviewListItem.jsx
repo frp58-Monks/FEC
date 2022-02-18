@@ -5,14 +5,9 @@ import { FaCheck } from "react-icons/fa";
 import axios from 'axios';
 
 
-<<<<<<< HEAD
-const ReviewListItem = ({ item }) => {
-  // console.log('item', item);
-=======
 const ReviewListItem = ({ item, product_id, reviewStars, reviews }) => {
   const[helpful, setHelpful] = useState(item.helpfulness);
 
->>>>>>> main
   let date = item.date.split('T');
   date = date[0];
 

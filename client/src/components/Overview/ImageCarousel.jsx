@@ -12,12 +12,12 @@ const ImageCarousel = (props) => {
 
   // console.log({'Styles stylesProp': props.productStyles});
   return (
-    <div>
-      {allImages && allImages[0].photos.map((eachImg) => {
-        return <img className="productStyles" src={eachImg.url} />}
-      )}
-    </div>
-    // <div>images</div>
+    // <div>
+    //   {allImages && allImages[0].photos.map((eachImg) => {
+    //     return <img className="productStyles" src={eachImg.url} />}
+    //   )}
+    // </div>
+    <div>images here baby</div>
   );
 }
 
