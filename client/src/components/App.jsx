@@ -2,42 +2,54 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Overview from './Overview.jsx';
 import Feedback from './Feedback.jsx';
-import Data from './Overview/hardcodedData.jsx';
 import SearchProductBar from './SearchProd.jsx';
 import RatingBreakdown from './RatingReview/RatingBreakdown.jsx';
 
-//Hardcoded prop data to pass to dropdown menus
-const hardcodedSizes = ['XS', 'S', 'M', 'L', 'XL', 'XXL'];
-const hardcodedQuantities = ['1', '2', '10', '16', '17'];
-
 //create global context
 export const AppContext = React.createContext();
-//Updated Component to use React Hooks (instead of class component)
+
 const App = (props) => {
-  const [url, setURL] = useState(window.location.href);
-  const [allProducts, setAllProducts] = useState(null);
+  // const [url, setURL] = useState(window.location.href);
   const [product_id, setProduct_id] = useState(null);
   const [productDetails, setProductDetails] = useState(null);
   const [productStyles, setProductStyles] = useState(null);
+  const [index, setIndex] = useState(0);
   const [reviewStars, setReviewStars] = useState(null);
 
-  window.addEventListener('popstate', (event) => {
-    return setURL(window.loaction.href);
-  })
+  // window.addEventListener('popstate', (event) => {
+  //   return setURL(window.loaction.href);
+  // })
+
+  const searchForProducts = (count, search) => {
+    axios.get('/products', { params: { count }})
+    .then((res) => {
+      const allTheProducts = res.data;
+      allTheProducts.map((eachProd) => {
+        if (eachProd.name.toLowerCase() === search) {
+          setProduct_id(eachProd.id);
+        }
+      })
+    })
+    .catch((err) => {
+      console.log('GET ALL products Error: ', err);
+    })
+  }
+
+  const featureNextProduct = () => {
+    let newIndex = index + 1;
+    setIndex(newIndex);
+  }
 
   useEffect(() => (
     axios.get('/products')
-      .then((res) => {
-        const product_id = res.data[0].id;
-        setProduct_id(product_id);
-        const allProducts = res.data;
-        setAllProducts(allProducts);
-      })
-      .catch((err) => {
-        console.log('GET /products Error: ', err);
-      })
-  ), []);//anytime states listed in [] are changed this function would run again, otherwise everytime you render it runs
-  //Install react method: isonfocus to only useEffect once upon page load
+    .then((res) => {
+      const product_id = res.data[index].id;
+      setProduct_id(product_id);
+    })
+    .catch((err) => {
+      console.log('GET /products Error: ', err);
+    })
+  ), []);
 
   const getProductDetails = (product_id) => {
     axios
@@ -82,13 +94,6 @@ const App = (props) => {
     getReviewStars(product_id)
   ), [product_id]);
 
-  //----Console Log States Before Passing Down to Sub-Components----//
-  // console.log({'current url': url});
-  // console.log({'all products data': allProducts});
-  // console.log({'product id': product_id});
-  // console.log({'product details': productDetails});
-  // console.log({'product styles': productStyles});
-  //------------Render_Here------------//
   return (
     <div className="content">
       <h1>Jello World</h1>
@@ -97,21 +102,21 @@ const App = (props) => {
         <RatingBreakdown reviewStars={reviewStars}/>
         }
       </div>
-      <SearchProductBar/>
-      <Overview
-        sizesArr={hardcodedSizes}
-        qtyArr={hardcodedQuantities}
-        allProducts={allProducts}
-        productId={product_id}
-        productDetails={productDetails}
-        productStyles={productStyles}
-      />
+      <SearchProductBar searchForProducts={searchForProducts}/>
+      <div>
+        {productStyles &&
+        <Overview
+          productDetails={productDetails}
+          productStyles={productStyles}
+        />
+        }
+      </div>
       <div>
         {product_id && reviewStars &&
           <Feedback
           product_id={product_id}
           reviewStars={reviewStars}
-        />
+          />
         }
       </div>
     </div>
