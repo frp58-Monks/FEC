@@ -66,7 +66,7 @@ const App = (props) => {
       })
   }
 
-  const getReviewStars = () => {
+  const getReviewStars = (product_id) => {
     axios.get('/reviews/meta', { params: { product_id } })
       .then(res => {
         setReviewStars(res.data);
@@ -128,7 +128,7 @@ export default App;
   // const averageSetting = {
   //   ratingAverage, setRatingAverage
   // }
-  
+
  <AppContext.Provider value={averageSetting}>
      </AppContext.Provider>
       <div>

@@ -25,15 +25,15 @@ const RatingBreakdown = ({ reviewStars }) => {
   // }
 
   let string = avg.toString();
-  // const width = avg * 10;
+  let width = avg * 10;
+  console.log('width ', width);
 
   return (
     <div>
-      <Container>
-        <AverageStar>
-         AVERAGE RATING FOR THIS PRODUCT: {avg}
-        </AverageStar>
-      </Container>
+        <div className="starbox">
+          <div style={{ width: `${width}%`}}>★★★★★</div>
+          <div>☆☆☆☆☆</div>
+        </div>
     </div>
   )
 }
@@ -47,8 +47,10 @@ progress bar:
       <progress value={string} max='5' />
 
 
-      <div class="star-ratings">
-        <div class="fill-ratings" style="width: 50%;">
+      <div class="starbox">
+        <div style={{ width: `{width}%`}}>★★★★★</div>
+
+
           <span>★★★★★</span>
         </div>
         <div class="empty-ratings">
@@ -61,4 +63,10 @@ progress bar:
         <div>⭐ ⭐ ⭐ ⭐ ⭐</div>
         <div>☆ ☆ ☆ ☆ ☆</div>
       </StarBox>
+
+            <Container>
+        <AverageStar>
+         AVERAGE RATING FOR THIS PRODUCT: {avg}
+        </AverageStar>
+      </Container>
 */

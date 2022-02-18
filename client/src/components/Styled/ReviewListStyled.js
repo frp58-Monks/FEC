@@ -53,7 +53,16 @@ export const Recommend = styled.div`
   padding: 3px;
 `
 
+export const Helpful = styled.button`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  border: 3px solid green;
+`
+
 export const Left = styled.div`
   display: flex;
   justify-content: flex-end;
 `
+

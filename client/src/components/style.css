@@ -1,45 +1,11 @@
-/* .starbox {
-  display: inline-block;
-  position: relative;
-  font-size: 100px;
-  color: #ddd;
+.starbox {
+  display: inline-grid;
+  color: green;
 }
 
-.starbox:after {
-  content: "\f005";
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 60%;
+.starbox div {
+  grid-column: 1;
+  grid-row: 2;
   overflow: hidden;
-  color: #f80;
-} */
-
-/* .star-ratings {
-  unicode-bidi: bidi-override;
-  color: #ccc;
-  font-size: 64px;
-  position: relative;
-  margin: 0;
-  padding: 0;
-  .fill-ratings {
-    color: #e7711b;
-    padding: 0;
-    position: absolute;
-    z-index: 1;
-    display: block;
-    top: 0;
-    left: 0;
-    overflow: hidden;
-
-    span {
-      display: inline-block;
-    }
-  }
-
-  .empty-ratings {
-    padding: 0;
-    display: block;
-    z-index: 0;
-    }
-  } */
+  font-size: 24px;
+}

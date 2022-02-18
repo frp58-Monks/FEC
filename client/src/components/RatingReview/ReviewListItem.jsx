@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { ReviewSummary, ReviewWrapper, ReviewBody, ReviewDate, ReviewPurchaser, Response, Recommend, Left } from '../Styled/ReviewListStyled.js';
+import { ReviewSummary, ReviewWrapper, ReviewBody, ReviewDate, ReviewPurchaser, Response, Recommend, Left, Helpful } from '../Styled/ReviewListStyled.js';
 import StarFilled from '../RatingReview/StarFilled.jsx';
 import { FaCheck } from "react-icons/fa";
 import axios from 'axios';
@@ -22,7 +22,7 @@ const ReviewListItem = ({ item, product_id, reviewStars, reviews }) => {
     reviewRating.push('⭐')
   }
 
-  //putting helpful reviews
+  //putting helpful reviews/onclick change count
   const updateHelpful = () => {
     let review_id = item.review_id;
 
@@ -34,7 +34,6 @@ const ReviewListItem = ({ item, product_id, reviewStars, reviews }) => {
         console.log('error with helpful submission', err);
       })
   }
-  //helpful review on click
 
   return (
     <Left >
@@ -49,7 +48,7 @@ const ReviewListItem = ({ item, product_id, reviewStars, reviews }) => {
       <ReviewSummary>Summary: {cappedSummary}</ReviewSummary>
       <ReviewBody>{item.body}</ReviewBody>
       <Response>{item.response ? `Response from seller: ${item.response}` : ''}</Response>
-      <button onClick={updateHelpful}>Helpful? Yes: {helpful}</button>
+      <Helpful onClick={updateHelpful}>Helpful? Yes: {helpful}</Helpful>
     </ReviewWrapper>
     </Left>
   )
