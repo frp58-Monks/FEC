@@ -27,7 +27,7 @@ const Overview = (props) => {
           <div className="category"><b>Category: </b>{props.productDetails.category}</div>
 
           <div>
-            <div className="stars">import Stars PROP from App</div>
+            <RatingBreakdown reviewStars={props.reviewStars}/>
             <div>Ratings-link</div>
             <div>Reviews-link</div>
           </div>
