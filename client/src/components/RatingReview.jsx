@@ -8,13 +8,13 @@ import { TotalContainer } from './Styled/ProgressBarStyled.js';
 
 
 //takes in product_id prop from feedback
-const RatingReview = ({ reviews, reviewStars, meta, product_id }) => {
+const RatingReview = ({ reviews, reviewStars, product_id }) => {
   let resultsArr = reviews.results;
   // console.log('review meta', meta);
   return (
     <div>
         <RatingBreakdown reviewStars={reviewStars}/>
-        <ProgressBar reviewStars={reviewStars} meta={meta}/>
+        <ProgressBar reviewStars={reviewStars} />
         <div>
           {
             resultsArr &&

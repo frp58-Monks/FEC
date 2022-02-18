@@ -12,10 +12,8 @@ class Feedback extends React.Component {
     this.state = {
       reviews:{},
       questions: {},
-      reviewMeta: {}
     };
     this.getReviews = this.getReviews.bind(this);
-    this.getMeta = this.getMeta.bind(this);
     this.getQuestions = this.getQuestions.bind(this);
   }
   //R&R API CALLS
@@ -37,21 +35,21 @@ class Feedback extends React.Component {
   }
 
   //get review meta
-  getMeta() {
-    let product_id = this.props.product_id;
-    axios
-      .get('/reviews/meta', { params: { product_id: product_id } })
-      .then(res => {
-        const data = res.data;
+  // getMeta() {
+  //   let product_id = this.props.product_id;
+  //   axios
+  //     .get('/reviews/meta', { params: { product_id: product_id } })
+  //     .then(res => {
+  //       const data = res.data;
 
-        this.setState({
-          reviewMeta: data
-        });
-      })
-      .catch((err) => {
-        console.log('error with reviews', err);
-      });
-  }
+  //       this.setState({
+  //         reviewMeta: data
+  //       });
+  //     })
+  //     .catch((err) => {
+  //       console.log('error with reviews', err);
+  //     });
+  // }
 
   //Put review req
 
@@ -78,7 +76,6 @@ class Feedback extends React.Component {
   //component did mount
   componentDidMount() {
     this.getReviews();
-    this.getMeta();
     this.getQuestions();
   }
 
@@ -92,7 +89,6 @@ class Feedback extends React.Component {
         <RatingReview
           reviews={this.state.reviews}
           reviewStars={this.props.reviewStars}
-          meta={this.state.reviewMeta}
           product_id={this.props.product_id}
         />
         </div>
