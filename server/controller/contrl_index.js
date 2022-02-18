@@ -77,6 +77,20 @@ const getAnswers = (req, res) => {
   })
 }
 
+//PUT Requests
+const putReviewHelpful = (req, res) => {
+  const params = req.body.params;
+  console.log('server put', params);
+
+  Model.putReviewHelpful(params, (err, reviews) => {
+    if (err) {
+      res.status(500).send(err);
+    } else {
+      res.status(204).send();
+    }
+  })
+}
+
 module.exports = {
   getAllProducts,
   getOneProduct,
@@ -84,5 +98,6 @@ module.exports = {
   getReviews,
   getReviewsMeta,
   getQuestions,
-  getAnswers
+  getAnswers,
+  putReviewHelpful
 };
