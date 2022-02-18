@@ -14,7 +14,7 @@ const App = (props) => {
   const [productDetails, setProductDetails] = useState(null);
   const [productStyles, setProductStyles] = useState(null);
   const [index, setIndex] = useState(0);
-  const [reviewStars, setReviewStars] = useState(null);
+  const [reviewStars, setReviewStars] = useState('');
 
   // window.addEventListener('popstate', (event) => {
   //   return setURL(window.loaction.href);
@@ -97,20 +97,34 @@ const App = (props) => {
   return (
     <div className="content">
       <h1>Jello World</h1>
+
+      <div>
+        <div className="ratingsAnchor">#ratgins_anchor</div>
+        <div className="questionsAnchor">#quesions_anchor</div>
+      </div>
+
       <div>
         {reviewStars &&
-        <RatingBreakdown reviewStars={reviewStars}/>
-        }
-      </div>
-      <SearchProductBar searchForProducts={searchForProducts}/>
-      <div>
-        {productStyles &&
-        <Overview
-          productDetails={productDetails}
-          productStyles={productStyles}
+        <RatingBreakdown
+          reviewStars={reviewStars}
+          getReviewStars={getReviewStars}
         />
         }
       </div>
+
+      <SearchProductBar searchForProducts={searchForProducts}/>
+
+      <div>
+        <stars></stars>
+        {productStyles && reviewStars &&
+        <Overview
+          productDetails={productDetails}
+          productStyles={productStyles}
+          stars={reviewStars}
+        />
+        }
+      </div>
+
       <div>
         {product_id && reviewStars &&
           <Feedback

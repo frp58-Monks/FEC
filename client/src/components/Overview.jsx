@@ -7,6 +7,7 @@ import Price from './Overview/Price.jsx';
 import AddToCart from './Overview/AddtoCart.jsx';
 
 const Overview = (props) => {
+  console.log({'stars': props.stars});
   let rdyToRender = null;
   if (props.productDetails && props.productStyles) {
     rdyToRender = true;

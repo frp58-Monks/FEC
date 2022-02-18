@@ -5,8 +5,9 @@ import AppContext from '../App.jsx'
 import styled from 'styled-components';
 import css from "../style.css";;
 
-const RatingBreakdown = ({ reviewStars }) => {
-  let starObj = reviewStars.ratings;
+const RatingBreakdown = (props) => {
+  console.log('rb stars', props.getReviewStars);
+  let starObj = props.reviewStars.ratings;
   let avg = StarAverage(starObj);
   let stars = [];
 
