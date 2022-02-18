@@ -9,24 +9,21 @@ import RatingBreakdown from './RatingReview/RatingBreakdown.jsx';
 export const AppContext = React.createContext();
 
 const App = (props) => {
-  const [url, setURL] = useState(window.location.href);
-  // const [allProducts, setAllProducts] = useState(null);
+  // const [url, setURL] = useState(window.location.href);
   const [product_id, setProduct_id] = useState(null);
   const [productDetails, setProductDetails] = useState(null);
   const [productStyles, setProductStyles] = useState(null);
   const [index, setIndex] = useState(0);
   const [reviewStars, setReviewStars] = useState(null);
 
-  window.addEventListener('popstate', (event) => {
-    return setURL(window.loaction.href);
-  })
+  // window.addEventListener('popstate', (event) => {
+  //   return setURL(window.loaction.href);
+  // })
 
   const searchForProducts = (count, search) => {
-    console.log('count: ', count, 'search: ', search);
     axios.get('/products', { params: { count }})
     .then((res) => {
       const allTheProducts = res.data;
-      setAllProducts(res.data);
       allTheProducts.map((eachProd) => {
         if (eachProd.name.toLowerCase() === search) {
           setProduct_id(eachProd.id);
@@ -48,14 +45,11 @@ const App = (props) => {
     .then((res) => {
       const product_id = res.data[index].id;
       setProduct_id(product_id);
-      // const allProducts = res.data;
-      // setAllProducts(allProducts);
     })
     .catch((err) => {
       console.log('GET /products Error: ', err);
     })
-  ), []);//anytime states listed in [] are changed this function would run again, otherwise everytime you render it runs
-  //Install react method: isonfocus to only useEffect once upon page load
+  ), []);
 
   const getProductDetails = (product_id) => {
     axios

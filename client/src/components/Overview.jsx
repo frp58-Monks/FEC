@@ -7,22 +7,10 @@ import Price from './Overview/Price.jsx';
 import AddToCart from './Overview/AddtoCart.jsx';
 
 const Overview = (props) => {
-  // const [loading, setLoading] = useState(false);
-
-  // console.log({'Overview productId': props.productId});
-  // console.log({'Overview allProducts': props.allProducts});
-  // console.log({'Overview productDetails': props.productDetails});
-  // console.log({'Overview productStyles': props.productStyles});
-
-  // Conditional Rendering - If Product Details and Product Styles states are not null then render
-  // If state_name is truthy then do null otherwise do y
-  // return product_id ? null : y
   let rdyToRender = null;
   if (props.productDetails && props.productStyles) {
     rdyToRender = true;
-    // console.log({'The DOM is ready to render: ': rdyToRender});
   }
-
   return (
     <div>
       {rdyToRender &&
