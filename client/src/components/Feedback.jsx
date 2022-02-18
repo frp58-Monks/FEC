@@ -10,9 +10,11 @@ class Feedback extends React.Component {
     super(props);
 
     this.state = {
-      reviews:{}
+      reviews:{},
+      questions: {}
     };
     this.getReviews = this.getReviews.bind(this);
+    this.getQuestions = this.getQuestions.bind(this);
   }
   //R&R API CALLS
   getReviews() {
@@ -33,16 +35,35 @@ class Feedback extends React.Component {
 
   //Q&A API CALLS
 
+  getQuestions() {
+    // const product_id = this.props.product_id;
+    const product_id = 40345
+    axios
+      .get('/qa/questions', { params: {
+        product_id: product_id
+      }})
+      .then(res => {
+        const data = res.data;
+        this.setState({
+          questions: data
+        });
+      })
+      .catch((err) => {
+        console.log('error with questions', err);
+      });
+  }
+
   //component did mount
   componentDidMount() {
     this.getReviews();
+    this.getQuestions();
   }
 
   render() {
-    console.log({'product id in feedback': this.props.product_id});
+    // console.log({'product id in feedback': this.props.product_id});
     return (
       <div>
-        {/* <QuestionAnswer /> */}
+        <QuestionAnswer questions={this.state.questions}/>
         <StarReview />
         <RatingReview reviews={this.state.reviews}/>
       </div>

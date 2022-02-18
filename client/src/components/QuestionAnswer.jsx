@@ -1,26 +1,18 @@
-import React, { useState, useEffect, useContext } from 'react';
-import axios from 'axios';
+import React from 'react';
+import QuestionListItem from './QuestionAnswer/QuestionListItem.jsx';
 
-const QuestionAnswer = (props) => {
-
-  const [questions, setQuestions] = useState([]);
-  const [question_id, setQuestion_id] = useState(null);
-  const [product_id, setProduct_id] = useState(props.product_id);
-
-  useEffect(() => (
-    axios.get('/qa/questions', { params: {
-      product_id: props.product_id,
-      page: 1,
-      count: 2
-    }})
-      .then((res) => { setQuestions(res.data); console.log({'Questions': questions})})
-      .catch((err) => {console.log('Client GET ERR', err)
-    })
-  ), [product_id]);
-
+const QuestionAnswer = ({ questions }) => {
+  let questionsArr = questions.results;
 
   return (
-    <div>Question and Answer Components Here</div>
+    <div>
+      {
+        questionsArr &&
+        questionsArr.map((question, i) => (
+          <QuestionListItem question={question} key={i} />
+        ))
+      }
+    </div>
   );
 }
 
