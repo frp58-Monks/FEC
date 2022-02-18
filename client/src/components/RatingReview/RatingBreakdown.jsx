@@ -14,19 +14,8 @@ const RatingBreakdown = ({ reviewStars }) => {
   let solid = decimal[0];
   decimal = decimal[1];
 
-  //let test = useContext(AppContext);
-  //console.log('test: ', test.ratingAverage);
-
-  // for (let i = 0; i < solid; i++) {
-  //   stars.push('⭐');
-  // }
-  // if (decimal <= 50) {
-  //   stars.push('')
-  // }
-
   let string = avg.toString();
   let width = avg * 10;
-  console.log('width ', width);
 
   return (
     <div>
@@ -46,25 +35,7 @@ progress bar:
       <label>Average Rating: {avg} </label>
       <progress value={string} max='5' />
 
-
-      <div class="starbox">
-        <div style={{ width: `{width}%`}}>★★★★★</div>
-
-
-          <span>★★★★★</span>
-        </div>
-        <div class="empty-ratings">
-          <span>★★★★★</span>
-        </div>
-      </div>
-
-
-      <StarBox width={`25%`}>
-        <div>⭐ ⭐ ⭐ ⭐ ⭐</div>
-        <div>☆ ☆ ☆ ☆ ☆</div>
-      </StarBox>
-
-            <Container>
+    <Container>
         <AverageStar>
          AVERAGE RATING FOR THIS PRODUCT: {avg}
         </AverageStar>
