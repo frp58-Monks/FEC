@@ -4,20 +4,24 @@ export const ReviewSummary = styled.div`
   font-weight: bold;
   font-family: Georgia;
   font-weight: 10px;
+  overflow: auto;
 `
 
 export const ReviewWrapper = styled.div`
   border-style: solid;
   width: 50%;
+  align: center;
   padding:10px;
   margin: 30px 15px;
+  background-color: #DCDCDC;
 `
 
 export const ReviewBody = styled.div`
   padding: 10px;
-  margin: 5px;
+  margin: 10px;
   text-align: center;
   font-family: Georgia;
+  overflow: auto;
 `
 
 export const ReviewDate = styled.div`
@@ -41,9 +45,24 @@ export const Response = styled.div`
   font-family: Georgia;
   background-color: #F0F8FF;
 `
+
 export const Recommend = styled.div`
   text-align: right;
   font-family: Georgia;
   font-size: smaller;
   padding: 3px;
 `
+
+export const Helpful = styled.button`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  border: 3px solid green;
+`
+
+export const Left = styled.div`
+  display: flex;
+  justify-content: flex-end;
+`
+
