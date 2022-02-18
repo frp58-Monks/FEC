@@ -35,6 +35,10 @@ app.get('/qa/questions/:question_id/answers', (req, res) => {
   Controller.getAnswers(req, res);
 });
 
+app.put('/reviews/:review_id/helpful', (req, res) => {
+  Controller.putReviewHelpful(req, res);
+});
+
 app.listen(PORT, () => {
   console.log(`Server listening on port: ${PORT}`);
 });

@@ -3,25 +3,28 @@ import axios from 'axios';
 import Overview from './Overview.jsx';
 import Feedback from './Feedback.jsx';
 import SearchProductBar from './SearchProd.jsx';
+import RatingBreakdown from './RatingReview/RatingBreakdown.jsx';
+
+//create global context
+export const AppContext = React.createContext();
 
 const App = (props) => {
   const [url, setURL] = useState(window.location.href);
-  const [allProducts, setAllProducts] = useState(null);
+  // const [allProducts, setAllProducts] = useState(null);
   const [product_id, setProduct_id] = useState(null);
   const [productDetails, setProductDetails] = useState(null);
   const [productStyles, setProductStyles] = useState(null);
   const [index, setIndex] = useState(0);
+  const [reviewStars, setReviewStars] = useState(null);
 
   window.addEventListener('popstate', (event) => {
     return setURL(window.loaction.href);
   })
 
-//     axios.get('/products', { params: {count: 1000}})
   const searchForProducts = (count, search) => {
     console.log('count: ', count, 'search: ', search);
     axios.get('/products', { params: { count }})
     .then((res) => {
-      // console.log('Search Res: ', res);
       const allTheProducts = res.data;
       setAllProducts(res.data);
       allTheProducts.map((eachProd) => {
@@ -29,12 +32,10 @@ const App = (props) => {
           setProduct_id(eachProd.id);
         }
       })
-
     })
     .catch((err) => {
       console.log('GET ALL products Error: ', err);
     })
-
   }
 
   const featureNextProduct = () => {
@@ -83,22 +84,31 @@ const App = (props) => {
       })
   }
 
+  const getReviewStars = (product_id) => {
+    axios.get('/reviews/meta', { params: { product_id } })
+      .then(res => {
+        setReviewStars(res.data);
+      })
+      .catch((err) => {
+        console.log('error with stars: ', err);
+      })
+  }
+
   useEffect(() => (
     getProductDetails(product_id),
-    getProductStyles(product_id)
+    getProductStyles(product_id),
+    getReviewStars(product_id)
   ), [product_id]);
 
-  //----Console Log States Before Passing Down to Sub-Components----//
-  // console.log({'current url': url});
-  // console.log({'all products data': allProducts});
-  // console.log({'product id': product_id});
-  // console.log({'product details': productDetails});
-  // console.log({'product styles': productStyles});
-  //------------Render_Here------------//
   return (
     <div className="content">
       <h1>Jello World</h1>
-      <SearchProductBar allProducts={allProducts} searchForProducts={searchForProducts}/>
+      <div>
+        {reviewStars &&
+        <RatingBreakdown reviewStars={reviewStars}/>
+        }
+      </div>
+      <SearchProductBar searchForProducts={searchForProducts}/>
       <div>
         {productStyles &&
         <Overview
@@ -108,10 +118,11 @@ const App = (props) => {
         }
       </div>
       <div>
-        {product_id &&
+        {product_id && reviewStars &&
           <Feedback
           product_id={product_id}
-        />
+          reviewStars={reviewStars}
+          />
         }
       </div>
     </div>
@@ -119,3 +130,24 @@ const App = (props) => {
 }
 
 export default App;
+
+
+/*
+
+  // const [ratingAverage, setRatingAverage] = useState(0);
+
+  // const averageSetting = {
+  //   ratingAverage, setRatingAverage
+  // }
+
+ <AppContext.Provider value={averageSetting}>
+     </AppContext.Provider>
+      <div>
+        {product_id && reviewStars &&
+          <Feedback
+          product_id={product_id}
+          reviewStars={reviewsStars}
+        />
+        }
+      </div>
+      */
