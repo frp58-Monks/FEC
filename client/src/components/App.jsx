@@ -2,15 +2,8 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Overview from './Overview.jsx';
 import Feedback from './Feedback.jsx';
-import Data from './Overview/hardcodedData.jsx';
-// import ReviewListData from './RatingReview/HardcodeData.jsx';
 import SearchProductBar from './SearchProd.jsx';
 
-//Hardcoded prop data to pass to dropdown menus
-const hardcodedSizes = ['XS', 'S', 'M', 'L', 'XL', 'XXL'];
-const hardcodedQuantities = ['1', '2', '10', '16', '17'];
-
-//Updated Component to use React Hooks (instead of class component)
 const App = (props) => {
   const [url, setURL] = useState(window.location.href);
   const [allProducts, setAllProducts] = useState(null);
@@ -29,9 +22,9 @@ const App = (props) => {
     .then((res) => {
       // console.log('Search Res: ', res);
       const allTheProducts = res.data;
-      // setAllProducts(res.data);
+      setAllProducts(res.data);
       allTheProducts.map((eachProd) => {
-        if (eachProd.name === search) {
+        if (eachProd.name.toLowerCase() === search) {
           setProduct_id(eachProd.id);
         }
       })

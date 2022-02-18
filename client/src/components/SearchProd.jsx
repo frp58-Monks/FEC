@@ -11,7 +11,7 @@ const SearchProductBar = (props) => {
     <form onSubmit={(e) => {
       e.preventDefault();
       console.log('You Clicked on Search!');
-      props.searchForProducts(1000, searchInput);
+      props.searchForProducts(1000, searchInput.toLowerCase());
     }}>
       <input
         type="text"

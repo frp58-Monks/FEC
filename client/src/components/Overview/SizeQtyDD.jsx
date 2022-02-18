@@ -26,11 +26,14 @@ const SizeQtyDD = (props) => {
     setQtyArray(arrayOfQuantities);
   }
 
-  let arrayOfSizes = [];
+  let arrayOfSizes = ['--'];
   if (props.productStyles) {
     let skusKeys = Object.keys(props.productStyles.results[0].skus);
     skusKeys.forEach((skuskey) => {
-      arrayOfSizes.push(props.productStyles.results[0].skus[skuskey].size);
+      let currentSize = props.productStyles.results[0].skus[skuskey].size;
+      if (arrayOfSizes.indexOf(currentSize) === -1) {
+        arrayOfSizes.push(currentSize);
+      }
     })
   }
 
