@@ -7,7 +7,7 @@ import { TotalContainer } from './Styled/ProgressBarStyled.js';
 
 
 //takes in product_id prop from feedback
-const RatingReview = ({ reviews, reviewStars, product_id, reviewFunc, filter }) => {
+const RatingReview = ({ reviews, reviewStars, product_id, reviewFunc, setDropdown }) => {
   const [showCount, setShowCount] = useState(2);
   const [selectedDropdown, setSelectedDropdown] = useState('relevant');
 
@@ -27,7 +27,7 @@ const RatingReview = ({ reviews, reviewStars, product_id, reviewFunc, filter }) 
   //sort filter view
   const onChange = (e) => {
     setSelectedDropdown(e.target.value);
-    reviewFunc(product_id, selectedDropdown);
+    setDropdown(e.target.value);
   }
 
   return (

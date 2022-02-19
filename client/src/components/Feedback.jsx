@@ -6,9 +6,10 @@ import axios from 'axios';
 
 const Feedback = (props) => {
   const [reviews, setReviews] = useState({});
-  const [reviewMeta, setReviewMeta] = useState({});
   const [questions, setQuestions] = useState({});
   const [product_id, setProduct_id] = useState(props.product_id);
+  const [dropdown, setDropdown] = useState('relevant');
+
   if (props.product_id !== product_id) {
     setProduct_id(props.product_id);
   }
@@ -20,7 +21,7 @@ const Feedback = (props) => {
       .get('/reviews/', {
         params: {
           product_id: product_id,
-          sort: selectedDropdown
+          sort: dropdown
         }
       })
       .then(res => {
@@ -31,20 +32,7 @@ const Feedback = (props) => {
       });
   }
 
-  //get review meta
-  const getMeta = () => {
-    axios
-      .get('/reviews/meta', { params: { product_id: product_id } })
-      .then(res => {
-        setReviewMeta(res.data);
-      })
-      .catch((err) => {
-        console.log('error with reviews', err);
-      });
-  }
-
   //Q&A API CALLS
-
   const getQuestions = () => {
     axios
       .get('/qa/questions', { params: { product_id: product_id } })
@@ -56,11 +44,14 @@ const Feedback = (props) => {
       });
   }
 
+  // useEffect(() => (
+  //   getReviews(dropdown)
+  // ), [dropdown]);
+
   useEffect(() => (
     getReviews(),
-    getMeta(),
     getQuestions()
-  ), [product_id]);
+  ), [product_id, dropdown]);
 
   return (
     <div>
@@ -69,12 +60,15 @@ const Feedback = (props) => {
       />
       <StarReview />
       <div>
+        {props.reviewStars && reviews && product_id &&
         <RatingReview
           reviews={reviews}
           reviewStars={props.reviewStars}
-          meta={reviewMeta}
           product_id={product_id}
+          reviewFunc={getReviews}
+          setDropdown={setDropdown}
         />
+        }
       </div>
     </div>
   )
@@ -130,6 +124,19 @@ export default Feedback;
 //         console.log('error with reviews', err);
 //       });
 //   }
+
+  //get review meta
+  // const getMeta = () => {
+  //   axios
+  //     .get('/reviews/meta', { params: { product_id: product_id } })
+  //     .then(res => {
+  //       setReviewMeta(res.data);
+  //     })
+  //     .catch((err) => {
+  //       console.log('error with reviews', err);
+  //     });
+  // }
+
 
 //   //Put review req
 
