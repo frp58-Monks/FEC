@@ -25,7 +25,7 @@ const QuestionListitem = (props) => {
 
   return (
     <div>
-      Question: {props.question.body}
+      Question: {props.question.question_body}
       {
         answers.map((answer, i) => (
           <AnswerListItem answer={answer} key={i} />

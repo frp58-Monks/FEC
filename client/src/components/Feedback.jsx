@@ -4,32 +4,22 @@ import QuestionAnswer from './QuestionAnswer.jsx';
 import StarReview from './RatingReview/StarReview.jsx';
 import axios from 'axios';
 
-//takes in product id from app (overview)
-class Feedback extends React.Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      reviews:{},
-      questions: {},
-      reviewMeta: {}
-    };
-    this.getReviews = this.getReviews.bind(this);
-    this.getMeta = this.getMeta.bind(this);
-    this.getQuestions = this.getQuestions.bind(this);
+const Feedback = (props) => {
+  const [reviews, setReviews] = useState({});
+  const [reviewMeta, setReviewMeta] = useState({});
+  const [questions, setQuestions] = useState({});
+  const [product_id, setProduct_id] = useState(props.product_id);
+  if (props.product_id !== product_id) {
+    setProduct_id(props.product_id);
   }
+
   //R&R API CALLS
   //get data for individual review tiles
-  getReviews() {
-    let product_id = this.props.product_id;
+  const getReviews = () => {
     axios
       .get('/reviews/', { params: { product_id: product_id } })
       .then(res => {
-        const data = res.data;
-
-        this.setState({
-          reviews: data
-        });
+        setReviews(res.data);
       })
       .catch((err) => {
         console.log('error with reviews', err);
@@ -37,71 +27,152 @@ class Feedback extends React.Component {
   }
 
   //get review meta
-  getMeta() {
-    let product_id = this.props.product_id;
+  const getMeta = () => {
     axios
       .get('/reviews/meta', { params: { product_id: product_id } })
       .then(res => {
-        const data = res.data;
-
-        this.setState({
-          reviewMeta: data
-        });
+        setReviewMeta(res.data);
       })
       .catch((err) => {
         console.log('error with reviews', err);
       });
   }
 
-  //Put review req
-
   //Q&A API CALLS
 
-  getQuestions() {
-    // const product_id = this.props.product_id;
-    const product_id = 40345
+  const getQuestions = () => {
     axios
-      .get('/qa/questions', { params: {
-        product_id: product_id
-      }})
+      .get('/qa/questions', { params: { product_id: product_id } })
       .then(res => {
-        const data = res.data;
-        this.setState({
-          questions: data
-        });
+        setQuestions(res.data);
       })
       .catch((err) => {
         console.log('error with questions', err);
       });
   }
 
-  //component did mount
-  componentDidMount() {
-    this.getReviews();
-    this.getMeta();
-    this.getQuestions();
-  }
+  useEffect(() => (
+    getReviews(),
+    getMeta(),
+    getQuestions()
+  ), [product_id]);
 
-  render() {
-    //console.log('review star in feedback', this.props.reviewStars);
-    return (
+  return (
+    <div>
+      <QuestionAnswer
+        questions={questions}
+      />
+      <StarReview />
       <div>
-        <QuestionAnswer questions={this.state.questions}/>
-        <StarReview />
-        <div>
         <RatingReview
-          reviews={this.state.reviews}
-          reviewStars={this.props.reviewStars}
-          meta={this.state.reviewMeta}
-          product_id={this.props.product_id}
+          reviews={reviews}
+          reviewStars={props.reviewStars}
+          meta={reviewMeta}
+          product_id={product_id}
         />
-        </div>
       </div>
-    )
-  }
+    </div>
+  )
 }
 
 export default Feedback;
+
+// //takes in product id from app (overview)
+// class Feedback extends React.Component {
+//   constructor(props) {
+//     super(props);
+
+//     this.state = {
+//       reviews:{},
+//       questions: {},
+//       reviewMeta: {}
+//     };
+//     this.getReviews = this.getReviews.bind(this);
+//     this.getMeta = this.getMeta.bind(this);
+//     this.getQuestions = this.getQuestions.bind(this);
+//   }
+//   //R&R API CALLS
+//   //get data for individual review tiles
+//   getReviews() {
+//     let product_id = this.props.product_id;
+//     axios
+//       .get('/reviews/', { params: { product_id: product_id } })
+//       .then(res => {
+//         const data = res.data;
+
+//         this.setState({
+//           reviews: data
+//         });
+//       })
+//       .catch((err) => {
+//         console.log('error with reviews', err);
+//       });
+//   }
+
+//   //get review meta
+//   getMeta() {
+//     let product_id = this.props.product_id;
+//     axios
+//       .get('/reviews/meta', { params: { product_id: product_id } })
+//       .then(res => {
+//         const data = res.data;
+
+//         this.setState({
+//           reviewMeta: data
+//         });
+//       })
+//       .catch((err) => {
+//         console.log('error with reviews', err);
+//       });
+//   }
+
+//   //Put review req
+
+//   //Q&A API CALLS
+
+//   getQuestions() {
+//     // const product_id = this.props.product_id;
+//     const product_id = 40345
+//     axios
+//       .get('/qa/questions', { params: {
+//         product_id: product_id
+//       }})
+//       .then(res => {
+//         const data = res.data;
+//         this.setState({
+//           questions: data
+//         });
+//       })
+//       .catch((err) => {
+//         console.log('error with questions', err);
+//       });
+//   }
+
+//   //component did mount
+//   componentDidMount() {
+//     this.getReviews();
+//     this.getMeta();
+//     this.getQuestions();
+//   }
+
+//   render() {
+//     //console.log('review star in feedback', this.props.reviewStars);
+//     return (
+//       <div>
+//         <QuestionAnswer questions={this.state.questions}/>
+//         <StarReview />
+//         <div>
+//         <RatingReview
+//           reviews={this.state.reviews}
+//           reviewStars={this.props.reviewStars}
+//           meta={this.state.reviewMeta}
+//           product_id={this.props.product_id}
+//         />
+//         </div>
+//       </div>
+//     )
+//   }
+// }
 
 /* META
  //get for progress bars
