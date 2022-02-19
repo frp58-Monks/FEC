@@ -7,7 +7,6 @@ const Styles = () => {
   const { productStyles } = useContext(AppContext);
   const { defaultStyle, updateCurrentStyle } = useContext(OverviewContext);
 
-
   return (
     <div style={{display: 'block'}}>
       <div>

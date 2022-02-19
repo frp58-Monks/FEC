@@ -11,7 +11,6 @@ import { AppContext } from './App.jsx';
 
 export const OverviewContext = createContext();
 
-
 const Overview = () => {
   const { productStyles, productDetails, reviewStars } = useContext(AppContext);
   const [defaultStyle, setDefaultStyle] = useState(productStyles.results[0]);
@@ -32,18 +31,16 @@ const Overview = () => {
 
   return (
     <OverviewContext.Provider value={{ updateCurrentStyle, defaultStyle }}>
-    <div>
       {rdyToRender &&
       <div className="overviewMain">
-        <div className="image-carousel">
-          <ImageCarousel/>
-        </div>
+
+        <ImageCarousel/>
 
         <div className="product-details">
 
           <h3>{productDetails.name}</h3>
 
-          <div className="category"><b>Category: </b>{productDetails.category}</div>
+          <div><b>Category: </b>{productDetails.category}</div>
 
           <div>
             <RatingBreakdown reviewStars={reviewStars}/>
@@ -51,21 +48,20 @@ const Overview = () => {
             <div>Reviews-link</div>
           </div>
 
-          <div>About this Item: <p className="productDesription">{productDetails.description}</p></div>
+          <div>About this Item: <p>{productDetails.description}</p></div>
 
-          <div className="styles"><Styles/></div>
+          <Styles/>
 
           <div className="dropdownsCart">
-            <SizeQtyDD productStyles={productStyles}/>
-            <div><AddToCart /></div>
+            <SizeQtyDD/>
+            <AddToCart />
           </div>
 
-          <div><Price originalPrice={productStyles.results[0].original_price} salePrice={productStyles.results[0].sale_price}/></div>
+          <Price/>
 
         </div>
       </div>
       }
-    </div>
     </OverviewContext.Provider>
   );
 }

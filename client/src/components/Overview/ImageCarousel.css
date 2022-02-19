@@ -1,20 +1,27 @@
 .carousel {
   overflow: hidden;
-  display: flex;
+  border-radius: 20px;
+  border: 1px rgb(255, 215, 0) solid;
+  padding: 10px;
+  flex: 5;
+  max-width: 500px;
+  max-height: 500px;
 }
 
-.inner {
+.allImages {
   white-space: nowrap;
-  transition: transform 0.3s;
+  border: 5px black solid;
+  max-width: 490px;
+  height: 90%;
+  width: 100%;
+  object-fit: contain;
 }
 
-.carousel-item {
+.eachImage {
   display: inline-flex;
   align-items: center;
-  justify-content: center;
-  height: 200px;
-  background-color: lightblue;
-  color: #fff;
+  height: 420px;
+  /* object-fit: contain; */
 }
 
 .indicators {
@@ -26,17 +33,8 @@
   margin: 5px;
 }
 
-.sideImages {
-  background-color: lightcoral;
-  display: flex;
-  flex-direction: column;
-  border: 1px grey solid;
-  /* width: 100px; */
-  /* flex: 1; */
+img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
 }
-
-.theCaro {
-  border: 2px black solid;
-  flex: 5
-}
-

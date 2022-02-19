@@ -16,7 +16,6 @@ const App = (props) => {
   const [index, setIndex] = useState(0);
   const [reviewStars, setReviewStars] = useState('');
 
-
   // window.addEventListener('popstate', (event) => {
   //   return setURL(window.loaction.href);
   // })

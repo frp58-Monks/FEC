@@ -10,23 +10,6 @@
   justify-content: between;
 }
 
-.image-carousel {
-  border-radius: 20px;
-  border: 2px gold solid;
-  padding: 10px;
-  flex: 5;
-  max-width: 490px;
-  max-height: 490px;
-}
-
-.inner {
-  background-color: #ccc;
-  border: 1px black solid;
-  max-width: 490px;
-  /* max-height: 380px; */
-  /* overflow: hidden; */
-}
-
 .product-details {
   background-color: lightblue;
   border: 4px black solid;
@@ -56,7 +39,7 @@
 img {
   height: 100%;
   width: 100%;
-  object-fit: fill;
+  object-fit: contain;
 }
 
 .currentStyles {

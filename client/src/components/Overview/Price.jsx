@@ -1,10 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
+import { AppContext } from '../App.jsx';
 import './StylesOver.css';
 
-const Price = (props) => {
+const Price = () => {
   const [sale, setSale] = useState(false);
+  const { productStyles } = useContext(AppContext);
 
-  if (props.sale_price) {
+  if (productStyles.results[0].sale_price) {
     setSale(true);
   }
 
@@ -12,17 +14,17 @@ const Price = (props) => {
     <div className="price">
 
       <div>
-      {sale &&
-        <div>
-          <div className="salePrice">Sale: ${props.salePrice}</div>
-          <div className="OriginalPrice">Price: ${props.originalPrice}</div>
-        </div>
-      }
+        {sale &&
+          <div>
+            <div className="salePrice">Sale: ${productStyles.results[0].sale_price}</div>
+            <div className="OriginalPrice">Price: ${productStyles.results[0].original_price}</div>
+          </div>
+        }
       </div>
 
       <div>
         {!sale &&
-        <div className="originalPrice">Price: ${props.originalPrice}</div>
+        <div className="originalPrice">Price: ${productStyles.results[0].original_price}</div>
         }
       </div>
 
