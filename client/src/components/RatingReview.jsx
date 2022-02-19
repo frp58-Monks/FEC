@@ -24,7 +24,7 @@ const RatingReview = ({ reviews, reviewStars, product_id, reviewFunc, setDropdow
     results = resultsArr.slice(0, showCount);
   }
 
-  //sort filter view
+  //sort/filter reviews
   const onChange = (e) => {
     setSelectedDropdown(e.target.value);
     setDropdown(e.target.value);
@@ -32,7 +32,12 @@ const RatingReview = ({ reviews, reviewStars, product_id, reviewFunc, setDropdow
 
   return (
     <div>
-      <RatingBreakdown reviewStars={reviewStars} />
+      <div>
+        {reviewStars &&
+          <RatingBreakdown reviewStars={reviewStars} />
+        }
+      </div>
+
       <div>
         {reviewStars &&
           <ProgressBar reviewStars={reviewStars} />
@@ -68,7 +73,7 @@ const RatingReview = ({ reviews, reviewStars, product_id, reviewFunc, setDropdow
           {
             resultsArr && results &&
               showCount <= results.length ?
-              <button onClick={addCount}>More Reviews</button> : 'No more Reviews'
+              <button onClick={addCount}>More Reviews</button> : ''
           }
         </div>
       </div>

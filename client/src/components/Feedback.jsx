@@ -15,13 +15,13 @@ const Feedback = (props) => {
   }
 
   //R&R API CALLS
-  //get data for individual review tiles
   const getReviews = () => {
     axios
       .get('/reviews/', {
         params: {
           product_id: product_id,
-          sort: dropdown
+          sort: dropdown,
+          count: 1000
         }
       })
       .then(res => {
@@ -44,10 +44,6 @@ const Feedback = (props) => {
       });
   }
 
-  // useEffect(() => (
-  //   getReviews(dropdown)
-  // ), [dropdown]);
-
   useEffect(() => (
     getReviews(),
     getQuestions()
@@ -61,13 +57,13 @@ const Feedback = (props) => {
       <StarReview />
       <div>
         {props.reviewStars && reviews && product_id &&
-        <RatingReview
-          reviews={reviews}
-          reviewStars={props.reviewStars}
-          product_id={product_id}
-          reviewFunc={getReviews}
-          setDropdown={setDropdown}
-        />
+          <RatingReview
+            reviews={reviews}
+            reviewStars={props.reviewStars}
+            product_id={product_id}
+            reviewFunc={getReviews}
+            setDropdown={setDropdown}
+          />
         }
       </div>
     </div>
@@ -136,6 +132,11 @@ export default Feedback;
   //       console.log('error with reviews', err);
   //     });
   // }
+
+    // useEffect(() => (
+  //   getReviews(dropdown)
+  // ), [dropdown]);
+
 
 
 //   //Put review req
