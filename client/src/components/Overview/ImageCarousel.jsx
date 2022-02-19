@@ -1,18 +1,16 @@
-import React, {useState, useEffect} from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import './ImageCarousel.css';
+import { AppContext } from '../App.jsx';
 
-const ImageCarousel = (props) => {
+const ImageCarousel = () => {
+  const { productStyles } = useContext(AppContext);
   const [activeIndex, setActiveIndex] = useState(0);
   const [paused, setPaused] = useState(false);
-
-  let allImages = null;
-  if (props.productStyles) {
-    allImages = props.productStyles.results;
-  }
+  const [currentStyle, setCurrentStyle] = useState(null);
 
   const updateIndex = (newIndex) => {
-    if (props.productStyles) {
-      const totalImages = allImages[0].photos.length;
+    if (productStyles) {
+      const totalImages = productStyles.results[0].photos.length;
       if (newIndex < 0) {
         newIndex = totalImages -1;
       } else if (newIndex >= totalImages) {
@@ -38,7 +36,7 @@ const ImageCarousel = (props) => {
   //   };
   // });
 
-  // console.log({'Styles stylesProp': props.productStyles});
+  // console.log({'Styles stylesProp': productStyles});
   return (
     <div className="carousel">
 
@@ -48,8 +46,9 @@ const ImageCarousel = (props) => {
       >
 
         <div className="inner" style={{transform: `translateX(-${activeIndex * 100}%)` }}>
-          {allImages && allImages[0].photos.map((eachImg) => {
-          return <img className="eachImage" src={eachImg.url} style={{width: '100%'}}/>
+          {productStyles && productStyles.results[0].photos.map((eachImg) => {
+            // console.log('image carousel images: ', eachImg.url);
+            return <img className="eachImage" src={eachImg.url} style={{width: '100%'}}/>
           })}
         </div>
 

@@ -23,7 +23,8 @@
   background-color: #ccc;
   border: 1px black solid;
   max-width: 490px;
-  max-height: 380px;
+  /* max-height: 380px; */
+  /* overflow: hidden; */
 }
 
 .product-details {
@@ -55,5 +56,20 @@
 img {
   height: 100%;
   width: 100%;
+  object-fit: fill;
+}
+
+.currentStyles {
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
   object-fit: cover;
+  padding: 10px;
+}
+
+.stylesComponent {
+  border: 2px black solid;
+  display: flex;
+  width: 300px;
+  flex-wrap: wrap;
 }

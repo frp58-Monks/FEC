@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, createContext } from 'react';
 import axios from 'axios';
 import Overview from './Overview.jsx';
 import Feedback from './Feedback.jsx';
@@ -6,7 +6,7 @@ import SearchProductBar from './SearchProd.jsx';
 import './style.css';
 
 //create global context
-export const AppContext = React.createContext();
+export const AppContext = createContext();
 
 const App = (props) => {
   // const [url, setURL] = useState(window.location.href);
@@ -15,6 +15,7 @@ const App = (props) => {
   const [productStyles, setProductStyles] = useState(null);
   const [index, setIndex] = useState(0);
   const [reviewStars, setReviewStars] = useState('');
+
 
   // window.addEventListener('popstate', (event) => {
   //   return setURL(window.loaction.href);
@@ -97,35 +98,33 @@ const App = (props) => {
   ), [product_id]);
 
   return (
-    <div className="content">
+    <AppContext.Provider value={{ productStyles, reviewStars, productDetails }}>
+      <div className="content">
 
-      <div>
-        <h1>Jello World</h1>
-        <div className="ratingsAnchor">#ratgins_anchor</div>
-        <div className="questionsAnchor">#quesions_anchor</div>
+        <div>
+          <h1>Jello World</h1>
+          <div className="ratingsAnchor">#ratgins_anchor</div>
+          <div className="questionsAnchor">#quesions_anchor</div>
+        </div>
+
+        <SearchProductBar className="search" searchForProducts={searchForProducts}/>
+
+        <div>
+          {productStyles &&
+          <Overview/>
+          }
+        </div>
+
+        <div>
+          {product_id && reviewStars &&
+            <Feedback
+            product_id={product_id}
+            reviewStars={reviewStars}
+            />
+          }
+        </div>
       </div>
-
-      <SearchProductBar className="search" searchForProducts={searchForProducts}/>
-
-      <div>
-        {reviewStars &&
-        <Overview
-          productDetails={productDetails}
-          productStyles={productStyles}
-          reviewStars={reviewStars}
-        />
-        }
-      </div>
-
-      <div>
-        {product_id && reviewStars &&
-          <Feedback
-          product_id={product_id}
-          reviewStars={reviewStars}
-          />
-        }
-      </div>
-    </div>
+    </AppContext.Provider>
   );
 }
 
