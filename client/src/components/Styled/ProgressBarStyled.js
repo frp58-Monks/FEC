@@ -1,24 +1,16 @@
 import styled from 'styled-components';
 
-// export const Container = styled.div`
-//   progress[value] {
-//     width: 40%
-//     appearance: none;
+//<RatingText>Rating Breakdown</RatingText>
+export const RatingText = styled.span`
+  font-weight: bold;
+  font-family: Georgia;
+  font-weight: 10px;
+  font-size: 15px;
+  margin; 20px;
+  padding: 5px;
+`;
 
-//     ::-webkit-progress-bar {
-//       height: 10px;
-//       border-radius: 20px;
-//       background-color: #F0F8FF;
-//     }
-
-//     ::webkit-progress-value {
-//       height: 10px;
-//       border-radius: 20px;
-//       background-color: #9932CC;
-//     }
-//   }
-// `;
-
+//<BarTitle> Three Star </BarTitle>
 export const BarTitle = styled.span`
   font-weight: bold;
   font-family: Georgia;
@@ -28,6 +20,7 @@ export const BarTitle = styled.span`
   padding: 5px;
 `;
 
+//<AverageText> {threeRating}% </AverageText>
 export const AverageText = styled.span`
   font-weight: bold;
   font-family: Georgia;
@@ -37,6 +30,7 @@ export const AverageText = styled.span`
   line-height: 10px;
 `;
 
+//<RecommendText> {recommendPercentageRound}% </RecommendText>
 export const RecommendText = styled.span`
   font-weight: bold;
   font-family: Georgia;
@@ -46,11 +40,3 @@ export const RecommendText = styled.span`
   line-height: 10px;
 `;
 
-export const RatingText = styled.span`
-  font-weight: bold;
-  font-family: Georgia;
-  font-weight: 10px;
-  font-size: 15px;
-  margin; 20px;
-  padding: 5px;
-`;

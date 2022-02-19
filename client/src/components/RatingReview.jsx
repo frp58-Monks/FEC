@@ -3,7 +3,9 @@ import ReviewListItem from './RatingReview/ReviewListItem.jsx';
 import axios from 'axios';
 import RatingBreakdown from './RatingReview/RatingBreakdown.jsx';
 import ProgressBar from './RatingReview/ProgressBar.jsx';
-import { TotalContainer } from './Styled/ProgressBarStyled.js';
+//import { TotalContainer} from './Styled/ProgressBarStyled.js';
+import { MoreReviews } from './styled/RatingReviewStyled.js';
+import Flexbos from './styled/Flexbox.js';
 
 
 //takes in product_id prop from feedback
@@ -31,20 +33,23 @@ const RatingReview = ({ reviews, reviewStars, product_id, reviewFunc, setDropdow
   }
 
   return (
-    <div>
-      <div>
+    <div className="RatingReviewContainer">
+      
+      <div className='StarandBarContainer'>
+      <div className="AverageStars">
         {reviewStars &&
           <RatingBreakdown reviewStars={reviewStars} />
         }
       </div>
 
-      <div>
+      <div className="ProgressBar">
         {reviewStars &&
           <ProgressBar reviewStars={reviewStars} />
         }
       </div>
+      </div>
 
-      <div>
+      <div className="Dropdown">
         {selectedDropdown && onChange &&
           <div className="sortReview">
             Sort:
@@ -62,21 +67,22 @@ const RatingReview = ({ reviews, reviewStars, product_id, reviewFunc, setDropdow
         }
       </div>
 
-      <div>
-        <div>
+        <div className="ReviewItem">
           {
             resultsArr && results &&
             results.map((item, i) => (
               <ReviewListItem item={item} key={i} product_id={product_id} reviewStars={reviewStars} reviews={reviews} />
             ))
           }
+        </div>
+
+        <div className="MoreReviews">
           {
             resultsArr && results &&
               showCount <= results.length ?
               <button onClick={addCount}>More Reviews</button> : ''
           }
         </div>
-      </div>
     </div>
   )
 }

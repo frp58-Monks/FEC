@@ -55,14 +55,14 @@ const Feedback = (props) => {
         questions={questions}
       />
       <StarReview />
-      <div>
+      <div className="ReviewFlexContainer">
         {props.reviewStars && reviews && product_id &&
-          <RatingReview
+          <RatingReview className="RRFeedbackContainer"
             reviews={reviews}
             reviewStars={props.reviewStars}
             product_id={product_id}
             reviewFunc={getReviews}
-            setDropdown={setDropdown}
+            setDropdown={setDropdown}c
           />
         }
       </div>

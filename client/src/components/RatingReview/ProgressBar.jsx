@@ -58,38 +58,46 @@ const ProgressBar = ({ reviewStars }) => {
   // console.log('3', threeRating);
 
   return (
-    <div>
-      <RatingText>Rating Breakdown</RatingText>
-      <div>
-        <BarTitle> One Star </BarTitle>
-        <AverageText> {oneRating}% </AverageText>
-        <progress value={oneRating} max={100} />
+    <div className="RatingBar">
+
+      <RatingText className="RatingText">Rating Breakdown</RatingText>
+
+      <div className="OneStar">
+        <BarTitle className="BarTitle"> One Star </BarTitle>
+        <AverageText className="AverageText"> {oneRating}% </AverageText>
+        <progress className="ProgressBar" value={oneRating} max={100} />
       </div>
-      <div>
-        <BarTitle> Two Star </BarTitle>
-        <AverageText> {twoRating}% </AverageText>
-        <progress value={twoRating} max={100} />
+
+      <div className="TwoStar">
+        <BarTitle className="BarTitle"> Two Star </BarTitle>
+        <AverageText className="AverageText"> {twoRating}% </AverageText>
+        <progress className="ProgressBar" value={twoRating} max={100} />
       </div>
-      <div>
-        <BarTitle> Three Star </BarTitle>
-        <AverageText> {threeRating}% </AverageText>
-        <progress value={threeRating} max={100} />
+
+      <div className="ThreeStar">
+        <BarTitle className="BarTitle"> Three Star </BarTitle>
+        <AverageText className="AverageText"> {threeRating}% </AverageText>
+        <progress className="ProgressBar" value={threeRating} max={100} />
       </div>
-      <div>
-        <BarTitle> Four Star </BarTitle>
-        <AverageText> {fourRating}% </AverageText>
-        <progress value={fourRating} max={100} />
+
+      <div className="FourStar">
+        <BarTitle className="BarTitle"> Four Star </BarTitle>
+        <AverageText className="AverageText"> {fourRating}% </AverageText>
+        <progress className="ProgressBar" value={fourRating} max={100} />
       </div>
-      <div>
-        <BarTitle> Five Star </BarTitle>
-        <AverageText> {fiveRating}% </AverageText>
-        <progress value={fiveRating} max={100} />
+
+      <div className="FiveStar">
+        <BarTitle className="BarTitle"> Five Star </BarTitle>
+        <AverageText className="AverageText"> {fiveRating}% </AverageText>
+        <progress className="ProgressBar" value={fiveRating} max={100} />
       </div>
-      <div>
-        <BarTitle> Recommended: </BarTitle>
-        <RecommendText> {recommendPercentageRound}% </RecommendText>
-        <progress value={recommendPercentageStr} max={100} />
+
+      <div className="RecommendedStar">
+        <BarTitle className="BarTitle"> Recommended: </BarTitle>
+        <RecommendText className="AverageText"> {recommendPercentageRound}% </RecommendText>
+        <progress className="ProgressBar" value={recommendPercentageStr} max={100} />
       </div>
+
     </div>
   )
 }

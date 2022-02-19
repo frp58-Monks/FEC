@@ -1,9 +1,22 @@
 import styled from 'styled-components';
 
-export const Position = styled.div`
+// //not used
+// export const Position = styled.div`
+//   display: flex;
+//   flex-direction: row;
+// `
+// //not used
+// export const TotalContainer = styled.div`
+//   justify-content: flex-start;
+// `
+
+//more review button
+export const MoreReviews = styled.button`
   display: flex;
-  flex-direction: row;
+  justify-content: flex-left;
+  margin: 0 auto;
+  align-items: center;
+  height: 30px;
+  border: 3px solid green;
 `
-export const TotalContainer(Position) = styled.div`
-  justify-content: flex-start;
-`
+
