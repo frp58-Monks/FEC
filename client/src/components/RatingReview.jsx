@@ -7,9 +7,9 @@ import { TotalContainer } from './Styled/ProgressBarStyled.js';
 
 
 //takes in product_id prop from feedback
-const RatingReview = ({ reviews, reviewStars, product_id, reviewFunc }) => {
+const RatingReview = ({ reviews, reviewStars, product_id, reviewFunc, filter }) => {
   const [showCount, setShowCount] = useState(2);
-  const [selectedDropdown, setSelectedDropdown] = useState('Relevant');
+  const [selectedDropdown, setSelectedDropdown] = useState('relevant');
 
   //limit/add review tiles to view
   const addCount = (event) => {
@@ -39,16 +39,15 @@ const RatingReview = ({ reviews, reviewStars, product_id, reviewFunc }) => {
         }
       </div>
 
-      <div>sort dropdown here</div>
       <div>
-        {selectedDropdown &&
+        {selectedDropdown && onChange &&
           <div className="sortReview">
             Sort:
             <select name="Sort" id="reviews"
               onChange={onChange}
             >
               {
-                selectedDropdown &&
+                selectedDropdown && onChange &&
                 ['relevant', 'helpful', 'newest'].map((sortItem, i) => {
                   return <option key='review' value={sortItem}>{sortItem}</option>
                 })

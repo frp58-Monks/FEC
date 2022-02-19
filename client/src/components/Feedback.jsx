@@ -20,6 +20,7 @@ class Feedback extends React.Component {
   //R&R API CALLS
   //get data for individual review tiles
   getReviews(prodId, selectedDropdown) {
+    console.log('selected drop', selectedDropdown);
     let product_id = this.props.product_id;
 
     axios
