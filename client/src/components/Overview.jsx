@@ -6,18 +6,20 @@ import SizeQtyDD from './Overview/SizeQtyDD.jsx';
 import Price from './Overview/Price.jsx';
 import AddToCart from './Overview/AddtoCart.jsx';
 import RatingBreakdown from './RatingReview/RatingBreakdown.jsx';
+import './Overview/StylesOver.css';
 
 const Overview = (props) => {
-  console.log({'stars': props.stars});
   let rdyToRender = null;
   if (props.productDetails && props.productStyles) {
     rdyToRender = true;
   }
   return (
-    <div>
+    <div >
       {rdyToRender &&
-      <div>
-        <div className="image-carousel"><ImageCarousel productStyles={props.productStyles}/></div>
+      <div className="overviewMain">
+        <div className="image-carousel">
+          <ImageCarousel productStyles={props.productStyles}/>
+        </div>
 
         <div className="product-details">
           <div>
@@ -37,11 +39,13 @@ const Overview = (props) => {
 
           <div className="styles"><Styles productStyles={props.productStyles}/></div>
 
-          <SizeQtyDD className="dropdown-menus" productStyles={props.productStyles}/>
+          <div className="dropdownsCart">
+            <SizeQtyDD productStyles={props.productStyles}/>
+            <div className="add-to-cart"><AddToCart /></div>
+          </div>
 
-          <div className="price"><Price originalPrice={props.productStyles.results[0].original_price} salePrice={props.productStyles.results[0].sale_price}/></div>
+          <div><Price originalPrice={props.productStyles.results[0].original_price} salePrice={props.productStyles.results[0].sale_price}/></div>
 
-          <div className="add-to-cart"><AddToCart /></div>
         </div>
       </div>
       }

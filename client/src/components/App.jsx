@@ -3,6 +3,7 @@ import axios from 'axios';
 import Overview from './Overview.jsx';
 import Feedback from './Feedback.jsx';
 import SearchProductBar from './SearchProd.jsx';
+import './style.css';
 
 //create global context
 export const AppContext = React.createContext();
@@ -104,10 +105,10 @@ const App = (props) => {
         <div className="questionsAnchor">#quesions_anchor</div>
       </div>
 
-      <SearchProductBar searchForProducts={searchForProducts}/>
+      <SearchProductBar className="search" searchForProducts={searchForProducts}/>
 
       <div>
-        {productStyles && reviewStars &&
+        {reviewStars &&
         <Overview
           productDetails={productDetails}
           productStyles={productStyles}

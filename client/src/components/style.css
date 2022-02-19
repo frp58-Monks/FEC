@@ -9,3 +9,12 @@
   overflow: hidden;
   font-size: 24px;
 }
+
+.search {
+  /* display: flex; */
+  /* border: 1px black solid; */
+  padding-left: 80%;
+  /* align-content: flex-end; */
+  /* flex-grow: 10;
+  align-content: flex-end; */
+}

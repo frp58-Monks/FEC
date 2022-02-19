@@ -1,0 +1,42 @@
+.carousel {
+  overflow: hidden;
+  display: flex;
+}
+
+.inner {
+  white-space: nowrap;
+  transition: transform 0.3s;
+}
+
+.carousel-item {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  background-color: lightblue;
+  color: #fff;
+}
+
+.indicators {
+  display: flex;
+  justify-content: center;
+}
+
+.indicators > button {
+  margin: 5px;
+}
+
+.sideImages {
+  background-color: lightcoral;
+  display: flex;
+  flex-direction: column;
+  border: 1px grey solid;
+  /* width: 100px; */
+  /* flex: 1; */
+}
+
+.theCaro {
+  border: 2px black solid;
+  flex: 5
+}
+

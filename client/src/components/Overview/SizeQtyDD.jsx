@@ -1,4 +1,5 @@
 import React, {useState, useEffect, useContext} from 'react';
+import './StylesOver.css';
 
 const SizeQtyDD = (props) => {
   const [size, setSize] = useState(null);
@@ -7,7 +8,7 @@ const SizeQtyDD = (props) => {
 
   const generateQtyArray = (sizeParam) => {
     let max;
-    let arrayOfQuantities = [];
+    let arrayOfQuantities = ['--'];
     if (props.productStyles) {
       let skusKeys = Object.keys(props.productStyles.results[0].skus);
       skusKeys.forEach((key) => {
@@ -17,6 +18,9 @@ const SizeQtyDD = (props) => {
           max = eachQuantity;
         }
       })
+      if (max > 15) {
+        max = 15;
+      }
       let num = 1;
       while (num <= max) {
         arrayOfQuantities.push(num);
@@ -44,7 +48,7 @@ const SizeQtyDD = (props) => {
   return (
     <div>
       {props.productStyles &&
-      <div>
+      <div className="dropdownMenus">
         <div className="size-dd">
           Choose Size:
           <select name="Size" id="size-DD"

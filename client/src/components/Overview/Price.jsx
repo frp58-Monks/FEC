@@ -1,23 +1,27 @@
-import React from 'react';
+import React, { useState } from 'react';
+import './StylesOver.css';
 
 const Price = (props) => {
-  let sale = false;
+  const [sale, setSale] = useState(false);
+
   if (props.sale_price) {
-    sale = true;
+    setSale(true);
   }
+
   return (
-    <div>
+    <div className="price">
+
       <div>
-      {props.salePrice &&
+      {sale &&
         <div>
           <div className="salePrice">Sale: ${props.salePrice}</div>
-          <div className="originalPrice">Price: ${props.originalPrice}</div>
+          <div className="OriginalPrice">Price: ${props.originalPrice}</div>
         </div>
       }
       </div>
 
       <div>
-        {sale &&
+        {!sale &&
         <div className="originalPrice">Price: ${props.originalPrice}</div>
         }
       </div>
