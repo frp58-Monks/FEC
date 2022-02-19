@@ -3,7 +3,6 @@ import axios from 'axios';
 import Overview from './Overview.jsx';
 import Feedback from './Feedback.jsx';
 import SearchProductBar from './SearchProd.jsx';
-import RatingBreakdown from './RatingReview/RatingBreakdown.jsx';
 
 //create global context
 export const AppContext = React.createContext();
@@ -79,7 +78,6 @@ const App = (props) => {
   }
 
   const getReviewStars = (product_id) => {
-    console.log('inside stars func')
     axios.get('/reviews/meta', { params: { product_id } })
       .then(res => {
         const starData = res.data;
@@ -123,23 +121,3 @@ const App = (props) => {
 
 export default App;
 
-
-/*
-
-  // const [ratingAverage, setRatingAverage] = useState(0);
-
-  // const averageSetting = {
-  //   ratingAverage, setRatingAverage
-  // }
-
- <AppContext.Provider value={averageSetting}>
-     </AppContext.Provider>
-      <div>
-        {product_id && reviewStars &&
-          <Feedback
-          product_id={product_id}
-          reviewStars={reviewsStars}
-        />
-        }
-      </div>
-      */

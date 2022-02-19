@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import { ReviewSummary, ReviewWrapper, ReviewBody, ReviewDate, ReviewPurchaser, Response, Recommend, Left, Helpful } from '../Styled/ReviewListStyled.js';
 import StarFilled from '../RatingReview/StarFilled.jsx';
 import { FaCheck } from "react-icons/fa";
@@ -7,10 +7,20 @@ import axios from 'axios';
 
 const ReviewListItem = ({ item, product_id, reviewStars, reviews }) => {
   const[helpful, setHelpful] = useState(item.helpfulness);
+  //const[notHelpful, setnotHelpful] = useState(0);
 
+  //convert date on individual tiles
   let date = item.date.split('T');
   date = date[0];
+  date = date.split('-');
+  let month = Number(date[1]);
+  let day = Number(date[2]);
+  let year = Number(date[0]);
 
+  let combined = new Date(`${year}, ${month}, ${day}`);
+  let combinedDate = combined.toDateString();
+
+  //Capped Summary
   let cappedSummary = item.summary.substring(0, 60);
   cappedSummary = cappedSummary.split('.');
   cappedSummary = cappedSummary[0];
@@ -35,26 +45,30 @@ const ReviewListItem = ({ item, product_id, reviewStars, reviews }) => {
       })
   }
 
+  // const decreaseHelpful = () => {
+  //   setnotHelpful(notHelpful + 1);
+  // }
+
   return (
-    <Left >
-    <ReviewWrapper>
-      <div>{reviewRating}</div>
-      <ReviewDate>{date}</ReviewDate>
-      <ReviewPurchaser>Verified Purchaser: {item.reviewer_name}</ReviewPurchaser>
-      <Recommend>
-        {item.recommend ? `I recommend this product` : ''}
-        {item.recommend ? <FaCheck style={{ 'color': "#00FA9A" }} /> : ''}
-      </Recommend>
-      <ReviewSummary>Summary: {cappedSummary}</ReviewSummary>
-      <ReviewBody>{item.body}</ReviewBody>
-      <Response>{item.response ? `Response from seller: ${item.response}` : ''}</Response>
-      <Helpful onClick={updateHelpful}>Helpful? Yes: {helpful}</Helpful>
-    </ReviewWrapper>
-    </Left>
+      <Left >
+      <ReviewWrapper>
+        <div>{reviewRating}</div>
+        <ReviewDate>{combinedDate}</ReviewDate>
+        <ReviewPurchaser>Verified Purchaser: {item.reviewer_name}</ReviewPurchaser>
+        <Recommend>
+          {item.recommend ? `I recommend this product` : ''}
+          {item.recommend ? <FaCheck style={{ 'color': "#00FA9A" }} /> : ''}
+        </Recommend>
+        <ReviewSummary>Summary: {cappedSummary}</ReviewSummary>
+        <ReviewBody>{item.body}</ReviewBody>
+        <Response>{item.response ? `Response from seller: ${item.response}` : ''}</Response>
+        <Helpful onClick={updateHelpful}> Helpful? Yes: {helpful}</Helpful>
+      </ReviewWrapper>
+      </Left>
   )
 }
 
 export default ReviewListItem;
 
 
-
+//<button onClick={decreaseHelpful}> No: {notHelpful} </button>
