@@ -1,29 +1,31 @@
 import styled from 'styled-components';
 
-export const Container = styled.div`
-  progress[value] {
-    width: 40%
-    appearance: none;
+// export const Container = styled.div`
+//   progress[value] {
+//     width: 40%
+//     appearance: none;
 
-    ::-webkit-progress-bar {
-      height: 10px;
-      border-radius: 20px;
-      background-color: #F0F8FF;
-    }
+//     ::-webkit-progress-bar {
+//       height: 10px;
+//       border-radius: 20px;
+//       background-color: #F0F8FF;
+//     }
 
-    ::webkit-progress-value {
-      height: 10px;
-      border-radius: 20px;
-      background-color: #9932CC;
-    }
-  }
-`;
+//     ::webkit-progress-value {
+//       height: 10px;
+//       border-radius: 20px;
+//       background-color: #9932CC;
+//     }
+//   }
+// `;
 
 export const BarTitle = styled.span`
   font-weight: bold;
   font-family: Georgia;
   font-weight: 10px;
   font-size: 15px;
+  margin; 20px;
+  padding: 5px;
 `;
 
 export const AverageText = styled.span`
@@ -32,4 +34,23 @@ export const AverageText = styled.span`
   font-weight: 10px;
   font-size: 15px;
   color: #E9967A;
+  line-height: 10px;
+`;
+
+export const RecommendText = styled.span`
+  font-weight: bold;
+  font-family: Georgia;
+  font-weight: 10px;
+  font-size: 15px;
+  color: #CD5C5C;
+  line-height: 10px;
+`;
+
+export const RatingText = styled.span`
+  font-weight: bold;
+  font-family: Georgia;
+  font-weight: 10px;
+  font-size: 15px;
+  margin; 20px;
+  padding: 5px;
 `;
