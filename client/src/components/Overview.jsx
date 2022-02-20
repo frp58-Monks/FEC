@@ -24,14 +24,13 @@ const Overview = () => {
     })
   };
 
-  let rdyToRender = null;
-  if (productDetails && productStyles) {
-    rdyToRender = true;
-  }
+  useEffect(() => {
+    setDefaultStyle(productStyles.results[0]);
+  }, [productStyles]);
 
   return (
     <OverviewContext.Provider value={{ updateCurrentStyle, defaultStyle }}>
-      {rdyToRender &&
+      {productStyles &&
       <div className="overviewMain">
 
         <ImageCarousel/>
