@@ -15,7 +15,9 @@ export const ReviewWrapper = styled.div`
   width: 95%;
   height: 50%
   align: center;
-  padding:10px;
+  padding: 10px;
+  padding-left: 5%;
+  padding-right: 5%;
   margin: 30px 15px;
   background-color: #e6e8fa;
   border-radius: 25px;

@@ -34,20 +34,8 @@ const RatingReview = ({ reviews, reviewStars, product_id, reviewFunc, setDropdow
   return (
     <div>
       <RTitle className="Rating Title"> Ratings and Reviews </RTitle>
-      <div className="Flexbox-container">
 
-        <div className="Flexbox-item">
-
-            <div className="StarAndBar">
-              <div className="Progress">
-                {reviewStars &&
-                  <ProgressBar reviewStars={reviewStars} />
-                }
-              </div>
-            </div>
-        </div>
-
-        <div className="Flexbox-item">
+      <div className="SortContainer">
             <div className="Dropdown">
               {selectedDropdown && onChange &&
                 <div className="sortReview" color='grey'>
@@ -65,7 +53,22 @@ const RatingReview = ({ reviews, reviewStars, product_id, reviewFunc, setDropdow
                 </div>
               }
           </div>
+          </div>
 
+      <div className="Flexbox-container">
+
+        <div className="Flexbox-item">
+
+            <div className="StarAndBar">
+              <div className="Progress">
+                {reviewStars &&
+                  <ProgressBar reviewStars={reviewStars} />
+                }
+              </div>
+            </div>
+        </div>
+
+          <div className="Flexbox-item">
             <div className="RItem">
               <div className="ReviewItem">
                 {

@@ -5,7 +5,7 @@ export const RatingText = styled.span`
   font-weight: bold;
   font-family: Georgia;
   font-weight: 10px;
-  font-size: 15px;
+  font-size: 20px;
   margin; 20px;
   padding: 5px;
 `;
@@ -27,7 +27,7 @@ export const AverageText = styled.span`
   font-weight: 10px;
   font-size: 15px;
   color: #6c3082;
-  line-height: 10px;
+  text-align: center;
 `;
 
 //<RecommendText> {recommendPercentageRound}% </RecommendText>
@@ -37,7 +37,7 @@ export const RecommendText = styled.span`
   font-weight: 10px;
   font-size: 15px;
   color: #CD5C5C;
-  line-height: 10px;
+  text-align: center;
 `;
 
 //container for progress bar
@@ -62,6 +62,25 @@ export const StarCont = styled.div`
 `
 
 export const SharedStarText = styled.span`
+  font-weight: bold;
+  font-family: Georgia;
+  font-weight: 10px;
+  font-size: 30px;
+  margin; 20px;
+  padding: 5px;
+  color: #6c3082;
+`
+
+//Justin's stars
+export const JStarCont = styled.div`
+  width: 90%;
+  height: 20%
+  align: center;
+  padding:10px;
+  margin: 30px 15px;
+`
+
+export const JStarText = styled.span`
   font-weight: bold;
   font-family: Georgia;
   font-weight: 10px;

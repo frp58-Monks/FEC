@@ -1,18 +1,31 @@
 .starbox {
   display: inline-grid;
-  color: gold;
+  color: #20B2AA;
 }
 
 .starbox div {
   grid-column: 1;
   grid-row: 2;
   overflow: hidden;
-  font-size: 24px;
+  font-size: 35px;
+}
+
+/* Justin's Stars */
+.JStarbox {
+  display: inline-grid;
+  color: #20B2AA;
+}
+
+.JStarbox div {
+  grid-column: 1;
+  grid-row: 2;
+  overflow: hidden;
+  font-size: 20px;
 }
 
 progress {
   border: none;
-  width: 400px;
+  width: 80%;
   height: 25px;
   padding-left: 2px;
   padding-right: 2px;
@@ -154,10 +167,21 @@ progress::-webkit-progress-bar {
 
 .Bar {
   display: flex;
-  justify-content: left;
-  margin: 31px;
-  margin-left: 20%;
+  justify-content: space-between;
+  margin: 30px;
+  margin-left: 2%;
 }
+
+.SortContainer {
+  display: block;
+  margin-left: 87%;
+}
+
+.Wrapper {
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
  /* color: #d8b2d1 */
 /* .StarAndBar {
   display: flex;
