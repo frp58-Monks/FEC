@@ -32,6 +32,19 @@ const Feedback = (props) => {
       });
   }
 
+  //post
+  const postReviews = () => {
+    axios
+      .post('/reviews/')
+      .then(() => {
+        getReviews();
+        console.log('successful post');
+      })
+      .catch((err) => {
+        console.log('error with posting review', err);
+      });
+  }
+
   //Q&A API CALLS
   const getQuestions = () => {
     axios
@@ -71,6 +84,20 @@ const Feedback = (props) => {
 }
 
 export default Feedback;
+
+// , {
+//   params: {
+//     product_id: 40344,
+//     rating: 3,
+//     summary: "this is monks test",
+//     body: "this is the bodddyyyy of monks",
+//     recommend: true,
+//     name: "monks",
+//     email: "test@yahoo.com",
+//     photos: [],
+//     characteristics:  { "14": 5, "15": 5}
+//   }
+// }
 
 // //takes in product id from app (overview)
 // class Feedback extends React.Component {

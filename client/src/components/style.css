@@ -50,6 +50,8 @@ progress::-webkit-progress-bar {
 
 .StarAndBar {
   justify-content: left;
+  /* margin: 10px;
+  padding: 100px; */
 }
 
 .AverageStars {
@@ -138,15 +140,24 @@ progress::-webkit-progress-bar {
 }
 
 .TextBar {
-  display: flex;
+  /* display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-evenly; */
   align-items: center;
   font-size: 50px;
-  width: 75%
+  width: 75%;
+  margin: 100px;
+}
+.ProgressCon {
+  margin: 100px;
 }
 
-
+.Bar {
+  display: flex;
+  justify-content: left;
+  margin: 31px;
+  margin-left: 20%;
+}
  /* color: #d8b2d1 */
 /* .StarAndBar {
   display: flex;

@@ -77,6 +77,7 @@ const getQuestions = (params, callback) => {
 };
 
 const getAnswers = (params, callback) => {
+  console.log('model', params);
   const route = API + `qa/questions/${params.question_id}/answers`;
   axios.get(route, {headers:
     {authorization: TOKEN}, params: params})
@@ -101,6 +102,19 @@ const putReviewHelpful = (params, callback) => {
   })
 };
 
+//POST reqs
+const postReviews = (params, callback) => {
+  const route = API + `reviews/${params.review_id}/helpful`;
+  axios.post(route, {headers:
+    {authorization: TOKEN}, params: params})
+  .then((res) => {
+    callback(null, res.data)
+  })
+  .catch((err) => {
+    callback(err);
+  })
+};
+
 module.exports = {
   getAllProducts,
   getOneProduct,
@@ -109,5 +123,6 @@ module.exports = {
   getReviewsMeta,
   getQuestions,
   getAnswers,
-  putReviewHelpful
+  putReviewHelpful,
+  postReviews
 };

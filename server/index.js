@@ -39,6 +39,10 @@ app.put('/reviews/:review_id/helpful', (req, res) => {
   Controller.putReviewHelpful(req, res);
 });
 
+app.post('/reviews/', (req, res) => {
+  Controller.postReviews(req, res);
+});
+
 app.listen(PORT, () => {
   console.log(`Server listening on port: ${PORT}`);
 });

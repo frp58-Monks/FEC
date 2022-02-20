@@ -8,9 +8,9 @@ import { StarCont, SharedStarText } from '../styled/ProgressBarStyled.js';
 
 const RatingBreakdown = ( {reviewStars} ) => {
 
-  let starObj = reviewStars.ratings;
-  let avg = StarAverage(starObj);
-  let width = avg * 20;
+    let starObj = reviewStars.ratings;
+    let avg = StarAverage(starObj);
+    let width = avg * 20;
 
   return (
     <StarCont className="SharedStars">
@@ -33,6 +33,10 @@ const RatingBreakdown = ( {reviewStars} ) => {
 export default RatingBreakdown;
 
 /*
+
+(!reviewStars && !avg && !width)? null :
+
+
 //{ reviewStars, getReviewStars }
 progress bar:
       <label>Average Rating: {avg} </label>

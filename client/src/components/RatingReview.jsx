@@ -37,18 +37,13 @@ const RatingReview = ({ reviews, reviewStars, product_id, reviewFunc, setDropdow
       <div className="Flexbox-container">
 
         <div className="Flexbox-item">
-            <div className="AverageStars">
-              {reviewStars &&
-                <RatingBreakdown reviewStars={reviewStars} />
-              }
-            </div>
 
             <div className="StarAndBar">
-            <div className="Progress">
-              {reviewStars &&
-                <ProgressBar reviewStars={reviewStars} />
-              }
-            </div>
+              <div className="Progress">
+                {reviewStars &&
+                  <ProgressBar reviewStars={reviewStars} />
+                }
+              </div>
             </div>
         </div>
 
@@ -100,6 +95,27 @@ export default RatingReview;
 // !resultsArr ? null :
 
 /*
+BEFORE REFACTOR OF CSS STARS
+  <div>
+      <RTitle className="Rating Title"> Ratings and Reviews </RTitle>
+      <div className="Flexbox-container">
+
+        <div className="Flexbox-item">
+            <div className="AverageStars">
+              {reviewStars &&
+                <RatingBreakdown reviewStars={reviewStars} />
+              }
+            </div>
+
+            <div className="StarAndBar">
+              <div className="Progress">
+                {reviewStars &&
+                  <ProgressBar reviewStars={reviewStars} />
+                }
+              </div>
+            </div>
+        </div>
+
 
 <div>sort dropdown here</div>
       <div>
