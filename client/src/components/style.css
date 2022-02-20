@@ -40,7 +40,7 @@ progress::-webkit-progress-bar {
 
 .Flexbox-item {
   width: 1100px;
-  margin: 7px;
+  margin: 1px;
   border: 3px;
   justify-content: space-evenly;
   flex-basis: auto;
@@ -146,6 +146,8 @@ progress::-webkit-progress-bar {
   width: 75%
 }
 
+
+ /* color: #d8b2d1 */
 /* .StarAndBar {
   display: flex;
   width: 75%

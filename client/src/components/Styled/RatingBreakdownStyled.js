@@ -1,4 +1,14 @@
-import styled from 'styled-components';
+// import styled from 'styled-components';
+
+// export const SharedStarText = styled.span`
+//   font-weight: bold;
+//   font-family: Georgia;
+//   font-weight: 10px;
+//   font-size: 15px;
+//   margin; 20px;
+//   padding: 5px;
+// `
+
 
 //not used
 // export const AverageStar = styled.div`

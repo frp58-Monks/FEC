@@ -4,7 +4,7 @@ import StarAverage from './StarAverage.jsx';
 import AppContext from '../App.jsx'
 import styled from 'styled-components';
 import css from "../style.css";
-import { StarCont } from '../styled/ProgressBarStyled.js';
+import { StarCont, SharedStarText } from '../styled/ProgressBarStyled.js';
 
 const RatingBreakdown = ( {reviewStars} ) => {
 
@@ -16,7 +16,7 @@ const RatingBreakdown = ( {reviewStars} ) => {
     <StarCont className="SharedStars">
 
         <div className="StarText">
-          <span className="SharedStarText"> Average Rating: {avg} </span>
+          <SharedStarText className="SharedStarText"> Average Rating: {avg} </SharedStarText>
         </div>
 
         <div className="StarText">

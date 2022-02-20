@@ -4,8 +4,7 @@ import axios from 'axios';
 import RatingBreakdown from './RatingReview/RatingBreakdown.jsx';
 import ProgressBar from './RatingReview/ProgressBar.jsx';
 //import { TotalContainer} from './Styled/ProgressBarStyled.js';
-import { MoreReviews } from './styled/RatingReviewStyled.js';
-import Flexbos from './styled/Flexbox.js';
+import { MoreReviews, RTitle } from './styled/RatingReviewStyled.js';
 
 
 //takes in product_id prop from feedback
@@ -33,62 +32,65 @@ const RatingReview = ({ reviews, reviewStars, product_id, reviewFunc, setDropdow
   }
 
   return (
-    <div className="Flexbox-container">
+    <div>
+      <RTitle className="Rating Title"> Ratings and Reviews </RTitle>
+      <div className="Flexbox-container">
 
-      <div className="Flexbox-item">
-          <div className="AverageStars">
-            {reviewStars &&
-              <RatingBreakdown reviewStars={reviewStars} />
-            }
-          </div>
+        <div className="Flexbox-item">
+            <div className="AverageStars">
+              {reviewStars &&
+                <RatingBreakdown reviewStars={reviewStars} />
+              }
+            </div>
 
-          <div className="StarAndBar">
-          <div className="Progress">
-            {reviewStars &&
-              <ProgressBar reviewStars={reviewStars} />
-            }
-          </div>
-          </div>
-      </div>
-
-      <div className="Flexbox-item">
-          <div className="Dropdown">
-            {selectedDropdown && onChange &&
-              <div className="sortReview">
-                Sort:
-                <select name="Sort" id="reviews"
-                  onChange={onChange}
-                >
-                  {
-                    selectedDropdown && onChange &&
-                    ['relevant', 'helpful', 'newest'].map((sortItem, i) => {
-                      return <option key='review' value={sortItem}>{sortItem}</option>
-                    })
-                  }
-                </select>
-              </div>
-            }
+            <div className="StarAndBar">
+            <div className="Progress">
+              {reviewStars &&
+                <ProgressBar reviewStars={reviewStars} />
+              }
+            </div>
+            </div>
         </div>
 
-          <div className="RItem">
-            <div className="ReviewItem">
+        <div className="Flexbox-item">
+            <div className="Dropdown">
+              {selectedDropdown && onChange &&
+                <div className="sortReview" color='grey'>
+                  Sort:
+                  <select name="Sort" id="reviews"
+                    onChange={onChange}
+                  >
+                    {
+                      selectedDropdown && onChange &&
+                      ['relevant', 'helpful', 'newest'].map((sortItem, i) => {
+                        return <option key='review' value={sortItem}>{sortItem}</option>
+                      })
+                    }
+                  </select>
+                </div>
+              }
+          </div>
+
+            <div className="RItem">
+              <div className="ReviewItem">
+                {
+                  resultsArr && results &&
+                  results.map((item, i) => (
+                    <ReviewListItem item={item} key={i} product_id={product_id} reviewStars={reviewStars} reviews={reviews} />
+                  ))
+                }
+              </div>
+            </div>
+
+            <div className="MReviews">
               {
                 resultsArr && results &&
-                results.map((item, i) => (
-                  <ReviewListItem item={item} key={i} product_id={product_id} reviewStars={reviewStars} reviews={reviews} />
-                ))
+                  showCount <= results.length ?
+                  <MoreReviews onClick={addCount}>More Reviews</MoreReviews> : ''
               }
             </div>
           </div>
-
-          <div className="MReviews">
-            {
-              resultsArr && results &&
-                showCount <= results.length ?
-                <MoreReviews onClick={addCount}>More Reviews</MoreReviews> : ''
-            }
-          </div>
-        </div>
+      </div>
     </div>
   )
 }
