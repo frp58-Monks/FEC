@@ -30,14 +30,14 @@ const Overview = () => {
 
   return (
     <OverviewContext.Provider value={{ updateCurrentStyle, defaultStyle }}>
-      {productStyles &&
+      {productStyles && productDetails &&
       <div className="overviewMain">
 
         <ImageCarousel/>
 
         <div className="product-details">
 
-          <h3>{productDetails.name}</h3>
+          <h3>{productStyles.name}</h3>
 
           <div><b>Category: </b>{productDetails.category}</div>
 
