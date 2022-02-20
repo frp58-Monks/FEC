@@ -84,7 +84,6 @@ progress::-webkit-progress-bar {
 }
 
 .RItem {
-  display: flex;
   justify-content: space-evenly;
   align-items: center;
   /* background-color: white; */
