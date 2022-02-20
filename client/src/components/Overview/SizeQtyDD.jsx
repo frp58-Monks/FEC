@@ -55,7 +55,7 @@ const SizeQtyDD = () => {
       {productStyles &&
       <div className="dropdownMenus">
         <div className="size-dd">
-          Choose Size:
+        <b>Size: </b>
           <select name="Size" id="size-DD"
           onChange={(e) => {setSize(e.target.value);}}>
           {arrayOfSizes.map((size) => {
@@ -65,7 +65,7 @@ const SizeQtyDD = () => {
         </div>
 
         <div className="qty-dd">
-          Choose Quantity:
+          <b>Qty: </b>
           <select name="qty" id="qty-DD" onChange={(e) => {
             console.log('qty changed'); setQty(e.target.value);
           }}>

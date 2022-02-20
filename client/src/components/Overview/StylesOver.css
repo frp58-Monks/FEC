@@ -1,6 +1,6 @@
 .overviewMain {
-  background-color: #ccc;
-  border: 1px lightskyblue solid;
+  background-color: whitesmoke;
+  border: 1px black solid;
   padding: 10px;
   display: flex;
   border-radius: 20px;
@@ -11,7 +11,7 @@
 }
 
 .product-details {
-  background-color: lightblue;
+  background-color: whitesmoke;
   border: 4px black solid;
   border-radius: 20px;
   padding: 10px;
@@ -34,6 +34,7 @@
 .styles {
   display: flex;
   object-fit: cover;
+  padding: 20px;
 }
 
 img {
@@ -55,4 +56,39 @@ img {
   display: flex;
   width: 300px;
   flex-wrap: wrap;
+}
+
+.allImages {
+  background-color: black;
+}
+
+.stylesComponent {
+  background-color:rgba(255, 255, 255, 0.736);
+  border-radius: 20px;
+}
+
+.addToCart {
+  background-color: rgb(243, 213, 43);
+  border-radius: 16px;
+  border: none;
+  padding: 10px 26px;
+  text-align: center;
+  display: inline-block;
+  font-size: 13px;
+}
+
+.starsNlinks {
+  display: flex;
+}
+
+.myStars {
+  padding:20px 20px;
+}
+
+.myRatings {
+  padding: 10px 5px;
+}
+
+.myQuestions {
+  padding: 10px 0px;
 }

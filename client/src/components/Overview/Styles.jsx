@@ -11,7 +11,7 @@ const Styles = () => {
     <div style={{display: 'block'}}>
       <div>
         {defaultStyle &&
-          <div>Current Style: {defaultStyle.name}</div>
+          <div><b>Current Style: </b>{defaultStyle.name}</div>
         }
       </div>
 

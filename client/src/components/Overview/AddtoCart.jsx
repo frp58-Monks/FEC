@@ -1,15 +1,15 @@
 import React from 'react';
+import './StylesOver.css';
 
-const AddToCart = (props) => {
+const AddToCart = () => {
   return (
-    <div>
-      <form onSubmit={(e) => {e.preventDefault(); console.log('You clicked AddToCart');}}>
-        <button
-          type="submit">
-          Add To Cart
-        </button>
-      </form>
-    </div>
+    <form onSubmit={(e) => {e.preventDefault(); console.log('You clicked AddToCart');}}>
+      <button
+        className="addToCart"
+        type="submit">
+        Add To Cart
+      </button>
+    </form>
   );
 }
 

@@ -37,17 +37,17 @@ const Overview = () => {
 
         <div className="product-details">
 
-          <h3>{productStyles.name}</h3>
+          <h3>{productDetails.name}</h3>
 
           <div><b>Category: </b>{productDetails.category}</div>
 
-          <div>
-            <RatingBreakdown reviewStars={reviewStars}/>
-            <div>Ratings-link</div>
-            <div>Reviews-link</div>
+          <div className="starsNlinks">
+            <RatingBreakdown className="myStars" reviewStars={reviewStars}/>
+            <div className="myRatings"><u>1902 ratings</u></div>
+            <div className="myQuestions">| <u>85 answered questions</u></div>
           </div>
 
-          <div>About this Item: <p>{productDetails.description}</p></div>
+          <div><b>About this Item: </b><p>{productDetails.description}</p></div>
 
           <Styles/>
 

@@ -16,15 +16,15 @@ const Price = () => {
       <div>
         {sale &&
           <div>
-            <div className="salePrice">Sale: ${productStyles.results[0].sale_price}</div>
-            <div className="OriginalPrice">Price: ${productStyles.results[0].original_price}</div>
+            <div className="salePrice"><b>Sale: </b>${productStyles.results[0].sale_price}</div>
+            <div className="OriginalPrice"><b>Price: </b>${productStyles.results[0].original_price}</div>
           </div>
         }
       </div>
 
       <div>
         {!sale &&
-        <div className="originalPrice">Price: ${productStyles.results[0].original_price}</div>
+        <div className="originalPrice"><b>Price: </b>${productStyles.results[0].original_price}</div>
         }
       </div>
 
