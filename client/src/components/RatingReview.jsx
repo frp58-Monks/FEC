@@ -33,55 +33,61 @@ const RatingReview = ({ reviews, reviewStars, product_id, reviewFunc, setDropdow
   }
 
   return (
-    <div className="RatingReviewContainer">
-      
-      <div className='StarandBarContainer'>
-      <div className="AverageStars">
-        {reviewStars &&
-          <RatingBreakdown reviewStars={reviewStars} />
-        }
-      </div>
+    <div className="Flexbox-container">
 
-      <div className="ProgressBar">
-        {reviewStars &&
-          <ProgressBar reviewStars={reviewStars} />
-        }
-      </div>
-      </div>
-
-      <div className="Dropdown">
-        {selectedDropdown && onChange &&
-          <div className="sortReview">
-            Sort:
-            <select name="Sort" id="reviews"
-              onChange={onChange}
-            >
-              {
-                selectedDropdown && onChange &&
-                ['relevant', 'helpful', 'newest'].map((sortItem, i) => {
-                  return <option key='review' value={sortItem}>{sortItem}</option>
-                })
-              }
-            </select>
+      <div className="Flexbox-item">
+          <div className="AverageStars">
+            {reviewStars &&
+              <RatingBreakdown reviewStars={reviewStars} />
+            }
           </div>
-        }
+
+          <div className="StarAndBar">
+          <div className="Progress">
+            {reviewStars &&
+              <ProgressBar reviewStars={reviewStars} />
+            }
+          </div>
+          </div>
       </div>
 
-        <div className="ReviewItem">
-          {
-            resultsArr && results &&
-            results.map((item, i) => (
-              <ReviewListItem item={item} key={i} product_id={product_id} reviewStars={reviewStars} reviews={reviews} />
-            ))
-          }
+      <div className="Flexbox-item">
+          <div className="Dropdown">
+            {selectedDropdown && onChange &&
+              <div className="sortReview">
+                Sort:
+                <select name="Sort" id="reviews"
+                  onChange={onChange}
+                >
+                  {
+                    selectedDropdown && onChange &&
+                    ['relevant', 'helpful', 'newest'].map((sortItem, i) => {
+                      return <option key='review' value={sortItem}>{sortItem}</option>
+                    })
+                  }
+                </select>
+              </div>
+            }
         </div>
 
-        <div className="MoreReviews">
-          {
-            resultsArr && results &&
-              showCount <= results.length ?
-              <button onClick={addCount}>More Reviews</button> : ''
-          }
+          <div className="RItem">
+            <div className="ReviewItem">
+              {
+                resultsArr && results &&
+                results.map((item, i) => (
+                  <ReviewListItem item={item} key={i} product_id={product_id} reviewStars={reviewStars} reviews={reviews} />
+                ))
+              }
+            </div>
+          </div>
+
+          <div className="MReviews">
+            {
+              resultsArr && results &&
+                showCount <= results.length ?
+                <MoreReviews onClick={addCount}>More Reviews</MoreReviews> : ''
+            }
+          </div>
         </div>
     </div>
   )

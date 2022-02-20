@@ -40,3 +40,21 @@ export const RecommendText = styled.span`
   line-height: 10px;
 `;
 
+export const TextBar = styled.div`
+  border-style: solid;
+  width: 90%;
+  height: 50%
+  align: center;
+  padding:10px;
+  margin: 30px 15px;
+  background-color: #DCDCDC;
+`
+
+//rating breakdown styled
+export const StarCont = styled.div`
+  width: 90%;
+  height: 50%
+  align: center;
+  padding:10px;
+  margin: 30px 15px;
+`

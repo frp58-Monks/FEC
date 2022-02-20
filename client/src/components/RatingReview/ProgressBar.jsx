@@ -1,6 +1,6 @@
 import React from 'react';
 import StarAverage from './StarAverage.jsx';
-import { Container, BarTitle, AverageText, RecommendText, RatingText } from '../Styled/ProgressBarStyled.js';
+import { Container, BarTitle, AverageText, RecommendText, RatingText, TextBar } from '../Styled/ProgressBarStyled.js';
 import axios from 'axios';
 
 const ProgressBar = ({ reviewStars }) => {
@@ -60,6 +60,7 @@ const ProgressBar = ({ reviewStars }) => {
   return (
     <div className="RatingBar">
 
+      <TextBar className='TextBar'>
       <RatingText className="RatingText">Rating Breakdown</RatingText>
 
       <div className="OneStar">
@@ -97,6 +98,7 @@ const ProgressBar = ({ reviewStars }) => {
         <RecommendText className="AverageText"> {recommendPercentageRound}% </RecommendText>
         <progress className="ProgressBar" value={recommendPercentageStr} max={100} />
       </div>
+      </TextBar>
 
     </div>
   )

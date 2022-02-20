@@ -44,7 +44,7 @@ const ReviewListItem = ({ item, product_id, reviewStars, reviews }) => {
   }
 
   return (
-      <div >
+      <div className="ReviewList" >
       <ReviewWrapper>
         <div>{reviewRating}</div>
         <ReviewDate>{combinedDate}</ReviewDate>

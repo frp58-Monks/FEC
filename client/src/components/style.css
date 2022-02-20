@@ -28,13 +28,163 @@ progress::-webkit-progress-bar {
   background: grey;
 }
 
-.RatingReviewContainer {
+.Flexbox-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  height: 700px;
+  flex-wrap: wrap;
+  /* background-color: grey; */
+}
+
+.Flexbox-item {
+  width: 1100px;
+  margin: 7px;
+  border: 3px;
+  justify-content: space-evenly;
+  flex-basis: auto;
+  align-items: center;
+  /* background-color: hotpink; */
+}
+
+.StarAndBar {
+  justify-content: left;
+}
+
+.AverageStars {
+  width: 500px;
+  height: 100px;
+  margin: 10px;
+  padding: 10px;
+  display:inline-block;
+  justify-content: center;
+}
+
+.drop {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: indigo;
+}
+
+.RItem {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  /* background-color: white; */
+}
+
+.MReviews {
+  height: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.sortReview {
+  display: flex;
+  justify-content: center;
+}
+
+.ReviewList{
+  display: flex;
+  justify-content: center;
+}
+
+.RatingText {
+  display: flex;
+  justify-content: center;
+  font-size: 50px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.OneStar {
+  display: flex;
+  justify-content: center;
+}
+
+.TwoStar {
+  display: flex;
+  justify-content: center;
+}
+
+.ThreeStar {
+  display: flex;
+  justify-content: center;
+}
+
+.FourStar {
+  display: flex;
+  justify-content: center;
+}
+
+.FiveStar {
+  display: flex;
+  justify-content: center;
+}
+
+.RecommendedStar {
+  display: flex;
+  justify-content: center;
+}
+
+.BarTitle {
+  text-align: left;
+}
+
+.ProgressBar {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.TextBar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 50px;
+  width: 75%
+}
+
+/* .StarAndBar {
+  display: flex;
+  width: 75%
+} */
+
+/* .progress {
+  align-content: left;
+} */
+
+/* .SharedStars {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+} */
+
+
+/* .StarandBarContainer {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+
   justify-content: space-between;
-  align-items: flex-start;
+  background-color: hotpink;
 }
+
+.DropandItemContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  background-color: purple;
+} */
+/* .sortReview {
+  width: 100px;
+  margin: 2px;
+  border: 3px solid purple;
+  background-color: grey;
+} */
 
 /* .AverageStars {
   flex-direction: column;

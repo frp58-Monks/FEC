@@ -11,7 +11,8 @@ import styled from 'styled-components';
 //wrapper for individual review tiles
 export const ReviewWrapper = styled.div`
   border-style: solid;
-  width: 50%;
+  width: 90%;
+  height: 50%
   align: center;
   padding:10px;
   margin: 30px 15px;
@@ -75,6 +76,7 @@ export const Helpful = styled.button`
   height: 30px;
   border: 3px solid green;
 `
+
 //not used
 // export const reviewStar = styled.button`
 //   display: flex;

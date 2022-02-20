@@ -12,11 +12,14 @@ import styled from 'styled-components';
 
 //more review button
 export const MoreReviews = styled.button`
-  display: flex;
-  justify-content: flex-left;
   margin: 0 auto;
   align-items: center;
-  height: 30px;
+  height: 40px;
   border: 3px solid green;
+  background-color: pink;
+  font-size: 15px;
+  font-family: Georgia;
 `
 
+//  display: flex;
+//justify-content: flex-start;
