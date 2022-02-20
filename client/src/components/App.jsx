@@ -9,16 +9,11 @@ import './style.css';
 export const AppContext = createContext();
 
 const App = (props) => {
-  // const [url, setURL] = useState(window.location.href);
   const [product_id, setProduct_id] = useState(null);
   const [productDetails, setProductDetails] = useState(null);
   const [productStyles, setProductStyles] = useState(null);
   const [index, setIndex] = useState(0);
   const [reviewStars, setReviewStars] = useState('');
-
-  // window.addEventListener('popstate', (event) => {
-  //   return setURL(window.loaction.href);
-  // })
 
   const searchForProducts = (count, search) => {
     axios.get('/products', { params: { count }})
@@ -79,7 +74,6 @@ const App = (props) => {
   }
 
   const getReviewStars = (product_id) => {
-    // console.log('inside stars func')
     axios.get('/reviews/meta', { params: { product_id } })
       .then(res => {
         const starData = res.data;

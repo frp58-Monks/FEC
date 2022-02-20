@@ -6,18 +6,24 @@ import axios from 'axios';
 
 const Feedback = (props) => {
   const [reviews, setReviews] = useState({});
-  const [reviewMeta, setReviewMeta] = useState({});
   const [questions, setQuestions] = useState({});
   const [product_id, setProduct_id] = useState(props.product_id);
+  const [dropdown, setDropdown] = useState('relevant');
+
   if (props.product_id !== product_id) {
     setProduct_id(props.product_id);
   }
 
   //R&R API CALLS
-  //get data for individual review tiles
   const getReviews = () => {
     axios
-      .get('/reviews/', { params: { product_id: product_id } })
+      .get('/reviews/', {
+        params: {
+          product_id: product_id,
+          sort: dropdown,
+          count: 1000
+        }
+      })
       .then(res => {
         setReviews(res.data);
       })
@@ -26,20 +32,7 @@ const Feedback = (props) => {
       });
   }
 
-  //get review meta
-  const getMeta = () => {
-    axios
-      .get('/reviews/meta', { params: { product_id: product_id } })
-      .then(res => {
-        setReviewMeta(res.data);
-      })
-      .catch((err) => {
-        console.log('error with reviews', err);
-      });
-  }
-
   //Q&A API CALLS
-
   const getQuestions = () => {
     axios
       .get('/qa/questions', { params: { product_id: product_id } })
@@ -53,9 +46,8 @@ const Feedback = (props) => {
 
   useEffect(() => (
     getReviews(),
-    getMeta(),
     getQuestions()
-  ), [product_id]);
+  ), [product_id, dropdown]);
 
   return (
     <div>
@@ -64,12 +56,15 @@ const Feedback = (props) => {
       />
       <StarReview />
       <div>
-        <RatingReview
-          reviews={reviews}
-          reviewStars={props.reviewStars}
-          meta={reviewMeta}
-          product_id={product_id}
-        />
+        {props.reviewStars && reviews && product_id &&
+          <RatingReview
+            reviews={reviews}
+            reviewStars={props.reviewStars}
+            product_id={product_id}
+            reviewFunc={getReviews}
+            setDropdown={setDropdown}
+          />
+        }
       </div>
     </div>
   )
@@ -125,6 +120,24 @@ export default Feedback;
 //         console.log('error with reviews', err);
 //       });
 //   }
+
+  //get review meta
+  // const getMeta = () => {
+  //   axios
+  //     .get('/reviews/meta', { params: { product_id: product_id } })
+  //     .then(res => {
+  //       setReviewMeta(res.data);
+  //     })
+  //     .catch((err) => {
+  //       console.log('error with reviews', err);
+  //     });
+  // }
+
+    // useEffect(() => (
+  //   getReviews(dropdown)
+  // ), [dropdown]);
+
+
 
 //   //Put review req
 

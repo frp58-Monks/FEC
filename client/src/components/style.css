@@ -12,4 +12,21 @@
 
 .search {
   padding-left: 80%;
+
+progress {
+  border: none;
+  width: 400px;
+  height: 25px;
+  padding-left: 2px;
+  padding-right: 2px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+progress::-webkit-progress-value {
+  background: #20B2AA;
+}
+
+progress::-webkit-progress-bar {
+  background: grey;
 }

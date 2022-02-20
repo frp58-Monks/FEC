@@ -4,6 +4,7 @@ export const ReviewSummary = styled.div`
   font-weight: bold;
   font-family: Georgia;
   font-weight: 10px;
+  font-size: 17px;
   overflow: auto;
 `
 
@@ -54,8 +55,16 @@ export const Recommend = styled.div`
 `
 
 export const Helpful = styled.button`
+  margin: 0 auto;
+  display: block;
+  align-items: center;
+  height: 30px;
+  border: 3px solid green;
+`
+
+export const reviewStar = styled.button`
   display: flex;
-  justify-content: center;
+  justify-content: flex-left;
   align-items: center;
   height: 30px;
   border: 3px solid green;
@@ -66,3 +75,18 @@ export const Left = styled.div`
   justify-content: flex-end;
 `
 
+export const scrollBarContainer = styled.div`
+  border-style: solid;
+  width: 60%;
+  height: 100vh
+  background-color: #DCDCDC;
+`
+
+export const scrollBar = styled.div`
+  height: 300px;
+  overflow-y:auto;
+  width:215px;
+  float:left;
+  position:relative;
+  margin-left:-5px;
+`

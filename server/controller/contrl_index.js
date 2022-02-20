@@ -80,7 +80,6 @@ const getAnswers = (req, res) => {
 //PUT Requests
 const putReviewHelpful = (req, res) => {
   const params = req.body.params;
-  console.log('server put', params);
 
   Model.putReviewHelpful(params, (err, reviews) => {
     if (err) {
