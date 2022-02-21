@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from 'react';
+import React, { useState, useEffect, useContext, createContext } from 'react';
 import ImageCarousel from './Overview/ImageCarousel.jsx';
 import Favoritable from './Overview/Favoritable.jsx';
 import Styles from './Overview/Styles.jsx';
@@ -6,45 +6,63 @@ import SizeQtyDD from './Overview/SizeQtyDD.jsx';
 import Price from './Overview/Price.jsx';
 import AddToCart from './Overview/AddtoCart.jsx';
 import RatingBreakdown from './RatingReview/RatingBreakdown.jsx';
+import Description from './Overview/Descript.jsx';
+import './Overview/StylesOver.css';
+import { AppContext } from './App.jsx';
 
-const Overview = (props) => {
-  let rdyToRender = null;
-  if (props.productDetails && props.productStyles) {
-    rdyToRender = true;
-  }
+export const OverviewContext = createContext();
+
+const Overview = () => {
+  const { productStyles, productDetails, reviewStars } = useContext(AppContext);
+  const [defaultStyle, setDefaultStyle] = useState(productStyles.results[0]);
+
+  const updateCurrentStyle = (e) => {
+    let value = parseInt(e.target.attributes.value.value);
+    productStyles.results.forEach((everyStyle) => {
+      if (everyStyle.style_id === value) {
+        setDefaultStyle(everyStyle);
+      }
+    })
+  };
+
+  useEffect(() => {
+    setDefaultStyle(productStyles.results[0]);
+  }, [productStyles]);
+
   return (
-    <div>
-      {rdyToRender &&
-      <div>
-        <div className="image-carousel"><ImageCarousel productStyles={props.productStyles}/></div>
+    <OverviewContext.Provider value={{ updateCurrentStyle, defaultStyle }}>
+      {productStyles && productDetails &&
+      <div className="overviewMain">
+
+        <ImageCarousel className="imageCarouselOver"/>
 
         <div className="product-details">
-          <div>
-            <h3 className="name">{props.productDetails.name}</h3>
-            <div className="favoritable"><Favoritable /></div>
+
+          <h3>{productDetails.name}</h3>
+
+          <div><b>Category: </b>{productDetails.category}</div>
+
+          <div className="starsNlinks">
+            <RatingBreakdown className="myStars" reviewStars={reviewStars}/>
+            <div className="myRatings" onClick={(e) => console.log('clicked on ratings route')}><u>1902 ratings</u></div>
+            <div className="myQuestions" onClick={(e) => console.log('clicked on questions route')}>| <u>85 answered questions</u></div>
           </div>
 
-          <div className="category"><b>Category: </b>{props.productDetails.category}</div>
+          <Description/>
 
-          <div>
-            <RatingBreakdown reviewStars={props.reviewStars}/>
-            <div>Ratings-link</div>
-            <div>Reviews-link</div>
+          <Styles/>
+
+          <div className="dropdownsCart">
+            <SizeQtyDD/>
+            <AddToCart/>
           </div>
 
-          <div className="description">About this Item: <p className="productDesription">{props.productDetails.description}</p></div>
+          <Price/>
 
-          <div className="styles"><Styles productStyles={props.productStyles}/></div>
-
-          <SizeQtyDD className="dropdown-menus" productStyles={props.productStyles}/>
-
-          <div className="price"><Price originalPrice={props.productStyles.results[0].original_price} salePrice={props.productStyles.results[0].sale_price}/></div>
-
-          <div className="add-to-cart"><AddToCart /></div>
         </div>
       </div>
       }
-    </div>
+    </OverviewContext.Provider>
   );
 }
 
