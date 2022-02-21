@@ -181,6 +181,18 @@ progress::-webkit-progress-bar {
   padding-right: 10%;
 }
 
+/* ::-webkit-scrollbar {
+  width: 10px;
+} */
+
+.ReviewItem {
+  width: 90%;
+  height: 600px;
+  overflow-y: scroll;
+  scrollbar-color: black;
+  scrollbar-width: thin;
+}
+
  /* color: #d8b2d1 */
 /* .StarAndBar {
   display: flex;

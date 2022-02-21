@@ -11,9 +11,10 @@ import styled from 'styled-components';
 // `
 
 //more review button
+//  // align-items: center;
 export const MoreReviews = styled.button`
-  margin: 0 auto;
-  align-items: center;
+  margin: 2px;
+  margin-right: 11%;
   height: 40px;
   width: 150px;
   border: 3px solid #6c3082;

@@ -13,7 +13,7 @@ import styled from 'styled-components';
 export const ReviewWrapper = styled.div`
   border-style: solid;
   width: 95%;
-  height: 50%
+  height: 50%;
   align: center;
   padding: 10px;
   padding-left: 5%;

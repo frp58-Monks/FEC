@@ -44,7 +44,7 @@ const ReviewListItem = ({ item, product_id, reviewStars, reviews }) => {
   }
 
   return (
-      <div className="ReviewList" >
+    <div className="ReviewList" >
       <ReviewWrapper className="Wrapper">
         <div>{reviewRating}</div>
         <ReviewDate>{combinedDate}</ReviewDate>
@@ -58,7 +58,7 @@ const ReviewListItem = ({ item, product_id, reviewStars, reviews }) => {
         <Response>{item.response ? `Response from seller: ${item.response}` : ''}</Response>
         <Helpful onClick={updateHelpful}> Helpful? Yes: {helpful}</Helpful>
       </ReviewWrapper>
-      </div>
+    </div>
   )
 }
 
