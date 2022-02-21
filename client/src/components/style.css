@@ -11,7 +11,17 @@
 }
 
 .search {
-  padding-left: 80%;
+  display: flex;
+  padding: 0px 0 20px 75%;
+}
+
+.searchForm {
+  font-size: 14px;
+  padding: 0 35px 0 3px;
+}
+
+.searchButton {
+  font-size: 18px;
 }
 
 progress {
@@ -34,5 +44,5 @@ progress::-webkit-progress-bar {
 
 .content {
   color: rgb(53, 52, 52);
-  background-color: rgb(160, 160, 160);
+  background-color: rgb(240, 238, 238);
 }

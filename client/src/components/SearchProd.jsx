@@ -15,12 +15,14 @@ const SearchProductBar = (props) => {
       props.searchForProducts(1000, searchInput.toLowerCase());
     }}>
       <input
+        className="searchForm"
         type="text"
         value={searchInput}
         onChange={(e) => {setSearchInput(e.target.value)}}
-        placeholder="Search for a Product"
+        placeholder="search for a product..."
       />
       <input
+        className="searchButton"
         type="submit"
         value="Search"
       />

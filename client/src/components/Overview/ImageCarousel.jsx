@@ -24,21 +24,20 @@ const ImageCarousel = () => {
     }
   }
 
-  // Auto Swipte the Carousel
-  // useEffect(() => {
-  //   const interval = setInterval(() => {
-  //     if (!paused) {
-  //       updateIndex(activeIndex + 1);
-  //     }
-  //   }, 10000);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      if (!paused) {
+        updateIndex(activeIndex + 1);
+      }
+    }, 10000);
 
-  //   //Ensure interval stops running when our component is unmounted
-  //   return () => {
-  //     if (interval) {
-  //       clearInterval(interval);
-  //     }
-  //   };
-  // });
+    //Ensure interval stops running when our component is unmounted
+    return () => {
+      if (interval) {
+        clearInterval(interval);
+      }
+    };
+  });
 
   //-----------Render-----------
   return (

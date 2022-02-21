@@ -51,7 +51,7 @@ const SizeQtyDD = () => {
   ), [size]);
 
   return (
-    <div>
+    <>
       {productStyles &&
       <div className="dropdownMenus">
         <div className="size-dd">
@@ -77,7 +77,7 @@ const SizeQtyDD = () => {
 
       </div>
       }
-    </div>
+    </>
   );
 };
 

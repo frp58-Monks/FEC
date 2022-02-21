@@ -3,7 +3,7 @@ import './StylesOver.css';
 
 const AddToCart = () => {
   return (
-    <form onSubmit={(e) => {e.preventDefault(); console.log('You clicked AddToCart');}}>
+    <form className="addForm" onSubmit={(e) => {e.preventDefault(); console.log('You clicked AddToCart');}}>
       <button
         className="addToCart"
         type="submit">

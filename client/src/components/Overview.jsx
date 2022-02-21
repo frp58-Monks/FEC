@@ -6,6 +6,7 @@ import SizeQtyDD from './Overview/SizeQtyDD.jsx';
 import Price from './Overview/Price.jsx';
 import AddToCart from './Overview/AddtoCart.jsx';
 import RatingBreakdown from './RatingReview/RatingBreakdown.jsx';
+import Description from './Overview/Descript.jsx';
 import './Overview/StylesOver.css';
 import { AppContext } from './App.jsx';
 
@@ -33,7 +34,7 @@ const Overview = () => {
       {productStyles && productDetails &&
       <div className="overviewMain">
 
-        <ImageCarousel/>
+        <ImageCarousel className="imageCarouselOver"/>
 
         <div className="product-details">
 
@@ -43,17 +44,17 @@ const Overview = () => {
 
           <div className="starsNlinks">
             <RatingBreakdown className="myStars" reviewStars={reviewStars}/>
-            <div className="myRatings"><u>1902 ratings</u></div>
-            <div className="myQuestions">| <u>85 answered questions</u></div>
+            <div className="myRatings" onClick={(e) => console.log('clicked on ratings route')}><u>1902 ratings</u></div>
+            <div className="myQuestions" onClick={(e) => console.log('clicked on questions route')}>| <u>85 answered questions</u></div>
           </div>
 
-          <div><b>About this Item: </b><p>{productDetails.description}</p></div>
+          <Description/>
 
           <Styles/>
 
           <div className="dropdownsCart">
             <SizeQtyDD/>
-            <AddToCart />
+            <AddToCart/>
           </div>
 
           <Price/>
