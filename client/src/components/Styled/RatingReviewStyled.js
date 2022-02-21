@@ -14,7 +14,7 @@ import styled from 'styled-components';
 //  // align-items: center;
 export const MoreReviews = styled.button`
   margin: 2px;
-  margin-right: 11%;
+  margin-right: 1%;
   height: 40px;
   width: 150px;
   border: 3px solid #6c3082;
@@ -22,6 +22,7 @@ export const MoreReviews = styled.button`
   font-family: Georgia;
   background-color: #d8b2d1;
   border-radius: 10px;
+  align-items: center;
 `
 
 export const RTitle = styled.h1`

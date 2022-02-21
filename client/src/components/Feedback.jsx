@@ -33,9 +33,10 @@ const Feedback = (props) => {
   }
 
   //post
-  const postReviews = () => {
+  const postReviews = (params) => {
+    console.log(params);
     axios
-      .post('/reviews/')
+      .post('/reviews/', params)
       .then(() => {
         getReviews();
         console.log('successful post');
@@ -75,7 +76,8 @@ const Feedback = (props) => {
             reviewStars={props.reviewStars}
             product_id={product_id}
             reviewFunc={getReviews}
-            setDropdown={setDropdown}c
+            setDropdown={setDropdown}
+            postFunc={postReviews}
           />
         }
       </div>

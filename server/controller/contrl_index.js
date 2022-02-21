@@ -93,7 +93,6 @@ const putReviewHelpful = (req, res) => {
 //POST Requests
 const postReviews = (req, res) => {
   const params = req.body;
-
   Model.postReviews(params, (err, reviews) => {
     if (err) {
       res.status(500).send(err);
