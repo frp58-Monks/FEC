@@ -16,14 +16,15 @@ const RatingBreakdown = ( {reviewStars} ) => {
     <JCont className="SharedStars">
 
         <div className="StarText">
-          <JText className="SharedStarText"> Average Rating: {avg} </JText>
-        </div>
-
-        <div className="StarText">
           <div className="JStarbox">
             <div style={{ 'width': `${width}%`}}>★★★★★</div>
             <div>☆☆☆☆☆</div>
           </div>
+
+          <div className="StarText">
+            <JText className="SharedStarText"> {avg} </JText>
+          </div>
+
         </div>
 
     </JCont>

@@ -76,8 +76,6 @@ export const JCont = styled.div`
   width: 90%;
   height: 20%
   align: center;
-  padding:10px;
-  margin: 30px 15px;
 `
 
 export const JText = styled.span`
@@ -85,7 +83,11 @@ export const JText = styled.span`
   font-family: Georgia;
   font-weight: 10px;
   font-size: 15px;
-  margin; 20px;
-  padding: 5px;
   color: #6c3082;
 `
+
+// padding:10px;
+// margin: 30px 15px;
+
+// margin; 20px;
+// padding: 5px;
