@@ -1,17 +1,5 @@
 import styled from 'styled-components';
 
-// //not used
-// export const Position = styled.div`
-//   display: flex;
-//   flex-direction: row;
-// `
-// //not used
-// export const TotalContainer = styled.div`
-//   justify-content: flex-start;
-// `
-
-//more review button
-//  // align-items: center;
 export const MoreReviews = styled.button`
   margin: 2px;
   padding: 5px;
@@ -46,23 +34,3 @@ export const AddReview = styled.button`
   border-radius: 10px;
   align-items: center;
 `
-
-// export const SelectDrop = styled.select`
-//   align-items: center;
-//   border: 3px solid #6c3082;
-//   font-size: 15px;
-//   font-family: Georgia;
-//   background-color: #d8b2d1;
-//   border-radius: 10px;
-// `
-// export const DropText = styled.div`
-//   align-items: center;
-//   height: 30px;
-//   border: 3px solid #6c3082;
-//   font-size: 15px;
-//   font-family: Georgia;;
-//   border-radius: 10px;
-// `
-
-//  display: flex;
-//justify-content: flex-start;

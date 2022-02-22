@@ -250,7 +250,8 @@ progress::-webkit-progress-bar {
   border: solid black;
   border-radius: 10px;
   padding: 15px;
-  color:#ffcc33;
+  /* color:#ffcc33; */
+  color: #eec64f;
 }
 
 .modalBar {
@@ -350,6 +351,8 @@ progress::-webkit-progress-bar {
   height: 40px;
   width: 300px; */
 }
+
+
 /* MODAL */
 /* .modal .modalContent > h2 {
   font-size: 28px;
