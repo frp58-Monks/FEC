@@ -1,13 +1,11 @@
 import React, {useState, useEffect} from 'react';
 import { ReviewSummary, ReviewWrapper, ReviewBody, ReviewDate, ReviewPurchaser, Response, Recommend, Left, Helpful } from '../Styled/ReviewListStyled.js';
-import StarFilled from '../RatingReview/StarFilled.jsx';
+//import StarFilled from '../RatingReview/StarFilled.jsx';
 import { FaCheck } from "react-icons/fa";
 import axios from 'axios';
 
-
 const ReviewListItem = ({ item, product_id, reviewStars, reviews }) => {
   const[helpful, setHelpful] = useState(item.helpfulness);
-  //const[notHelpful, setnotHelpful] = useState(0);
 
   //convert date on individual tiles
   let date = item.date.split('T');
@@ -45,13 +43,9 @@ const ReviewListItem = ({ item, product_id, reviewStars, reviews }) => {
       })
   }
 
-  // const decreaseHelpful = () => {
-  //   setnotHelpful(notHelpful + 1);
-  // }
-
   return (
-      <Left >
-      <ReviewWrapper>
+    <div className="ReviewList" >
+      <ReviewWrapper className="Wrapper">
         <div>{reviewRating}</div>
         <ReviewDate>{combinedDate}</ReviewDate>
         <ReviewPurchaser>Verified Purchaser: {item.reviewer_name}</ReviewPurchaser>
@@ -64,7 +58,7 @@ const ReviewListItem = ({ item, product_id, reviewStars, reviews }) => {
         <Response>{item.response ? `Response from seller: ${item.response}` : ''}</Response>
         <Helpful onClick={updateHelpful}> Helpful? Yes: {helpful}</Helpful>
       </ReviewWrapper>
-      </Left>
+    </div>
   )
 }
 

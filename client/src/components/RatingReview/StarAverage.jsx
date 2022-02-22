@@ -1,10 +1,8 @@
 import React from 'react';
-// { productId }
+
 const StarAverage = (ratingsObj) => {
   var totalCount = 0;
   var averageCount = 0;
-
-  //let ratingsObj = data.ratings;
 
   for (let key in ratingsObj) {
     let value = Number(ratingsObj[key]);

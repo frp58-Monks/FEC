@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import RatingReview from './RatingReview.jsx';
 import QuestionAnswer from './QuestionAnswer.jsx';
-import StarReview from './RatingReview/StarReview.jsx';
+// import StarReview from './RatingReview/StarReview.jsx';
 import axios from 'axios';
 
 const Feedback = (props) => {
@@ -32,6 +32,20 @@ const Feedback = (props) => {
       });
   }
 
+  //post
+  const postReviews = (params) => {
+    console.log(params);
+    axios
+      .post('/reviews/', params)
+      .then(() => {
+        getReviews();
+        console.log('successful post');
+      })
+      .catch((err) => {
+        console.log('error with posting review', err);
+      });
+  }
+
   //Q&A API CALLS
   const getQuestions = () => {
     axios
@@ -54,15 +68,15 @@ const Feedback = (props) => {
       <QuestionAnswer
         questions={questions}
       />
-      <StarReview />
-      <div>
+      <div className="ReviewFlexContainer">
         {props.reviewStars && reviews && product_id &&
-          <RatingReview
+          <RatingReview className="RRFeedbackContainer"
             reviews={reviews}
             reviewStars={props.reviewStars}
             product_id={product_id}
             reviewFunc={getReviews}
             setDropdown={setDropdown}
+            postFunc={postReviews}
           />
         }
       </div>
@@ -71,6 +85,21 @@ const Feedback = (props) => {
 }
 
 export default Feedback;
+
+//     <StarReview />
+// , {
+//   params: {
+//     product_id: 40344,
+//     rating: 3,
+//     summary: "this is monks test",
+//     body: "this is the bodddyyyy of monks",
+//     recommend: true,
+//     name: "monks",
+//     email: "test@yahoo.com",
+//     photos: [],
+//     characteristics:  { "14": 5, "15": 5}
+//   }
+// }
 
 // //takes in product id from app (overview)
 // class Feedback extends React.Component {

@@ -12,3 +12,5 @@ config/myConfig.js
 ## DEV ##
 node_modules
 
+.DS_Store
+

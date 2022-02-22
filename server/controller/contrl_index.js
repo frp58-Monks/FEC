@@ -90,6 +90,18 @@ const putReviewHelpful = (req, res) => {
   })
 }
 
+//POST Requests
+const postReviews = (req, res) => {
+  const params = req.body;
+  Model.postReviews(params, (err, reviews) => {
+    if (err) {
+      res.status(500).send(err);
+    } else {
+      res.status(201).send();
+    }
+  })
+}
+
 module.exports = {
   getAllProducts,
   getOneProduct,
@@ -98,5 +110,6 @@ module.exports = {
   getReviewsMeta,
   getQuestions,
   getAnswers,
-  putReviewHelpful
+  putReviewHelpful,
+  postReviews
 };
