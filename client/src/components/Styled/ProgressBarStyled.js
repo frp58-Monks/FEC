@@ -72,7 +72,7 @@ export const SharedStarText = styled.span`
 `
 
 //Justin's stars
-export const JStarCont = styled.div`
+export const JCont = styled.div`
   width: 90%;
   height: 20%
   align: center;
@@ -80,7 +80,7 @@ export const JStarCont = styled.div`
   margin: 30px 15px;
 `
 
-export const JStarText = styled.span`
+export const JText = styled.span`
   font-weight: bold;
   font-family: Georgia;
   font-weight: 10px;
