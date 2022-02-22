@@ -133,11 +133,11 @@ const Modal = ({ customClass, show, closeModal, setRating, setSummary, setBody, 
             <div>
               <label>
               Recommend? :
-              <input type="radio" value='Yes' onChange={handleRecommend}/>
+              <input type="radio" name="radioBut" value='Yes' onChange={handleRecommend} required/>
                 Yes
               </label>
               <label>
-              <input type="radio" value='No' onChange={handleRecommend} />
+              <input type="radio" name="radioBut" value='No' onChange={handleRecommend} />
                 No
               </label>
             </div>
