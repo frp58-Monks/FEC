@@ -4,7 +4,7 @@ import axios from 'axios';
 import RatingBreakdown from './RatingReview/RatingBreakdown.jsx';
 import ProgressBar from './RatingReview/ProgressBar.jsx';
 //import { TotalContainer} from './Styled/ProgressBarStyled.js';
-import { MoreReviews, RTitle } from './styled/RatingReviewStyled.js';
+import { MoreReviews, RTitle, AddReview } from './styled/RatingReviewStyled.js';
 import Modal from './RatingReview/Modal.jsx';
 
 
@@ -66,30 +66,6 @@ const RatingReview = ({ reviews, reviewStars, product_id, reviewFunc, setDropdow
     <div>
       <RTitle className="Rating Title"> Ratings and Reviews </RTitle>
 
-      <div className="ModalContainer">
-        <button className="ModalOpener" onClick={toggleModal}>
-          Add Review
-        </button>
-
-        <Modal
-          show={showModal}
-          closeModal={toggleModal}
-          setRating={setRating}
-          setSummary={setSummary}
-          setBody={setBody}
-          setRecommend={setRecommend}
-          setUsername={setUsername}
-          setEmail={setEmail}
-          customClass="CustomModal"
-          setForm={setForm}
-          postFunc={postFunc}
-        >
-          <div>
-            <h2>add review form here</h2>
-          </div>
-        </Modal>
-      </div>
-
       <div className="SortContainer">
             <div className="Dropdown">
               {selectedDropdown && onChange &&
@@ -135,15 +111,39 @@ const RatingReview = ({ reviews, reviewStars, product_id, reviewFunc, setDropdow
               </div>
             </div>
 
-            <div className="MReviews">
-              {
-                resultsArr && results &&
-                  showCount <= results.length ?
-                  <MoreReviews onClick={addCount}>More Reviews</MoreReviews> : ''
-              }
+            <div className="modalContainer">
+              <div className="MReviews">
+                {
+                  resultsArr && results &&
+                    showCount <= results.length ?
+                    <MoreReviews onClick={addCount}>More Reviews</MoreReviews> : ''
+                }
+              </div>
+
+              <div className="modalReviews">
+                <AddReview className="ModalOpener" onClick={toggleModal}>
+                  Add Review
+                </AddReview>
+
+                <Modal
+                  show={showModal}
+                  closeModal={toggleModal}
+                  setRating={setRating}
+                  setSummary={setSummary}
+                  setBody={setBody}
+                  setRecommend={setRecommend}
+                  setUsername={setUsername}
+                  setEmail={setEmail}
+                  customClass="CustomModal"
+                  setForm={setForm}
+                  postFunc={postFunc}
+                >
+                </Modal>
+              </div>
             </div>
           </div>
       </div>
+
     </div>
   )
 }
