@@ -5,7 +5,12 @@ const AnswerListitem = (props) => {
 
   return (
     <div>
-      {props.answer.body.length ? 'Answer: ' + props.answer.body : 'No answers to this question yet'}
+      <div>
+        Answered by: {props.answer.answerer_name}
+      </div>
+      <div>
+        Answer: {props.answer.body}
+      </div>
     </div>
   );
 }
