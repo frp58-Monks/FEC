@@ -10,6 +10,7 @@ const Modal = ({ customClass, show, closeModal, setRating, setSummary, setBody, 
   // const [modalPhotos, setModalPhotos] = useState([]);
   // const [modalCharacteristics, setmodalCharacteristics] = useState({});
   const[modalEmail, setModalEmail] = useState('');
+  const[success, setSuccess] = useState(true);
 
  const handleRating = (e) => {
     setModalRating(e.target.value);
@@ -29,6 +30,7 @@ const Modal = ({ customClass, show, closeModal, setRating, setSummary, setBody, 
   const handleRecommend = (e) => {
       setModalRecommend(e.target.value);
       //setRecommend(e.target.value);
+      // setSuccess(true);
   }
 
   const handleUsername = (e) => {
@@ -56,7 +58,7 @@ const Modal = ({ customClass, show, closeModal, setRating, setSummary, setBody, 
 
   //function to convert recommended to boolean
 
-    if (typeof modalRecommend === 'string' && modalRecommend === 'no') {
+    if (typeof modalRecommend === 'string' && modalRecommend === 'No') {
       setRecommend(false);
     } else {
       setRecommend(true);
@@ -101,16 +103,17 @@ const Modal = ({ customClass, show, closeModal, setRating, setSummary, setBody, 
               />
             </label>
 
-
-            <label>
+            <div>
+              <label>
               Recommend?:
-              <input
-                onChange={handleRecommend}
-                placeholder="yes/no"
-                type="text"
-                value={modalRecommend}
-              />
-            </label>
+              <input type="radio" value='Yes' onChange={handleRecommend}/>
+                Yes
+              </label>
+              <label>
+              <input type="radio" value='No' onChange={handleRecommend} />
+                No
+              </label>
+            </div>
 
             <label>
               Name:
@@ -133,10 +136,11 @@ const Modal = ({ customClass, show, closeModal, setRating, setSummary, setBody, 
             <input
               type="submit"
               value="Submit"
+              messsage='Submission Sucessful'
             />
           </form>
 
-          <button title="Close" className="closeModal" onClick={closeModal}>
+          <button title="Close" className="closeModal" onClick={closeModal} >
           </button>
         </div>
 
@@ -166,5 +170,13 @@ Characteristics:
   value={modalCharacteristics}
 />
 </label>
-
+            <label>
+              Recommend?:
+              <input
+                onChange={handleRecommend}
+                placeholder="yes/no"
+                type="text"
+                value={modalRecommend}
+              />
+            </label>
 */

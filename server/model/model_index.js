@@ -77,7 +77,6 @@ const getQuestions = (params, callback) => {
 };
 
 const getAnswers = (params, callback) => {
-  console.log('model', params);
   const route = API + `qa/questions/${params.question_id}/answers`;
   axios.get(route, {headers:
     {authorization: TOKEN}, params: params})
