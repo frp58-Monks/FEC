@@ -96,30 +96,35 @@ const Modal = ({ customClass, show, closeModal, setRating, setSummary, setBody, 
                 )
               })
             }
-              <div>
-                1 star - “Poor”
-                2 stars - “Fair”
-                3 stars - “Average”
-                4 stars - “Good"
+              <div className="modalStarForm">
+                1 star - “Poor” |
+                2 stars - “Fair” |
+                3 stars - “Average” |
+                4 stars - “Good" |
                 5 stars - “Great”
               </div>
             </div>
 
-            <label>
-              Summary:
-              <input
-                onChange={handleSummary}
-                type="text"
-                maxLength="60"
-                placeholder="Example: Best purchase ever!"
-                value={modalSummary}
-                required
-              />
-            </label>
-
+            <div className="modalSummary">
               <label>
-                Body:
+                *Summary:
                 <input
+                  className="modalBar innerModalSummary"
+                  onChange={handleSummary}
+                  type="text"
+                  maxLength="60"
+                  placeholder="Example: Best purchase ever!"
+                  value={modalSummary}
+                  required
+                />
+              </label>
+            </div>
+
+            <div className="modalBody">
+              <label>
+                *Body:
+                <input
+                  className="modalBar innerModalBody"
                   onChange={handleBody}
                   type="text"
                   // minLength="50"
@@ -129,45 +134,65 @@ const Modal = ({ customClass, show, closeModal, setRating, setSummary, setBody, 
                   required
                 />
               </label>
+            </div>
 
-            <div>
+            <div className="modalRecommend">
               <label>
-              Recommend? :
-              <input type="radio" name="radioBut" value='Yes' onChange={handleRecommend} required/>
+              *Recommend? :
+              <input
+                className="innerModalRecommend"
+                type="radio"
+                name="radioBut"
+                value='Yes'
+                onChange={handleRecommend} required
+              />
                 Yes
               </label>
               <label>
-              <input type="radio" name="radioBut" value='No' onChange={handleRecommend} />
+              <input
+                className="innerModalRecommend"
+                type="radio"
+                name="radioBut"
+                value='No'
+                onChange={handleRecommend}
+              />
                 No
               </label>
             </div>
 
-            <label>
-              Name:
-              <input
-                onChange={handleUsername}
-                type="text"
-                maxLength="60"
-                placeholder="Example: jackson11!"
-                value={modalUsername}
-                required
-              />
-              <div> For privacy reasons, do not use your full name or email address </div>
-            </label>
+            <div className="modalNameEmail">
+              <label>
+               *Name:
+                <input
+                  className="modalBar innerModalNameEmail"
+                  onChange={handleUsername}
+                  type="text"
+                  maxLength="60"
+                  placeholder="Example: jackson11!"
+                  value={modalUsername}
+                  required
+                />
+                <div className="modalUserDisclaimer"> * For privacy reasons, do not use your full name or email address * </div>
+              </label>
+            </div>
 
-            <label>
-              Email:
-              <input
-                onChange={handleEmail}
-                type="email"
-                placeholder="Example: jackson11@email.com"
-                value={modalEmail}
-                required
-              />
-              <div> For authentication reasons, you will not be emailed </div>
-            </label>
+            <div className="modalNameEmail">
+              <label>
+                *Email:
+                <input
+                  className="modalBar innerModalNameEmail"
+                  onChange={handleEmail}
+                  type="email"
+                  placeholder="Example: jackson11@email.com"
+                  value={modalEmail}
+                  required
+                />
+                <div className="modalUserDisclaimer"> * For authentication reasons, you will not be emailed * </div>
+              </label>
+            </div>
 
             <input
+              className="modalBar modalSubmit"
               type="submit"
               value="Submit"
               messsage='Submission Sucessful'
