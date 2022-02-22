@@ -139,3 +139,4 @@ export default ProgressBar;
 //       console.log('error with reviews', err);
 //     });
 // }
+

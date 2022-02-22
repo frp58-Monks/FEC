@@ -57,6 +57,8 @@ const Modal = ({ customClass, show, closeModal, setRating, setSummary, setBody, 
     };
   //form was triggered
     setForm(true);
+
+    alert("Submission Successful!");
   }
 
 
@@ -94,6 +96,13 @@ const Modal = ({ customClass, show, closeModal, setRating, setSummary, setBody, 
                 )
               })
             }
+              <div>
+                1 star - “Poor”
+                2 stars - “Fair”
+                3 stars - “Average”
+                4 stars - “Good"
+                5 stars - “Great”
+              </div>
             </div>
 
             <label>
@@ -101,22 +110,29 @@ const Modal = ({ customClass, show, closeModal, setRating, setSummary, setBody, 
               <input
                 onChange={handleSummary}
                 type="text"
+                maxLength="60"
+                placeholder="Example: Best purchase ever!"
                 value={modalSummary}
+                required
               />
             </label>
 
-            <label>
-              Body:
-              <input
-                onChange={handleBody}
-                type="text"
-                value={modalBody}
-              />
-            </label>
+              <label>
+                Body:
+                <input
+                  onChange={handleBody}
+                  type="text"
+                  // minLength="50"
+                  maxLength="1000"
+                  placeholder="Why did you like the product or not?"
+                  value={modalBody}
+                  required
+                />
+              </label>
 
             <div>
               <label>
-              Recommend?:
+              Recommend? :
               <input type="radio" value='Yes' onChange={handleRecommend}/>
                 Yes
               </label>
@@ -131,8 +147,12 @@ const Modal = ({ customClass, show, closeModal, setRating, setSummary, setBody, 
               <input
                 onChange={handleUsername}
                 type="text"
+                maxLength="60"
+                placeholder="Example: jackson11!"
                 value={modalUsername}
+                required
               />
+              <div> For privacy reasons, do not use your full name or email address </div>
             </label>
 
             <label>
@@ -140,8 +160,11 @@ const Modal = ({ customClass, show, closeModal, setRating, setSummary, setBody, 
               <input
                 onChange={handleEmail}
                 type="email"
+                placeholder="Example: jackson11@email.com"
                 value={modalEmail}
+                required
               />
+              <div> For authentication reasons, you will not be emailed </div>
             </label>
 
             <input
