@@ -101,6 +101,19 @@ const putReviewHelpful = (params, callback) => {
   })
 };
 
+//POST reqs
+const postReviews = (params, callback) => {
+  const route = API + `reviews/`;
+  axios.post(route, params, {headers:
+    {authorization: TOKEN}})
+  .then((res) => {
+    callback(null, res.data)
+  })
+  .catch((err) => {
+    callback(err);
+  })
+};
+
 module.exports = {
   getAllProducts,
   getOneProduct,
@@ -109,5 +122,6 @@ module.exports = {
   getReviewsMeta,
   getQuestions,
   getAnswers,
-  putReviewHelpful
+  putReviewHelpful,
+  postReviews
 };

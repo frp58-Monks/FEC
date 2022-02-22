@@ -1,23 +1,33 @@
 import React, { useContext } from 'react';
 import StarAverage from './StarAverage.jsx';
-import { AverageStar, ProgressBar, Container } from '../Styled/RatingBreakdownStyled.js';
+// import { AverageStar, ProgressBar, Container } from '../Styled/RatingBreakdownStyled.js';
 import AppContext from '../App.jsx'
 import styled from 'styled-components';
-import css from "../style.css";;
+import css from "../style.css";
+import { JCont, JText } from '../Styled/ProgressBarStyled.js';
 
-const RatingBreakdown = ({ reviewStars }) => {
-  let starObj = reviewStars.ratings;
-  let avg = StarAverage(starObj);
-  let width = avg * 20;
+const RatingBreakdown = ( {reviewStars} ) => {
+
+    let starObj = reviewStars.ratings;
+    let avg = StarAverage(starObj);
+    let width = avg * 20;
 
   return (
-    <div>
-        <span> Average Rating: {avg} </span>
-        <div className="starbox">
-          <div style={{ 'width': `${width}%`}}>★★★★★</div>
-          <div>☆☆☆☆☆</div>
+    <JCont className="SharedStars">
+
+        <div className="StarText">
+          <div className="JStarbox">
+            <div style={{ 'width': `${width}%`}}>★★★★★</div>
+            <div>☆☆☆☆☆</div>
+          </div>
+
+          <div className="StarText">
+            <JText className="SharedStarText"> {avg} </JText>
+          </div>
+
         </div>
-    </div>
+
+    </JCont>
   )
 }
 

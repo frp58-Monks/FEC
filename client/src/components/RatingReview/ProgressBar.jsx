@@ -1,7 +1,9 @@
 import React from 'react';
 import StarAverage from './StarAverage.jsx';
-import { Container, BarTitle, AverageText, RecommendText, RatingText } from '../Styled/ProgressBarStyled.js';
+import { Container, BarTitle, AverageText, RecommendText, RatingText, TextBar } from '../Styled/ProgressBarStyled.js';
 import axios from 'axios';
+import RatingBreakdown from './RatingBreakdown.jsx';
+import { StarCont, SharedStarText } from '../Styled/ProgressBarStyled.js';
 
 const ProgressBar = ({ reviewStars }) => {
 
@@ -9,6 +11,8 @@ const ProgressBar = ({ reviewStars }) => {
   let starObj = reviewStars.ratings;
   let avg = StarAverage(starObj);
   let string = avg.toString();
+
+  let width = avg * 20;
 
   //meta deta of recommended
   let rec = reviewStars.recommended;
@@ -58,38 +62,62 @@ const ProgressBar = ({ reviewStars }) => {
   // console.log('3', threeRating);
 
   return (
-    <div>
-      <RatingText>Rating Breakdown</RatingText>
-      <div>
-        <BarTitle> One Star </BarTitle>
-        <AverageText> {oneRating}% </AverageText>
-        <progress value={oneRating} max={100} />
+    <div className="RatingBar">
+
+      <TextBar className='TextBar'>
+
+      <StarCont className="SharedStars">
+        <div className="StarText">
+          <SharedStarText className="SharedStarText"> Average Rating: {avg} </SharedStarText>
+        </div>
+
+        <div className="StarText">
+          <div className="starbox">
+            <div style={{ 'width': `${width}%`}}>★★★★★</div>
+            <div>☆☆☆☆☆</div>
+          </div>
+        </div>
+      </StarCont>
+
+      <RatingText className="RatingText">Rating Breakdown</RatingText>
+
+      <div className="Bar OneStar">
+        <BarTitle className="BarTitle"> One Star </BarTitle>
+        <AverageText className="AverageText"> {oneRating}% </AverageText>
+        <progress className="ProgressBar" value={oneRating} max={100} />
       </div>
-      <div>
-        <BarTitle> Two Star </BarTitle>
-        <AverageText> {twoRating}% </AverageText>
-        <progress value={twoRating} max={100} />
+
+      <div className="Bar TwoStar">
+        <BarTitle className="BarTitle"> Two Star </BarTitle>
+        <AverageText className="AverageText"> {twoRating}% </AverageText>
+        <progress className="ProgressBar" value={twoRating} max={100} />
       </div>
-      <div>
-        <BarTitle> Three Star </BarTitle>
-        <AverageText> {threeRating}% </AverageText>
-        <progress value={threeRating} max={100} />
+
+      <div className="Bar ThreeStar">
+        <BarTitle className="BarTitle"> Three Star </BarTitle>
+        <AverageText className="AverageText"> {threeRating}% </AverageText>
+        <progress className="ProgressBar" value={threeRating} max={100} />
       </div>
-      <div>
-        <BarTitle> Four Star </BarTitle>
-        <AverageText> {fourRating}% </AverageText>
-        <progress value={fourRating} max={100} />
+
+      <div className="Bar FourStar">
+        <BarTitle className="BarTitle"> Four Star </BarTitle>
+        <AverageText className="AverageText"> {fourRating}% </AverageText>
+        <progress className="ProgressBar" value={fourRating} max={100} />
       </div>
-      <div>
-        <BarTitle> Five Star </BarTitle>
-        <AverageText> {fiveRating}% </AverageText>
-        <progress value={fiveRating} max={100} />
+
+      <div className="Bar FiveStar">
+        <BarTitle className="BarTitle"> Five Star </BarTitle>
+        <AverageText className="AverageText"> {fiveRating}% </AverageText>
+        <progress className="ProgressBar" value={fiveRating} max={100} />
       </div>
-      <div>
-        <BarTitle> Recommended: </BarTitle>
-        <RecommendText> {recommendPercentageRound}% </RecommendText>
-        <progress value={recommendPercentageStr} max={100} />
+
+      <div className="Bar RecommendedStar">
+        <BarTitle className="BarTitle"> Recommended: </BarTitle>
+        <RecommendText className="AverageText"> {recommendPercentageRound}% </RecommendText>
+        <progress className="ProgressBar" value={recommendPercentageStr} max={100} />
       </div>
+      </TextBar>
+
     </div>
   )
 }
@@ -111,3 +139,4 @@ export default ProgressBar;
 //       console.log('error with reviews', err);
 //     });
 // }
+

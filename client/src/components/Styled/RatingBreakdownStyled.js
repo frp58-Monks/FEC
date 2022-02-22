@@ -1,21 +1,32 @@
-import styled from 'styled-components';
+// import styled from 'styled-components';
 
-export const AverageStar = styled.div`
-  text-align: center;
-  font-weight: bold;
-  font-family: Georgia;
-  font-weight: 20px;
-  padding: 20px;
-  margin: 20px 75px;
-  background-color: #E9967A;
-  width: 60%;
-`
+// export const SharedStarText = styled.span`
+//   font-weight: bold;
+//   font-family: Georgia;
+//   font-weight: 10px;
+//   font-size: 15px;
+//   margin; 20px;
+//   padding: 5px;
+// `
 
-export const Container = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-`
+
+//not used
+// export const AverageStar = styled.div`
+//   text-align: center;
+//   font-weight: bold;
+//   font-family: Georgia;
+//   font-weight: 20px;
+//   padding: 20px;
+//   margin: 20px 75px;
+//   background-color: #E9967A;
+//   width: 60%;
+// `
+// //not used
+// export const Container = styled.div`
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+// `
   // const Starbox = styled.div.attrs({
   //   className: "Starbox"
   // })`
