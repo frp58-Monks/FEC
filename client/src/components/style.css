@@ -23,6 +23,20 @@
   font-size: 20px;
 }
 
+.search {
+  display: flex;
+  padding: 0px 0 20px 75%;
+}
+
+.searchForm {
+  font-size: 14px;
+  padding: 0 35px 0 3px;
+}
+
+.searchButton {
+  font-size: 18px;
+}
+
 progress {
   border: none;
   width: 80%;
@@ -38,7 +52,7 @@ progress::-webkit-progress-value {
 }
 
 progress::-webkit-progress-bar {
-  background: grey;
+  background: rgb(150, 149, 149);
 }
 
 .Flexbox-container {
@@ -417,3 +431,7 @@ progress::-webkit-progress-bar {
   align-items: center;
 
   */
+.content {
+  color: rgb(53, 52, 52);
+  background-color: rgb(240, 238, 238);
+}

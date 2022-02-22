@@ -1,22 +1,31 @@
 import React, {useState, useEffect, useContext} from 'react';
+import { AppContext } from '../App.jsx';
+import { OverviewContext } from '../Overview.jsx';
+import './StylesOver.css';
 
-const SizeQtyDD = (props) => {
+const SizeQtyDD = () => {
+  const { defaultStyle, updateCurrentStyle } = useContext(OverviewContext);
+  const { productStyles } = useContext(AppContext);
+
   const [size, setSize] = useState(null);
   const [qty, setQty] = useState(null);
   const [qtyArray, setQtyArray] = useState(null);
 
   const generateQtyArray = (sizeParam) => {
     let max;
-    let arrayOfQuantities = [];
-    if (props.productStyles) {
-      let skusKeys = Object.keys(props.productStyles.results[0].skus);
+    let arrayOfQuantities = ['--'];
+    if (productStyles) {
+      let skusKeys = Object.keys(productStyles.results[0].skus);
       skusKeys.forEach((key) => {
-        let eachSize = props.productStyles.results[0].skus[key].size;
-        let eachQuantity = props.productStyles.results[0].skus[key].quantity;
+        let eachSize = productStyles.results[0].skus[key].size;
+        let eachQuantity = productStyles.results[0].skus[key].quantity;
         if (eachSize === sizeParam) {
           max = eachQuantity;
         }
       })
+      if (max > 15) {
+        max = 15;
+      }
       let num = 1;
       while (num <= max) {
         arrayOfQuantities.push(num);
@@ -27,10 +36,10 @@ const SizeQtyDD = (props) => {
   }
 
   let arrayOfSizes = ['--'];
-  if (props.productStyles) {
-    let skusKeys = Object.keys(props.productStyles.results[0].skus);
+  if (productStyles) {
+    let skusKeys = Object.keys(productStyles.results[0].skus);
     skusKeys.forEach((skuskey) => {
-      let currentSize = props.productStyles.results[0].skus[skuskey].size;
+      let currentSize = productStyles.results[0].skus[skuskey].size;
       if (arrayOfSizes.indexOf(currentSize) === -1) {
         arrayOfSizes.push(currentSize);
       }
@@ -42,11 +51,11 @@ const SizeQtyDD = (props) => {
   ), [size]);
 
   return (
-    <div>
-      {props.productStyles &&
-      <div>
+    <>
+      {productStyles &&
+      <div className="dropdownMenus">
         <div className="size-dd">
-          Choose Size:
+        <b>Size: </b>
           <select name="Size" id="size-DD"
           onChange={(e) => {setSize(e.target.value);}}>
           {arrayOfSizes.map((size) => {
@@ -56,7 +65,7 @@ const SizeQtyDD = (props) => {
         </div>
 
         <div className="qty-dd">
-          Choose Quantity:
+          <b>Qty: </b>
           <select name="qty" id="qty-DD" onChange={(e) => {
             console.log('qty changed'); setQty(e.target.value);
           }}>
@@ -68,7 +77,7 @@ const SizeQtyDD = (props) => {
 
       </div>
       }
-    </div>
+    </>
   );
 };
 

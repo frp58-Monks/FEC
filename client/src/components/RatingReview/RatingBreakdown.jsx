@@ -34,10 +34,6 @@ export default RatingBreakdown;
 
 /*
 
-(!reviewStars && !avg && !width)? null :
-
-
-//{ reviewStars, getReviewStars }
 progress bar:
       <label>Average Rating: {avg} </label>
       <progress value={string} max='5' />

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './style.css';
 
 const SearchProductBar = (props) => {
   const [searchInput, setSearchInput] = useState('');
@@ -8,18 +9,20 @@ const SearchProductBar = (props) => {
   // }
 
   return (
-    <form onSubmit={(e) => {
+    <form className="search" onSubmit={(e) => {
       e.preventDefault();
-      console.log('You Clicked on Search!');
+      console.log('Search is loading...loading...loading...');
       props.searchForProducts(1000, searchInput.toLowerCase());
     }}>
       <input
+        className="searchForm"
         type="text"
         value={searchInput}
         onChange={(e) => {setSearchInput(e.target.value)}}
-        placeholder="Search for a Product"
+        placeholder="search for a product..."
       />
       <input
+        className="searchButton"
         type="submit"
         value="Search"
       />
