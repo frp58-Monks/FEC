@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import RatingReview from './RatingReview.jsx';
 import QuestionAnswer from './QuestionAnswer.jsx';
-import StarReview from './RatingReview/StarReview.jsx';
+// import StarReview from './RatingReview/StarReview.jsx';
 import axios from 'axios';
 
 const Feedback = (props) => {
@@ -68,7 +68,6 @@ const Feedback = (props) => {
       <QuestionAnswer
         questions={questions}
       />
-      <StarReview />
       <div className="ReviewFlexContainer">
         {props.reviewStars && reviews && product_id &&
           <RatingReview className="RRFeedbackContainer"
@@ -87,6 +86,7 @@ const Feedback = (props) => {
 
 export default Feedback;
 
+//     <StarReview />
 // , {
 //   params: {
 //     product_id: 40344,

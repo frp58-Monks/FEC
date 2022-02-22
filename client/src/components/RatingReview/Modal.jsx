@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import '../style.css';
+import { FaStar } from "react-icons/fa";
+import { StarStyled, StarBorder, StarText } from '../Styled/StarStyled.js';
 
 const Modal = ({ customClass, show, closeModal, setRating, setSummary, setBody, setRecommend, setUsername, setEmail, children, setForm }) => {
   const [modalRating, setModalRating] = useState(null);
@@ -7,13 +9,14 @@ const Modal = ({ customClass, show, closeModal, setRating, setSummary, setBody, 
   const [modalBody, setModalBody] = useState('');
   const [modalRecommend, setModalRecommend] = useState(null);
   const [modalUsername, setModalUsername] = useState('');
-  // const [modalPhotos, setModalPhotos] = useState([]);
-  // const [modalCharacteristics, setmodalCharacteristics] = useState({});
   const[modalEmail, setModalEmail] = useState('');
-  const[success, setSuccess] = useState(true);
+  // const[success, setSuccess] = useState(true);
+  const [starRating, setStarRating] = useState(null);
+  const [hover, setHover] = useState(null);
 
  const handleRating = (e) => {
     setModalRating(e.target.value);
+    setStarRating(e.target.value);
     setRating(e.target.value);
   }
 
@@ -43,27 +46,16 @@ const Modal = ({ customClass, show, closeModal, setRating, setSummary, setBody, 
     setEmail(e.target.value);
   }
 
-  // const handlePhotos = (e) => {
-  //   setModalPhotos([]);
-  //   setEmail(e.target.value);
-  // }
-
-  // const handleCharacteristics = (e) => {
-  //   setmodalCharacteristics(e.target.value);
-  //   setEmail(e.target.value);
-  // }
-
  const handleSubmit = (e) => {
     e.preventDefault();
 
   //function to convert recommended to boolean
-
     if (typeof modalRecommend === 'string' && modalRecommend === 'No') {
       setRecommend(false);
     } else {
       setRecommend(true);
     };
-
+  //form was triggered
     setForm(true);
   }
 
@@ -75,15 +67,34 @@ const Modal = ({ customClass, show, closeModal, setRating, setSummary, setBody, 
 
         <div className="modalContent">
           <form onSubmit={handleSubmit}>
-            <label>
-              Rating:
-              <input
-                onChange={handleRating}
-                type="text"
-                placeholder='1, 2, 3, 4, 5'
-                value={modalRating}
-              />
-            </label>
+
+            <div className="StarReview">
+              {
+                [...Array(5)].map((star, i) => {
+                const ratingValue = i + 1;
+
+                return (
+                    <label className="StarReviewFiller">
+                      <StarStyled className="StarReviewRadio">
+                      <input
+                        type='radio'
+                        name='rating'
+                        value={ratingValue}
+                        onClick={handleRating}
+                        onMouseOver={() => setHover(ratingValue)}
+                        onMouseOut={() => setHover(null)}
+                      />
+                        <FaStar
+                          className="StarIcon"
+                          color={ratingValue <= (hover || starRating) ? '#ffc107' : '#e4e5e9'}
+                          size={100}
+                        />
+                      </StarStyled>
+                    </label>
+                )
+              })
+            }
+            </div>
 
             <label>
               Summary:
@@ -170,6 +181,18 @@ Characteristics:
   value={modalCharacteristics}
 />
 </label>
+
+  // const handlePhotos = (e) => {
+  //   setModalPhotos([]);
+  //   setEmail(e.target.value);
+  // }
+
+  // const handleCharacteristics = (e) => {
+  //   setmodalCharacteristics(e.target.value);
+  //   setEmail(e.target.value);
+  // }
+
+
             <label>
               Recommend?:
               <input
@@ -177,6 +200,18 @@ Characteristics:
                 placeholder="yes/no"
                 type="text"
                 value={modalRecommend}
+              />
+            </label>
+
+            RATING INPUT
+
+                        <label>
+              Rating:
+              <input
+                onChange={handleRating}
+                type="text"
+                placeholder='1, 2, 3, 4, 5'
+                value={modalRating}
               />
             </label>
 */
