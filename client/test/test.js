@@ -14,7 +14,6 @@ import App from '../src/components/App.jsx';
 import Overview from '../src/components/Overview.jsx';
 import RatingReview from '../src/components/RatingReview.jsx';
 import QuestionAnswer from '../src/components/QuestionAnswer.jsx';
-import StarReview from '../src/components/RatingReview/StarReview.jsx';
 import ReviewListItem from '../src/components/RatingReview/ReviewListItem.jsx';
 //---------Invoke Cleanup---------
 // afterEach(cleanup);
