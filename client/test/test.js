@@ -57,6 +57,16 @@ test('expect QuestionAnswer Component to render string', async () => {
   expect(value).toBeInTheDocument();
 })
 
+test('', async () => {
+
+
+
+
+
+
+
+
+
 // import Data from '../src/components/Overview/hardcodedData.jsx';
 
 // const route = '/products/40344/styles';
