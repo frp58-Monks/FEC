@@ -1,10 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <coverage generated="1645644015463" clover="3.2.0">
   <project timestamp="1645644015463" name="All files">
     <metrics statements="373" coveredstatements="148" conditionals="106" coveredconditionals="29" methods="100" coveredmethods="18" elements="579" coveredelements="195" complexity="0" loc="373" ncloc="373" packages="5" files="25" classes="25"/>
     <package name="components">
       <metrics statements="115" coveredstatements="53" conditionals="40" coveredconditionals="21" methods="47" coveredmethods="12"/>
       <file name="App.jsx" path="/Users/gchen/Desktop/Hackreactor/FEC/client/src/components/App.jsx">
+=======
+<coverage generated="1645589772301" clover="3.2.0">
+  <project timestamp="1645589772302" name="All files">
+    <metrics statements="372" coveredstatements="91" conditionals="106" coveredconditionals="6" methods="100" coveredmethods="13" elements="578" coveredelements="110" complexity="0" loc="372" ncloc="372" packages="5" files="26" classes="26"/>
+    <package name="components">
+      <metrics statements="115" coveredstatements="31" conditionals="40" coveredconditionals="5" methods="47" coveredmethods="9"/>
+      <file name="App.jsx" path="/home/skipdawg3000/hackreactor/repos/FEC/client/src/components/App.jsx">
+>>>>>>> main
         <metrics statements="36" coveredstatements="20" conditionals="7" coveredconditionals="3" methods="19" coveredmethods="6"/>
         <line num="9" count="2" type="stmt"/>
         <line num="11" count="2" type="stmt"/>
@@ -43,6 +52,7 @@
         <line num="88" count="1" type="stmt"/>
         <line num="93" count="1" type="stmt"/>
       </file>
+<<<<<<< HEAD
       <file name="Feedback.jsx" path="/Users/gchen/Desktop/Hackreactor/FEC/client/src/components/Feedback.jsx">
         <metrics statements="24" coveredstatements="1" conditionals="6" coveredconditionals="0" methods="11" coveredmethods="0"/>
         <line num="6" count="2" type="stmt"/>
@@ -71,6 +81,36 @@
         <line num="65" count="0" type="stmt"/>
       </file>
       <file name="Overview.jsx" path="/Users/gchen/Desktop/Hackreactor/FEC/client/src/components/Overview.jsx">
+=======
+      <file name="Feedback.jsx" path="/home/skipdawg3000/hackreactor/repos/FEC/client/src/components/Feedback.jsx">
+        <metrics statements="24" coveredstatements="1" conditionals="6" coveredconditionals="0" methods="11" coveredmethods="0"/>
+        <line num="7" count="2" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="9" count="0" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="13" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="28" count="0" type="stmt"/>
+        <line num="31" count="0" type="stmt"/>
+        <line num="36" count="0" type="stmt"/>
+        <line num="37" count="0" type="stmt"/>
+        <line num="38" count="0" type="stmt"/>
+        <line num="41" count="0" type="stmt"/>
+        <line num="42" count="0" type="stmt"/>
+        <line num="45" count="0" type="stmt"/>
+        <line num="50" count="0" type="stmt"/>
+        <line num="51" count="0" type="stmt"/>
+        <line num="54" count="0" type="stmt"/>
+        <line num="57" count="0" type="stmt"/>
+        <line num="61" count="0" type="stmt"/>
+        <line num="62" count="0" type="stmt"/>
+        <line num="66" count="0" type="stmt"/>
+      </file>
+      <file name="Overview.jsx" path="/home/skipdawg3000/hackreactor/repos/FEC/client/src/components/Overview.jsx">
+>>>>>>> main
         <metrics statements="14" coveredstatements="2" conditionals="5" coveredconditionals="0" methods="6" coveredmethods="0"/>
         <line num="13" count="2" type="stmt"/>
         <line num="15" count="2" type="stmt"/>
@@ -87,11 +127,16 @@
         <line num="47" count="0" type="stmt"/>
         <line num="48" count="0" type="stmt"/>
       </file>
+<<<<<<< HEAD
       <file name="QuestionAnswer.jsx" path="/Users/gchen/Desktop/Hackreactor/FEC/client/src/components/QuestionAnswer.jsx">
+=======
+      <file name="QuestionAnswer.jsx" path="/home/skipdawg3000/hackreactor/repos/FEC/client/src/components/QuestionAnswer.jsx">
+>>>>>>> main
         <metrics statements="4" coveredstatements="4" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
         <line num="4" count="2" type="stmt"/>
         <line num="5" count="1" type="stmt"/>
         <line num="7" count="1" type="stmt"/>
+<<<<<<< HEAD
         <line num="13" count="1" type="stmt"/>
       </file>
       <file name="RatingReview.jsx" path="/Users/gchen/Desktop/Hackreactor/FEC/client/src/components/RatingReview.jsx">
@@ -128,6 +173,44 @@
         <line num="106" count="3" type="stmt"/>
       </file>
       <file name="SearchProd.jsx" path="/Users/gchen/Desktop/Hackreactor/FEC/client/src/components/SearchProd.jsx">
+=======
+        <line num="13" count="2" type="stmt"/>
+      </file>
+      <file name="RatingReview.jsx" path="/home/skipdawg3000/hackreactor/repos/FEC/client/src/components/RatingReview.jsx">
+        <metrics statements="30" coveredstatements="1" conditionals="20" coveredconditionals="0" methods="6" coveredmethods="0"/>
+        <line num="12" count="2" type="stmt"/>
+        <line num="13" count="0" type="stmt"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="17" count="0" type="stmt"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="21" count="0" type="stmt"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="23" count="0" type="stmt"/>
+        <line num="24" count="0" type="stmt"/>
+        <line num="27" count="0" type="stmt"/>
+        <line num="28" count="0" type="stmt"/>
+        <line num="29" count="0" type="stmt"/>
+        <line num="33" count="0" type="stmt"/>
+        <line num="35" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="36" count="0" type="stmt"/>
+        <line num="40" count="0" type="stmt"/>
+        <line num="41" count="0" type="stmt"/>
+        <line num="42" count="0" type="stmt"/>
+        <line num="46" count="0" type="stmt"/>
+        <line num="47" count="0" type="stmt"/>
+        <line num="50" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="51" count="0" type="stmt"/>
+        <line num="62" count="0" type="stmt"/>
+        <line num="65" count="0" type="stmt"/>
+        <line num="80" count="0" type="stmt"/>
+        <line num="108" count="0" type="stmt"/>
+      </file>
+      <file name="SearchProd.jsx" path="/home/skipdawg3000/hackreactor/repos/FEC/client/src/components/SearchProd.jsx">
+>>>>>>> main
         <metrics statements="7" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="1"/>
         <line num="4" count="2" type="stmt"/>
         <line num="5" count="1" type="stmt"/>
@@ -140,13 +223,21 @@
     </package>
     <package name="components.Overview">
       <metrics statements="99" coveredstatements="7" conditionals="46" coveredconditionals="0" methods="28" coveredmethods="0"/>
+<<<<<<< HEAD
       <file name="AddtoCart.jsx" path="/Users/gchen/Desktop/Hackreactor/FEC/client/src/components/Overview/AddtoCart.jsx">
+=======
+      <file name="AddtoCart.jsx" path="/home/skipdawg3000/hackreactor/repos/FEC/client/src/components/Overview/AddtoCart.jsx">
+>>>>>>> main
         <metrics statements="3" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
         <line num="4" count="2" type="stmt"/>
         <line num="5" count="0" type="stmt"/>
         <line num="6" count="0" type="stmt"/>
       </file>
+<<<<<<< HEAD
       <file name="Descript.jsx" path="/Users/gchen/Desktop/Hackreactor/FEC/client/src/components/Overview/Descript.jsx">
+=======
+      <file name="Descript.jsx" path="/home/skipdawg3000/hackreactor/repos/FEC/client/src/components/Overview/Descript.jsx">
+>>>>>>> main
         <metrics statements="20" coveredstatements="1" conditionals="10" coveredconditionals="0" methods="2" coveredmethods="0"/>
         <line num="4" count="2" type="stmt"/>
         <line num="5" count="0" type="stmt"/>
@@ -169,12 +260,20 @@
         <line num="31" count="0" type="stmt"/>
         <line num="38" count="0" type="stmt"/>
       </file>
+<<<<<<< HEAD
       <file name="Favoritable.jsx" path="/Users/gchen/Desktop/Hackreactor/FEC/client/src/components/Overview/Favoritable.jsx">
+=======
+      <file name="Favoritable.jsx" path="/home/skipdawg3000/hackreactor/repos/FEC/client/src/components/Overview/Favoritable.jsx">
+>>>>>>> main
         <metrics statements="2" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="3" count="2" type="stmt"/>
         <line num="4" count="0" type="stmt"/>
       </file>
+<<<<<<< HEAD
       <file name="ImageCarousel.jsx" path="/Users/gchen/Desktop/Hackreactor/FEC/client/src/components/Overview/ImageCarousel.jsx">
+=======
+      <file name="ImageCarousel.jsx" path="/home/skipdawg3000/hackreactor/repos/FEC/client/src/components/Overview/ImageCarousel.jsx">
+>>>>>>> main
         <metrics statements="26" coveredstatements="1" conditionals="12" coveredconditionals="0" methods="10" coveredmethods="0"/>
         <line num="6" count="2" type="stmt"/>
         <line num="8" count="0" type="stmt"/>
@@ -203,7 +302,11 @@
         <line num="58" count="0" type="stmt"/>
         <line num="65" count="0" type="stmt"/>
       </file>
+<<<<<<< HEAD
       <file name="Price.jsx" path="/Users/gchen/Desktop/Hackreactor/FEC/client/src/components/Overview/Price.jsx">
+=======
+      <file name="Price.jsx" path="/home/skipdawg3000/hackreactor/repos/FEC/client/src/components/Overview/Price.jsx">
+>>>>>>> main
         <metrics statements="6" coveredstatements="1" conditionals="6" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="5" count="2" type="stmt"/>
         <line num="6" count="0" type="stmt"/>
@@ -212,7 +315,11 @@
         <line num="10" count="0" type="stmt"/>
         <line num="13" count="0" type="stmt"/>
       </file>
+<<<<<<< HEAD
       <file name="SizeQtyDD.jsx" path="/Users/gchen/Desktop/Hackreactor/FEC/client/src/components/Overview/SizeQtyDD.jsx">
+=======
+      <file name="SizeQtyDD.jsx" path="/home/skipdawg3000/hackreactor/repos/FEC/client/src/components/Overview/SizeQtyDD.jsx">
+>>>>>>> main
         <metrics statements="36" coveredstatements="1" conditionals="14" coveredconditionals="0" methods="9" coveredmethods="0"/>
         <line num="6" count="2" type="stmt"/>
         <line num="7" count="0" type="stmt"/>
@@ -251,7 +358,11 @@
         <line num="70" count="0" type="stmt"/>
         <line num="73" count="0" type="stmt"/>
       </file>
+<<<<<<< HEAD
       <file name="Styles.jsx" path="/Users/gchen/Desktop/Hackreactor/FEC/client/src/components/Overview/Styles.jsx">
+=======
+      <file name="Styles.jsx" path="/home/skipdawg3000/hackreactor/repos/FEC/client/src/components/Overview/Styles.jsx">
+>>>>>>> main
         <metrics statements="6" coveredstatements="1" conditionals="4" coveredconditionals="0" methods="3" coveredmethods="0"/>
         <line num="6" count="2" type="stmt"/>
         <line num="7" count="0" type="stmt"/>
@@ -262,6 +373,7 @@
       </file>
     </package>
     <package name="components.QuestionAnswer">
+<<<<<<< HEAD
       <metrics statements="22" coveredstatements="17" conditionals="2" coveredconditionals="1" methods="7" coveredmethods="3"/>
       <file name="AnswerListItem.jsx" path="/Users/gchen/Desktop/Hackreactor/FEC/client/src/components/QuestionAnswer/AnswerListItem.jsx">
         <metrics statements="2" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
@@ -289,10 +401,39 @@
         <line num="35" count="1" type="stmt"/>
         <line num="36" count="1" type="stmt"/>
         <line num="38" count="1" type="stmt"/>
+=======
+      <metrics statements="21" coveredstatements="18" conditionals="2" coveredconditionals="1" methods="7" coveredmethods="4"/>
+      <file name="AnswerListItem.jsx" path="/home/skipdawg3000/hackreactor/repos/FEC/client/src/components/QuestionAnswer/AnswerListItem.jsx">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="4" count="2" type="stmt"/>
+        <line num="6" count="2" type="stmt"/>
+      </file>
+      <file name="QuestionListItem.jsx" path="/home/skipdawg3000/hackreactor/repos/FEC/client/src/components/QuestionAnswer/QuestionListItem.jsx">
+        <metrics statements="19" coveredstatements="16" conditionals="2" coveredconditionals="1" methods="6" coveredmethods="3"/>
+        <line num="6" count="2" type="stmt"/>
+        <line num="7" count="6" type="stmt"/>
+        <line num="8" count="6" type="stmt"/>
+        <line num="11" count="6" type="stmt"/>
+        <line num="12" count="6" type="stmt"/>
+        <line num="13" count="6" type="stmt"/>
+        <line num="14" count="6" type="stmt"/>
+        <line num="15" count="6" type="stmt"/>
+        <line num="16" count="6" type="stmt"/>
+        <line num="18" count="6" type="stmt"/>
+        <line num="19" count="6" type="stmt"/>
+        <line num="21" count="6" type="stmt"/>
+        <line num="22" count="6" type="stmt"/>
+        <line num="27" count="0" type="stmt"/>
+        <line num="28" count="0" type="stmt"/>
+        <line num="35" count="6" type="stmt"/>
+        <line num="36" count="6" type="stmt"/>
+        <line num="38" count="6" type="stmt"/>
+>>>>>>> main
         <line num="46" count="0" type="stmt"/>
       </file>
     </package>
     <package name="components.RatingReview">
+<<<<<<< HEAD
       <metrics statements="107" coveredstatements="41" conditionals="18" coveredconditionals="7" methods="18" coveredmethods="3"/>
       <file name="Modal.jsx" path="/Users/gchen/Desktop/Hackreactor/FEC/client/src/components/RatingReview/Modal.jsx">
         <metrics statements="39" coveredstatements="19" conditionals="10" coveredconditionals="4" methods="11" coveredmethods="2"/>
@@ -324,11 +465,45 @@
         <line num="45" count="0" type="stmt"/>
         <line num="46" count="0" type="stmt"/>
         <line num="49" count="3" type="stmt"/>
+=======
+      <metrics statements="107" coveredstatements="5" conditionals="18" coveredconditionals="0" methods="18" coveredmethods="0"/>
+      <file name="Modal.jsx" path="/home/skipdawg3000/hackreactor/repos/FEC/client/src/components/RatingReview/Modal.jsx">
+        <metrics statements="39" coveredstatements="1" conditionals="10" coveredconditionals="0" methods="11" coveredmethods="0"/>
+        <line num="6" count="2" type="stmt"/>
+        <line num="7" count="0" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="9" count="0" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="17" count="0" type="stmt"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="23" count="0" type="stmt"/>
+        <line num="24" count="0" type="stmt"/>
+        <line num="25" count="0" type="stmt"/>
+        <line num="28" count="0" type="stmt"/>
+        <line num="29" count="0" type="stmt"/>
+        <line num="30" count="0" type="stmt"/>
+        <line num="33" count="0" type="stmt"/>
+        <line num="34" count="0" type="stmt"/>
+        <line num="39" count="0" type="stmt"/>
+        <line num="40" count="0" type="stmt"/>
+        <line num="41" count="0" type="stmt"/>
+        <line num="44" count="0" type="stmt"/>
+        <line num="45" count="0" type="stmt"/>
+        <line num="46" count="0" type="stmt"/>
+        <line num="49" count="0" type="stmt"/>
+>>>>>>> main
         <line num="50" count="0" type="stmt"/>
         <line num="53" count="0" type="cond" truecount="0" falsecount="4"/>
         <line num="54" count="0" type="stmt"/>
         <line num="56" count="0" type="stmt"/>
         <line num="59" count="0" type="stmt"/>
+<<<<<<< HEAD
         <line num="60" count="0" type="stmt"/>
         <line num="64" count="3" type="stmt"/>
         <line num="75" count="15" type="stmt"/>
@@ -345,10 +520,28 @@
         <line num="14" count="0" type="stmt"/>
         <line num="17" count="0" type="stmt"/>
         <line num="20" count="0" type="stmt"/>
+=======
+        <line num="61" count="0" type="stmt"/>
+        <line num="65" count="0" type="stmt"/>
+        <line num="76" count="0" type="stmt"/>
+        <line num="78" count="0" type="stmt"/>
+        <line num="86" count="0" type="stmt"/>
+        <line num="87" count="0" type="stmt"/>
+      </file>
+      <file name="ProgressBar.jsx" path="/home/skipdawg3000/hackreactor/repos/FEC/client/src/components/RatingReview/ProgressBar.jsx">
+        <metrics statements="29" coveredstatements="1" conditionals="2" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="8" count="2" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="13" count="0" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="18" count="0" type="stmt"/>
+>>>>>>> main
         <line num="21" count="0" type="stmt"/>
         <line num="22" count="0" type="stmt"/>
         <line num="23" count="0" type="stmt"/>
         <line num="24" count="0" type="stmt"/>
+<<<<<<< HEAD
         <line num="27" count="0" type="stmt"/>
         <line num="29" count="0" type="stmt"/>
         <line num="37" count="0" type="stmt"/>
@@ -357,6 +550,16 @@
         <line num="40" count="0" type="cond" truecount="0" falsecount="2"/>
         <line num="41" count="0" type="stmt"/>
         <line num="46" count="0" type="stmt"/>
+=======
+        <line num="25" count="0" type="stmt"/>
+        <line num="28" count="0" type="stmt"/>
+        <line num="30" count="0" type="stmt"/>
+        <line num="38" count="0" type="stmt"/>
+        <line num="39" count="0" type="stmt"/>
+        <line num="40" count="0" type="stmt"/>
+        <line num="41" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="42" count="0" type="stmt"/>
+>>>>>>> main
         <line num="47" count="0" type="stmt"/>
         <line num="48" count="0" type="stmt"/>
         <line num="49" count="0" type="stmt"/>
@@ -366,6 +569,7 @@
         <line num="53" count="0" type="stmt"/>
         <line num="54" count="0" type="stmt"/>
         <line num="55" count="0" type="stmt"/>
+<<<<<<< HEAD
         <line num="63" count="0" type="stmt"/>
       </file>
       <file name="RatingBreakdown.jsx" path="/Users/gchen/Desktop/Hackreactor/FEC/client/src/components/RatingReview/RatingBreakdown.jsx">
@@ -403,6 +607,46 @@
         <line num="45" count="7" type="stmt"/>
       </file>
       <file name="StarAverage.jsx" path="/Users/gchen/Desktop/Hackreactor/FEC/client/src/components/RatingReview/StarAverage.jsx">
+=======
+        <line num="56" count="0" type="stmt"/>
+        <line num="64" count="0" type="stmt"/>
+      </file>
+      <file name="RatingBreakdown.jsx" path="/home/skipdawg3000/hackreactor/repos/FEC/client/src/components/RatingReview/RatingBreakdown.jsx">
+        <metrics statements="5" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="9" count="2" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="13" count="0" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
+      </file>
+      <file name="ReviewListItem.jsx" path="/home/skipdawg3000/hackreactor/repos/FEC/client/src/components/RatingReview/ReviewListItem.jsx">
+        <metrics statements="23" coveredstatements="1" conditionals="6" coveredconditionals="0" methods="4" coveredmethods="0"/>
+        <line num="7" count="2" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="13" count="0" type="stmt"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="23" count="0" type="stmt"/>
+        <line num="24" count="0" type="stmt"/>
+        <line num="27" count="0" type="stmt"/>
+        <line num="28" count="0" type="stmt"/>
+        <line num="29" count="0" type="stmt"/>
+        <line num="30" count="0" type="stmt"/>
+        <line num="34" count="0" type="stmt"/>
+        <line num="35" count="0" type="stmt"/>
+        <line num="37" count="0" type="stmt"/>
+        <line num="39" count="0" type="stmt"/>
+        <line num="42" count="0" type="stmt"/>
+        <line num="46" count="0" type="stmt"/>
+      </file>
+      <file name="StarAverage.jsx" path="/home/skipdawg3000/hackreactor/repos/FEC/client/src/components/RatingReview/StarAverage.jsx">
+>>>>>>> main
         <metrics statements="11" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="3" count="2" type="stmt"/>
         <line num="4" count="0" type="stmt"/>
@@ -416,10 +660,20 @@
         <line num="15" count="0" type="stmt"/>
         <line num="16" count="0" type="stmt"/>
       </file>
+<<<<<<< HEAD
     </package>
     <package name="components.Styled">
       <metrics statements="30" coveredstatements="30" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       <file name="ProgressBarStyled.js" path="/Users/gchen/Desktop/Hackreactor/FEC/client/src/components/Styled/ProgressBarStyled.js">
+=======
+      <file name="StarReview.jsx" path="/home/skipdawg3000/hackreactor/repos/FEC/client/src/components/RatingReview/StarReview.jsx">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+    <package name="components.Styled">
+      <metrics statements="30" coveredstatements="30" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="ProgressBarStyled.js" path="/home/skipdawg3000/hackreactor/repos/FEC/client/src/components/Styled/ProgressBarStyled.js">
+>>>>>>> main
         <metrics statements="9" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="4" count="2" type="stmt"/>
         <line num="14" count="2" type="stmt"/>
@@ -431,7 +685,11 @@
         <line num="75" count="2" type="stmt"/>
         <line num="81" count="2" type="stmt"/>
       </file>
+<<<<<<< HEAD
       <file name="QuestionListStyled.js" path="/Users/gchen/Desktop/Hackreactor/FEC/client/src/components/Styled/QuestionListStyled.js">
+=======
+      <file name="QuestionListStyled.js" path="/home/skipdawg3000/hackreactor/repos/FEC/client/src/components/Styled/QuestionListStyled.js">
+>>>>>>> main
         <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="3" count="2" type="stmt"/>
         <line num="11" count="2" type="stmt"/>
@@ -440,13 +698,21 @@
         <line num="36" count="2" type="stmt"/>
         <line num="44" count="2" type="stmt"/>
       </file>
+<<<<<<< HEAD
       <file name="RatingReviewStyled.js" path="/Users/gchen/Desktop/Hackreactor/FEC/client/src/components/Styled/RatingReviewStyled.js">
+=======
+      <file name="RatingReviewStyled.js" path="/home/skipdawg3000/hackreactor/repos/FEC/client/src/components/Styled/RatingReviewStyled.js">
+>>>>>>> main
         <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="3" count="2" type="stmt"/>
         <line num="17" count="2" type="stmt"/>
         <line num="24" count="2" type="stmt"/>
       </file>
+<<<<<<< HEAD
       <file name="ReviewListStyled.js" path="/Users/gchen/Desktop/Hackreactor/FEC/client/src/components/Styled/ReviewListStyled.js">
+=======
+      <file name="ReviewListStyled.js" path="/home/skipdawg3000/hackreactor/repos/FEC/client/src/components/Styled/ReviewListStyled.js">
+>>>>>>> main
         <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="13" count="2" type="stmt"/>
         <line num="26" count="2" type="stmt"/>
@@ -457,7 +723,11 @@
         <line num="71" count="2" type="stmt"/>
         <line num="77" count="2" type="stmt"/>
       </file>
+<<<<<<< HEAD
       <file name="StarStyled.js" path="/Users/gchen/Desktop/Hackreactor/FEC/client/src/components/Styled/StarStyled.js">
+=======
+      <file name="StarStyled.js" path="/home/skipdawg3000/hackreactor/repos/FEC/client/src/components/Styled/StarStyled.js">
+>>>>>>> main
         <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="3" count="2" type="stmt"/>
         <line num="18" count="2" type="stmt"/>

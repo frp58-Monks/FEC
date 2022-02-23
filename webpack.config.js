@@ -24,16 +24,23 @@ module.exports = {
               ["@babel/plugin-transform-runtime",
                 {
                   "regenerator": true
-                }
-              ]
-            ]
-          }
-        }
+                },
+              ],
+            ],
+          },
+        },
       },
       {
         test: /\.css$/i,
         use: [stylesHandler, 'css-loader', 'postcss-loader'],
       },
+      {
+        test: /\.(png|jpe?g|gif)$/i,
+        loader: 'file-loader',
+        options: {
+          outputPath: 'images',
+        },
+      },
     ],
-  }
+  },
 };

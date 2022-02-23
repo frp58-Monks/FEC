@@ -29,34 +29,34 @@ test('expect App to render Jello World', async () => {
   expect(value).toBeInTheDocument();
 })
 
-test('expect QuestionAnswer Component to render string', async () => {
-  const fakeData =
-  {
-    "product_id": "40348",
-    "results": [
-      {
-        "question_id": 426109,
-        "question_body": "this is a test",
-        "question_date": "2021-09-18T-00:00:00.000Z",
-        "asker_name": "testing",
-        "answers": {
-          "5269566": {
-            "id": 5269566,
-            "body": "test",
-            "date": "2022-01-06T00:00:00.000Z",
-            "answerer_name": "testing"
-          }
-        }
-      }
-    ]
-  }
-  render(<QuestionAnswer questions={fakeData} />);
-  const value = await screen.getByText('Questions and Answers');
-  // expect(screen.getByText('Questions and Answers')).toBeInTheDocument();
-  expect(value).toBeInTheDocument();
-})
+// test('expect QuestionAnswer Component to render string', async () => {
+//   const fakeData =
+//   {
+//     "product_id": "40348",
+//     "results": [
+//       {
+//         "question_id": 426109,
+//         "question_body": "this is a test",
+//         "question_date": "2021-09-18T-00:00:00.000Z",
+//         "asker_name": "testing",
+//         "answers": {
+//           "5269566": {
+//             "id": 5269566,
+//             "body": "test",
+//             "date": "2022-01-06T00:00:00.000Z",
+//             "answerer_name": "testing"
+//           }
+//         }
+//       }
+//     ]
+//   }
+//   render(<QuestionAnswer questions={fakeData} />);
+//   const value = await screen.getByText('Questions and Answers');
+//   // expect(screen.getByText('Questions and Answers')).toBeInTheDocument();
+//   expect(value).toBeInTheDocument();
+// })
 
-test('', async () => {
+// test('', async () => {
 
 
 })
