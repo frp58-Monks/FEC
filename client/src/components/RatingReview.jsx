@@ -4,7 +4,7 @@ import axios from 'axios';
 import RatingBreakdown from './RatingReview/RatingBreakdown.jsx';
 import ProgressBar from './RatingReview/ProgressBar.jsx';
 //import { TotalContainer} from './Styled/ProgressBarStyled.js';
-import { MoreReviews, RTitle, AddReview } from './styled/RatingReviewStyled.js';
+import { MoreReviews, RTitle, AddReview } from './Styled/RatingReviewStyled.js';
 import Modal from './RatingReview/Modal.jsx';
 
 
