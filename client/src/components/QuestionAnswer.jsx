@@ -6,7 +6,7 @@ const QuestionAnswer = ({ questions }) => {
 
   return (
     <div>
-      <h1>Questions and Answers</h1>
+      <h1 className="QuestionList">Questions and Answers</h1>
       {
         questionsArr &&
         questionsArr.map((question, i) => (

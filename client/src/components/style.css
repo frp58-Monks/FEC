@@ -373,6 +373,10 @@ progress::-webkit-progress-bar {
   width: 300px; */
 }
 
+.QuestionList {
+  text-align: center;
+}
+
 
 /* MODAL */
 /* .modal .modalContent > h2 {

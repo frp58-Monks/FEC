@@ -10,11 +10,16 @@ export const QuestionSummary = styled.div`
 
 export const QuestionWrapper = styled.div`
   border-style: solid;
-  width: 50%;
+  width: 95%;
+  height: 50%;
   align: center;
-  padding:10px;
+  padding: 10px;
+  padding-left: 5%;
+  padding-right: 5%;
   margin: 30px 15px;
-  background-color: #DCDCDC;
+  background-color: #fff1e6;
+  border-radius: 25px;
+  border-color: #b3b3b3;
 `
 
 export const QuestionBody = styled.div`
@@ -31,12 +36,13 @@ export const QuestionDate = styled.div`
   font-style: italic;
   padding: 2px;
   font-size: 15px;
+  color: #20B2AA;
 `
 
 export const QuestionAsker = styled.div`
   text-align: right;
   font-family: Georgia;
-  color: green;
+  color: #ff8243;
   padding: 3px;
   font-size: 15px;
 `
