@@ -95,7 +95,7 @@ const Modal = ({ customClass, show, closeModal, setRating, setSummary, setBody, 
                 )
               })
             }
-              <div> Your rating for this product: {starRating} </div>
+              <div className="modalBar starRating" > Your rating for this product: {starRating} </div>
               <div className="modalStarForm">
                 1 star - “Poor” |
                 2 stars - “Fair” |

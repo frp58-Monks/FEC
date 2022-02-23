@@ -237,7 +237,7 @@ progress::-webkit-progress-bar {
   max-height: 90%;
   overflow: auto;
   /* background: #b39eb5; */
-  background: #ffcc99;
+  background: rgba(255, 255, 255, 0.736);
   box-sizing: border-box;
   padding: 20px;
   box-shadow: 0 1px 5px rgba(0,0,0,0.7);
@@ -270,7 +270,7 @@ progress::-webkit-progress-bar {
   border-radius: 10px;
   padding: 15px;
   /* color:#ffcc33; */
-  color: #eec64f;
+  color: #f28500;
   background-color: #F0F0F0;
 }
 
@@ -355,7 +355,8 @@ progress::-webkit-progress-bar {
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-size: 20px;
   font-style: bold;
-  border: solid #20B2AA;
+  border-style: solid black;
+  background-color: #ffcba4;
   border-radius: 10px;
   padding: 5px;
   margin: 5px;
@@ -370,6 +371,12 @@ progress::-webkit-progress-bar {
   margin-right: 1%;
   height: 40px;
   width: 300px; */
+}
+
+.starRating {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 17px;
+  font-style: bold;
 }
 
 
