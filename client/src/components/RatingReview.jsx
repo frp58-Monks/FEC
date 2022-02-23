@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import ReviewListItem from './RatingReview/ReviewListItem.jsx';
 import axios from 'axios';
-import RatingBreakdown from './RatingReview/RatingBreakdown.jsx';
 import ProgressBar from './RatingReview/ProgressBar.jsx';
-//import { TotalContainer} from './Styled/ProgressBarStyled.js';
 import { MoreReviews, RTitle, AddReview } from './Styled/RatingReviewStyled.js';
 import Modal from './RatingReview/Modal.jsx';
 
@@ -77,7 +75,7 @@ const RatingReview = ({ reviews, reviewStars, product_id, reviewFunc, setDropdow
                     {
                       selectedDropdown && onChange &&
                       ['relevant', 'helpful', 'newest'].map((sortItem, i) => {
-                        return <option key='review' value={sortItem}>{sortItem}</option>
+                        return <option key={i} value={sortItem}>{sortItem}</option>
                       })
                     }
                   </select>
@@ -105,7 +103,7 @@ const RatingReview = ({ reviews, reviewStars, product_id, reviewFunc, setDropdow
                 {
                   resultsArr && results &&
                   results.map((item, i) => (
-                    <ReviewListItem item={item} key={i} product_id={product_id} reviewStars={reviewStars} reviews={reviews} />
+                    <ReviewListItem item={item} key={i} />
                   ))
                 }
               </div>
@@ -136,7 +134,6 @@ const RatingReview = ({ reviews, reviewStars, product_id, reviewFunc, setDropdow
                   setEmail={setEmail}
                   customClass="CustomModal"
                   setForm={setForm}
-                  postFunc={postFunc}
                 >
                 </Modal>
               </div>
