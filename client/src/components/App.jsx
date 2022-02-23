@@ -26,7 +26,7 @@ const App = (props) => {
       })
     })
     .catch((err) => {
-      console.log('GET ALL products Error: ', err);
+      // console.log('GET ALL products Error: ', err);
     })
   }
 
@@ -56,7 +56,7 @@ const App = (props) => {
         setProductDetails(prodDetailsRes);
       })
       .catch((err) => {
-        console.log('Client GET Details err: ', err)
+        // console.log('Client GET Details err: ', err)
       })
   }
 
@@ -69,7 +69,7 @@ const App = (props) => {
         const prodStylesRes = (res.data);
         setProductStyles(prodStylesRes);
       })
-      .catch((err) => { console.log('Client GET Styles err: ', err);
+      .catch((err) => { /*console.log('Client GET Styles err: ', err);*/
       })
   }
 
@@ -80,7 +80,7 @@ const App = (props) => {
         setReviewStars(starData);
       })
       .catch((err) => {
-        console.log('error with stars: ', err);
+        // console.log('error with stars: ', err);
       })
   }
 

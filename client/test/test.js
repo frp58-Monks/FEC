@@ -17,16 +17,17 @@ import QuestionAnswer from '../src/components/QuestionAnswer.jsx';
 import StarReview from '../src/components/RatingReview/StarReview.jsx';
 import ReviewListItem from '../src/components/RatingReview/ReviewListItem.jsx';
 //---------Invoke Cleanup---------
-afterEach(cleanup);
+// afterEach(cleanup);
 //OR--
-// afterEach(() => {
-//   cleanup();
-// });
+afterEach(() => {
+  cleanup();
+});
 
 //---------React Unit Tests---------
 test('expect App to render Jello World', async () => {
-  render(<App/>);
-  await expect(screen.getByText('Jello World')).toBeInTheDocument();
+  render(<App />);
+  const value = await screen.getByText('Jello World');
+  expect(value).toBeInTheDocument();
 })
 
 test('expect QuestionAnswer Component to render string', async () => {
@@ -50,9 +51,10 @@ test('expect QuestionAnswer Component to render string', async () => {
       }
     ]
   }
-  render(<QuestionAnswer questions={fakeData}/>);
+  render(<QuestionAnswer questions={fakeData} />);
+  const value = await screen.getByText('Questions and Answers');
   // expect(screen.getByText('Questions and Answers')).toBeInTheDocument();
-  await expect(screen.getByText('Questions and Answers')).toBeInTheDocument();
+  expect(value).toBeInTheDocument();
 })
 
 // import Data from '../src/components/Overview/hardcodedData.jsx';
