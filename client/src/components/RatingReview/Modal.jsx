@@ -57,7 +57,6 @@ const Modal = ({ customClass, show, closeModal, setRating, setSummary, setBody, 
     };
   //form was triggered
     setForm(true);
-
     alert("Submission Successful!");
   }
 

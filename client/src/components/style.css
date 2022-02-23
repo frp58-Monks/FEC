@@ -60,25 +60,19 @@ progress::-webkit-progress-bar {
   flex-direction: row;
   justify-content: space-evenly;
   align-items: flex-start;
-  height: 700px;
+  max-height: 700px;
   flex-wrap: wrap;
   /* background-color: grey; */
 }
 
 .Flexbox-item {
-  width: 1100px;
+  max-width: 45%;
   margin: 1px;
   border: 3px;
   justify-content: space-evenly;
   flex-basis: auto;
   align-items: center;
   /* background-color: hotpink; */
-}
-
-.StarAndBar {
-  justify-content: left;
-  /* margin: 10px;
-  padding: 100px; */
 }
 
 .AverageStars {
@@ -112,6 +106,7 @@ progress::-webkit-progress-bar {
 .sortReview {
   display: flex;
   justify-content: center;
+  margin-right: 90%;
 }
 
 .ReviewList{
@@ -124,6 +119,10 @@ progress::-webkit-progress-bar {
   justify-content: center;
   font-size: 50px;
   font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.StarAndBar {
+  justify-content: left;
 }
 
 .OneStar {
@@ -183,6 +182,8 @@ progress::-webkit-progress-bar {
   justify-content: space-between;
   margin: 30px;
   margin-left: 2%;
+  width: 90%;
+  max-height: 500px;
 }
 
 .SortContainer {
@@ -264,7 +265,6 @@ progress::-webkit-progress-bar {
   border: solid black;
   border-radius: 10px;
   padding: 15px;
-  /* color:#ffcc33; */
   color: #eec64f;
 }
 
@@ -368,6 +368,13 @@ progress::-webkit-progress-bar {
 
 
 /* MODAL */
+
+
+/* .StarAndBar {
+  justify-content: left;
+  margin: 10px;
+  padding: 100px;
+} */
 /* .modal .modalContent > h2 {
   font-size: 28px;
   font-weight: 200;
@@ -434,4 +441,5 @@ progress::-webkit-progress-bar {
 .content {
   color: rgb(53, 52, 52);
   background-color: rgb(240, 238, 238);
+  height: 100%;
 }

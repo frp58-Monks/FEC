@@ -57,15 +57,15 @@ export const StarCont = styled.div`
   width: 90%;
   height: 50%
   align: center;
-  padding:10px;
-  margin: 30px 15px;
 `
+// padding:10px;
+// margin: 30px 15px;
 
 export const SharedStarText = styled.span`
   font-weight: bold;
   font-family: Georgia;
   font-weight: 10px;
-  font-size: 30px;
+  font-size: 25px;
   margin; 20px;
   padding: 5px;
   color: #6c3082;
@@ -85,9 +85,3 @@ export const JText = styled.span`
   font-size: 15px;
   color: #6c3082;
 `
-
-// padding:10px;
-// margin: 30px 15px;
-
-// margin; 20px;
-// padding: 5px;
