@@ -8,9 +8,9 @@ import { JCont, JText } from '../Styled/ProgressBarStyled.js';
 
 const RatingBreakdown = ( {reviewStars} ) => {
 
-    let starObj = reviewStars.ratings;
-    let avg = StarAverage(starObj);
-    let width = avg * 20;
+  let starObj = reviewStars.ratings;
+  let avg = StarAverage(starObj);
+  let width = avg * 20;
 
   return (
     <JCont className="SharedStars">

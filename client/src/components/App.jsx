@@ -30,11 +30,6 @@ const App = (props) => {
     })
   }
 
-  const featureNextProduct = () => {
-    let newIndex = index + 1;
-    setIndex(newIndex);
-  }
-
   useEffect(() => (
     axios.get('/products')
     .then((res) => {

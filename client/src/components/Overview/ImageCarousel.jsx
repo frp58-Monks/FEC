@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { AppContext } from '../App.jsx';
 import { OverviewContext } from '../Overview.jsx';
-import './ImageCarousel.css';
+import './StylesCarousel.css';
 
 const ImageCarousel = () => {
   //-----------Contexts-----------
