@@ -1,8 +1,7 @@
 import React from 'react';
 import StarAverage from './StarAverage.jsx';
-import { Container, BarTitle, AverageText, RecommendText, RatingText, TextBar } from '../Styled/ProgressBarStyled.js';
 import axios from 'axios';
-import RatingBreakdown from './RatingBreakdown.jsx';
+import { Container, BarTitle, AverageText, RecommendText, RatingText, TextBar } from '../Styled/ProgressBarStyled.js';
 import { StarCont, SharedStarText } from '../Styled/ProgressBarStyled.js';
 
 const ProgressBar = ({ reviewStars }) => {

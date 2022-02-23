@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import RatingReview from './RatingReview.jsx';
 import QuestionAnswer from './QuestionAnswer.jsx';
-// import StarReview from './RatingReview/StarReview.jsx';
 import axios from 'axios';
 
 const Feedback = (props) => {

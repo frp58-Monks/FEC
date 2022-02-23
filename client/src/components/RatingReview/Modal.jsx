@@ -3,7 +3,7 @@ import '../style.css';
 import { FaStar } from "react-icons/fa";
 import { StarStyled, StarBorder, StarText } from '../Styled/StarStyled.js';
 
-const Modal = ({ customClass, show, closeModal, setRating, setSummary, setBody, setRecommend, setUsername, setEmail, children, setForm }) => {
+const Modal = ({ customClass, show, closeModal, setRating, setSummary, setBody, setRecommend, setUsername, setEmail, setForm }) => {
   const [modalRating, setModalRating] = useState(null);
   const [modalSummary, setModalSummary] = useState('');
   const [modalBody, setModalBody] = useState('');
@@ -57,7 +57,6 @@ const Modal = ({ customClass, show, closeModal, setRating, setSummary, setBody, 
     };
   //form was triggered
     setForm(true);
-
     alert("Submission Successful!");
   }
 
@@ -76,7 +75,7 @@ const Modal = ({ customClass, show, closeModal, setRating, setSummary, setBody, 
                 const ratingValue = i + 1;
 
                 return (
-                    <label className="StarReviewFiller">
+                    <label className="StarReviewFiller" key={i}>
                       <StarStyled className="StarReviewRadio">
                       <input
                         type='radio'
@@ -96,6 +95,7 @@ const Modal = ({ customClass, show, closeModal, setRating, setSummary, setBody, 
                 )
               })
             }
+              <div className="modalBar starRating" > Your rating for this product: {starRating} </div>
               <div className="modalStarForm">
                 1 star - “Poor” |
                 2 stars - “Fair” |

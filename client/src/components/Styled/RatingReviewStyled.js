@@ -5,11 +5,11 @@ export const MoreReviews = styled.button`
   padding: 5px;
   margin-right: 1%;
   height: 40px;
-  width: 150px;
-  border: 3px solid #6c3082;
+  width: 200px;
+  border: 2px solid black;
   font-size: 15px;
   font-family: Georgia;
-  background-color: #d8b2d1;
+  background-color: #ffcba4;
   border-radius: 10px;
   align-items: center;
 `
@@ -26,11 +26,11 @@ export const AddReview = styled.button`
   padding: 5px;
   margin-left: 2%;
   height: 40px;
-  width: 150px;
-  border: 3px solid #6c3082;
+  width: 200px;
+  border: 2px solid black;
   font-size: 15px;
   font-family: Georgia;
-  background-color: #d8b2d1;
+  background-color: #ffcba4;
   border-radius: 10px;
   align-items: center;
 `
