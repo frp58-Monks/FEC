@@ -3,7 +3,7 @@ import StarAverage from './StarAverage.jsx';
 import AppContext from '../App.jsx'
 import styled from 'styled-components';
 import css from "../style.css";
-import { JCont, JText } from '../styled/ProgressBarStyled.js';
+import { JCont, JText } from '../Styled/ProgressBarStyled.js';
 
 const RatingBreakdown = ( {reviewStars} ) => {
 

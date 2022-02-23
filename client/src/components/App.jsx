@@ -9,7 +9,7 @@ import './style.css';
 export const AppContext = createContext();
 
 const App = (props) => {
-  const [product_id, setProduct_id] = useState(null);
+  const [product_id, setProduct_id] = useState(40344);
   const [productDetails, setProductDetails] = useState(null);
   const [productStyles, setProductStyles] = useState(null);
   const [index, setIndex] = useState(0);
@@ -26,7 +26,7 @@ const App = (props) => {
       })
     })
     .catch((err) => {
-      console.log('GET ALL products Error: ', err);
+      // console.log('GET ALL products Error: ', err);
     })
   }
 
@@ -56,7 +56,7 @@ const App = (props) => {
         setProductDetails(prodDetailsRes);
       })
       .catch((err) => {
-        console.log('Client GET Details err: ', err)
+        // console.log('Client GET Details err: ', err)
       })
   }
 
@@ -69,7 +69,7 @@ const App = (props) => {
         const prodStylesRes = (res.data);
         setProductStyles(prodStylesRes);
       })
-      .catch((err) => { console.log('Client GET Styles err: ', err);
+      .catch((err) => { /*console.log('Client GET Styles err: ', err);*/
       })
   }
 
@@ -80,7 +80,7 @@ const App = (props) => {
         setReviewStars(starData);
       })
       .catch((err) => {
-        console.log('error with stars: ', err);
+        // console.log('error with stars: ', err);
       })
   }
 
