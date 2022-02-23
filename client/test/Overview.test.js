@@ -18,6 +18,8 @@ import '@testing-library/jest-dom';
 //---------Import_Components---------
 import App from '../src/components/App.jsx';
 import Overview from '../src/components/Overview.jsx';
+//JSON.parse is not supported by jest :(
+// const hardcodedData = require('../src/components/Overview/testContext.js');
 
 // const product_id = 40344;
 
@@ -65,54 +67,57 @@ import Overview from '../src/components/Overview.jsx';
 // });
 
 const product_id = 40344; //Camo Onesie
-
-//const worker = setupWorker( ) ??
+// //const worker = setupWorker( ) ??
+// //A function that sets up a request interception later in nodeJS env
 const server = setupServer(
   //Product Details
   rest.get('/products/:product_id', (req, res, ctx) => {
     //give the request a query paramater of the product_id //40344
     const { product_id } = req.params
     //what do i return and how do I add the res data to my test context?
-    return res(ctx.json(productDetails))
-  },
+    return res(
+      ctx.json({ product_id })
+      // ctx.json(???)
+      // ctx.json(productDetails)
+    )
+  }),
   //Product Styles
   rest.get('/products/:product_id/styles', (req, res, ctx) => {
     const { product_id } = req.params
     return res(
       ctx.json(productStyles)
     )
-  },
+  }),
   //Product Stars
   rest.get('/reviews/meta', (req, res, ctx) => {
     const { product_id } = req.params
     return res(
       ctx.json(reviewStars)
     )
-  }
+  })
 )
 
-//Mock out route
+// Mock out route
 beforeAll(() => server.listen())
 afterEach(() => server.resetHandlers())
 afterAll(()=> server.close())
 
 const TestContext = React.createContext();
 
-test('it tests overview component', async () => {
-
-  console.log({'test details': productDetails}); //still undefined
+test.only('tests overview component for the word: Category', async () => {
+  // console.log({'hardcoded data': hardcodedData.productDetails});
+  console.log({'test details': productDetails}); //still undefined (async issue)
   console.log({'test styles': productStyles});
   console.log({'test stars': reviewStars});
 
   render(
     <TestContext.Provider value={{ productDetails, productStyles, reviewStars }}>
-      <Overview />
+      <App />
     </TestContext.Provider>
   )
   const value = await waitFor(() => screen.getByText('Category'))
   expect(value).toBeInTheDocument()
 })
-
 
 // test('Search renders new product price', async () => {
 //   //input 'heir force ones' into the search bar form

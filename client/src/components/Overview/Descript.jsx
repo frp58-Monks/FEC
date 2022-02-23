@@ -6,12 +6,10 @@ const Description = () => {
   // const [sentencesArr, setSentencesArr] = useState(null);
 
   let sentencesArr = null
-
   if (productDetails) {
     sentencesArr = [];
     let prodDescr = productDetails.description;
     let descrLettersArray = productDetails.description.split('');
-
     let sentence;
     let startingIndex = 0;
     for (var i = 0; i < descrLettersArray.length; i++) {
