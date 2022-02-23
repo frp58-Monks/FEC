@@ -9,7 +9,7 @@ import './style.css';
 export const AppContext = createContext();
 
 const App = (props) => {
-  const [product_id, setProduct_id] = useState(null);
+  const [product_id, setProduct_id] = useState(40344);
   const [productDetails, setProductDetails] = useState(null);
   const [productStyles, setProductStyles] = useState(null);
   const [index, setIndex] = useState(0);

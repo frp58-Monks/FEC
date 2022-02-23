@@ -1,18 +1,59 @@
-//Import react and react DOM
+//---------Import React---------
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-//Import API mocking utilities from Mock Service Worker
-import {rest} from 'msw';
-import {setupServer} from 'msw/node';
-import {render, getByText, waitFor, screen} from '@testing-library/react';
+import "babel-polyfill";
+
+//---------Import Testing Libraries---------
+// import {rest} from 'msw';
+// import {setupServer} from 'msw/node';
+import {render, screen, cleanup, getByText, waitFor, fireEvent} from '@testing-library/react';
 import '@testing-library/jest-dom';
+
+//---------Import_Components---------
 import App from '../src/components/App.jsx';
 import Overview from '../src/components/Overview.jsx';
 import RatingReview from '../src/components/RatingReview.jsx';
 import QuestionAnswer from '../src/components/QuestionAnswer.jsx';
 import StarReview from '../src/components/RatingReview/StarReview.jsx';
 import ReviewListItem from '../src/components/RatingReview/ReviewListItem.jsx';
-import ReviewListData from '../src/components/RatingReview/HardcodeData.jsx';
+//---------Invoke Cleanup---------
+afterEach(cleanup);
+//OR--
+// afterEach(() => {
+//   cleanup();
+// });
+
+//---------React Unit Tests---------
+test('expect App to render Jello World', async () => {
+  render(<App/>);
+  await expect(screen.getByText('Jello World')).toBeInTheDocument();
+})
+
+test('expect QuestionAnswer Component to render string', async () => {
+  const fakeData =
+  {
+    "product_id": "40348",
+    "results": [
+      {
+        "question_id": 426109,
+        "question_body": "this is a test",
+        "question_date": "2021-09-18T-00:00:00.000Z",
+        "asker_name": "testing",
+        "answers": {
+          "5269566": {
+            "id": 5269566,
+            "body": "test",
+            "date": "2022-01-06T00:00:00.000Z",
+            "answerer_name": "testing"
+          }
+        }
+      }
+    ]
+  }
+  render(<QuestionAnswer questions={fakeData}/>);
+  // expect(screen.getByText('Questions and Answers')).toBeInTheDocument();
+  await expect(screen.getByText('Questions and Answers')).toBeInTheDocument();
+})
 
 // import Data from '../src/components/Overview/hardcodedData.jsx';
 
@@ -45,33 +86,3 @@ import ReviewListData from '../src/components/RatingReview/HardcodeData.jsx';
 //   expect(screen.getByText('todo two'))
 
 // })
-
-test('expect App to render Jello World', () => {
-  render(<App/>);
-  expect(screen.getByText('Jello World')).toBeInTheDocument();
-})
-
-// test('expect DOM to render', () => {
-//   render(<Overview/>);
-//   expect(screen.getByText('Product Name-PROP')).toBeInTheDocument();
-// })
-
-test('expect QuestionAnswer Component to render string', () => {
-  render(<QuestionAnswer/>);
-  expect(screen.getByText('Question and Answer Components Here')).toBeInTheDocument();
-})
-
-test('expect RatingReview Component to render string: RatingReview', () => {
-  render(<RatingReview/>);
-  expect(screen.getByText('RatingReview')).toBeInTheDocument();
-})
-
-test('expect StarReview Component to render string: The Rating is', () => {
-  render(<StarReview/>);
-  expect(screen.getByText('The rating is')).toBeInTheDocument();
-})
-
-test('expect ReviewListItem Component to render purchaser name: shortandsweeet', () => {
-  render(<ReviewListItem item={ReviewListData.results[0]}/>);
-  expect(screen.getByText('shortandsweeet')).toBeInTheDocument();
-})
