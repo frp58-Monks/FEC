@@ -133,6 +133,7 @@ progress::-webkit-progress-bar {
 .RatingText {
   display: flex;
   justify-content: center;
+  white-space: nowrap;
   font-size: 50px;
   font-family: Georgia, 'Times New Roman', Times, serif;
 }
@@ -169,6 +170,7 @@ progress::-webkit-progress-bar {
 
 .BarTitle {
   text-align: left;
+  white-space: nowrap;
 }
 
 .ProgressBar {

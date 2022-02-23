@@ -29,6 +29,7 @@ export const ReviewDate = styled.div`
   text-align: right;
   font-family: Georgia;
   font-style: italic;
+  white-space: nowrap;
   padding: 2px;
   font-size: 15px;
   color: #66cc99;
@@ -37,6 +38,7 @@ export const ReviewDate = styled.div`
 export const ReviewPurchaser = styled.div`
   text-align: right;
   font-family: Georgia;
+  white-space: nowrap;
   color: #f28500;
   padding: 3px;
   font-size: 15px;
@@ -51,6 +53,7 @@ export const Recommend = styled.div`
   text-align: right;
   font-family: Georgia;
   font-size: smaller;
+  white-space: nowrap;
   padding: 3px;
 `
 //<ReviewSummary>Summary: {cappedSummary}</ReviewSummary>

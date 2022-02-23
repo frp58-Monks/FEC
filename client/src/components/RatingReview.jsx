@@ -114,7 +114,7 @@ const RatingReview = ({ reviews, reviewStars, product_id, reviewFunc, setDropdow
                 {
                   resultsArr && results &&
                     showCount <= results.length ?
-                    <MoreReviews onClick={addCount}>More Reviews</MoreReviews> : ''
+                    <MoreReviews onClick={addCount}>More Reviews</MoreReviews> : 'No More Reviews'
                 }
               </div>
 

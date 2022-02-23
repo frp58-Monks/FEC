@@ -67,6 +67,7 @@ export const SharedStarText = styled.span`
   font-family: Georgia;
   font-weight: 10px;
   font-size: 25px;
+  white-space: nowrap;
   margin; 20px;
   padding: 5px;
   color: #ff8243;
