@@ -5,7 +5,7 @@ import styled from 'styled-components';
 import css from "../style.css";
 import { JCont, JText } from '../Styled/ProgressBarStyled.js';
 
-const RatingBreakdown = ( {reviewStars} ) => {
+const RatingBreakdown = ({ reviewStars }) => {
 
     let starObj = reviewStars.ratings;
     let avg = StarAverage(starObj);

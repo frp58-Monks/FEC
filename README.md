@@ -5,7 +5,7 @@ A File that documents your work and outlines important information as the first 
 
 Project Title: Project Catwalk
 
-Overview:
+How to start the project: In a terminal run npm install. In two seperate terminals, run npm start and npm run build. Once npm start is running, open localhost:3000 in a web browser.
 
 Table of Contents:
 1. Product Overview

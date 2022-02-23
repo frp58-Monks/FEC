@@ -1,10 +1,9 @@
 import React, {useState, useEffect} from 'react';
 import { ReviewSummary, ReviewWrapper, ReviewBody, ReviewDate, ReviewPurchaser, Response, Recommend, Left, Helpful } from '../Styled/ReviewListStyled.js';
-//import StarFilled from '../RatingReview/StarFilled.jsx';
 import { FaCheck } from "react-icons/fa";
 import axios from 'axios';
 
-const ReviewListItem = ({ item, product_id, reviewStars, reviews }) => {
+const ReviewListItem = ({ item }) => {
   const[helpful, setHelpful] = useState(item.helpfulness);
 
   //convert date on individual tiles
@@ -63,6 +62,3 @@ const ReviewListItem = ({ item, product_id, reviewStars, reviews }) => {
 }
 
 export default ReviewListItem;
-
-
-//<button onClick={decreaseHelpful}> No: {notHelpful} </button>
