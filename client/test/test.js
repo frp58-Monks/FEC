@@ -51,6 +51,7 @@ test('expect App to render Jello World', async () => {
 //       }
 //     ]
 //   }
+<<<<<<< HEAD
 //   render(<QuestionAnswer question={fakeData} />);
 //   // const value = await screen.getByText('Questions and Answers');
 //   const value = await screen.getByText('Questions and Answers');
@@ -58,6 +59,17 @@ test('expect App to render Jello World', async () => {
 //   // expect(screen.getByText('Questions and Answers')).toBeInTheDocument();
 //   expect(value).toBeInTheDocument();
 // })
+=======
+//   render(<QuestionAnswer questions={fakeData} />);
+//   const value = await screen.getByText('Questions and Answers');
+//   // expect(screen.getByText('Questions and Answers')).toBeInTheDocument();
+//   expect(value).toBeInTheDocument();
+// })
+
+// test('', async () => {
+
+
+>>>>>>> main
 
 
 

@@ -29,7 +29,7 @@ const QuestionListitem = (props) => {
         setAnswers(data.results);
       })
       .catch((err) => {
-        console.log('error with answers', err);
+        // console.log('error with answers', err);
       });
   }
 
