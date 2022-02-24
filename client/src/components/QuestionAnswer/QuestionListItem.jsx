@@ -36,7 +36,7 @@ const QuestionListitem = (props) => {
   getAnswers()}, [question_id]);
 
   return (
-    <Left >
+    <Left className="QuestionListItem">
     <QuestionWrapper>
       <QuestionDate>{combinedDate}</QuestionDate>
       <QuestionAsker>Asker Name: {props.question.asker_name}</QuestionAsker>

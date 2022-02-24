@@ -1,13 +1,29 @@
-.logo {
-  width: 100px;
-  height: 50px;
-  padding: 5px;
-  vertical-align: middle;
+/* Designing for scroll-bar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgb(240, 238, 238);
+  border-radius: 5px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #b3b3b3;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
 
 .starbox {
   display: inline-grid;
-  color: #20B2AA;
+  /* color: #20B2AA; */
+  color: gold;
 }
 
 .starbox div {
@@ -20,7 +36,8 @@
 /* Justin's Stars */
 .JStarbox {
   display: inline-grid;
-  color: #20B2AA;
+  /* color: #20B2AA; */
+  color: gold;
 }
 
 .JStarbox div {
@@ -55,11 +72,12 @@ progress {
 }
 
 progress::-webkit-progress-value {
-  background: #20B2AA;
+  /* background: #20B2AA; */
+  background: #ffa500;
 }
 
 progress::-webkit-progress-bar {
-  background: rgb(150, 149, 149);
+  background: #b3b3b3;
 }
 
 .Flexbox-container {
@@ -73,7 +91,8 @@ progress::-webkit-progress-bar {
 }
 
 .Flexbox-item {
-  width: 1100px;
+  /* width: 1100px; */
+  width: 47%;
   margin: 1px;
   border: 3px;
   justify-content: space-evenly;
@@ -239,7 +258,8 @@ progress::-webkit-progress-bar {
   transform: translate(-50%, -50%);
   max-height: 90%;
   overflow: auto;
-  background: #b39eb5;
+  /* background: #b39eb5; */
+  background: rgba(255, 255, 255, 0.736);
   box-sizing: border-box;
   padding: 20px;
   box-shadow: 0 1px 5px rgba(0,0,0,0.7);
@@ -272,7 +292,8 @@ progress::-webkit-progress-bar {
   border-radius: 10px;
   padding: 15px;
   /* color:#ffcc33; */
-  color: #eec64f;
+  color: #f28500;
+  background-color: #F0F0F0;
 }
 
 .modalBar {
@@ -356,7 +377,8 @@ progress::-webkit-progress-bar {
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-size: 20px;
   font-style: bold;
-  border: solid #20B2AA;
+  border-style: solid black;
+  background-color: #ffcba4;
   border-radius: 10px;
   padding: 5px;
   margin: 5px;
@@ -371,6 +393,16 @@ progress::-webkit-progress-bar {
   margin-right: 1%;
   height: 40px;
   width: 300px; */
+}
+
+.QuestionList {
+  text-align: center;
+}
+
+.starRating {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 17px;
+  font-style: bold;
 }
 
 

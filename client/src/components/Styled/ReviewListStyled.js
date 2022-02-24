@@ -10,8 +10,10 @@ import styled from 'styled-components';
 // `
 //wrapper for individual review tiles
 //background-color: #DCDCDC;
+//background-color: #e6e8fa;
 export const ReviewWrapper = styled.div`
   border-style: solid;
+  border-color: #b3b3b3;
   width: 95%;
   height: 50%;
   align: center;
@@ -19,7 +21,7 @@ export const ReviewWrapper = styled.div`
   padding-left: 5%;
   padding-right: 5%;
   margin: 30px 15px;
-  background-color: #e6e8fa;
+  background-color: rgba(255, 255, 255, 0.736);
   border-radius: 25px;
 `
 //<ReviewDate>{combinedDate}</ReviewDate>
@@ -29,13 +31,13 @@ export const ReviewDate = styled.div`
   font-style: italic;
   padding: 2px;
   font-size: 15px;
-  color: #20B2AA;
+  color: #66cc99;
 `
 //<ReviewPurchaser>Verified Purchaser: {item.reviewer_name}</ReviewPurchaser>
 export const ReviewPurchaser = styled.div`
   text-align: right;
   font-family: Georgia;
-  color: #6c3082;
+  color: #f28500;
   padding: 3px;
   font-size: 15px;
 `
@@ -79,9 +81,9 @@ export const Helpful = styled.button`
   display: block;
   align-items: center;
   height: 30px;
-  border: 3px solid #b48395;
+  border: 1px solid black;
   border-radius: 8px;
-  background-color: #d8b2d1;
+  background-color: #ffcba4;
 `
 
 // //FEEDBACK STYLING
