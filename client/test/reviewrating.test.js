@@ -67,11 +67,11 @@ const metaData =
       "true": "6"
   },
   "characteristics": {
-      "Size": {
+      "Fit": {
           "id": 135494,
           "value": "3.0000000000000000"
       },
-      "Width": {
+      "Length": {
           "id": 135495,
           "value": "3.5000000000000000"
       },
