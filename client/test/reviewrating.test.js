@@ -6,13 +6,16 @@ import "babel-polyfill";
 //---------Import Testing Libraries---------
 // import {rest} from 'msw';
 // import {setupServer} from 'msw/node';
-import { render, screen, cleanup, getByText, waitFor, fireEvent, getByLabel } from '@testing-library/react';
+import { render, screen, cleanup, getByText, waitFor, fireEvent, getByLabel, getByTestId, toHaveStyle } from '@testing-library/react';
 import '@testing-library/jest-dom';
 
 //---------Import_Components---------
 import App from '../src/components/App.jsx';
 import Overview from '../src/components/Overview.jsx';
 import RatingReview from '../src/components/RatingReview.jsx';
+import RatingBreakdown from '../src/components/RatingReview/RatingBreakdown.jsx';
+import StarAverage from '../src/components/RatingReview/StarAverage.jsx';
+import ProgressBar from '../src/components/RatingReview/ProgressBar.jsx';
 import QuestionAnswer from '../src/components/QuestionAnswer.jsx';
 import ReviewListItem from '../src/components/RatingReview/ReviewListItem.jsx';
 //---------Invoke Cleanup---------
@@ -47,6 +50,40 @@ const reviewData =
       ]
     }
   ]
+}
+
+const metaData =
+{
+  "product_id": "40427",
+  "ratings": {
+      "1": "2",
+      "2": "1",
+      "3": "1",
+      "4": "1",
+      "5": "3"
+  },
+  "recommended": {
+      "false": "2",
+      "true": "6"
+  },
+  "characteristics": {
+      "Size": {
+          "id": 135494,
+          "value": "3.0000000000000000"
+      },
+      "Width": {
+          "id": 135495,
+          "value": "3.5000000000000000"
+      },
+      "Comfort": {
+          "id": 135496,
+          "value": "2.5000000000000000"
+      },
+      "Quality": {
+          "id": 135497,
+          "value": "3.5000000000000000"
+      }
+  }
 }
 
 //---------React Unit Tests---------
@@ -120,6 +157,12 @@ async () => {
 
 /*TESTING PROGRESS BAR COMPONENT */
 //test rating breakdown title
+test('expect ProgressBar Component to render Rating Breakdown title',
+async () => {
+  render(<ProgressBar reviewStars={metaData}/>);
+  const value = await screen.getByText('Rating Breakdown');
+  expect(value).toBeInTheDocument();
+  })
 //test average rating text and averge rating
 //test 1 star bar & title
 //test 2 star bar & title
@@ -129,14 +172,39 @@ async () => {
 //test recommended & title
 //test star icons
 
-/*TESTING RATING BREAKDOWN COMPONENT */ //same as progress bar
-//test rating breakdown title
-//test average rating text and averge rating
-//test star icons
+/*TESTING RATING BREAKDOWN COMPONENT */
+test("expect star icons to be filled with yellow based on average rating percentage",
+async () => {
+  render(<RatingBreakdown reviewStars={metaData}/>);
+  const value = await screen.getByTestId('star');
+  expect(value).toBeInTheDocument(`width: 65%`);
+})
 
-/*TESTING STAR AVERAGE COMPONENT */ //takes obj
-//test average of ratings
+/*TESTING STAR AVERAGE COMPONENT */
+describe('Testing sum', () => {
+  function average() {
+    var totalCount = 0;
+    var averageCount = 0;
+
+    for (let key in metaData.ratings) {
+      let value = Number(metaData.ratings[key]);
+      let num = Number(key);
+      totalCount += value;
+      averageCount += (num * metaData.ratings[key]);
+    }
+
+    let average = averageCount / totalCount;
+    average = Math.round(average * 10) / 10
+    return average;
+  }
+
+  it('should equal 3.3',()=>{
+     expect(average()).toBe(3.3);
+    })
+
+  test('also should equal 3.3', () => {
+    expect(average()).toBe(3.3);
+    })
+});
 
 /*TESTING ADD REVIEWS MODAL COMPONENT */
-
-

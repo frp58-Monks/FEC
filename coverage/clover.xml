@@ -1,47 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1645656519279" clover="3.2.0">
-  <project timestamp="1645656519279" name="All files">
-    <metrics statements="372" coveredstatements="142" conditionals="106" coveredconditionals="26" methods="100" coveredmethods="13" elements="578" coveredelements="181" complexity="0" loc="372" ncloc="372" packages="5" files="25" classes="25"/>
+<coverage generated="1645678270270" clover="3.2.0">
+  <project timestamp="1645678270270" name="All files">
+    <metrics statements="372" coveredstatements="191" conditionals="106" coveredconditionals="31" methods="100" coveredmethods="22" elements="578" coveredelements="244" complexity="0" loc="372" ncloc="372" packages="5" files="25" classes="25"/>
     <package name="components">
-      <metrics statements="115" coveredstatements="46" conditionals="40" coveredconditionals="18" methods="47" coveredmethods="6"/>
+      <metrics statements="115" coveredstatements="53" conditionals="40" coveredconditionals="21" methods="47" coveredmethods="12"/>
       <file name="App.jsx" path="/Users/gchen/Desktop/Hackreactor/FEC/client/src/components/App.jsx">
-        <metrics statements="36" coveredstatements="15" conditionals="7" coveredconditionals="0" methods="19" coveredmethods="1"/>
+        <metrics statements="36" coveredstatements="20" conditionals="7" coveredconditionals="3" methods="19" coveredmethods="6"/>
         <line num="9" count="2" type="stmt"/>
         <line num="11" count="2" type="stmt"/>
-        <line num="12" count="3" type="stmt"/>
-        <line num="13" count="2" type="stmt"/>
-        <line num="14" count="2" type="stmt"/>
-        <line num="15" count="2" type="stmt"/>
-        <line num="16" count="2" type="stmt"/>
-        <line num="18" count="2" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="15" count="1" type="stmt"/>
+        <line num="16" count="1" type="stmt"/>
+        <line num="18" count="1" type="stmt"/>
         <line num="19" count="0" type="stmt"/>
         <line num="21" count="0" type="stmt"/>
         <line num="22" count="0" type="stmt"/>
         <line num="23" count="0" type="cond" truecount="0" falsecount="2"/>
         <line num="24" count="0" type="stmt"/>
-        <line num="33" count="2" type="stmt"/>
+        <line num="33" count="1" type="stmt"/>
         <line num="34" count="0" type="stmt"/>
         <line num="35" count="0" type="stmt"/>
-        <line num="38" count="2" type="stmt"/>
-        <line num="39" count="0" type="stmt"/>
+        <line num="38" count="1" type="stmt"/>
+        <line num="39" count="1" type="stmt"/>
         <line num="41" count="0" type="stmt"/>
         <line num="42" count="0" type="stmt"/>
         <line num="45" count="0" type="stmt"/>
-        <line num="49" count="2" type="stmt"/>
-        <line num="50" count="0" type="stmt"/>
+        <line num="49" count="1" type="stmt"/>
+        <line num="50" count="1" type="stmt"/>
         <line num="55" count="0" type="stmt"/>
         <line num="56" count="0" type="stmt"/>
-        <line num="63" count="2" type="stmt"/>
-        <line num="64" count="0" type="stmt"/>
+        <line num="63" count="1" type="stmt"/>
+        <line num="64" count="1" type="stmt"/>
         <line num="69" count="0" type="stmt"/>
         <line num="70" count="0" type="stmt"/>
-        <line num="76" count="2" type="stmt"/>
-        <line num="77" count="0" type="stmt"/>
+        <line num="76" count="1" type="stmt"/>
+        <line num="77" count="1" type="stmt"/>
         <line num="79" count="0" type="stmt"/>
         <line num="80" count="0" type="stmt"/>
-        <line num="87" count="2" type="stmt"/>
-        <line num="88" count="0" type="stmt"/>
-        <line num="93" count="2" type="stmt"/>
+        <line num="87" count="1" type="stmt"/>
+        <line num="88" count="1" type="stmt"/>
+        <line num="93" count="1" type="stmt"/>
       </file>
       <file name="Feedback.jsx" path="/Users/gchen/Desktop/Hackreactor/FEC/client/src/components/Feedback.jsx">
         <metrics statements="24" coveredstatements="1" conditionals="6" coveredconditionals="0" methods="11" coveredmethods="0"/>
@@ -128,10 +128,10 @@
         <line num="106" count="3" type="stmt"/>
       </file>
       <file name="SearchProd.jsx" path="/Users/gchen/Desktop/Hackreactor/FEC/client/src/components/SearchProd.jsx">
-        <metrics statements="7" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="0"/>
+        <metrics statements="7" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="1"/>
         <line num="4" count="2" type="stmt"/>
-        <line num="5" count="0" type="stmt"/>
-        <line num="11" count="0" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
         <line num="13" count="0" type="stmt"/>
         <line num="14" count="0" type="stmt"/>
         <line num="15" count="0" type="stmt"/>
@@ -292,7 +292,7 @@
       </file>
     </package>
     <package name="components.RatingReview">
-      <metrics statements="107" coveredstatements="41" conditionals="18" coveredconditionals="7" methods="18" coveredmethods="3"/>
+      <metrics statements="107" coveredstatements="83" conditionals="18" coveredconditionals="9" methods="18" coveredmethods="6"/>
       <file name="Modal.jsx" path="/Users/gchen/Desktop/Hackreactor/FEC/client/src/components/RatingReview/Modal.jsx">
         <metrics statements="39" coveredstatements="19" conditionals="10" coveredconditionals="4" methods="11" coveredmethods="2"/>
         <line num="6" count="3" type="stmt"/>
@@ -336,44 +336,44 @@
         <line num="86" count="0" type="stmt"/>
       </file>
       <file name="ProgressBar.jsx" path="/Users/gchen/Desktop/Hackreactor/FEC/client/src/components/RatingReview/ProgressBar.jsx">
-        <metrics statements="29" coveredstatements="1" conditionals="2" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <metrics statements="29" coveredstatements="29" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
         <line num="7" count="3" type="stmt"/>
-        <line num="10" count="0" type="stmt"/>
-        <line num="11" count="0" type="stmt"/>
-        <line num="12" count="0" type="stmt"/>
-        <line num="14" count="0" type="stmt"/>
-        <line num="17" count="0" type="stmt"/>
-        <line num="20" count="0" type="stmt"/>
-        <line num="21" count="0" type="stmt"/>
-        <line num="22" count="0" type="stmt"/>
-        <line num="23" count="0" type="stmt"/>
-        <line num="24" count="0" type="stmt"/>
-        <line num="27" count="0" type="stmt"/>
-        <line num="29" count="0" type="stmt"/>
-        <line num="37" count="0" type="stmt"/>
-        <line num="38" count="0" type="stmt"/>
-        <line num="39" count="0" type="stmt"/>
-        <line num="40" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="41" count="0" type="stmt"/>
-        <line num="46" count="0" type="stmt"/>
-        <line num="47" count="0" type="stmt"/>
-        <line num="48" count="0" type="stmt"/>
-        <line num="49" count="0" type="stmt"/>
-        <line num="50" count="0" type="stmt"/>
-        <line num="51" count="0" type="stmt"/>
-        <line num="52" count="0" type="stmt"/>
-        <line num="53" count="0" type="stmt"/>
-        <line num="54" count="0" type="stmt"/>
-        <line num="55" count="0" type="stmt"/>
-        <line num="63" count="0" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="17" count="1" type="stmt"/>
+        <line num="20" count="1" type="stmt"/>
+        <line num="21" count="1" type="stmt"/>
+        <line num="22" count="1" type="stmt"/>
+        <line num="23" count="1" type="stmt"/>
+        <line num="24" count="1" type="stmt"/>
+        <line num="27" count="1" type="stmt"/>
+        <line num="29" count="1" type="stmt"/>
+        <line num="37" count="1" type="stmt"/>
+        <line num="38" count="5" type="stmt"/>
+        <line num="39" count="5" type="stmt"/>
+        <line num="40" count="25" type="cond" truecount="2" falsecount="0"/>
+        <line num="41" count="5" type="stmt"/>
+        <line num="46" count="1" type="stmt"/>
+        <line num="47" count="1" type="stmt"/>
+        <line num="48" count="1" type="stmt"/>
+        <line num="49" count="1" type="stmt"/>
+        <line num="50" count="1" type="stmt"/>
+        <line num="51" count="1" type="stmt"/>
+        <line num="52" count="1" type="stmt"/>
+        <line num="53" count="1" type="stmt"/>
+        <line num="54" count="1" type="stmt"/>
+        <line num="55" count="1" type="stmt"/>
+        <line num="63" count="1" type="stmt"/>
       </file>
       <file name="RatingBreakdown.jsx" path="/Users/gchen/Desktop/Hackreactor/FEC/client/src/components/RatingReview/RatingBreakdown.jsx">
-        <metrics statements="5" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="8" count="2" type="stmt"/>
-        <line num="10" count="0" type="stmt"/>
-        <line num="11" count="0" type="stmt"/>
-        <line num="12" count="0" type="stmt"/>
-        <line num="14" count="0" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
       </file>
       <file name="ReviewListItem.jsx" path="/Users/gchen/Desktop/Hackreactor/FEC/client/src/components/RatingReview/ReviewListItem.jsx">
         <metrics statements="23" coveredstatements="19" conditionals="6" coveredconditionals="3" methods="4" coveredmethods="1"/>
@@ -402,18 +402,18 @@
         <line num="45" count="7" type="stmt"/>
       </file>
       <file name="StarAverage.jsx" path="/Users/gchen/Desktop/Hackreactor/FEC/client/src/components/RatingReview/StarAverage.jsx">
-        <metrics statements="11" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <metrics statements="11" coveredstatements="11" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="3" count="3" type="stmt"/>
-        <line num="4" count="0" type="stmt"/>
-        <line num="5" count="0" type="stmt"/>
-        <line num="7" count="0" type="stmt"/>
-        <line num="8" count="0" type="stmt"/>
-        <line num="9" count="0" type="stmt"/>
-        <line num="10" count="0" type="stmt"/>
-        <line num="11" count="0" type="stmt"/>
-        <line num="14" count="0" type="stmt"/>
-        <line num="15" count="0" type="stmt"/>
-        <line num="16" count="0" type="stmt"/>
+        <line num="4" count="2" type="stmt"/>
+        <line num="5" count="2" type="stmt"/>
+        <line num="7" count="2" type="stmt"/>
+        <line num="8" count="10" type="stmt"/>
+        <line num="9" count="10" type="stmt"/>
+        <line num="10" count="10" type="stmt"/>
+        <line num="11" count="10" type="stmt"/>
+        <line num="14" count="2" type="stmt"/>
+        <line num="15" count="2" type="stmt"/>
+        <line num="16" count="2" type="stmt"/>
       </file>
     </package>
     <package name="components.Styled">
@@ -427,8 +427,8 @@
         <line num="44" count="3" type="stmt"/>
         <line num="57" count="3" type="stmt"/>
         <line num="65" count="3" type="stmt"/>
-        <line num="76" count="3" type="stmt"/>
-        <line num="82" count="3" type="stmt"/>
+        <line num="77" count="3" type="stmt"/>
+        <line num="83" count="3" type="stmt"/>
       </file>
       <file name="QuestionListStyled.js" path="/Users/gchen/Desktop/Hackreactor/FEC/client/src/components/Styled/QuestionListStyled.js">
         <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
@@ -449,12 +449,12 @@
         <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="14" count="3" type="stmt"/>
         <line num="28" count="3" type="stmt"/>
-        <line num="37" count="3" type="stmt"/>
-        <line num="50" count="3" type="stmt"/>
-        <line num="57" count="3" type="stmt"/>
-        <line num="65" count="3" type="stmt"/>
-        <line num="73" count="3" type="stmt"/>
-        <line num="79" count="3" type="stmt"/>
+        <line num="38" count="3" type="stmt"/>
+        <line num="52" count="3" type="stmt"/>
+        <line num="60" count="3" type="stmt"/>
+        <line num="68" count="3" type="stmt"/>
+        <line num="76" count="3" type="stmt"/>
+        <line num="82" count="3" type="stmt"/>
       </file>
       <file name="StarStyled.js" path="/Users/gchen/Desktop/Hackreactor/FEC/client/src/components/Styled/StarStyled.js">
         <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
