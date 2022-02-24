@@ -1,25 +1,33 @@
 .overviewMain {
-  background-color: rgb(240, 238, 238);
+  background: rgba(255, 255, 255, 0.736);
   border: 1px black solid;
-  padding: 10px;
+  padding: 10px 10px;
   display: flex;
   border-radius: 20px;
   margin-right: 20px;
   /* max-width: 490px; */
-  max-height: 490px;
-  justify-content: between;
+  max-height: 550px;
+  justify-content: space-evenly;
+  /* padding: 0px 30px; */
+}
+
+b {
+  /* color: #ffa500; */
+  /* color: #ffcba4; */
+  color: #f28500;
 }
 
 .product-details {
-  background-color: rgb(240, 238, 238);
-  border: 4px black solid;
+  /* background: rgba(255, 255, 255, 0.736);
+  border: 4px black solid; */
   border-radius: 20px;
-  padding: 10px;
-  flex: 2;
+  padding: 10px 20px;
+  flex: 4;
+  max-width: 40%;
 }
 
 .imageCarouselOver {
-  flex: 5;
+  flex: 2;
 }
 
 .dropdownMenus {
@@ -68,15 +76,18 @@ img {
   display: flex;
   width: 300px;
   flex-wrap: wrap;
+  background-color:rgba(211, 211, 211, 0.736);
+  border-radius: 20px;
+}
+
+.descript {
+  background-color:rgba(211, 211, 211, 0.736);
+  border-radius: 20px;
+  border: 1px black solid;
 }
 
 .allImages {
   background-color: black;
-}
-
-.stylesComponent {
-  background-color:rgba(255, 255, 255, 0.736);
-  border-radius: 20px;
 }
 
 .addToCart {

@@ -4,7 +4,6 @@ import { QuestionSummary, QuestionWrapper, QuestionBody, QuestionDate, QuestionA
 import AnswerListItem from './AnswerListItem.jsx';
 
 const QuestionListitem = (props) => {
-  console.log('question prop: ', props.question);
   const [answers, setAnswers] = useState([]);
   const [question_id, setQuestion_id] = useState(props.question.question_id);
 

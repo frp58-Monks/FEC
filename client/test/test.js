@@ -25,6 +25,6 @@ afterEach(() => {
 //---------React Unit Tests---------
 // test('expect App to render Jello World', async () => {
 //   render(<App />)
-//   const value = await screen.getByText('Jello World')
+//   const value = await screen.getByText('ratgins')
 //   expect(value).toBeInTheDocument()
 // })
