@@ -18,16 +18,10 @@ b {
 }
 
 .product-details {
-  /* background: rgba(255, 255, 255, 0.736);
-  border: 4px black solid; */
   border-radius: 20px;
   padding: 10px 20px;
-  flex: 4;
 }
 
-.imageCarouselOver {
-  flex: 2;
-}
 
 .dropdownMenus {
   display: flex;
@@ -43,7 +37,6 @@ b {
 
 .dropdownsCart {
   display: flex;
-  /* justify-content: space-evenly; */
 }
 
 .salePrice {
@@ -54,12 +47,6 @@ b {
   display: flex;
   object-fit: cover;
   padding: 20px;
-}
-
-img {
-  height: 100%;
-  width: 100%;
-  object-fit: contain;
 }
 
 .currentStyles {
@@ -85,10 +72,6 @@ img {
   border: 1px black solid;
 }
 
-.allImages {
-  background-color: black;
-}
-
 .addToCart {
   background-color: rgb(243, 213, 43);
   border-radius: 16px;
@@ -100,6 +83,7 @@ img {
 
 .starsNlinks {
   display: flex;
+  padding: 8px 0px;
 }
 
 .myStars {
@@ -116,4 +100,12 @@ img {
 
 .addForm {
   padding-left: 45px;
+}
+
+i {
+  color: rgb(53, 52, 52);
+}
+
+.category {
+  padding: 8px 0px;
 }

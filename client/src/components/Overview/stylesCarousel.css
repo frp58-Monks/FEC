@@ -1,29 +1,40 @@
+.mamma {
+  padding: 0 0 0 0;
+}
+
 .carousel {
-  border-radius: 20px;
   overflow: hidden;
-  padding: 20px;
-  max-width: 490px;
+  max-width: 500px;
+  max-height: 500px;
+  padding: 0 0 0 0;
 }
 
 .allImages {
+  /* max-width: 300px;
+  max-height: 300px; */
   white-space: nowrap;
-  border-radius: 20px;
-  object-fit: contain;
-}
-
-.eachImage {
-  display: inline-flex;
+  object-fit: fill;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  align-self: center;
   align-items: center;
-  height: 420px;
+
 }
 
 .indicators {
   display: flex;
+  flex-direction: row;
   justify-content: center;
 }
 
 .indicators > button {
   margin: 5px;
+  border-radius: 10px;
+  padding: 10px 10px;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
 }
 
 img {

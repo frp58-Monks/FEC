@@ -4,6 +4,7 @@ import AppContext from '../App.jsx'
 import styled from 'styled-components';
 import css from "../style.css";
 import { JCont, JText } from '../Styled/ProgressBarStyled.js';
+import '../Overview/StylesOver.css';
 
 const RatingBreakdown = ({ reviewStars }) => {
 
@@ -21,7 +22,7 @@ const RatingBreakdown = ({ reviewStars }) => {
           </div>
 
           <div className="StarText">
-            <JText className="SharedStarText"> {avg} </JText>
+            <JText className="SharedStarText"> <b>Rating:</b> <i>{avg}</i> </JText>
           </div>
 
         </div>

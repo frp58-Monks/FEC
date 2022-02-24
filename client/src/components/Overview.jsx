@@ -38,9 +38,9 @@ const Overview = () => {
 
         <div className="product-details">
 
-          <h3>{productDetails.name}</h3>
+          <h3><b>{productDetails.name}</b></h3>
 
-          <div><b>Category: </b>{productDetails.category}</div>
+          <div className="category"><b>Category: </b>{productDetails.category}</div>
 
           <div className="starsNlinks">
             <RatingBreakdown className="myStars" reviewStars={reviewStars}/>

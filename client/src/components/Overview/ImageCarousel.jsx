@@ -29,7 +29,7 @@ const ImageCarousel = () => {
       if (!paused) {
         updateIndex(activeIndex + 1);
       }
-    }, 10000);
+    }, 2000);
 
     //Ensure interval stops running when our component is unmounted
     return () => {
@@ -41,15 +41,18 @@ const ImageCarousel = () => {
 
   //-----------Render-----------
   return (
-    <div className="carousel"
-      onMouseEnter={() => setPaused(true)}
-      onMouseLeave={() => setPaused(false)}
-    >
+    <div className="mamma">
+      <div className="carousel"
+        onMouseEnter={() => setPaused(true)}
+        onMouseLeave={() => setPaused(false)}
+      >
 
-      <div className="allImages" style={{transform: `translateX(-${activeIndex * 100}%)`, border: '5px black solid' }}>
-        {productStyles && defaultStyle.photos.map((eachImg) => {
-          return <img className="eachImage" src={eachImg.url} style={{width: '100%'}}/>
-        })}
+        <div className="allImages" style={{transform: `translateX(-${activeIndex * 100}%)`}}>
+          {productStyles && defaultStyle.photos.map((eachImg) => {
+            return <img src={eachImg.url} style={{width: '100%'}}/>
+          })}
+        </div>
+
       </div>
 
       <div className="indicators">
@@ -58,19 +61,18 @@ const ImageCarousel = () => {
             updateIndex(activeIndex - 1);
           }}
         >
-          Prev
+          {'<'}
         </button>
         <button className="nextImg"
           onClick={() => {
             updateIndex(activeIndex + 1);
           }}
         >
-          Next
+          {'>'}
         </button>
       </div>
 
-      </div>
-
+    </div>
   );
 }
 
