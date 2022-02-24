@@ -89,12 +89,6 @@ const App = (props) => {
     <AppContext.Provider value={{ productStyles, reviewStars, productDetails }}>
       <div className="content">
 
-        <div>
-          {/* <h1 className="header"><img className="logo" src={require('../images/Logo.png').default} alt="Jello World Logo" width="100" height="50"/>Jello World</h1> */}
-          <div className="ratingsAnchor">#ratgins_anchor</div>
-          <div className="questionsAnchor">#quesions_anchor</div>
-        </div>
-
         <SearchProductBar className="search" searchForProducts={searchForProducts}/>
 
         <div>
