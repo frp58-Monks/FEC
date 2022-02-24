@@ -4,7 +4,8 @@ import axios from 'axios';
 const AnswerListitem = (props) => {
 
   return (
-    <div>
+    <div className="AnswerListItem">
+      <hr/><br/>
       <div>
         Answered by: {props.answer.answerer_name}
       </div>

@@ -1,8 +1,23 @@
-.logo {
-  width: 100px;
-  height: 50px;
-  padding: 5px;
-  vertical-align: middle;
+/* Designing for scroll-bar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgb(240, 238, 238);
+  border-radius: 5px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #b3b3b3;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
 
 .starbox {
@@ -378,6 +393,10 @@ progress::-webkit-progress-bar {
   margin-right: 1%;
   height: 40px;
   width: 300px; */
+}
+
+.QuestionList {
+  text-align: center;
 }
 
 .starRating {
