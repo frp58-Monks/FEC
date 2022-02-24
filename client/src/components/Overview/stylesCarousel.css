@@ -1,12 +1,12 @@
 .mamma {
   padding: 0 0 0 0;
-  max-width: 450px;
+  max-width: 500px;
 }
 
 .carousel {
   overflow: hidden;
-  max-width: 500px;
-  max-height: 500px;
+  max-width: 400px;
+  max-height: 450px;
   padding: 0 0 0 0;
 }
 
