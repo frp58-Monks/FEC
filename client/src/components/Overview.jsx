@@ -38,7 +38,7 @@ const Overview = () => {
 
         <div className="product-details">
 
-          <h3><b>{productDetails.name}</b></h3>
+          <h2><b>{productDetails.name}</b></h2>
 
           <div className="category"><b>Category: </b>{productDetails.category}</div>
 
