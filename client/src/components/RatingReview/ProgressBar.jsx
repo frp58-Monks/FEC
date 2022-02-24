@@ -54,11 +54,19 @@ const ProgressBar = ({ reviewStars }) => {
   let fiveRating = (obj['5'] / total) * 100;
   fiveRating = Math.round(fiveRating * 10) / 10;
 
-  // let comfort = meta.characteristics.Comfort.value;
-  // let fit = meta.characteristics.Fit.value;
-  // let length = meta.characteristics.Length.value;
-  // let quality = meta.characteristics.Quality.value;
-  // console.log('3', threeRating);
+  //product breakdown
+  let comfort = reviewStars.characteristics.Comfort.value;
+  var comfortRound = Math.round(comfort * 10) / 10
+
+  let fit = reviewStars.characteristics.Fit.value;
+  var fitRound = Math.round(fit * 10) / 10
+
+  let length = reviewStars.characteristics.Length.value;
+  var lengthRound = Math.round(length * 10) / 10
+
+  let quality = reviewStars.characteristics.Quality.value;
+  var qualityRound = Math.round(quality * 10) / 10
+
 
   return (
     <div className="RatingBar">
@@ -80,7 +88,7 @@ const ProgressBar = ({ reviewStars }) => {
 
       <RatingText className="RatingText">Rating Breakdown</RatingText>
 
-      <div className="Bar OneStar">
+      <div className="Bar OneStar" >
         <BarTitle className="BarTitle"> One Star </BarTitle>
         <AverageText className="AverageText"> {oneRating}% </AverageText>
         <progress className="ProgressBar" value={oneRating} max={100} />
@@ -115,27 +123,21 @@ const ProgressBar = ({ reviewStars }) => {
         <RecommendText className="AverageText"> {recommendPercentageRound}% </RecommendText>
         <progress className="ProgressBar" value={recommendPercentageStr} max={100} />
       </div>
-      </TextBar>
 
+      <div className="Comfort">
+        <BarTitle className="ProdText"> Comfort: </BarTitle>
+        <AverageText className="ProdText"> {comfortRound}/5 </AverageText>
+        <BarTitle className="ProdText"> Fit: </BarTitle>
+        <AverageText className="ProdText"> {fitRound}/5 </AverageText>
+        <BarTitle className="ProdText"> Length: </BarTitle>
+        <AverageText className="ProdText"> {lengthRound}/5 </AverageText>
+        <BarTitle className="ProdText"> Quality: </BarTitle>
+        <AverageText className="ProdText"> {qualityRound}/5 </AverageText>
+      </div>
+
+      </TextBar>
     </div>
   )
 }
 
 export default ProgressBar;
-
-// const getMeta = () => {
-//   let product_id = this.props.product_id;
-//   axios
-//     .get('/reviews/meta', { params: { product_id: product_id } })
-//     .then(res => {
-//       const data = res.data;
-
-//       this.setState({
-//         reviewMeta: data
-//       });
-//     })
-//     .catch((err) => {
-//       console.log('error with reviews', err);
-//     });
-// }
-

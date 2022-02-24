@@ -22,7 +22,6 @@
 
 .starbox {
   display: inline-grid;
-  /* color: #20B2AA; */
   color: gold;
 }
 
@@ -36,7 +35,6 @@
 /* Justin's Stars */
 .JStarbox {
   display: inline-grid;
-  /* color: #20B2AA; */
   color: gold;
 }
 
@@ -72,7 +70,6 @@ progress {
 }
 
 progress::-webkit-progress-value {
-  /* background: #20B2AA; */
   background: #ffa500;
 }
 
@@ -87,24 +84,19 @@ progress::-webkit-progress-bar {
   align-items: flex-start;
   height: 700px;
   flex-wrap: wrap;
-  /* background-color: grey; */
 }
 
 .Flexbox-item {
-  /* width: 1100px; */
   width: 47%;
   margin: 1px;
   border: 3px;
   justify-content: space-evenly;
   flex-basis: auto;
   align-items: center;
-  /* background-color: hotpink; */
 }
 
 .StarAndBar {
   justify-content: left;
-  /* margin: 10px;
-  padding: 100px; */
 }
 
 .AverageStars {
@@ -126,7 +118,6 @@ progress::-webkit-progress-bar {
 .RItem {
   justify-content: space-evenly;
   align-items: center;
-  /* background-color: white; */
 }
 
 .MReviews {
@@ -148,6 +139,7 @@ progress::-webkit-progress-bar {
 .RatingText {
   display: flex;
   justify-content: center;
+  white-space: nowrap;
   font-size: 50px;
   font-family: Georgia, 'Times New Roman', Times, serif;
 }
@@ -184,6 +176,7 @@ progress::-webkit-progress-bar {
 
 .BarTitle {
   text-align: left;
+  white-space: nowrap;
 }
 
 .ProgressBar {
@@ -192,9 +185,6 @@ progress::-webkit-progress-bar {
 }
 
 .TextBar {
-  /* display: flex;
-  flex-direction: column;
-  justify-content: space-evenly; */
   align-items: center;
   font-size: 50px;
   width: 75%;
@@ -209,6 +199,16 @@ progress::-webkit-progress-bar {
   justify-content: space-between;
   margin: 30px;
   margin-left: 2%;
+}
+
+.Comfort {
+  display: flex;
+  justify-content: center;
+}
+
+.ProdText {
+  margin: 2px 5px 2px 5px;
+  padding: 2px;
 }
 
 .SortContainer {
@@ -258,7 +258,6 @@ progress::-webkit-progress-bar {
   transform: translate(-50%, -50%);
   max-height: 90%;
   overflow: auto;
-  /* background: #b39eb5; */
   background: rgba(255, 255, 255, 0.736);
   box-sizing: border-box;
   padding: 20px;
@@ -291,7 +290,6 @@ progress::-webkit-progress-bar {
   border: solid black;
   border-radius: 10px;
   padding: 15px;
-  /* color:#ffcc33; */
   color: #f28500;
   background-color: #F0F0F0;
 }
@@ -389,10 +387,6 @@ progress::-webkit-progress-bar {
 .modalContainer {
   display: flex;
   justify-content: space-evenly;
-  /* margin: 2px;
-  margin-right: 1%;
-  height: 40px;
-  width: 300px; */
 }
 
 .QuestionList {
@@ -405,71 +399,6 @@ progress::-webkit-progress-bar {
   font-style: bold;
 }
 
-
-/* MODAL */
-/* .modal .modalContent > h2 {
-  font-size: 28px;
-  font-weight: 200;
-  margin: 20px 0 40px;
-  text-align: center;
-} */
-
-/* .modal .modalContent .buttons_wrapper {
-  padding: 20px;
-} */
-
-
-
- /* color: #d8b2d1 */
-/* .StarAndBar {
-  display: flex;
-  width: 75%
-} */
-
-/* .progress {
-  align-content: left;
-} */
-
-/* .SharedStars {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-content: center;
-} */
-
-
-/* .StarandBarContainer {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-
-  justify-content: space-between;
-  background-color: hotpink;
-}
-
-.DropandItemContainer {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: flex-end;
-  background-color: purple;
-} */
-/* .sortReview {
-  width: 100px;
-  margin: 2px;
-  border: 3px solid purple;
-  background-color: grey;
-} */
-
-/* .AverageStars {
-  flex-direction: column;
-} */
-/*
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-
-  */
 .content {
   color: rgb(53, 52, 52);
   background-color: rgb(240, 238, 238);
