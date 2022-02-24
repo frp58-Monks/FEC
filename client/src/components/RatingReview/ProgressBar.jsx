@@ -55,17 +55,17 @@ const ProgressBar = ({ reviewStars }) => {
   fiveRating = Math.round(fiveRating * 10) / 10;
 
   //product breakdown
-  let comfort = reviewStars.characteristics.Comfort.value;
-  var comfortRound = Math.round(comfort * 10) / 10
+  // let comfort = reviewStars.characteristics.Comfort.value;
+  // var comfortRound = Math.round(comfort * 10) / 10
 
-  let fit = reviewStars.characteristics.Fit.value;
-  var fitRound = Math.round(fit * 10) / 10
+  // let fit = reviewStars.characteristics.Fit.value;
+  // var fitRound = Math.round(fit * 10) / 10
 
-  let length = reviewStars.characteristics.Length.value;
-  var lengthRound = Math.round(length * 10) / 10
+  // let length = reviewStars.characteristics.Length.value;
+  // var lengthRound = Math.round(length * 10) / 10
 
-  let quality = reviewStars.characteristics.Quality.value;
-  var qualityRound = Math.round(quality * 10) / 10
+  // let quality = reviewStars.characteristics.Quality.value;
+  // var qualityRound = Math.round(quality * 10) / 10
 
 
   return (
@@ -124,7 +124,7 @@ const ProgressBar = ({ reviewStars }) => {
         <progress className="ProgressBar" value={recommendPercentageStr} max={100} />
       </div>
 
-      <div className="Comfort">
+      {/* <div className="Comfort">
         <BarTitle className="ProdText"> Comfort: </BarTitle>
         <AverageText className="ProdText"> {comfortRound}/5 </AverageText>
         <BarTitle className="ProdText"> Fit: </BarTitle>
@@ -133,7 +133,7 @@ const ProgressBar = ({ reviewStars }) => {
         <AverageText className="ProdText"> {lengthRound}/5 </AverageText>
         <BarTitle className="ProdText"> Quality: </BarTitle>
         <AverageText className="ProdText"> {qualityRound}/5 </AverageText>
-      </div>
+      </div> */}
 
       </TextBar>
     </div>
