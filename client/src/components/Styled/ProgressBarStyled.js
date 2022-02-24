@@ -59,14 +59,13 @@ export const StarCont = styled.div`
   height: 50%
   align: center;
 `
-// padding:10px;
-// margin: 30px 15px;
 
 export const SharedStarText = styled.span`
   font-weight: bold;
   font-family: Georgia;
   font-weight: 10px;
   font-size: 25px;
+  white-space: nowrap;
   margin; 20px;
   padding: 5px;
   color: #ff8243;

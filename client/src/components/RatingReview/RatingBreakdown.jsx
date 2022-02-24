@@ -15,7 +15,7 @@ const RatingBreakdown = ({ reviewStars }) => {
   return (
     <JCont className="SharedStars">
 
-        <div className="StarText">
+        <div data-testid="star" className="StarText">
           <div className="JStarbox">
             <div style={{ 'width': `${width}%`}}>★★★★★</div>
             <div>☆☆☆☆☆</div>
