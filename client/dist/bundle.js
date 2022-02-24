@@ -645,16 +645,6 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
-/***/ "./client/src/images/Logo.png":
-/*!************************************!*\
-  !*** ./client/src/images/Logo.png ***!
-  \************************************/
-/***/ (() => {
-
-eval("throw new Error(\"Module build failed (from ./node_modules/babel-loader/lib/index.js):\\nSyntaxError: /Users/gchen/Desktop/Hackreactor/FEC/client/src/images/Logo.png: Unexpected character '�'. (1:0)\\n\\n\\u001b[0m\\u001b[31m\\u001b[1m>\\u001b[22m\\u001b[39m\\u001b[90m 1 |\\u001b[39m �PNG\\u001b[0m\\n\\u001b[0m \\u001b[90m   |\\u001b[39m \\u001b[31m\\u001b[1m^\\u001b[22m\\u001b[39m\\u001b[0m\\n\\u001b[0m \\u001b[90m 2 |\\u001b[39m \\u001b[37m\\u001b[41m\\u001b[1m\\u001a\\u001b[22m\\u001b[49m\\u001b[39m\\u001b[0m\\n\\u001b[0m \\u001b[90m 3 |\\u001b[39m \\u001b[37m\\u001b[41m\\u001b[1m\\u0000\\u001b[22m\\u001b[49m\\u001b[39m\\u001b[37m\\u001b[41m\\u001b[1m\\u0000\\u001b[22m\\u001b[49m\\u001b[39m\\u001b[37m\\u001b[41m\\u001b[1m\\u0000\\u001b[22m\\u001b[49m\\u001b[39m\\u001b[0m\\n\\u001b[0m \\u001b[90m 4 |\\u001b[39m \\u001b[33mIHDR\\u001b[39m\\u001b[37m\\u001b[41m\\u001b[1m\\u0000\\u001b[22m\\u001b[49m\\u001b[39m\\u001b[37m\\u001b[41m\\u001b[1m\\u0000\\u001b[22m\\u001b[49m\\u001b[39m\\u001b[37m\\u001b[41m\\u001b[1m\\u0001\\u001b[22m\\u001b[49m\\u001b[39m�\\u001b[37m\\u001b[41m\\u001b[1m\\u0000\\u001b[22m\\u001b[49m\\u001b[39m\\u001b[37m\\u001b[41m\\u001b[1m\\u0000\\u001b[22m\\u001b[49m\\u001b[39m\\u001b[37m\\u001b[41m\\u001b[1m\\u0000\\u001b[22m\\u001b[49m\\u001b[39m�\\u001b[37m\\u001b[41m\\u001b[1m\\b\\u001b[22m\\u001b[49m\\u001b[39m\\u001b[37m\\u001b[41m\\u001b[1m\\u0006\\u001b[22m\\u001b[49m\\u001b[39m\\u001b[37m\\u001b[41m\\u001b[1m\\u0000\\u001b[22m\\u001b[49m\\u001b[39m\\u001b[37m\\u001b[41m\\u001b[1m\\u0000\\u001b[22m\\u001b[49m\\u001b[39m\\u001b[37m\\u001b[41m\\u001b[1m\\u0000\\u001b[22m\\u001b[49m\\u001b[39m\\u001b[33mW��N\\u001b[39m\\u001b[37m\\u001b[41m\\u001b[1m\\u0000\\u001b[22m\\u001b[49m\\u001b[39m\\u001b[37m\\u001b[41m\\u001b[1m\\u0000\\u001b[22m\\u001b[49m\\u001b[39m\\u001b[37m\\u001b[41m\\u001b[1m\\u0000\\u001b[22m\\u001b[49m\\u001b[39m\\u001b[37m\\u001b[41m\\u001b[1m\\u0001\\u001b[22m\\u001b[49m\\u001b[39msRGB\\u001b[37m\\u001b[41m\\u001b[1m\\u0000\\u001b[22m\\u001b[49m\\u001b[39m��\\u001b[37m\\u001b[41m\\u001b[1m\\u001c\\u001b[22m\\u001b[49m\\u001b[39m�\\u001b[37m\\u001b[41m\\u001b[1m\\u0000\\u001b[22m\\u001b[49m\\u001b[39m\\u001b[37m\\u001b[41m\\u001b[1m\\u0000\\u001b[22m\\u001b[49m\\u001b[39m \\u001b[37m\\u001b[41m\\u001b[1m\\u0000\\u001b[22m\\u001b[49m\\u001b[39m\\u001b[33mIDATx\\u001b[39m\\u001b[33m^\\u001b[39m�}\\u001b[37m\\u001b[41m\\u001b[1m\\u0007\\u001b[22m\\u001b[49m\\u001b[39mx\\u001b[37m\\u001b[41m\\u001b[1m\\u001c\\u001b[22m\\u001b[49m\\u001b[39m�����׋zs�E�\\u001b[37m\\u001b[41m\\u001b[1m\\u0005\\u001b[22m\\u001b[49m\\u001b[39m�1\\u001b[32m`$\\\\�\\u0000!�\\u0005��\\u0010HH���?j��2�`\\u001b[39m��\\u001b[33m@\\u001b[39mh�$\\u001b[33m@\\u001b[39m\\u001b[33mL\\u001b[39m\\u000b�t\\u001b[37m\\u001b[41m\\u001b[1m\\u001b\\u001b[22m\\u001b[49m\\u001b[39m�\\u001b[37m\\u001b[41m\\u001b[1m\\u0015\\u001b[22m\\u001b[49m\\u001b[39m\\u001b[33mW�r�\\u001b[39m\\u001b[33m-\\u001b[39m\\u001b[33mY�w�z�������\\u001b[39m\\u001b[33m%\\u001b[39m\\u001b[33mWɖdI�\\u001b[39m}�CXڝ�ygn��u\\u001b[37m\\u001b[41m\\u001b[1m\\u0001\\u001b[22m\\u001b[49m\\u001b[39m��\\u001b[37m\\u001b[41m\\u001b[1m\\b\\u001b[22m\\u001b[49m\\u001b[39mp\\u001b[37m\\u001b[41m\\u001b[1m\\u0004\\u001b[22m\\u001b[49m\\u001b[39m\\u001b[35m8\\u001b[39m\\u001b[37m\\u001b[41m\\u001b[1m\\u0002\\u001b[22m\\u001b[49m\\u001b[39m\\u001b[37m\\u001b[41m\\u001b[1m\\u001c\\u001b[22m\\u001b[49m\\u001b[39m\\u001b[37m\\u001b[41m\\u001b[1m\\u0001\\u001b[22m\\u001b[49m\\u001b[39m�\\u001b[37m\\u001b[41m\\u001b[1m\\u0000\\u001b[22m\\u001b[49m\\u001b[39m\\u001b[33mG��\\u001b[39m\\u001b[33m#\\u001b[39m ��\\u001b[37m\\u001b[41m\\u001b[1m\\u0011\\u001b[22m\\u001b[49m\\u001b[39m�\\u001b[37m\\u001b[41m\\u001b[1m\\u0001\\u001b[22m\\u001b[49m\\u001b[39mp\\u001b[37m\\u001b[41m\\u001b[1m\\u0004\\u001b[22m\\u001b[49m\\u001b[39m\\u001b[35m8\\u001b[39m\\u001b[37m\\u001b[41m\\u001b[1m\\u0002\\u001b[22m\\u001b[49m\\u001b[39m\\u001b[37m\\u001b[41m\\u001b[1m\\u001c\\u001b[22m\\u001b[49m\\u001b[39m\\u001b[37m\\u001b[41m\\u001b[1m\\u0001\\u001b[22m\\u001b[49m\\u001b[39m�\\u001b[37m\\u001b[41m\\u001b[1m\\u0000\\u001b[22m\\u001b[49m\\u001b[39m\\u001b[33mG�\\u001b[39m\\u001b[33m#\\u001b[39m\\u001b[37m\\u001b[41m\\u001b[1m\\u0000\\u001b[22m\\u001b[49m\\u001b[39m\\u001b[33mN�\\u001b[39m\\u001b[33m|\\u001b[39m\\u001b[37m\\u001b[41m\\u001b[1m\\u0011\\u001b[22m\\u001b[49m\\u001b[39mp\\u001b[37m\\u001b[41m\\u001b[1m\\u0004\\u001b[22m\\u001b[49m\\u001b[39m\\u001b[35m8\\u001b[39m\\u001b[37m\\u001b[41m\\u001b[1m\\u0002\\u001b[22m\\u001b[49m\\u001b[39m\\u001b[37m\\u001b[41m\\u001b[1m\\u001c\\u001b[22m\\u001b[49m\\u001b[39m\\u001b[37m\\u001b[41m\\u001b[1m\\u0001\\u001b[22m\\u001b[49m\\u001b[39m�\\u001b[37m\\u001b[41m\\u001b[1m\\u0000\\u001b[22m\\u001b[49m\\u001b[39m\\u001b[33mG�\\u001b[39m\\u001b[37m\\u001b[41m\\u001b[1m\\u0017\\u001b[22m\\u001b[49m\\u001b[39m �\\t�\\u001b[37m\\u001b[41m\\u001b[1m\\u0017\\u001b[22m\\u001b[49m\\u001b[39m\\u001b[33mL\\u001b[39m\\u001b[32m\\\"\\u001f\\u0002G�#�\\u0011�\\bp\\u00048��5�\\u0011�\\bp\\u00048\\u0002\\u001c�^�\\u0000'�^0�|\\b\\u001c\\u0001�\\u0000G�#�\\u0011����\\u0000G�#�\\u0011�\\bp\\u0004z\\u0001\\u0002��{�$�!p\\u00048\\u0002mC���/Sd�=Ev{\\u0001�\\u001f�\\u0002�t\\u0010M&h,\\u0016$^}uZ�Z�wq\\u0004�\\u001f\\u0002�лߜ�\\u001eq\\u00048\\u0002��@μyi�]�\\u0016��\\u000b\\u0010������\\u0000,�G\\f�\\u0014Du�#\\u001b[39m\\u001b[0m\\n    at Object._raise (/Users/gchen/Desktop/Hackreactor/FEC/node_modules/@babel/parser/lib/index.js:476:17)\\n    at Object.raiseWithData (/Users/gchen/Desktop/Hackreactor/FEC/node_modules/@babel/parser/lib/index.js:469:17)\\n    at Object.raise (/Users/gchen/Desktop/Hackreactor/FEC/node_modules/@babel/parser/lib/index.js:430:17)\\n    at Object.getTokenFromCode (/Users/gchen/Desktop/Hackreactor/FEC/node_modules/@babel/parser/lib/index.js:2761:16)\\n    at Object.getTokenFromCode (/Users/gchen/Desktop/Hackreactor/FEC/node_modules/@babel/parser/lib/index.js:7848:18)\\n    at Object.nextToken (/Users/gchen/Desktop/Hackreactor/FEC/node_modules/@babel/parser/lib/index.js:2100:10)\\n    at Object.parse (/Users/gchen/Desktop/Hackreactor/FEC/node_modules/@babel/parser/lib/index.js:15938:10)\\n    at parse (/Users/gchen/Desktop/Hackreactor/FEC/node_modules/@babel/parser/lib/index.js:15992:38)\\n    at parser (/Users/gchen/Desktop/Hackreactor/FEC/node_modules/@babel/core/lib/parser/index.js:52:34)\\n    at parser.next (<anonymous>)\");\n\n//# sourceURL=webpack://project-runway/./client/src/images/Logo.png?");
-
-/***/ }),
-
 /***/ "./client/src/index.js":
 /*!*****************************!*\
   !*** ./client/src/index.js ***!
@@ -663,6 +653,17 @@ eval("throw new Error(\"Module build failed (from ./node_modules/babel-loader/li
 
 "use strict";
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ \"./node_modules/react-dom/index.js\");\n/* harmony import */ var _components_App_jsx__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/App.jsx */ \"./client/src/components/App.jsx\");\n// import { camelCase } from 'lodash';\n// console.log(camelCase('hello world'));\n\n\n\nreact_dom__WEBPACK_IMPORTED_MODULE_1__.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_App_jsx__WEBPACK_IMPORTED_MODULE_2__[\"default\"], null), document.getElementById('app'));\n\n//# sourceURL=webpack://project-runway/./client/src/index.js?");
+
+/***/ }),
+
+/***/ "./client/src/images/Logo.png":
+/*!************************************!*\
+  !*** ./client/src/images/Logo.png ***!
+  \************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"images/647c30a19150241c0f2dc450f91e1198.png\");\n\n//# sourceURL=webpack://project-runway/./client/src/images/Logo.png?");
 
 /***/ }),
 
@@ -1222,6 +1223,18 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /******/ 		};
 /******/ 	})();
 /******/ 	
+/******/ 	/* webpack/runtime/global */
+/******/ 	(() => {
+/******/ 		__webpack_require__.g = (function() {
+/******/ 			if (typeof globalThis === 'object') return globalThis;
+/******/ 			try {
+/******/ 				return this || new Function('return this')();
+/******/ 			} catch (e) {
+/******/ 				if (typeof window === 'object') return window;
+/******/ 			}
+/******/ 		})();
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
 /******/ 	(() => {
 /******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
@@ -1236,6 +1249,26 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /******/ 			}
 /******/ 			Object.defineProperty(exports, '__esModule', { value: true });
 /******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/publicPath */
+/******/ 	(() => {
+/******/ 		var scriptUrl;
+/******/ 		if (__webpack_require__.g.importScripts) scriptUrl = __webpack_require__.g.location + "";
+/******/ 		var document = __webpack_require__.g.document;
+/******/ 		if (!scriptUrl && document) {
+/******/ 			if (document.currentScript)
+/******/ 				scriptUrl = document.currentScript.src
+/******/ 			if (!scriptUrl) {
+/******/ 				var scripts = document.getElementsByTagName("script");
+/******/ 				if(scripts.length) scriptUrl = scripts[scripts.length - 1].src
+/******/ 			}
+/******/ 		}
+/******/ 		// When supporting browsers where an automatic publicPath is not supported you must specify an output.publicPath manually via configuration
+/******/ 		// or pass an empty string ("") and set the __webpack_public_path__ variable from your code to use your own logic.
+/******/ 		if (!scriptUrl) throw new Error("Automatic publicPath is not supported in this browser");
+/******/ 		scriptUrl = scriptUrl.replace(/#.*$/, "").replace(/\?.*$/, "").replace(/\/[^\/]+$/, "/");
+/******/ 		__webpack_require__.p = scriptUrl;
 /******/ 	})();
 /******/ 	
 /************************************************************************/
