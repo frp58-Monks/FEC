@@ -17,7 +17,7 @@ export const QuestionWrapper = styled.div`
   padding-left: 5%;
   padding-right: 5%;
   margin: 30px 15px;
-  background-color: #fff1e6;
+  background-color: rgba(255, 255, 255, 0.736);
   border-radius: 25px;
   border-color: #b3b3b3;
 `
@@ -36,7 +36,7 @@ export const QuestionDate = styled.div`
   font-style: italic;
   padding: 2px;
   font-size: 15px;
-  color: #20B2AA;
+  color: #66cc99;
 `
 
 export const QuestionAsker = styled.div`
