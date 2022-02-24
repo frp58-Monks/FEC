@@ -1,17 +1,16 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { AppContext } from '../App.jsx';
+import './StylesOver.css';
 
 const Description = () => {
   const { productDetails } = useContext(AppContext);
   // const [sentencesArr, setSentencesArr] = useState(null);
 
   let sentencesArr = null
-
   if (productDetails) {
     sentencesArr = [];
     let prodDescr = productDetails.description;
     let descrLettersArray = productDetails.description.split('');
-
     let sentence;
     let startingIndex = 0;
     for (var i = 0; i < descrLettersArray.length; i++) {
@@ -31,7 +30,7 @@ const Description = () => {
   return (
     <div>
       <b>About this item: </b>
-      <p>
+      <p className="descript">
         {sentencesArr &&
           <ul>
             {sentencesArr.map((eachSentence) => {

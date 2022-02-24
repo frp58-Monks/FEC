@@ -4,10 +4,6 @@ import './style.css';
 const SearchProductBar = (props) => {
   const [searchInput, setSearchInput] = useState('');
 
-  // if (props.allProducts) {
-  //   console.log({'Searchbar all products prop': props.allProducts});
-  // }
-
   return (
     <form className="search" onSubmit={(e) => {
       e.preventDefault();

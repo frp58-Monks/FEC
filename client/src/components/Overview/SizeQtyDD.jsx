@@ -10,7 +10,6 @@ const SizeQtyDD = () => {
   const [size, setSize] = useState(null);
   const [qty, setQty] = useState(null);
   const [qtyArray, setQtyArray] = useState(null);
-
   const generateQtyArray = (sizeParam) => {
     let max;
     let arrayOfQuantities = ['--'];

@@ -1,0 +1,45 @@
+.mamma {
+  padding: 0 0 0 0;
+  max-width: 40%;
+}
+
+.carousel {
+  overflow: hidden;
+  max-width: 400px;
+  max-height: 500px;
+  padding: 0 0 0 0;
+}
+
+.allImages {
+  /* max-width: 300px;
+  max-height: 300px; */
+  white-space: nowrap;
+  object-fit: fill;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  align-self: center;
+  align-items: center;
+
+}
+
+.indicators {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.indicators > button {
+  margin: 5px;
+  border-radius: 10px;
+  padding: 10px 10px;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+}
+
+img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}

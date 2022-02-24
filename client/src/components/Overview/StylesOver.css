@@ -1,26 +1,27 @@
 .overviewMain {
-  background-color: rgb(240, 238, 238);
+  background: rgba(255, 255, 255, 0.736);
   border: 1px black solid;
-  padding: 10px;
+  padding: 10px 10px 10px 10px;
   display: flex;
   border-radius: 20px;
-  margin-right: 20px;
+  margin: 20px;
   /* max-width: 490px; */
-  max-height: 490px;
-  justify-content: between;
+  justify-content: space-evenly;
+  /* padding: 0px 30px; */
+}
+
+b {
+  /* color: #ffa500; */
+  /* color: #ffcba4; */
+  color: #f28500;
 }
 
 .product-details {
-  background-color: rgb(240, 238, 238);
-  border: 4px black solid;
   border-radius: 20px;
-  padding: 10px;
-  flex: 2;
+  padding: 10px 20px;
+  max-width: 45%;
 }
 
-.imageCarouselOver {
-  flex: 5;
-}
 
 .dropdownMenus {
   display: flex;
@@ -36,7 +37,7 @@
 
 .dropdownsCart {
   display: flex;
-  /* justify-content: space-evenly; */
+  padding: 10px;
 }
 
 .salePrice {
@@ -46,13 +47,7 @@
 .styles {
   display: flex;
   object-fit: cover;
-  padding: 20px;
-}
-
-img {
-  height: 100%;
-  width: 100%;
-  object-fit: contain;
+  padding: 10px;
 }
 
 .currentStyles {
@@ -68,20 +63,22 @@ img {
   display: flex;
   width: 300px;
   flex-wrap: wrap;
-}
-
-.allImages {
-  background-color: black;
-}
-
-.stylesComponent {
-  background-color:rgba(255, 255, 255, 0.736);
+  background-color:rgba(211, 211, 211, 0.736);
   border-radius: 20px;
+}
+
+.descript {
+  background-color:rgba(211, 211, 211, 0.736);
+  border-radius: 8px;
+  border: 2px black solid;
+  padding: 0 20px 0 0;
+  overflow-x: scroll;
 }
 
 .addToCart {
   background-color: rgb(243, 213, 43);
   border-radius: 16px;
+  border: 1px black solid;
   padding: 10px 26px;
   text-align: center;
   display: inline-block;
@@ -90,6 +87,7 @@ img {
 
 .starsNlinks {
   display: flex;
+  padding: 8px 0px;
 }
 
 .myStars {
@@ -106,4 +104,12 @@ img {
 
 .addForm {
   padding-left: 45px;
+}
+
+i {
+  color: rgb(53, 52, 52);
+}
+
+.category {
+  padding: 8px 0px;
 }
