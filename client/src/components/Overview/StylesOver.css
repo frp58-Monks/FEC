@@ -70,6 +70,7 @@ b {
   background-color:rgba(211, 211, 211, 0.736);
   border-radius: 20px;
   border: 1px black solid;
+  padding: 0 20px 0 0;
 }
 
 .addToCart {
