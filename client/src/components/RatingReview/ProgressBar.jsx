@@ -141,10 +141,3 @@ const ProgressBar = ({ reviewStars }) => {
 }
 
 export default ProgressBar;
-
-// let comfort = reviewStars.characteristics.Comfort.value;
-// var comfortRound = Math.round(comfort * 10) / 10
-// let comfortNum= Number(comfort) / 5;
-// comfortNum = Math.round((comfortNum * 100) * 10) / 10
-// let comfortStr = comfortNum.toString();
-

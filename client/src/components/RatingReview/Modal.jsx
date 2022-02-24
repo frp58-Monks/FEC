@@ -10,7 +10,6 @@ const Modal = ({ customClass, show, closeModal, setRating, setSummary, setBody, 
   const [modalRecommend, setModalRecommend] = useState(null);
   const [modalUsername, setModalUsername] = useState('');
   const[modalEmail, setModalEmail] = useState('');
-  // const[success, setSuccess] = useState(true);
   const [starRating, setStarRating] = useState(null);
   const [hover, setHover] = useState(null);
 
@@ -32,8 +31,6 @@ const Modal = ({ customClass, show, closeModal, setRating, setSummary, setBody, 
 
   const handleRecommend = (e) => {
       setModalRecommend(e.target.value);
-      //setRecommend(e.target.value);
-      // setSuccess(true);
   }
 
   const handleUsername = (e) => {
@@ -59,7 +56,6 @@ const Modal = ({ customClass, show, closeModal, setRating, setSummary, setBody, 
     setForm(true);
     alert("Submission Successful!");
   }
-
 
   return (
       <div className={`modal ${customClass}`} style={{ display: show ? 'block' : 'none' }}>
@@ -208,58 +204,3 @@ const Modal = ({ customClass, show, closeModal, setRating, setSummary, setBody, 
 };
 
 export default Modal;
-
-// const Modal = ({ customClass, show, closeModal, setRating, setSummary, setBody, setRecommend, setUsername, setEmail, postFunc, children, setForm })
-
-/*
-<label>
-Photos:
-<input
-  onChange={handlePhotos}
-  type="text"
-  value={modalPhotos}
-/>
-</label>
-
-<label>
-Characteristics:
-<input
-  onChange={handleCharacteristics}
-  type="text"
-  value={modalCharacteristics}
-/>
-</label>
-
-  // const handlePhotos = (e) => {
-  //   setModalPhotos([]);
-  //   setEmail(e.target.value);
-  // }
-
-  // const handleCharacteristics = (e) => {
-  //   setmodalCharacteristics(e.target.value);
-  //   setEmail(e.target.value);
-  // }
-
-
-            <label>
-              Recommend?:
-              <input
-                onChange={handleRecommend}
-                placeholder="yes/no"
-                type="text"
-                value={modalRecommend}
-              />
-            </label>
-
-            RATING INPUT
-
-                        <label>
-              Rating:
-              <input
-                onChange={handleRating}
-                type="text"
-                placeholder='1, 2, 3, 4, 5'
-                value={modalRating}
-              />
-            </label>
-*/

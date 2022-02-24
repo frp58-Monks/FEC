@@ -5,7 +5,6 @@ import ProgressBar from './RatingReview/ProgressBar.jsx';
 import { MoreReviews, RTitle, AddReview } from './Styled/RatingReviewStyled.js';
 import Modal from './RatingReview/Modal.jsx';
 
-
 //takes in product_id prop from feedback
 const RatingReview = ({ reviews, reviewStars, product_id, reviewFunc, setDropdown, postFunc }) => {
   const [showCount, setShowCount] = useState(2);
@@ -147,92 +146,3 @@ const RatingReview = ({ reviews, reviewStars, product_id, reviewFunc, setDropdow
 }
 
 export default RatingReview;
-
-// !resultsArr ? null :
-
-/*
-BEFORE REFACTOR OF CSS STARS
-  <div>
-      <RTitle className="Rating Title"> Ratings and Reviews </RTitle>
-      <div className="Flexbox-container">
-
-        <div className="Flexbox-item">
-            <div className="AverageStars">
-              {reviewStars &&
-                <RatingBreakdown reviewStars={reviewStars} />
-              }
-            </div>
-
-            <div className="StarAndBar">
-              <div className="Progress">
-                {reviewStars &&
-                  <ProgressBar reviewStars={reviewStars} />
-                }
-              </div>
-            </div>
-        </div>
-
-
-<div>sort dropdown here</div>
-      <div>
-        {selectedDropdown &&
-          <div className="sortReview">
-            Sort:
-            <select name="Sort" id="reviews"
-              onChange={onChange}
-            >
-              {
-                sortArray && selectedDropdown &&
-                sortArray.map((sortItem, i) => {
-                  return <option key='review' value={selectedDropdown}>{sortItem}</option>
-                })
-              }
-            </select>
-          </div>
-        }
-      </div>
-
-
-  return (
-    <div>
-      <RatingBreakdown reviewStars={reviewStars} />
-      <div>
-        {reviewStars &&
-          <ProgressBar reviewStars={reviewStars} />
-        }
-      </div>
-      <div>
-        {
-          resultsArr &&
-          resultsArr.map((item, i) => (
-            <ReviewListItem item={item} key={i} product_id={product_id} reviewStars={reviewStars} reviews={reviews} />
-          ))
-        }
-      </div>
-    </div>
-  )
-}
-
-          {
-            sortArray &&
-            sortArray.map((sortItem, i) => {
-              return <option key='i' value='sorted'>{sortItem}</option>
-            })
-          }
-
-
-            useEffect(() => (
-    postFunc({
-      "product_id": product_id,
-      "rating": Number(rating),
-      "summary": summary,
-      "body": body,
-      "recommend": recommend,
-      "name": username,
-      "email": email,
-      "photos": photos,
-      "characteristics": characteristics
-    }),
-    setForm(false)
-  ), [form]);
-*/

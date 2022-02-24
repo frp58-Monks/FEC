@@ -1,16 +1,5 @@
 import styled from 'styled-components';
 
-//review list item
-
-//<Left >
-//entire wrapper in return
-// export const Left = styled.div`
-//   display: flex;
-//   justify-content: flex-end;
-// `
-//wrapper for individual review tiles
-//background-color: #DCDCDC;
-//background-color: #e6e8fa;
 export const ReviewWrapper = styled.div`
   border-style: solid;
   border-color: #b3b3b3;
@@ -88,39 +77,3 @@ export const Helpful = styled.button`
   border-radius: 8px;
   background-color: #ffcba4;
 `
-
-// //FEEDBACK STYLING
-// export const FeedRevWrapper = styled.div`
-//   border-style: solid;
-//   width: 90%;
-//   height: 90%
-//   align: center;
-//   padding:10px;
-//   margin: 30px 15px;
-//   background-color: #DCDCDC;
-// `
-
-//not used
-// export const reviewStar = styled.button`
-//   display: flex;
-//   justify-content: flex-left;
-//   align-items: center;
-//   height: 30px;
-//   border: 3px solid green;
-// `
-// //not used
-// export const scrollBarContainer = styled.div`
-//   border-style: solid;
-//   width: 60%;
-//   height: 100vh
-//   background-color: #DCDCDC;
-// `
-// //not used
-// export const scrollBar = styled.div`
-//   height: 300px;
-//   overflow-y:auto;
-//   width:215px;
-//   float:left;
-//   position:relative;
-//   margin-left:-5px;
-// `
