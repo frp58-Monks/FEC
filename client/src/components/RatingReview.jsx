@@ -95,6 +95,7 @@ const RatingReview = ({ reviews, reviewStars, product_id, reviewFunc, setDropdow
                 }
               </div>
             </div>
+
         </div>
 
           <div className="Flexbox-item">

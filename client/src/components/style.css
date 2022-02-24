@@ -198,6 +198,16 @@ progress::-webkit-progress-bar {
   margin-left: 2%;
 }
 
+.Comfort {
+  display: flex;
+  justify-content: center;
+}
+
+.ProdText {
+  margin: 2px 5px 2px 5px;
+  padding: 2px;
+}
+
 .SortContainer {
   display: block;
   margin-left: 82%;
@@ -387,6 +397,8 @@ progress::-webkit-progress-bar {
   font-size: 17px;
   font-style: bold;
 }
+
+
 
 
 /* MODAL */
