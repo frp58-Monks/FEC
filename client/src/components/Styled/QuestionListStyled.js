@@ -10,16 +10,25 @@ export const QuestionSummary = styled.div`
 
 export const QuestionWrapper = styled.div`
   border-style: solid;
-  width: 95%;
-  height: 50%;
+  width: 85%;
+  height: 225px;
   align: center;
   padding: 10px;
   padding-left: 5%;
   padding-right: 5%;
-  margin: 30px 15px;
+  margin: 30px 0 0 10px;
   background-color: rgba(255, 255, 255, 0.736);
-  border-radius: 25px;
+  border-radius: 8px;
   border-color: #b3b3b3;
+  overflow-y:auto;
+`
+
+export const QuestionSectionWrapper = styled.div`
+  width: 95%;
+  height: 450px;
+  align: center;
+  padding: 10px;
+  overflow-y:auto;
 `
 
 export const QuestionBody = styled.div`
@@ -51,3 +60,8 @@ export const Left = styled.div`
   display: flex;
   justify-content: flex-end;
 `
+export const NoQuestion = styled.div`
+  text-align: center;
+  font-family: Georgia;
+`
+
