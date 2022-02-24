@@ -1,10 +1,10 @@
 .overviewMain {
   background: rgba(255, 255, 255, 0.736);
   border: 1px black solid;
-  padding: 10px 10px;
+  padding: 10px 10px 10px 10px;
   display: flex;
   border-radius: 20px;
-  margin-right: 20px;
+  margin: 20px;
   /* max-width: 490px; */
   max-height: 550px;
   justify-content: space-evenly;
@@ -23,7 +23,6 @@ b {
   border-radius: 20px;
   padding: 10px 20px;
   flex: 4;
-  max-width: 40%;
 }
 
 .imageCarouselOver {
