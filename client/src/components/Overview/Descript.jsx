@@ -28,7 +28,7 @@ const Description = () => {
   }
 
   return (
-    <div>
+    <div className="descriptionMamma">
       <b>About this item: </b>
       <div className="descript">
         {sentencesArr &&
