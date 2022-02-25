@@ -1,5 +1,15 @@
 import styled from 'styled-components';
 
+export const QuestionSectionWrapper = styled.div`
+  height: 450px;
+  width: 54%;
+  max-width: 60%;
+  align: center;
+  overflow-y:auto;
+  margin: auto;
+  padding: 30px 10px 10px 10px;
+`
+
 export const QuestionSummary = styled.div`
   font-weight: bold;
   font-family: Georgia;
@@ -9,26 +19,14 @@ export const QuestionSummary = styled.div`
 `
 
 export const QuestionWrapper = styled.div`
-  border-style: solid;
-  width: 85%;
+  width: 98%;
   height: 225px;
   align: center;
-  padding: 10px;
-  padding-left: 5%;
-  padding-right: 5%;
-  margin: 30px 0 0 10px;
   background-color: rgba(255, 255, 255, 0.736);
-  border-radius: 8px;
-  border-color: #b3b3b3;
   overflow-y:auto;
-`
-
-export const QuestionSectionWrapper = styled.div`
-  width: 95%;
-  height: 450px;
-  align: center;
-  padding: 10px;
-  overflow-y:auto;
+  margin: 5px;
+  padding: 10px, 0px, 10px, 0px;
+  max-width: 100%;
 `
 
 export const QuestionBody = styled.div`

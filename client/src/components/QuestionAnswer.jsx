@@ -17,7 +17,7 @@ const QuestionAnswer = ({ questions }) => {
           />
           ))
         }
-      </QuestionSectionWrapper> : <QuestionWrapper><NoQuestion>There are no questions about this product yet</NoQuestion></QuestionWrapper>
+      </QuestionSectionWrapper> : <QuestionSectionWrapper><QuestionWrapper><NoQuestion>There are no questions about this product yet</NoQuestion></QuestionWrapper></QuestionSectionWrapper>
       }
     </div>
   );

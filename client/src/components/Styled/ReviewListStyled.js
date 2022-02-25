@@ -1,17 +1,16 @@
 import styled from 'styled-components';
 
 export const ReviewWrapper = styled.div`
-  border-style: solid;
-  border-color: #b3b3b3;
   width: 95%;
   height: 50%;
   align: center;
   padding: 10px;
   padding-left: 5%;
   padding-right: 5%;
-  margin: 30px 15px;
+  padding-top: 3%;
+  padding-bottom: 3%;
+  margin: 5px 5px;
   background-color: rgba(255, 255, 255, 0.736);
-  border-radius: 25px;
 `
 //<ReviewDate>{combinedDate}</ReviewDate>
 export const ReviewDate = styled.div`
@@ -74,6 +73,5 @@ export const Helpful = styled.button`
   align-items: center;
   height: 30px;
   border: 1px solid black;
-  border-radius: 8px;
   background-color: #ffcba4;
 `

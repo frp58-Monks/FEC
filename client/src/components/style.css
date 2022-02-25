@@ -23,6 +23,8 @@
 .starbox {
   display: inline-grid;
   color: gold;
+  margin: 20px;
+  padding: 5px;
 }
 
 .starbox div {
@@ -47,7 +49,7 @@
 
 .search {
   display: flex;
-  padding: 0px 0 20px 75%;
+  padding: 0px 0 20px 63%;
 }
 
 .searchForm {
@@ -82,17 +84,28 @@ progress::-webkit-progress-bar {
   flex-direction: row;
   justify-content: space-evenly;
   align-items: flex-start;
-  height: 700px;
+  height: 1000px;
   flex-wrap: wrap;
+  max-width: 65%;
+  margin: auto;
 }
 
-.Flexbox-item {
-  width: 47%;
-  margin: 1px;
+.Flexbox-item-1 {
+  width: 20%;
   border: 3px;
   justify-content: space-evenly;
   flex-basis: auto;
   align-items: center;
+  height: 600px;
+}
+
+.Flexbox-item-2 {
+  width: 60%;
+  border: 3px;
+  justify-content: space-evenly;
+  flex-basis: auto;
+  align-items: center;
+  height: 600px;
 }
 
 .StarAndBar {
@@ -129,6 +142,7 @@ progress::-webkit-progress-bar {
 .sortReview {
   display: flex;
   justify-content: center;
+  font-size: 16px;
 }
 
 .ReviewList{
@@ -213,7 +227,7 @@ progress::-webkit-progress-bar {
 
 .SortContainer {
   display: block;
-  margin-left: 82%;
+  margin-left: 45%;
 }
 
 .Wrapper {
@@ -402,4 +416,5 @@ progress::-webkit-progress-bar {
 .content {
   color: rgb(53, 52, 52);
   background-color: rgb(240, 238, 238);
+  align-items: center;
 }
