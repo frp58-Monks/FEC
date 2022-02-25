@@ -16,8 +16,9 @@ const Styles = () => {
       </div>
 
       <div className="stylesComponent">
-        {productStyles && productStyles.results.map((eachStyle) => {
+        {productStyles && productStyles.results.map((eachStyle, i) => {
           return <img
+            key={i}
             className="currentStyles"
             value={eachStyle["style_id"]}
             src={eachStyle.photos[0].thumbnail_url}

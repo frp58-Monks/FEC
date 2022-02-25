@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useContext, createContext } from 'react';
 import ImageCarousel from './Overview/ImageCarousel.jsx';
-import Favoritable from './Overview/Favoritable.jsx';
 import Styles from './Overview/Styles.jsx';
 import SizeQtyDD from './Overview/SizeQtyDD.jsx';
 import Price from './Overview/Price.jsx';

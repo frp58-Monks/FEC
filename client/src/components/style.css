@@ -16,6 +16,10 @@ html * {
   width: 6px;
 }
 
+::-webkit-scrollbar-corner {
+  background-color: rgb(240, 238, 238);
+}
+
 /* Track */
 ::-webkit-scrollbar-track {
   background: rgb(240, 238, 238);

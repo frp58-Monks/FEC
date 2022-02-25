@@ -1,29 +1,19 @@
 .overviewMain {
   background: rgba(255, 255, 255, 0.736);
-  /* border: 1px black solid; */
-  padding: 30px 10px 10px 10px;
   display: flex;
-  /* border-radius: 20px; */
-  margin: 20px;
+  flex-direction: row;
   max-width: 60%;
-  justify-content: space-evenly;
-  /* padding: 0 100px 0 100px; */
-  margin: auto;
   width: 53%;
-}
-
-b {
-  /* color: #ffa500; */
-  /* color: #ffcba4; */
-  color: #f28500;
+  margin: 20px;
+  margin: auto;
+  padding: 30px 10px 10px 10px;
+  justify-content: space-evenly;
 }
 
 .product-details {
-  border-radius: 20px;
   padding: 10px 20px;
   max-width: 45%;
 }
-
 
 .dropdownMenus {
   display: flex;
@@ -44,6 +34,7 @@ b {
 
 .salePrice {
   color: rgba(255, 0, 0, 0.808);
+  margin-left: 10px;
 }
 
 .styles {
@@ -65,14 +56,15 @@ b {
   display: flex;
   width: 300px;
   flex-wrap: wrap;
-  background-color:rgba(211, 211, 211, 0.736);
+  background-color: rgb(240, 238, 238);
 }
 
 .descript {
-  background-color:rgba(211, 211, 211, 0.736);
+  background-color: rgb(240, 238, 238);
   border: 1px black solid;
-  padding: 0 20px 0 0;
+  /* padding: 0 40px 0 0; */
   overflow: scroll;
+  font-size: 14px;
 }
 
 .addToCart {
@@ -83,6 +75,10 @@ b {
   text-align: center;
   display: inline-block;
   font-size: 13px;
+}
+
+b {
+  color: #f28500;
 }
 
 .starsNlinks {
@@ -113,3 +109,10 @@ i {
 .category {
   padding: 8px 0px;
 }
+
+.subPrice {
+  display: flex;
+  flex-direction: row;
+  /* justify-content: space-evenly; */
+}
+

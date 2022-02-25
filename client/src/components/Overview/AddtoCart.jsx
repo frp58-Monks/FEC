@@ -14,5 +14,3 @@ const AddToCart = () => {
 }
 
 export default AddToCart;
-
-let hi;
