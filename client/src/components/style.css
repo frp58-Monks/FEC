@@ -2,6 +2,14 @@ html * {
   font-family: Calibre, sans-serif;
 }
 
+h1 {
+    display: block;
+    font-size: 2em;
+    margin-top: 0.67em;
+    margin-bottom: 0.67em;
+    margin-left: 25%;
+    margin-right: 0;
+}
 /* Designing for scroll-bar */
 ::-webkit-scrollbar {
   width: 6px;
