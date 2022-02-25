@@ -448,7 +448,7 @@ progress::-webkit-progress-bar {
   align-items: center;
 }
 
-/* hr {
+hr {
   display: block;
   margin-before: 0.5em;
   margin-after: 0.5em;
@@ -457,7 +457,7 @@ progress::-webkit-progress-bar {
   overflow: hidden;
   border-style: inset;
   border-width: 1px;
-} */
+}
 
 button {
   border: 1px solid #ffcba4;
