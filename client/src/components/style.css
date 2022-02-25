@@ -2,7 +2,7 @@ html * {
   font-family: Calibre, sans-serif;
 }
 
-h1 {
+.logo {
     display: block;
     font-size: 2em;
     margin-top: 0.67em;
