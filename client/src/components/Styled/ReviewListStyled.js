@@ -12,6 +12,7 @@ export const ReviewWrapper = styled.div`
   margin: 5px 5px;
   background-color: rgba(255, 255, 255, 0.736);
 `
+
 //<ReviewDate>{combinedDate}</ReviewDate>
 export const ReviewDate = styled.div`
   text-align: right;

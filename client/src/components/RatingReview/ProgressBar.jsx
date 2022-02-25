@@ -87,6 +87,7 @@ const ProgressBar = ({ reviewStars }) => {
       </StarCont>
 
       {/* <RatingText className="RatingText">Rating Breakdown</RatingText> */}
+      <hr></hr>
 
       <div className="Bar OneStar" >
         <BarTitle className="BarTitle"> One Star </BarTitle>

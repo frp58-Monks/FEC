@@ -45,22 +45,22 @@ export const TextBar = styled.div`
   height: 50%
   align: center;
   padding:10px;
-  margin: 30px;
+  margin: 5px 5px;
   background-color: rgba(255, 255, 255, 0.736);
 `
 //rating breakdown styled
 export const StarCont = styled.div`
   width: 90%;
-  height: 50%
+  height: 25%;
 `
 
 export const SharedStarText = styled.span`
   font-weight: bold;
   font-family: Georgia;
   font-weight: 10px;
-  font-size: 20px;
+  font-size: 25px;
   white-space: nowrap;
-  margin: 20px;
+  margin: 10px;
   padding: 5px;
   color: #ff8243;
 `

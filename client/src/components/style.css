@@ -1,3 +1,7 @@
+html * {
+  font-family: Calibre, sans-serif;
+}
+
 /* Designing for scroll-bar */
 ::-webkit-scrollbar {
   width: 6px;
@@ -23,7 +27,6 @@
 .starbox {
   display: inline-grid;
   color: gold;
-  margin: 20px;
   padding: 5px;
 }
 
@@ -201,6 +204,7 @@ progress::-webkit-progress-bar {
 .TextBar {
   align-items: center;
   font-size: 50px;
+  height: 545px;
   width: 75%;
   margin: 100px;
 }
@@ -417,4 +421,15 @@ progress::-webkit-progress-bar {
   color: rgb(53, 52, 52);
   background-color: rgb(240, 238, 238);
   align-items: center;
+}
+
+hr {
+  display: block;
+  margin-before: 0.5em;
+  margin-after: 0.5em;
+  margin-start: auto;
+  margin-end: auto;
+  overflow: hidden;
+  border-style: inset; 
+  border-width: 1px;
 }
