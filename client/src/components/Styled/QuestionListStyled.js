@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const QuestionSectionWrapper = styled.div`
-  height: 450px;
+  max-height: 450px;
   width: 54%;
   max-width: 60%;
   align: center;
