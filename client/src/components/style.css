@@ -5,11 +5,12 @@ html * {
 .logo {
     display: block;
     font-size: 2em;
-    margin-top: 0.67em;
-    margin-bottom: 0.67em;
+    margin-top: 1em;
+    margin-bottom: 0.1em;
     margin-left: 25%;
     margin-right: 0;
 }
+
 /* Designing for scroll-bar */
 ::-webkit-scrollbar {
   width: 6px;
@@ -316,7 +317,6 @@ progress::-webkit-progress-bar {
   font-family: Calibre, sans-serif;
   font-weight: bold;
   border: solid black;
-  border-radius: 10px;
   padding: 15px;
   color: #f28500;
   background-color: #F0F0F0;
@@ -405,12 +405,20 @@ progress::-webkit-progress-bar {
   font-style: bold;
   border-style: solid black;
   background-color: #ffcba4;
-  border-radius: 10px;
   padding: 5px;
   margin: 5px;
   width: 10%;
   margin-left: 15%;
+  cursor: pointer;
 }
+
+.modalSubmit:hover{
+  background-color: white;
+  transition: all 0.3s;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
 
 .modalContainer {
   display: flex;
@@ -418,7 +426,9 @@ progress::-webkit-progress-bar {
 }
 
 .QuestionList {
-  text-align: center;
+  /* text-align: center; */
+  margin-left: 24%;
+  font-size: 30px;
 }
 
 .starRating {
@@ -442,4 +452,30 @@ hr {
   overflow: hidden;
   border-style: inset;
   border-width: 1px;
+}
+
+button {
+  border: 1px solid #ffcba4;
+}
+
+button:hover {
+  border: 3px dotted #ff7a59;
+  color: #ff7a59;
+  background: #fff;
+  opacity:1;
+  transition: all 300ms cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+
+.StarIcon:hover {
+  transform: translateX(-3px);
+  box-shadow: rgba(0, 0, 0, 0.2);
+}
+
+.sortReview select:hover {
+  background-color: #ffcba4;
+}
+
+.Helpful:hover {
+  background-color: rgb(230, 224, 224);
+
 }
