@@ -1,14 +1,16 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import './style.css';
+import { AppContext } from './App.jsx';
 
-const SearchProductBar = (props) => {
+const SearchProductBar = () => {
   const [searchInput, setSearchInput] = useState('');
+  const { searchForProducts } = useContext(AppContext);
 
   return (
     <form className="search" onSubmit={(e) => {
       e.preventDefault();
       console.log('Search is loading...loading...loading...');
-      props.searchForProducts(1000, searchInput.toLowerCase());
+      searchForProducts(1000, searchInput.toLowerCase());
     }}>
       <input
         className="searchForm"

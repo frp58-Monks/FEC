@@ -1,29 +1,19 @@
 .overviewMain {
   background: rgba(255, 255, 255, 0.736);
-  /* border: 1px black solid; */
-  padding: 30px 10px 10px 10px;
   display: flex;
-  /* border-radius: 20px; */
-  margin: 20px;
+  flex-direction: row;
   max-width: 60%;
-  justify-content: space-evenly;
-  /* padding: 0 100px 0 100px; */
-  margin: auto;
   width: 53%;
-}
-
-b {
-  /* color: #ffa500; */
-  /* color: #ffcba4; */
-  color: #f28500;
+  margin: 20px;
+  margin: auto;
+  padding: 30px 10px 10px 10px;
+  justify-content: space-evenly;
 }
 
 .product-details {
-  border-radius: 20px;
   padding: 10px 20px;
   max-width: 45%;
 }
-
 
 .dropdownMenus {
   display: flex;

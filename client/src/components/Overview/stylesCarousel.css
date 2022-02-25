@@ -11,8 +11,6 @@
 }
 
 .allImages {
-  /* max-width: 300px;
-  max-height: 300px; */
   white-space: nowrap;
   object-fit: fill;
   text-align: center;
