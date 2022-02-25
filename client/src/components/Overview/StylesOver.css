@@ -1,13 +1,15 @@
 .overviewMain {
   background: rgba(255, 255, 255, 0.736);
-  border: 1px black solid;
-  padding: 10px 10px 10px 10px;
+  /* border: 1px black solid; */
+  padding: 30px 10px 10px 10px;
   display: flex;
-  border-radius: 20px;
+  /* border-radius: 20px; */
   margin: 20px;
-  /* max-width: 490px; */
+  max-width: 60%;
   justify-content: space-evenly;
-  /* padding: 0px 30px; */
+  /* padding: 0 100px 0 100px; */
+  margin: auto;
+  width: 53%;
 }
 
 b {
@@ -59,24 +61,22 @@ b {
 }
 
 .stylesComponent {
-  border: 2px black solid;
+  border: 1px black solid;
   display: flex;
   width: 300px;
   flex-wrap: wrap;
   background-color:rgba(211, 211, 211, 0.736);
-  border-radius: 20px;
 }
 
 .descript {
   background-color:rgba(211, 211, 211, 0.736);
-  border-radius: 8px;
-  border: 2px black solid;
+  border: 1px black solid;
   padding: 0 20px 0 0;
-  overflow-x: scroll;
+  overflow: scroll;
 }
 
 .addToCart {
-  background-color: rgb(243, 213, 43);
+  background-color: #ffcba4;
   border-radius: 16px;
   border: 1px black solid;
   padding: 10px 26px;

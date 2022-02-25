@@ -55,7 +55,7 @@ const ReviewListItem = ({ item }) => {
         <ReviewSummary>Summary: {cappedSummary}</ReviewSummary>
         <ReviewBody>{item.body}</ReviewBody>
         <Response>{item.response ? `Response from seller: ${item.response}` : ''}</Response>
-        <Helpful onClick={updateHelpful}> Helpful? Yes: {helpful}</Helpful>
+        <Helpful className="Helpful" onClick={updateHelpful}> Helpful? Yes: {helpful}</Helpful>
       </ReviewWrapper>
     </div>
   )

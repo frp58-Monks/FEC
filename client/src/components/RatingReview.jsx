@@ -85,7 +85,7 @@ const RatingReview = ({ reviews, reviewStars, product_id, reviewFunc, setDropdow
 
       <div className="Flexbox-container">
 
-        <div className="Flexbox-item">
+        <div className="Flexbox-item-1">
 
             <div className="StarAndBar">
               <div className="Progress">
@@ -97,7 +97,7 @@ const RatingReview = ({ reviews, reviewStars, product_id, reviewFunc, setDropdow
 
         </div>
 
-          <div className="Flexbox-item">
+          <div className="Flexbox-item-2">
             <div className="RItem" >
               <div className="ReviewItem">
                 {

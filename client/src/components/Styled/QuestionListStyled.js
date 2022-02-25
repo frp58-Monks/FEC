@@ -1,47 +1,45 @@
 import styled from 'styled-components';
 
+export const QuestionSectionWrapper = styled.div`
+  max-height: 450px;
+  width: 54%;
+  max-width: 60%;
+  align: center;
+  overflow-y:auto;
+  margin: auto;
+  padding: 30px 10px 10px 10px;
+`
+
 export const QuestionSummary = styled.div`
   font-weight: bold;
-  font-family: Georgia;
+  font-family: Calibre, sans-serif;
   font-weight: 10px;
   font-size: 17px;
   overflow: auto;
 `
 
 export const QuestionWrapper = styled.div`
-  border-style: solid;
-  width: 85%;
+  width: 98%;
   height: 225px;
   align: center;
-  padding: 10px;
-  padding-left: 5%;
-  padding-right: 5%;
-  margin: 30px 0 0 10px;
   background-color: rgba(255, 255, 255, 0.736);
-  border-radius: 8px;
-  border-color: #b3b3b3;
   overflow-y:auto;
-`
-
-export const QuestionSectionWrapper = styled.div`
-  width: 95%;
-  height: 450px;
-  align: center;
-  padding: 10px;
-  overflow-y:auto;
+  margin: 5px;
+  padding: 10px, 0px, 10px, 0px;
+  max-width: 100%;
 `
 
 export const QuestionBody = styled.div`
   padding: 10px;
   margin: 10px;
   text-align: center;
-  font-family: Georgia;
+  font-family: Calibre, sans-serif;
   overflow: auto;
 `
 
 export const QuestionDate = styled.div`
   text-align: right;
-  font-family: Georgia;
+  font-family: Calibre, sans-serif;
   font-style: italic;
   padding: 2px;
   font-size: 15px;
@@ -50,7 +48,7 @@ export const QuestionDate = styled.div`
 
 export const QuestionAsker = styled.div`
   text-align: right;
-  font-family: Georgia;
+  font-family: Calibre, sans-serif;
   color: #ff8243;
   padding: 3px;
   font-size: 15px;
@@ -62,6 +60,6 @@ export const Left = styled.div`
 `
 export const NoQuestion = styled.div`
   text-align: center;
-  font-family: Georgia;
+  font-family: Calibre, sans-serif;
 `
 
