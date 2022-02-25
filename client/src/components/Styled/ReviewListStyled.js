@@ -21,7 +21,7 @@ export const ReviewDate = styled.div`
   white-space: nowrap;
   padding: 2px;
   font-size: 15px;
-  color: #66cc99;
+  color: grey;
 `
 //<ReviewPurchaser>Verified Purchaser: {item.reviewer_name}</ReviewPurchaser>
 export const ReviewPurchaser = styled.div`
