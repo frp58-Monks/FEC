@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { AppContext } from '../App.jsx';
 import { OverviewContext } from '../Overview.jsx';
-import './stylesCarousel.css';
+import './StylesCarousel.css';
 
 const ImageCarousel = () => {
   //-----------Contexts-----------
@@ -48,8 +48,8 @@ const ImageCarousel = () => {
       >
 
         <div className="allImages" style={{transform: `translateX(-${activeIndex * 100}%)`}}>
-          {productStyles && defaultStyle.photos.map((eachImg) => {
-            return <img src={eachImg.url} style={{width: '100%'}}/>
+          {productStyles && defaultStyle.photos.map((eachImg, i) => {
+            return <img src={eachImg.url} style={{width: '100%'}} key={i}/>
           })}
         </div>
 

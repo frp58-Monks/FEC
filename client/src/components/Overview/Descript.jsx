@@ -30,15 +30,15 @@ const Description = () => {
   return (
     <div>
       <b>About this item: </b>
-      <p className="descript">
+      <div className="descript">
         {sentencesArr &&
           <ul>
-            {sentencesArr.map((eachSentence) => {
-              return <option>- {eachSentence}</option>
+            {sentencesArr.map((eachSentence, i) => {
+              return <option key={i}>- {eachSentence}</option>
             })}
           </ul>
         }
-      </p>
+      </div>
 
     </div>
   );

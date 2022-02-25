@@ -3,27 +3,33 @@ import { AppContext } from '../App.jsx';
 import './StylesOver.css';
 
 const Price = () => {
-  const [sale, setSale] = useState(false);
+  // const [sale, setSale] = useState(false);
   const { productStyles } = useContext(AppContext);
+
+  const sale = productStyles.results[0].sale_price || false;
 
   return (
     <div className="price">
 
-      <div>
-        {productStyles.sale_price &&
-          <div>
-            <div className="salePrice"><b>Sale: </b>${productStyles.results[0].sale_price}</div>
-            <div className="originalPrice"><b>Price: </b>${productStyles.results[0].original_price}</div>
+      {sale ?
+
+        <div className="subPrice">
+          <div className="originalPrice" style={{'text-decoration': 'line-through'}}>
+            Price: ${productStyles.results[0].original_price}
           </div>
-        }
-      </div>
+          <div className="salePrice">
+            Sale: ${productStyles.results[0].sale_price}
+          </div>
+        </div>
 
-      <div>
-        {!productStyles.sale_price &&
-        <div className="originalPrice"><b>Price: </b>${productStyles.results[0].original_price}</div>
-        }
-      </div>
+        :
 
+        <div
+          className="originalPrice">
+          <b>Price: </b>${productStyles.results[0].original_price}
+        </div>
+
+      }
     </div>
   );
 }

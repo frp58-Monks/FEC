@@ -9,10 +9,10 @@ import './style.css';
 export const AppContext = createContext();
 
 const App = (props) => {
-  const [product_id, setProduct_id] = useState(40344);
+  const [product_id, setProduct_id] = useState(40348);
   const [productDetails, setProductDetails] = useState(null);
   const [productStyles, setProductStyles] = useState(null);
-  const [index, setIndex] = useState(0);
+  const [index, setIndex] = useState(4);
   const [reviewStars, setReviewStars] = useState('');
 
   const searchForProducts = (count, search) => {
@@ -86,10 +86,10 @@ const App = (props) => {
   ), [product_id]);
 
   return (
-    <AppContext.Provider value={{ productStyles, reviewStars, productDetails }}>
+    <AppContext.Provider value={{ productStyles, reviewStars, productDetails, searchForProducts }}>
       <div className="content">
 
-        <SearchProductBar className="search" searchForProducts={searchForProducts}/>
+        <SearchProductBar className="search"/>
 
         <div>
           {productStyles &&
