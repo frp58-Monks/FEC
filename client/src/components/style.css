@@ -16,6 +16,10 @@ html * {
   width: 6px;
 }
 
+::-webkit-scrollbar-corner {
+  background-color: rgb(240, 238, 238);
+}
+
 /* Track */
 ::-webkit-scrollbar-track {
   background: rgb(240, 238, 238);
@@ -444,7 +448,7 @@ progress::-webkit-progress-bar {
   align-items: center;
 }
 
-hr {
+/* hr {
   display: block;
   margin-before: 0.5em;
   margin-after: 0.5em;
@@ -453,7 +457,7 @@ hr {
   overflow: hidden;
   border-style: inset;
   border-width: 1px;
-}
+} */
 
 button {
   border: 1px solid #ffcba4;

@@ -34,6 +34,7 @@
 
 .salePrice {
   color: rgba(255, 0, 0, 0.808);
+  margin-left: 10px;
 }
 
 .styles {
@@ -55,14 +56,15 @@
   display: flex;
   width: 300px;
   flex-wrap: wrap;
-  background-color:rgba(211, 211, 211, 0.736);
+  background-color: rgb(240, 238, 238);
 }
 
 .descript {
-  background-color:rgba(211, 211, 211, 0.736);
+  background-color: rgb(240, 238, 238);
   border: 1px black solid;
-  padding: 0 20px 0 0;
+  /* padding: 0 40px 0 0; */
   overflow: scroll;
+  font-size: 14px;
 }
 
 .addToCart {
@@ -73,6 +75,10 @@
   text-align: center;
   display: inline-block;
   font-size: 13px;
+}
+
+b {
+  color: #f28500;
 }
 
 .starsNlinks {
@@ -103,3 +109,10 @@ i {
 .category {
   padding: 8px 0px;
 }
+
+.subPrice {
+  display: flex;
+  flex-direction: row;
+  /* justify-content: space-evenly; */
+}
+
