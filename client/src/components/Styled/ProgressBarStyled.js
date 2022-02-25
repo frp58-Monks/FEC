@@ -62,7 +62,7 @@ export const SharedStarText = styled.span`
   font-weight: 10px;
   font-size: 25px;
   white-space: nowrap;
-  margin: 10px;
+  margin: 5px;
   padding: 5px;
   color: #ff8243;
 `
