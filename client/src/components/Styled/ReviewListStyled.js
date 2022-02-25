@@ -16,7 +16,7 @@ export const ReviewWrapper = styled.div`
 //<ReviewDate>{combinedDate}</ReviewDate>
 export const ReviewDate = styled.div`
   text-align: right;
-  font-family: Georgia;
+  font-family: Calibre, sans-serif;
   font-style: italic;
   white-space: nowrap;
   padding: 2px;
@@ -26,7 +26,7 @@ export const ReviewDate = styled.div`
 //<ReviewPurchaser>Verified Purchaser: {item.reviewer_name}</ReviewPurchaser>
 export const ReviewPurchaser = styled.div`
   text-align: right;
-  font-family: Georgia;
+  font-family: Calibre, sans-serif;
   white-space: nowrap;
   color: #f28500;
   padding: 3px;
@@ -40,7 +40,7 @@ export const ReviewPurchaser = styled.div`
 */
 export const Recommend = styled.div`
   text-align: right;
-  font-family: Georgia;
+  font-family: Calibre, sans-serif;
   font-size: smaller;
   white-space: nowrap;
   padding: 3px;
@@ -48,7 +48,7 @@ export const Recommend = styled.div`
 //<ReviewSummary>Summary: {cappedSummary}</ReviewSummary>
 export const ReviewSummary = styled.div`
   font-weight: bold;
-  font-family: Georgia;
+  font-family: Calibre, sans-serif;
   font-weight: 10px;
   font-size: 17px;
   overflow: auto;
@@ -58,13 +58,13 @@ export const ReviewBody = styled.div`
   padding: 10px;
   margin: 10px;
   text-align: center;
-  font-family: Georgia;
+  font-family: Calibre, sans-serif;
   overflow: auto;
 `
 //<Response>{item.response ? `Response from seller: ${item.response}` : ''}</Response>
 export const Response = styled.div`
   text-align: center;
-  font-family: Georgia;
+  font-family: Calibre, sans-serif;
   background-color: #F0F8FF;
 `
 //<Helpful onClick={updateHelpful}> Helpful? Yes: {helpful}</Helpful>

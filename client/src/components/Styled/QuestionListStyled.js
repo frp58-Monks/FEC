@@ -12,7 +12,7 @@ export const QuestionSectionWrapper = styled.div`
 
 export const QuestionSummary = styled.div`
   font-weight: bold;
-  font-family: Georgia;
+  font-family: Calibre, sans-serif;
   font-weight: 10px;
   font-size: 17px;
   overflow: auto;
@@ -33,13 +33,13 @@ export const QuestionBody = styled.div`
   padding: 10px;
   margin: 10px;
   text-align: center;
-  font-family: Georgia;
+  font-family: Calibre, sans-serif;
   overflow: auto;
 `
 
 export const QuestionDate = styled.div`
   text-align: right;
-  font-family: Georgia;
+  font-family: Calibre, sans-serif;
   font-style: italic;
   padding: 2px;
   font-size: 15px;
@@ -48,7 +48,7 @@ export const QuestionDate = styled.div`
 
 export const QuestionAsker = styled.div`
   text-align: right;
-  font-family: Georgia;
+  font-family: Calibre, sans-serif;
   color: #ff8243;
   padding: 3px;
   font-size: 15px;
@@ -60,6 +60,6 @@ export const Left = styled.div`
 `
 export const NoQuestion = styled.div`
   text-align: center;
-  font-family: Georgia;
+  font-family: Calibre, sans-serif;
 `
 

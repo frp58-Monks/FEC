@@ -3,7 +3,7 @@ import styled from 'styled-components';
 //<RatingText>Rating Breakdown</RatingText>
 export const RatingText = styled.span`
   font-weight: bold;
-  font-family: Georgia;
+  font-family: Calibre, sans-serif;
   font-weight: 10px;
   font-size: 20px;
   margin; 20px;
@@ -12,7 +12,7 @@ export const RatingText = styled.span`
 //<BarTitle> Three Star </BarTitle>
 export const BarTitle = styled.span`
   font-weight: bold;
-  font-family: Georgia;
+  font-family: Calibre, sans-serif;
   font-weight: 10px;
   font-size: 15px;
   margin; 20px;
@@ -22,21 +22,23 @@ export const BarTitle = styled.span`
 //<AverageText> {threeRating}% </AverageText>
 export const AverageText = styled.span`
   font-weight: bold;
-  font-family: Georgia;
+  font-family: Calibre, sans-serif;
   font-weight: 10px;
   font-size: 15px;
   color: #ff8243;
   text-align: center;
+  margin-top: 5px;
 `;
 
 //<RecommendText> {recommendPercentageRound}% </RecommendText>
 export const RecommendText = styled.span`
   font-weight: bold;
-  font-family: Georgia;
+  font-family: Calibre, sans-serif;
   font-weight: 10px;
   font-size: 15px;
   color: #CD5C5C;
   text-align: center;
+  margin-top: 5px;
 `;
 
 //container for progress bar
@@ -56,7 +58,7 @@ export const StarCont = styled.div`
 
 export const SharedStarText = styled.span`
   font-weight: bold;
-  font-family: Georgia;
+  font-family: Calibre, sans-serif;
   font-weight: 10px;
   font-size: 25px;
   white-space: nowrap;
@@ -74,7 +76,7 @@ export const JCont = styled.div`
 
 export const JText = styled.span`
   font-weight: bold;
-  font-family: Georgia;
+  font-family: Calibre, sans-serif;
   font-weight: 10px;
   font-size: 15px;
   color: #ff8243;

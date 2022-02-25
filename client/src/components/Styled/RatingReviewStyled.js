@@ -7,13 +7,13 @@ export const MoreReviews = styled.button`
   height: 40px;
   width: 200px;
   font-size: 15px;
-  font-family: Georgia;
+  font-family: Calibre, sans-serif;
   background-color: #ffcba4;
   align-items: center;
 `
 
 export const RTitle = styled.h1`
-  font-family: Georgia;
+  font-family: Calibre, sans-serif;
   text-align: center;
   font-size: 30px;
   font-weight: bold;
@@ -26,7 +26,7 @@ export const AddReview = styled.button`
   height: 40px;
   width: 200px;
   font-size: 15px;
-  font-family: Georgia;
+  font-family: Calibre, sans-serif;
   background-color: #ffcba4;
   align-items: center;
 `
