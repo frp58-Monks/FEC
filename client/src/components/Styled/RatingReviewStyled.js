@@ -16,7 +16,7 @@ export const RTitle = styled.h1`
   font-family: Calibre, sans-serif;
   font-size: 30px;
   font-weight: bold;
-  margin-left: 24%;
+  margin-left: 5%;
 `
 
 export const AddReview = styled.button`

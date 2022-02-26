@@ -2,7 +2,9 @@ const express = require('express');
 const app = express();
 const PORT = 3000 || process.env.PORT;
 const Controller = require('./controller/contrl_index.js');
+const compression = require('compression');
 
+app.use(compression());
 app.use(express.static('client/dist'));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());

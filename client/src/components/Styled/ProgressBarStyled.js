@@ -6,7 +6,7 @@ export const RatingText = styled.span`
   font-family: Calibre, sans-serif;
   font-weight: 10px;
   font-size: 20px;
-  margin; 20px;
+  margin-left: 5%;
 `;
 
 //<BarTitle> Three Star </BarTitle>
@@ -60,7 +60,7 @@ export const SharedStarText = styled.span`
   font-weight: bold;
   font-family: Calibre, sans-serif;
   font-weight: 10px;
-  font-size: 25px;
+  font-size: 35%;
   white-space: nowrap;
   margin: 5px;
   padding: 5px;

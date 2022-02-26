@@ -1,13 +1,21 @@
 import styled from 'styled-components';
 
+// export const QuestionSectionWrapper = styled.div`
+//   max-height: 450px;
+//   width: 54%;
+//   max-width: 60%;
+//   align: center;
+//   overflow-y:auto;
+//   margin: auto;
+//   padding: 30px 10px 10px 10px;
+// `
 export const QuestionSectionWrapper = styled.div`
-  max-height: 450px;
-  width: 54%;
-  max-width: 60%;
-  align: center;
-  overflow-y:auto;
-  margin: auto;
-  padding: 30px 10px 10px 10px;
+max-height: 450px;
+width: 94%;
+align: center;
+overflow-y: auto;
+margin: auto;
+padding: 30px 10px 10px 10px;
 `
 
 export const QuestionSummary = styled.div`
