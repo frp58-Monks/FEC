@@ -17,14 +17,14 @@ const Styles = () => {
 
       <div className="stylesComponent">
         {productStyles && productStyles.results.map((eachStyle, i) => {
-          if (eachStyle.name === defaultStyle.name) {
+          if (eachStyle.style_id === defaultStyle.style_id) {
             return <img
             key={i}
             className="currentStyles"
             value={eachStyle["style_id"]}
             src={eachStyle.photos[0].thumbnail_url}
             onClick={(e) => updateCurrentStyle(e)}
-            style={{'box-shadow': '2px 2px 2px black'}}
+            style={{'boxShadow': '2px 2px 2px black'}}
           />
           } else {
           return <img
