@@ -47,7 +47,7 @@ html * {
   grid-column: 1;
   grid-row: 2;
   overflow: hidden;
-  font-size: 35px;
+  font-size: 35%;
 }
 
 /* Justin's Stars */
@@ -95,7 +95,7 @@ progress::-webkit-progress-bar {
   background: #b3b3b3;
 }
 
-.Flexbox-container {
+/* .Flexbox-container {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -105,19 +105,33 @@ progress::-webkit-progress-bar {
   flex-wrap: wrap;
   max-width: 65%;
   margin: auto;
+} */
+
+.Flexbox-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 2%;
+  align-items: flex-start;
+  max-height: 1000px;
+  flex-wrap: wrap;
+  max-width: 100%;
 }
 
 .Flexbox-item-1 {
+  /* width: 20%; */
   width: 20%;
   border: 3px;
   justify-content: space-evenly;
   flex-basis: auto;
   align-items: center;
   max-height: 600px;
+  /* margin: 8px 5px 8px 5px; */
 }
 
 .Flexbox-item-2 {
-  width: 60%;
+  /* width: 60%; */
+  width: 70%;
   border: 3px;
   justify-content: space-evenly;
   flex-basis: auto;
@@ -161,6 +175,7 @@ progress::-webkit-progress-bar {
   justify-content: center;
   font-size: 16px;
   margin-bottom: 10px;
+  margin-left: 15%;
 }
 
 .ReviewList{
@@ -247,7 +262,7 @@ progress::-webkit-progress-bar {
 
 .SortContainer {
   display: block;
-  margin-left: 45%;
+  margin-left: 75%;
 }
 
 .Wrapper {
@@ -432,7 +447,7 @@ progress::-webkit-progress-bar {
 
 .QuestionList {
   /* text-align: center; */
-  margin-left: 24%;
+  margin-left: 5%;
   font-size: 30px;
 }
 

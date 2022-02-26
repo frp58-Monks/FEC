@@ -1,9 +1,21 @@
-.overviewMain {
+/* .overviewMain {
   background: rgba(255, 255, 255, 0.736);
   display: flex;
   flex-direction: row;
   max-width: 60%;
   width: 53%;
+  margin: 20px;
+  margin: auto;
+  padding: 30px 10px 10px 10px;
+  justify-content: space-evenly;
+} */
+
+.overviewMain {
+  background: rgba(255, 255, 255, 0.736);
+  display: flex;
+  flex-direction: row;
+  max-width: 100%;
+  width: 90%;
   margin: 20px;
   margin: auto;
   padding: 30px 10px 10px 10px;
