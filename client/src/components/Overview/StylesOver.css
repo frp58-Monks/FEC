@@ -129,3 +129,7 @@ i {
   flex-direction: row;
 }
 
+.addForm {
+  padding: 50px;
+}
+
