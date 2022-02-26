@@ -17,7 +17,7 @@ const Styles = () => {
 
       <div className="stylesComponent">
         {productStyles && productStyles.results.map((eachStyle, i) => {
-          if (eachStyle.name === defaultStyle.name) {
+          if (eachStyle.style_id === defaultStyle.style_id) {
             return <img
             key={i}
             className="currentStyles"
