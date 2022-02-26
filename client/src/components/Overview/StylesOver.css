@@ -41,7 +41,8 @@
 
 .dropdownsCart {
   display: flex;
-  padding: 10px;
+  flex-direction: row;
+  padding: 10px 10px 5px 0;
 }
 
 .salePrice {
@@ -72,10 +73,13 @@
   padding: 5px 0 5px 0;
 }
 
+.descriptionMamma {
+  padding: 0 0 10px 0;
+}
+
 .descript {
   background-color: rgb(240, 238, 238);
   border: 1px black solid;
-  /* padding: 0 40px 0 0; */
   overflow: scroll;
   font-size: 14px;
 }
@@ -97,6 +101,7 @@ b {
 .starsNlinks {
   display: flex;
   padding: 8px 0px;
+  font-size: 14px;
 }
 
 .myStars {
@@ -111,10 +116,6 @@ b {
   padding: 10px 0px;
 }
 
-.addForm {
-  padding-left: 45px;
-}
-
 i {
   color: rgb(53, 52, 52);
 }
@@ -126,6 +127,5 @@ i {
 .subPrice {
   display: flex;
   flex-direction: row;
-  /* justify-content: space-evenly; */
 }
 

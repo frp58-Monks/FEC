@@ -14,6 +14,7 @@ html * {
 /* Designing for scroll-bar */
 ::-webkit-scrollbar {
   width: 6px;
+  height: 6px;
 }
 
 ::-webkit-scrollbar-corner {
