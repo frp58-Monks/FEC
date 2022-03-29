@@ -1,6 +1,7 @@
 # FEC
 Deliver a fully functional web application that meets the specifications and requirements outlined by project stakeholders. Work together on a single code base by dividing up the work among team members but working collaboratively to produce a single front end application. Integrate your front end with the existing API for the product, and demonstrate your working application at the end of the project timeline.
 
+![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
 ![React.js](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB "React.js")
 ![NodeJS](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white "NodeJS")
 ![Express](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white "Express")
