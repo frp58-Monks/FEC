@@ -1,7 +1,13 @@
 # FEC
 Deliver a fully functional web application that meets the specifications and requirements outlined by project stakeholders. Work together on a single code base by dividing up the work among team members but working collaboratively to produce a single front end application. Integrate your front end with the existing API for the product, and demonstrate your working application at the end of the project timeline.
 
-A File that documents your work and outlines important information as the first impression for anyone who views your project
+![React.js](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB "React.js")
+![NodeJS](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white "NodeJS")
+![Express](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white "Express")
+![MySQL](https://img.shields.io/badge/MySQL-005C84?style=for-the-badge&logo=mysql&logoColor=white "MySQL")
+![BootStrap](https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white "Bootstrap")
+![StyledComponents](https://img.shields.io/badge/styled--components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white "StyledComponents")
+![Webpack](https://img.shields.io/badge/webpack-%238DD6F9.svg?style=for-the-badge&logo=webpack&logoColor=black)
 
 Project Title: Project Catwalk
 
