@@ -92,28 +92,12 @@ Description:
 
 Team Members:
   - Widget owners:
-    1.
-    2.
-    3.
+    1. Product Overview: Justin
+    2. Questions and Answers: Skip
+    3. Ratings and Reviews: Gloria
 
 Roadmap: What future enhancements are planned? What is the current status of the project? Is it being actively maintained?
 
-License: If open source, state how the project is licensed.
-
-Installation:
- --Provide a list of steps that another developer to get the project up an running on their own
- --What dependencies are required?
- --Other envt. rquirements?
-
-Usage:
- --Further details on how the project is meant to be used
- --If using a library framework outline how to use the library within another project
+License: Open Source
 
 Folder Structure: MVC
-
-Optional/Other:
- --Related projects
- --Team members
- --Git workflow steps
- --Roadmap (current state of the project and future goals)
- --Liscense(if open source explain how the project is liscenced
